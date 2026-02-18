@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_social_insurance_config,Access.Social.Insurance.Config,model_social_insurance_config,group_social_insurance_manager,1,1,1,1
+access_user_insurance_sector,Access.User.Insurance.Sector,model_insurance_sector,group_social_insurance_manager,1,1,1,1
+access_user_insurance_sector_line,Access.User.Insurance.Sector.Line,model_insurance_sector_line,group_social_insurance_manager,1,1,1,1
+access_user_insurance_sector_period,Access.User.Insurance.Sector.Period,model_insurance_sector_period,group_social_insurance_manager,1,1,1,1
+access_user_insurance_legal_firm,Access.User.Insurance.Legal.Firm,model_insurance_legal_firm,group_social_insurance_manager,1,1,1,1
+access_user_insurance_office,Access.User.Insurance.Office,model_insurance_office,group_social_insurance_manager,1,1,1,1
+access_user_insurance_job,Access.User.Insurance.job,model_insurance_job,group_social_insurance_manager,1,1,1,1
+access_user_res_country_state_area,Access.User.Res.Country.State.Area,model_res_country_state_area,base.group_user,1,1,1,1

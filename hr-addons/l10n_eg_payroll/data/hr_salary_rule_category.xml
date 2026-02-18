@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="social_insurance_salary_category" model="hr.salary.rule.category">
+        <field name="name">Social Insurance</field>
+        <field name="code">SI</field>
+    </record>
+
+    <record id="medical_insurance_salary_category" model="hr.salary.rule.category">
+        <field name="name">Medical Insurance</field>
+        <field name="code">MI</field>
+    </record>
+
+    <record id="other_allowance_salary_category" model="hr.salary.rule.category">
+        <field name="name">Other Allowance</field>
+        <field name="code">OA</field>
+    </record>
+
+    <record id="basic_insured_salary_category" model="hr.salary.rule.category">
+        <field name="name">Basic Insured</field>
+        <field name="code">BI</field>
+    </record>
+
+
+    <record id="information_salary_category" model="hr.salary.rule.category">
+        <field name="name">Information</field>
+        <field name="code">INFO</field>
+    </record>
+
+    <record id="total_deductions_salary_category" model="hr.salary.rule.category">
+        <field name="name">Total Deductions</field>
+        <field name="code">TOTALDED</field>
+    </record>
+
+</odoo>
+

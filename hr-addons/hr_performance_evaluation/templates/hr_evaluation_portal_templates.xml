@@ -1,0 +1,454 @@
+<odoo>
+    <template id="portal_layout" name="Portal layout: HR Evaluation menu entry"
+              inherit_id="portal.portal_breadcrumbs" priority="50">
+        <xpath expr="//ol[hasclass('o_portal_submenu')]" position="inside">
+            <li t-if="page_name == 'evaluation' or evaluation"
+                t-attf-class="breadcrumb-item #{'active ' if not evaluation else ''}">
+                <a t-if="evaluation"
+                   t-attf-href="/my/evaluations?{{ keep_query() }}">
+                    Evaluations</a>
+                <t t-else="">Evaluations</t>
+            </li>
+            <li t-if="evaluation"
+                class="breadcrumb-item active col-8 col-lg-10 text-truncate">
+                <span t-field="evaluation.name"/>
+            </li>
+        </xpath>
+    </template>
+
+    <template id="portal_my_home" name="Show Evaluations" customize_show="True"
+              inherit_id="portal.portal_my_home" priority="50">
+        <xpath expr="//div[hasclass('o_portal_docs')]" position="inside">
+            <t t-call="portal.portal_docs_entry"
+               t-if="env.user.sudo().employee_id">
+                <t t-set="title">Evaluations</t>
+                <t t-set="url" t-value="'/my/evaluations'"/>
+                <t t-set="placeholder_count" t-value="'evaluation_count'"/>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="portal_my_evaluations" name="My Evaluations">
+        <t t-call="portal.portal_layout">
+            <t t-set="breadcrumbs_searchbar" t-value="True"/>
+
+            <t t-call="portal.portal_searchbar">
+                <t t-set="title">Evaluations</t>
+            </t>
+            <t t-if="not grouped_evaluations">
+                <div class="alert alert-warning mt8" role="alert">
+                    There are no evaluations.
+                </div>
+            </t>
+            <t t-if="grouped_evaluations">
+                <t t-call="portal.portal_table">
+                    <t t-foreach="grouped_evaluations" t-as="evaluations">
+                        <thead>
+                            <tr t-attf-class="{{'thead-light' if not groupby == 'none' else ''}}">
+                                <th t-if="groupby == 'none'">Name</th>
+                                <th t-if="groupby == 'period'">
+                                    <em class="font-weight-normal text-muted">
+                                        Evaluation for period:</em>
+                                    <span t-field="evaluations[0].sudo().period_id.display_name"/>
+                                </th>
+                                <th t-if="groupby == 'state'">
+                                    <em class="font-weight-normal text-muted">
+                                        Evaluation in Status:</em>
+                                    <t t-if="evaluations[0].sudo().state == 'draft'">
+
+                                        <span class="text-truncate">Draft</span>
+                                    </t>
+                                    <t t-if="evaluations[0].sudo().state == 'send_to_manager'">
+
+                                        <span class="text-truncate">Sent to
+                                            Manager</span>
+                                    </t>
+                                    <t t-if="evaluations[0].sudo().state == 'done'">
+
+                                        <span class="text-truncate">Done</span>
+                                    </t>
+                                    <t t-if="evaluations[0].sudo().state == 'cancel'">
+
+                                        <span class="text-truncate">
+                                            Cancelled</span>
+                                    </t>
+                                </th>
+
+                                <th t-if="groupby != 'period'"
+                                    class="text-center">Period</th>
+                                <th t-if="groupby != 'state'"
+                                    class="text-center">Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="evaluations" t-as="evaluation">
+                                <tr>
+                                    <td>
+                                        <a t-attf-href="/my/evaluation/#{evaluation.id}?{{ keep_query() }}"><span
+                                                t-field="evaluation.name"/></a>
+                                    </td>
+                                    <td t-if="groupby != 'period'"
+                                        class="text-center">
+                                        <span class="badge badge-pill badge-info"
+                                              title="Current period of the evaluation"
+                                              t-esc="evaluation.period_id.name"/>
+                                    </td>
+                                    <td t-if="groupby != 'state'"
+                                        class="text-center">
+                                        <span class="badge badge-pill badge-info"
+                                              title="Current state of the evaluation">
+                                            <t t-if="evaluation.state == 'draft'">
+
+                                                <span class="text-truncate">
+                                                    Draft</span>
+                                            </t>
+                                            <t t-if="evaluation.state == 'send_to_manager'">
+
+                                                <span class="text-truncate">Sent
+                                                    to Manager</span>
+                                            </t>
+                                            <t t-if="evaluation.state == 'done'">
+
+                                                <span class="text-truncate">
+                                                    Done</span>
+                                            </t>
+                                            <t t-if="evaluation.state == 'cancel'">
+
+                                                <span class="text-truncate">
+                                                    Cancelled</span>
+                                            </t>
+                                        </span>
+                                    </td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </t>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="portal_my_evaluation" name="My Evaluation">
+        <t t-call="portal.portal_layout">
+            <t t-set="o_portal_fullwidth_alert"
+               groups="hr_performance_evaluation.employee_performance_user_group">
+                <t t-call="portal.portal_back_in_edit_mode">
+                    <t t-set="backend_url"
+                       t-value="'/web#model=hr.evaluation&amp;id=%s&amp;view_type=form' % (evaluation.id)"/>
+                </t>
+            </t>
+
+            <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <h5 class="d-flex mb-1 mb-md-0 row">
+                                <span t-field="evaluation.name"
+                                      class="col-9 text-truncate"/>
+                                <div class="col-3 text-right">
+                                    <small class="text-right">Status:</small>
+                                    <t t-if="evaluation.state == 'draft'">
+
+                                        <span class=" badge badge-pill badge-info"
+                                              title="Current status of this evaluation">
+                                            Draft</span>
+                                    </t>
+                                    <t t-if="evaluation.state == 'send_to_manager'">
+
+                                        <span class=" badge badge-pill badge-info"
+                                              title="Current status of this evaluation">
+                                            Sent
+                                            to Manager</span>
+                                    </t>
+                                    <t t-if="evaluation.state == 'done'">
+
+                                        <span class=" badge badge-pill badge-info"
+                                              title="Current status of this evaluation">
+                                            Done</span>
+                                    </t>
+                                    <t t-if="evaluation.state == 'cancel'">
+
+                                        <span class=" badge badge-pill badge-info"
+                                              title="Current status of this evaluation">
+                                            Cancelled</span>
+                                    </t>
+
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                </t>
+                <t t-set="card_body">
+                    <a role="button" t-if="evaluation.state == 'send_to_manager' and not evaluation.manager_done_evaluation and request.env.user.sudo().employee_id.id == evaluation.sudo().employee_id.parent_id.user_id.employee_id.id"
+                       t-att-href="'/my/evaluation/%s/edit' % evaluation.id"
+                       class="btn btn-primary float-right"><i
+                            class="mr-1"/>Submit <span t-field="evaluation.sudo().employee_id.user_id.display_name"/> Evaluation</a>
+                    <div class="mb-1">
+                        <strong>Period:</strong> <span
+                            t-field="evaluation.period_id.name"/>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-1">
+                            <strong>Start Date:</strong> <span
+                                t-field="evaluation.start_date"
+                                t-options='{"widget": "date"}'/>
+                        </div>
+                        <div class="col-12 col-md-6"
+                             t-if="evaluation.deadline_date">
+                            <strong>Deadline:</strong> <span
+                                t-field="evaluation.deadline_date"
+                                t-options='{"widget": "date"}'/>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6 mb-1">
+                            <strong>End Date:</strong> <span
+                                t-field="evaluation.end_date"
+                                t-options='{"widget": "date"}'/>
+                        </div>
+                    </div>
+                    <div class="row mb-4" t-if="evaluation.state == 'done'">
+                        <div class="col-12 col-md-6 mb-1">
+                            <strong>Performance Score Percentage:</strong> <span
+                                t-field="evaluation.performance_score_percentage"/>
+                        </div>
+                    </div>
+                    <div class="row mb-4" t-if="evaluation.state == 'done'">
+                        <div class="col-12 col-md-6 mb-1">
+                            <strong>Performance Score Scale:</strong> <span
+                                t-field="evaluation.performance_score_scale_id.display_name"/>
+                        </div>
+                    </div>
+
+                    <div t-if="evaluation.performance_line_ids">
+                        <div class="text-center font-weight-bold mb-2"
+                             style="background-color:gray;">
+                            <span>Key Performance Areas</span>
+                        </div>
+                        <div>
+                            <table class="table rounded mb-0 bg-white o_portal_my_doc_table">
+                                <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Description</th>
+                                        <th>Weightage</th>
+                                        <th>My Assessment</th>
+                                        <th>My Remark</th>
+                                        <th>Final Rating</th>
+                                        <th>Final Remark</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="evaluation.performance_line_ids"
+                                       t-as="performance_line">
+                                        <tr t-if="performance_line.display_type"
+                                            style="background-color:#DDDDDD;font-weight: bold;">
+                                            <td colspan="100%">
+                                                <span t-field="performance_line.name"/>
+                                            </td>
+                                        </tr>
+                                        <tr t-else="">
+                                            <td>
+                                                <span t-field="performance_line.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="performance_line.description"/>
+                                            </td>
+                                            <td>
+                                                <span t-esc="int(performance_line.weightage * 100)"/> %
+                                            </td>
+                                            <td>
+                                                <span t-esc="int(performance_line.final_rating * 100)"/>%
+                                            </td>
+                                            <td>
+                                                <span t-field="performance_line.final_remark"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <br/>
+                </t>
+            </t>
+
+            <div class="mt32">
+                <h4><strong>Message and communication history</strong></h4>
+                <t t-call="portal.message_thread">
+                    <t t-set="object" t-value="evaluation"/>
+                    <t t-set="token" t-value="evaluation.access_token"/>
+                    <t t-set="pid" t-value="pid"/>
+                    <t t-set="hash" t-value="hash"/>
+                </t>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_my_evaluation_edit" name="Edit My Evaluation">
+        <t t-call="portal.portal_layout">
+            <t t-call="portal.portal_record_layout">
+                <t t-set="card_header">
+                    <div class="row no-gutters">
+                        <div class="col-12">
+                            <h5 class="d-flex mb-1 mb-md-0 row">
+                                <span t-field="evaluation.name"
+                                      class="col-9 text-truncate"/>
+                                <div class="col-3 text-right">
+                                    <small class="text-right">Status:</small>
+                                    <t t-if="evaluation.state == 'draft'">
+
+                                        <span class=" badge badge-pill badge-info"
+                                              title="Current status of this evaluation">
+                                            Draft</span>
+                                    </t>
+                                    <t t-if="evaluation.state == 'send_to_manager'">
+
+                                        <span class=" badge badge-pill badge-info"
+                                              title="Current status of this evaluation">
+                                            Sent
+                                            to Manager</span>
+                                    </t>
+                                    <t t-if="evaluation.state == 'done'">
+
+                                        <span class=" badge badge-pill badge-info"
+                                              title="Current status of this evaluation">
+                                            Done</span>
+                                    </t>
+                                    <t t-if="evaluation.state == 'cancel'">
+
+                                        <span class=" badge badge-pill badge-info"
+                                              title="Current status of this evaluation">
+                                            Cancelled</span>
+                                    </t>
+
+                                </div>
+                            </h5>
+                        </div>
+                    </div>
+                </t>
+                <t t-set="card_body">
+                    <div class="mb-1">
+                        <strong>Period:</strong> <span
+                            t-field="evaluation.period_id.name"/>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-12 col-md-6 mb-1">
+                            <strong>Start Date:</strong> <span
+                                t-field="evaluation.start_date"
+                                t-options='{"widget": "date"}'/>
+                        </div>
+                        <div class="col-12 col-md-6"
+                             t-if="evaluation.deadline_date">
+                            <strong>Deadline:</strong> <span
+                                t-field="evaluation.deadline_date"
+                                t-options='{"widget": "date"}'/>
+                        </div>
+                    </div>
+                    <div class="row mb-4">
+                        <div class="col-12 col-md-6 mb-1">
+                            <strong>End Date:</strong> <span
+                                t-field="evaluation.end_date"
+                                t-options='{"widget": "date"}'/>
+                        </div>
+                    </div>
+                    <form t-attf-action="/my/evaluation/#{evaluation.id}/edit?access_token=#{evaluation.access_token}"
+                          method="POST">
+                        <input type="hidden" name="csrf_token"
+                               t-att-value="request.csrf_token()"/>
+                        <div class="container">
+                            <h6 class="modal-title text-center font-weight-bold mb-2"
+                                style="background-color:gray;"
+                                t-if="evaluation.performance_line_ids">Key
+                                Performance Areas</h6>
+                            <div t-if="evaluation.performance_line_ids">
+                                <table class="table rounded mb-0 bg-white o_portal_my_doc_table ">
+                                    <thead>
+                                        <tr>
+                                            <th>Name</th>
+                                            <th>Description</th>
+                                            <th>Weightage</th>
+                                            <th>My Assessment</th>
+                                            <th>My Remark</th>
+                                            <th>Final Rating</th>
+                                            <th>Final Remark</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="evaluation.performance_line_ids"
+                                           t-as="performance_line">
+                                            <tr t-if="performance_line.display_type"
+                                                style="background-color:#DDDDDD;font-weight: bold;">
+                                                <td colspan="100%">
+                                                    <span t-field="performance_line.name"/>
+                                                </td>
+                                            </tr>
+                                            <tr t-else="">
+                                                <td>
+                                                    <span t-field="performance_line.name"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="performance_line.description"/>
+                                                </td>
+                                                <td>
+                                                    <span t-esc="int(performance_line.weightage * 100)"/> %
+                                                </td>
+                                                <td>
+                                                    <t t-if="evaluation.state == 'send_to_manager' and not evaluation.manager_done_evaluation and request.env.user.sudo().employee_id.id == evaluation.sudo().employee_id.parent_id.user_id.employee_id.id">
+                                                        <div class="form-group">
+                                                            <div class="input-group">
+                                                                <t t-if="performance_line.final_remark">
+                                                                    <textarea
+                                                                            class="form-control"
+                                                                            t-att-value="performance_line.final_remark"
+                                                                            t-attf-id="performance_line_employee_remark#{performance_line.id}"
+                                                                            t-att-name="'performance_line_ids['+str(performance_line.id)+'][\'final_remark\']'">
+                                                                        <t t-esc="performance_line.final_remark.strip()"/>
+                                                                    </textarea>
+                                                                </t>
+                                                                <t t-else="">
+                                                                    <textarea
+                                                                            class="form-control"
+                                                                            t-att-value="performance_line.final_remark"
+                                                                            t-attf-id="performance_line_employee_remark#{performance_line.id}"
+                                                                            t-att-name="'performance_line_ids['+str(performance_line.id)+'][\'final_remark\']'"/>
+                                                                </t>
+                                                            </div>
+                                                        </div>
+                                                    </t>
+                                                    <t t-else="">
+                                                        <span t-field="performance_line.final_remark"/>
+                                                    </t>
+                                                </td>
+                                            </tr>
+                                        </t>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <p class="alert alert-danger" t-if="error"
+                               role="alert">
+                                <t t-esc="error"/>
+                            </p>
+                            <t t-if="evaluation.state == 'send_to_manager' and not evaluation.manager_done_evaluation and request.env.user.sudo().employee_id.id == evaluation.sudo().employee_id.parent_id.user_id.employee_id.id">
+                                <div t-attf-class="clearfix text-center mb-1">
+                                    <button type="submit"
+                                            class="btn btn-primary float-right">
+                                        Submit <span t-field="evaluation.sudo().employee_id.user_id.display_name"/> Evaluation</button>
+                                </div>
+                            </t>
+                        </div>
+                    </form>
+
+
+                    <br/>
+
+                </t>
+            </t>
+
+
+        </t>
+    </template>
+
+</odoo>

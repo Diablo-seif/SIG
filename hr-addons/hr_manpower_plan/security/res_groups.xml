@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="category_manpower_plan" model="ir.module.category" >
+        <field name="name">Manpower Plan</field>
+    </record>
+
+    <record id="group_manpower_plan_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="category_manpower_plan"/>
+    </record>
+
+    <record id="group_manpower_plan_budget" model="res.groups">
+        <field name="name">Budget</field>
+        <field name="implied_ids" eval="[(4, ref('group_manpower_plan_user'))]"/>
+        <field name="category_id" ref="category_manpower_plan"/>
+    </record>
+
+    <record id="group_manpower_plan_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="implied_ids" eval="[(4, ref('group_manpower_plan_budget'))]"/>
+        <field name="category_id" ref="category_manpower_plan"/>
+    </record>
+
+    <record id="rule_hr_manpower_plan_line_user" model="ir.rule">
+        <field name="name">Manpower Plan User Manage Own Lines</field>
+        <field name="model_id" ref="model_hr_manpower_plan_line"/>
+        <field name="groups" eval="[(4, ref('group_manpower_plan_user'))]"/>
+        <field name="domain_force">[('department_id.manager_id', '=', user.employee_id.id)]</field>
+    </record>
+
+    <record id="rule_hr_manpower_plan_line_budget" model="ir.rule">
+        <field name="name">Manpower Plan Budget Manage All Lines</field>
+        <field name="model_id" ref="model_hr_manpower_plan_line"/>
+        <field name="groups" eval="[(4, ref('group_manpower_plan_budget'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+    </record>
+
+    <record id="rule_hr_manpower_plan_user" model="ir.rule">
+        <field name="name">Manpower Plan User Manage Own</field>
+        <field name="model_id" ref="model_hr_manpower_plan"/>
+        <field name="groups" eval="[(4, ref('group_manpower_plan_user'))]"/>
+        <field name="domain_force">[('department_ids.manager_id', '=', user.employee_id.id)]</field>
+    </record>
+
+    <record id="rule_hr_manpower_plan_budget" model="ir.rule">
+        <field name="name">Manpower Plan Budget Manage All</field>
+        <field name="model_id" ref="model_hr_manpower_plan"/>
+        <field name="groups" eval="[(4, ref('group_manpower_plan_budget'))]"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+
+    </record>
+
+</odoo>

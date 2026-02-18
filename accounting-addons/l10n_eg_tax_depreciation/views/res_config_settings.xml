@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_deferred" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.deferred
+        </field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id"
+               ref="l10n_eg_deferred_tax_data.res_config_settings_view_form_deferred"/>
+        <field name="arch" type="xml">
+            <div name="account_tax_deferred_right_pane" position="inside">
+                <label for="deferred_tax_liabilities_account_id"
+                       string="Deferred Tax liabilities Account"/>
+                <field name="deferred_tax_liabilities_account_id"/>
+
+                <label for="deferred_tax_assets_account_id"
+                       string="Deferred Tax assets Account"/>
+                <field name="deferred_tax_assets_account_id"/>
+
+                <label for="deferred_taxes_account_id"
+                       string="Deferred Tax Account"/>
+                <field name="deferred_taxes_account_id"/>
+            </div>
+        </field>
+    </record>
+</odoo>

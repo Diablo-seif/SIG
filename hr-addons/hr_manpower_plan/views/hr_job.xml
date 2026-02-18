@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="salary_hr_job_form" model="ir.ui.view">
+        <field name="name">salary.hr.job.form</field>
+        <field name="model">hr.job</field>
+        <field name="inherit_id" ref="hr.view_hr_job_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='user_id']" position="after">
+                <field name="salary_type" widget="radio"
+                       options="{'horizontal': True}"/>
+                <label for="min_salary" string="Salary Range"
+                       invisible="salary_type != range"/>
+                <div class="o_row mr16"
+                     invisible="salary_type != range">
+                    <span class="oe_form_field"> Min </span>
+                    <field name="min_salary"/>
+                    <span class="oe_form_field"> Max </span>
+                    <field name="max_salary"/>
+                </div>
+                <field name="salary" widget="monetary"
+                       options="{'currency_field': 'currency_id'}"
+                       invisible="salary_type != fixed"/>
+<!--                       attrs="{'invisible':[('salary_type','!=','fixed')]}"/>-->
+                <field name="currency_id" invisible="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

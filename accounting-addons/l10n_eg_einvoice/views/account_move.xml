@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">inherit.account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <button name="button_draft" position="after">
+                <button name="submit_document"
+                        invisible="einvoice_state not in ['waiting_sign','submit_issue','invalid','waiting_submit'] or use_eg_invoice=False"
+                        string="Submit E-Invoice" type="object"
+                        class="oe_highlight"/>
+<!--                        attrs="{'invisible':['|',('einvoice_state','not in',['waiting_sign','submit_issue','invalid','waiting_submit']),('use_eg_invoice','=',False)]}"-->
+                <button name="submit_document"
+                        invisible="einvoice_state not in ['waiting_sign','submit_issue','invalid','waiting_submit'] or use_eg_invoice=False"
+                        string="Submit E-Invoice Immediately" type="object"
+                        context="{'force_submit': True}"/>
+<!--                        attrs="{'invisible':['|',('einvoice_state','not in',['waiting_sign','submit_issue','invalid','waiting_submit']),('use_eg_invoice','=',False)]}"-->
+
+                <button name="get_einvoice_printout" string="Get E-Invoice PDF"
+                        type="object"
+                        invisible="einvoice_state not in ['submitted','valid','rejected','cancelled','waiting_cancel'] or use_eg_invoice=False "/>
+<!--                        attrs="{'invisible':['|',('einvoice_state','not in',['submitted','valid','rejected','cancelled','waiting_cancel']),('use_eg_invoice','=',False)]}"/>-->
+                <button name="action_cancel_einvoice"
+                        string="Cancel E-Invoice" type="object"
+                        invisible="einvoice_state!=valid' use_eg_invoice=False"
+                />
+            </button>
+<!--                        attrs="{'invisible':['|',('einvoice_state','!=','valid'),('use_eg_invoice','=',False)]}"-->
+            <xpath expr="//notebook" position="inside">
+                <page name="e_invoice" string="E-Invoice"
+                      invisible="use_eg_invoice = False"
+                >
+<!--                      attrs="{'invisible':[('use_eg_invoice','=',False)]}"-->
+                    <group>
+                        <group>
+                            <field name="use_eg_invoice" invisible="1"/>
+                            <field name="einvoice_uuid"/>
+                            <field name="einvoice_submit_uuid"/>
+                        </group>
+                        <group>
+                            <label for="einvoice_state"/>
+                            <div class="o_row">
+                                <button name="action_update_einvoice_status" help="Update"
+                                        type="object" class="oe_stat_button" icon="fa-rotate">
+                                    <i class="fa fa-fw fa-rotate-left"/>
+                                </button>
+                                <field name="einvoice_state"/>
+                            </div>
+                            <field name="posted_by"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="einvoice_signature"
+                               readonly="einvoice_state in ['submitted','waiting_submit','in_queue','validated','rejected','cancelled','waiting_cancel']"
+                               placeholder="E-Invoice Signature"/>
+<!--                               attrs="{'readonly':[('einvoice_state','in',['submitted','waiting_submit','in_queue','validated','rejected','cancelled','waiting_cancel'])]}"-->
+                    </group>
+                    <group>
+                        <field name="einvoice_message"
+                               invisible="einvoice_message = False or einvoice_state not in ['rejected','cancelled','waiting_cancel','submit_issue','invalid']"/>
+<!--                               attrs="{'invisible':['|', ('einvoice_message','=',False),('einvoice_state','not in',['rejected','cancelled','waiting_cancel','submit_issue','invalid'])]}"/>-->
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="account_move_search_inherit" model="ir.ui.view">
+        <field name="name">account.move.search.inherit</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_account_invoice_filter"/>
+        <field name="arch" type="xml">
+            <filter name="due_date" position="after">
+                <separator/>
+                <filter name="waiting_sign" string="E-Invoice Waiting Sign"
+                        domain="[('einvoice_state', '=', 'waiting_sign')]"/>
+                <filter name="waiting_submit" string="E-Invoice Waiting Submit"
+                        domain="[('einvoice_state', '=', 'waiting_submit')]"/>
+                <filter name="submitted" string="E-Invoice Submitted"
+                        domain="[('einvoice_state', '=', 'submitted')]"/>
+                <filter name="submit_issue" string="E-Invoice Submit Issue"
+                        domain="[('einvoice_state', '=', 'submit_issue')]"/>
+                <filter name="validated" string="E-Invoice Validated"
+                        domain="[('einvoice_state', '=', 'validated')]"/>
+                <filter name="invalid" string="E-Invoice Validation Issue"
+                        domain="[('einvoice_state', '=', 'invalid')]"/>
+                <filter name="rejected" string="E-Invoice Rejected"
+                        domain="[('einvoice_state', '=', 'rejected')]"/>
+                <filter name="waiting_cancel" string="E-Invoice Waiting Cancel"
+                        domain="[('einvoice_state', '=', 'waiting_cancel')]"/>
+                <filter name="cancelled" string="E-Invoice Cancelled"
+                        domain="[('einvoice_state', '=', 'cancelled')]"/>
+            </filter>
+            <filter name="duedate" position="after">
+                <separator/>
+                <filter string="E-Invoice Status" name="einvoice_state"
+                        context="{'group_by': 'einvoice_state'}"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>

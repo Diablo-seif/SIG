@@ -1,0 +1,30 @@
+# pylint: disable=missing-docstring,manifest-required-author
+{
+    'name': 'HR Manpower Plan',
+    'summary': 'HR Manpower Plan',
+    'author': "Muhamed Abd El-Rhman, CORE B.P.O",
+    'website': "http://www.core-bpo.com",
+    # 'version': '13.0.1.0.0',
+    'category': '',
+    'license': 'AGPL-3',
+    'depends': [
+        'hr_recruitment',
+        'hr_job_position',
+        'hr_contract_type',
+    ],
+    'data': [
+        'security/res_groups.xml',
+        'security/ir.model.access.csv',
+        'wizard/manpower_recruitment.xml',
+        'views/hr_job.xml',
+        'views/hr_manpower_plan.xml',
+        'views/hr_manpower_plan_lines.xml',
+        'data/ir_cron.xml',
+        'data/ir_server_action.xml',
+        'report/manpower_templates.xml',
+        'report/manpower_reports.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

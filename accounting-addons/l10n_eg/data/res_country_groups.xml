@@ -1,0 +1,9 @@
+<odoo>
+
+    <record id="exports" model="res.country.group">
+        <field name="name">Exports</field>
+        <field name="country_ids" model="res.country"
+               eval="[(6, 0, obj().search([('code', '!=','EG')]).ids)]"/>
+    </record>
+
+</odoo>

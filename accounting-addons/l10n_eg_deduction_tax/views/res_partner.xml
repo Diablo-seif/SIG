@@ -1,0 +1,20 @@
+<odoo>
+    <record id="res_partner_view_form" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="partner_legal_information.res_partner_view_form"/>
+        <field name="arch" type="xml">
+            <field name="vat_department_id" position="after">
+                <field name="deduction_tax_exemption_status"
+                       readonly="company_type != 'company'"/>
+                <!--                       attrs="{'readonly': [('company_type','!=', 'company')]}"/>-->
+                <field name="exemption_expire_date"
+                       readonly="company_type != 'company'"
+                       invisible="deduction_tax_exemption_status != 'advanced'"/>
+                <!--                       attrs="{'readonly': [('company_type','!=', 'company')],-->
+                <!--                           'invisible': [('deduction_tax_exemption_status','!=', 'advanced')]}"/>-->
+            </field>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,42 @@
+<odoo>
+
+    <record id="deferred_taxes_action" model="ir.actions.act_window">
+        <field name="name">Deferred Tax Percentages</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">deferred.tax.percentage</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <record id="deferred_taxes_form" model="ir.ui.view">
+        <field name="name">deferred.tax.percentage.form</field>
+        <field name="model">deferred.tax.percentage</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="percentage"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="deferred_taxes_tree" model="ir.ui.view">
+        <field name="name">deferred.tax.percentage.tree</field>
+        <field name="model">deferred.tax.percentage</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="percentage"/>
+            </list>
+        </field>
+    </record>
+
+    <menuitem id="menuitem_deferred_taxes"
+              name="Deferred Tax Percentage"
+              parent="account.account_invoicing_menu"
+              action="deferred_taxes_action" sequence="1"/>
+
+</odoo>

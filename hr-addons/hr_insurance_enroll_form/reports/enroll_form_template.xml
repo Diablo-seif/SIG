@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="hr_insurance_enroll_form_template">
+        <t t-call="hr_insurance_enroll_form.enroll_form_layout"
+           t-lang="'ar_001'">
+            <t t-set="get_piaster"
+               t-value="lambda amount:int(round(amount % 1*100,2))"/>
+            <t t-set="table_break" t-value="6"/>
+            <t t-set="table_size" t-value="0"/>
+            <t t-set="emp_counter" t-value="0"/>
+            <t t-set="total_employees_len"
+               t-value="len(o.form_line_ids)"/>
+            <t t-set="employee_list"
+               t-value="[o.form_line_ids[x:x+table_break] for x in range(0, total_employees_len,table_break)] "/>
+            <t t-set="total_insured" t-value="0"/>
+            <t t-set="total_gross" t-value="0"/>
+            <link rel="stylesheet"
+                  href="/hr_insurance_enroll_form/static/src/css/page_style.css"/>
+            <t t-foreach="employee_list" t-as="employees">
+                <div class="page">
+                    <t t-set="employees_len"
+                       t-value="len(employees)"/>
+                    <table class="col-12 table table-bordered border-dark text-center">
+                        <thead class="table-bordered border-dark">
+                            <tr>
+                                <th rowspan="2" colspan="8" width="14%">
+                                    Insurance Number
+                                </th>
+                                <th rowspan="2" width="24%">
+                                    The name of the insured
+                                </th>
+                                <th rowspan="2" colspan="14" width="14%">
+                                    Identification Number
+                                </th>
+                                <th colspan="3" width="15%">
+                                    Joining Date
+                                </th>
+                                <th colspan="2">
+                                    Insured
+                                </th>
+                                <th colspan="2">
+                                    Gross
+                                </th>
+                            </tr>
+                            <tr>
+                                <th>
+                                    Day
+                                </th>
+                                <th>
+                                    Month
+                                </th>
+                                <th>
+                                    Year
+                                </th>
+                                <th>
+                                    Piaster
+                                </th>
+                                <th>
+                                    Pound
+                                </th>
+                                <th>
+                                    Piaster
+                                </th>
+                                <th>
+                                    Pound
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="employees"
+                               t-as="employee">
+                                <tr t-if="total_insured and table_size == 0"
+                                    class="font-weight-bold border-bottom border-dark">
+                                    <td colspan="26">
+                                        <strong>Before</strong>
+                                    </td>
+                                    <td>
+                                        <span t-esc="get_piaster(total_insured)"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="int(total_insured)"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="get_piaster(total_gross)"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="int(total_gross)"/>
+                                    </td>
+                                </tr>
+                                <t t-set="total_insured"
+                                   t-value="total_insured + employee.insured_salary"/>
+                                <t t-set="total_gross"
+                                   t-value="total_gross + employee.gross_salary "/>
+                                <t t-set="emp_counter"
+                                   t-value="emp_counter+1"/>
+                                <tr>
+                                    <t t-foreach="8" t-as="digit">
+                                        <td>
+                                            <t t-if="len(str(employee.employee_insurance_number)) > digit"
+                                               t-esc="str(employee.employee_insurance_number)[::-1][digit]"/>
+                                            <t t-else="" t-esc="'0'"/>
+                                        </td>
+                                    </t>
+                                    <td class=" text-center">
+                                        <span t-esc="employee.employee_id.name_in_arabic"/>
+                                    </td>
+                                    <t t-foreach="14" t-as="digit">
+                                        <td>
+                                            <t t-if="len(str((employee.identification_id or 0))) > digit"
+                                               t-esc="str((employee.identification_id or 0))[::-1][digit]"/>
+                                            <t t-else="" t-esc="'0'"/>
+                                        </td>
+                                    </t>
+                                    <td>
+                                        <span t-esc="str(employee.insurance_date.day).zfill(2)"
+                                              t-if="employee.insurance_date"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="str(employee.insurance_date.month).zfill(2)"
+                                              t-if="employee.insurance_date"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="employee.insurance_date.year"
+                                              t-if="employee.insurance_date"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="get_piaster(employee.insured_salary)"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="int(employee.insured_salary)"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="get_piaster(employee.gross_salary)"/>
+                                    </td>
+                                    <td>
+                                        <span t-esc="int(employee.gross_salary)"/>
+                                        <t t-set="table_size"
+                                           t-value="table_size+1"/>
+                                        <t t-if="table_size >= table_break">
+                                            <t t-set="table_size"
+                                               t-value="0"/>
+                                        </t>
+                                    </td>
+                                </tr>
+                            </t>
+                            <t t-if="employees_len &lt; table_break">
+                                <tr t-foreach="range(table_break-employees_len)"
+                                    t-as="l">
+                                    <td t-foreach="30" t-as="a">
+                                        <span>
+                                            /
+                                        </span>
+                                    </td>
+                                </tr>
+                            </t>
+                            <tr t-if="total_insured"
+                                class="font-weight-bold border-top border-dark">
+                                <td colspan="26">
+                                    <t t-if=" total_employees_len > emp_counter">
+                                        <strong>After</strong>
+                                    </t>
+                                    <t t-else="">
+                                        <strong>Total</strong>
+                                    </t>
+                                </td>
+                                <td>
+                                    <span t-esc="get_piaster(total_insured)"/>
+                                </td>
+                                <td>
+                                    <span t-esc="int(total_insured)"/>
+                                </td>
+                                <td>
+                                    <span t-esc="get_piaster(total_gross)"/>
+                                </td>
+                                <td>
+                                    <span t-esc="int(total_gross)"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p style="page-break-after:always;"/>
+                </div>
+            </t>
+        </t>
+    </template>
+
+    <template id="hr_insurance_enroll_form_report_template">
+        <t t-call="web.html_container">
+            <t t-set="docs" t-value="docs.with_context(lang='ar_001')"/>
+            <t t-foreach="docs" t-as="o">
+                <t t-call="hr_insurance_enroll_form.hr_insurance_enroll_form_template"
+                   t-lang="'ar_001'"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>

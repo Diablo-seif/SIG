@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_leave_allocation_view_form_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.allocation.form.inherit</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="priority">33</field>
+        <field name="inherit_id" ref="hr_holidays.hr_leave_allocation_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='holiday_status_id']" position="before">
+                <field name="leave_category" required="1" attrs="{'readonly': [('state', 'not in', ('draft', 'confirm'))]}"/>
+            </xpath>
+            <field name="holiday_status_id" position="attributes">
+                <attribute name="domain">[('category','=',leave_category)]</attribute>
+            </field>
+        </field>
+    </record>
+
+
+    <record id="hr_leave_allocation_view_tree_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.leave.allocation.tree.inherit</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id"
+               ref="hr_holidays.hr_leave_allocation_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='employee_id']" position="after">
+                <field name="leave_category" required="1"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

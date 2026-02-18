@@ -1,0 +1,233 @@
+<odoo>
+
+    <record id="view_request_card_form" model="ir.ui.view">
+        <field name="name">sig.request.cards.form</field>
+        <field name="model">sig.request.cards</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <field name="status" widget="statusbar"/>
+                </header>
+                <sheet>
+                    <field name="is_duplicate" invisible="1"/>
+                    <widget name="web_ribbon" title="Duplicated" bg_color="bg-danger"
+                            invisible="is_duplicate = False"/>
+                    <div class="o_employee_avatar">
+                        <field name="image" widget="image" class="oe_avatar"
+                               options="{&quot;zoom&quot;: true}"/>
+                    </div>
+
+                    <label for="full_name" class="oe_edit_only"/>
+                    <h1>
+                        <field name="full_name" class="oe_inline"/>
+                    </h1>
+                    <group>
+                        <!-- <field name="image" widget="image"/> -->
+                        <group>
+                            <field name="national_id"/>
+                            <field name="for_organization"/>
+                            <field name="associated_company_id"
+                                   invisible="for_organization != 'el_mesaha_el_Askareya'"/>
+
+                            <field name="job_position_id"/>
+                            <field name="job_grade_id"
+                                   invisible="for_organization != 'alshar_alaqari'"/>
+                        </group>
+                        <group>
+                            <field name="job_code"/>
+                            <field name="phone_number"/>
+                            <field name="governorate_id"/>
+                        </group>
+                    </group>
+                </sheet>
+                <chatter/>
+                <!--<div class="oe_chatter">-->
+                <!--    <field name="message_follower_ids"/>-->
+                <!--    <field name="activity_ids"/>-->
+                <!--    <field name="message_ids"/>-->
+                <!--</div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="view_request_card_tree" model="ir.ui.view">
+        <field name="name">sig.request.cards.tree</field>
+        <field name="model">sig.request.cards</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="full_name"/>
+                <field name="national_id"/>
+                <field name="job_position_id"/>
+                <field name="job_grade_id"/>
+                <field name="job_code"/>
+                <field name="phone_number"/>
+                <field name="governorate_id"/>
+                <field name="for_organization" optional="show"/>
+                <field name="associated_company_id" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_sig_request_cards_kanban" model="ir.ui.view">
+        <field name="name">sig.request.cards.kanban</field>
+        <field name="model">sig.request.cards</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_small_column" create="0">
+                <field name="status"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div
+                                class="oe_kanban_global_click o_kanban_record_has_image_fill o_res_partner_kanban">
+
+                            <div class="o_kanban_image_fill_left o_kanban_image_full" role="img">
+                                <div class="o_employee_avatar">
+                                    <field name="image" widget="image" class="oe_avatar"
+                                           options="{&quot;zoom&quot;: true}"/>
+                                </div>
+                            </div>
+                            <div
+                                    class="oe_kanban_details d-flex flex-column justify-content-between">
+                                <div>
+                                    <strong class="o_kanban_record_title oe_partner_heading">
+                                        <field name="full_name"/>
+                                    </strong>
+                                    <div class="o_kanban_tags_section oe_kanban_partner_categories"/>
+                                </div>
+                                <div class="o_kanban_record_bottom">
+                                    <div class="oe_kanban_bottom_left"/>
+                                    <div class="oe_kanban_bottom_right"/>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+
+    <record id="view_sig_request_cards_search" model="ir.ui.view">
+        <field name="name">sig.request.cards.search</field>
+        <field name="model">sig.request.cards</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="full_name"/>
+                <field name="national_id"/>
+                <field name="phone_number"/>
+                <field name="job_code"/>
+
+                <filter name="filter_draft" string="Draft" domain="[('status','=','draft')]"/>
+                <filter name="filter_print" string="Print" domain="[('status','=','print')]"/>
+                <filter name="filter_sent" string="Sent" domain="[('status','=','sent')]"/>
+                <separator/>
+                <filter name="filter_duplicate" string="Duplicates" domain="[('is_duplicate','=',True)]"/>
+
+                <group expand="1" string="Group By">
+                    <filter name="group_by_for_organization" string="Organization"
+                            context="{'group_by':'for_organization'}"/>
+                    <filter name="group_by_status" string="Status" domain="[]"
+                            context="{'group_by':'status'}"/>
+                    <filter name="group_by_is_duplicate" string="Is Duplicate?" domain="[]"
+                            context="{'group_by':'is_duplicate'}"/>
+                    <separator/>
+                    <filter name="group_by_position" string="Job Position" domain="[]"
+                            context="{'group_by':'job_position_id'}"/>
+                    <filter name="group_by_grade" string="Job Grade" domain="[]"
+                            context="{'group_by':'job_grade_id'}"/>
+                    <filter name="group_by_governorate" string="Governorate" domain="[]"
+                            context="{'group_by':'governorate_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_request_card_in_review" model="ir.actions.server">
+        <field name="name">In Review Request Card</field>
+        <field name="model_id" ref="model_sig_request_cards"/>
+        <field name="binding_model_id" ref="model_sig_request_cards"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.request_card_in_review()
+        </field>
+    </record>
+
+    <record id="action_request_card_reviewed" model="ir.actions.server">
+        <field name="name">Review Request Card</field>
+        <field name="model_id" ref="model_sig_request_cards"/>
+        <field name="binding_model_id" ref="model_sig_request_cards"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.request_card_reviewed()
+        </field>
+    </record>
+
+    <record id="action_request_card_hold" model="ir.actions.server">
+        <field name="name">Hold Request Card</field>
+        <field name="model_id" ref="model_sig_request_cards"/>
+        <field name="binding_model_id" ref="model_sig_request_cards"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.request_card_hold()
+        </field>
+    </record>
+
+    <record id="action_request_card_cancelled" model="ir.actions.server">
+        <field name="name">Cancel Request Card</field>
+        <field name="model_id" ref="model_sig_request_cards"/>
+        <field name="binding_model_id" ref="model_sig_request_cards"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.request_card_cancelled()
+        </field>
+    </record>
+
+
+    <record id="action_request_card_print" model="ir.actions.server">
+        <field name="name">Print Request Card</field>
+        <field name="model_id" ref="model_sig_request_cards"/>
+        <field name="binding_model_id" ref="model_sig_request_cards"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.request_card_print()
+        </field>
+    </record>
+
+    <record id="action_request_card_sent" model="ir.actions.server">
+        <field name="name">Send Request Card</field>
+        <field name="model_id" ref="model_sig_request_cards"/>
+        <field name="binding_model_id" ref="model_sig_request_cards"/>
+        <field name="state">code</field>
+        <field name="code">
+            records.request_card_sent()
+        </field>
+    </record>
+
+    <record id="action_request_card_export_excel" model="ir.actions.server">
+        <field name="name">Export to Excel (Including Images)</field>
+        <field name="model_id" ref="model_sig_request_cards"/>
+        <field name="binding_model_id" ref="model_sig_request_cards"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.request_card_export_excel()
+        </field>
+    </record>
+
+    <record id="action_request_card_export_excel_separate_images" model="ir.actions.server">
+        <field name="name">Export to Excel (Separate Image Files)</field>
+        <field name="model_id" ref="model_sig_request_cards"/>
+        <field name="binding_model_id" ref="model_sig_request_cards"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.request_card_export_excel_separate_images()
+        </field>
+    </record>
+
+    <record id="action_sig_request_cards_view" model="ir.actions.act_window">
+        <field name="name">Request Cards</field>
+        <field name="res_model">sig.request.cards</field>
+        <field name="view_mode">list,kanban,form</field>
+        <field name="context">{'delete': 0}</field>
+        <field name="search_view_id" ref="view_sig_request_cards_search"/>
+    </record>
+
+</odoo>

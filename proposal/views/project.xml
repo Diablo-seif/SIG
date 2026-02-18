@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="project_project_form" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="hr_timesheet.project_invoice_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='name']" position="before">
+                <field name="code" placeholder="Code" required="1" class="w-25"/>
+                <field name="proposal_id" invisible="1"/>
+            </xpath>
+
+            <xpath expr="//field[@name='company_id']" position="after">
+                <label for="amendment_date" string="Amendment Date"/>
+                <div class="o_row">
+                    <field name="amendment_duration"/>
+                    <span class="oe_form_field">Days</span>
+                    <field name="amendment_date"/>
+                </div>
+                <label for="actual_start_date" string="Actual Date"/>
+                <div class="o_row">
+                    <field name="actual_start_date"/>
+                    <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow"/>
+                    <field name="actual_end_date"/>
+                </div>
+                <field name="project_progress_status"/>
+            </xpath>
+
+            <!--            <field name="name" position="before">-->
+            <!--                <field name="code" placeholder="Code" required="1" class="w-25"/>-->
+            <!--                <field name="proposal_id" invisible="1"/>-->
+            <!--            </field>-->
+            <!--            <div name="dates" position="after">-->
+            <!--                <label for="amendment_date" string="Amendment Date"/>-->
+            <!--                <div class="o_row">-->
+            <!--                    <field name="amendment_duration"/>-->
+            <!--                    <span class="oe_form_field">Days</span>-->
+            <!--                    <field name="amendment_date"/>-->
+            <!--                </div>-->
+            <!--                <label for="actual_start_date" string="Actual Date"/>-->
+            <!--                <div name="dates" class="o_row">-->
+            <!--                    <field name="actual_start_date"/>-->
+            <!--                    <i class="fa fa-long-arrow-right mx-2 oe_edit_only" aria-label="Arrow icon" title="Arrow"/>-->
+            <!--                    <field name="actual_end_date"/>-->
+            <!--                </div>-->
+            <!--                <field name="project_progress_status"/>-->
+            <!--            </div>-->
+        </field>
+    </record>
+
+    <record id="project_project_view_form_simplified_footer" model="ir.ui.view">
+        <field name="name">project.project.form</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.project_project_view_form_simplified_footer"/>
+        <field name="arch" type="xml">
+            <button name="action_view_tasks" position="after">
+                <button string="Create project From proposal" name="create_project_from_proposal" type="object"
+                        class="btn-primary o_open_tasks" data-hotkey="p"/>
+            </button>
+        </field>
+    </record>
+
+    <record id="project_task_tree" model="ir.ui.view">
+        <field name="name">project.task.tree</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="hr_timesheet.view_task_tree2_inherited"/>
+        <field name="arch" type="xml">
+            <field name="progress" position="after">
+                <field name="weight" widget="percentage"/>
+            </field>
+        </field>
+    </record>
+
+
+</odoo>

@@ -1,0 +1,763 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_insurance_enroll_form
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200701\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-20 13:29+0000\n"
+"PO-Revision-Date: 2020-08-30 18:44+0000\n"
+"Last-Translator: Abdalla Mohamed <abdalla.mohamed@core-bpo.com>\n"
+"Language-Team: Arabic <http://weblate.staging.core-bpo.net/projects/"
+"hr-product/hr_insurance_enroll_form/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.0.4\n"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "( Look behind paper )"
+msgstr "( انظر خلفه )"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid ") Ministerial Decree No. ("
+msgstr ") قرار وزاري رقم ("
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid ") of"
+msgstr ") لسنة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "<strong>After</strong>"
+msgstr "<strong>بعد</strong>"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "<strong>Before</strong>"
+msgstr "<strong>قبل</strong>"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "<strong>Total</strong>"
+msgstr "<strong>الإجمالي</strong>"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء مطلوب"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "شكل استثناء النشاط"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Activity start date :"
+msgstr "بدء النشاط :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Area :"
+msgstr "منطقة :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Automatically recorded :"
+msgstr "سجل ألياَ:"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields.selection,name:hr_insurance_enroll_form.selection__hr_insurance_enroll_form__insurance_type__branch
+msgid "Branch"
+msgstr "الفرع"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Building number :"
+msgstr "رقم العقار :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.create_enroll_form_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields.selection,name:hr_insurance_enroll_form.selection__hr_insurance_enroll_form__state__canceled
+msgid "Canceled"
+msgstr "ألغيت"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields.selection,name:hr_insurance_enroll_form.selection__hr_insurance_enroll_form__insurance_type__centralized
+msgid "Centralized"
+msgstr "مركزي"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Check back automatically :"
+msgstr "روجع ألياَ :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields.selection,name:hr_insurance_enroll_form.selection__hr_insurance_enroll_form__state__confirmed
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.actions.act_window,name:hr_insurance_enroll_form.create_enroll_form_action
+#: model:ir.model,name:hr_insurance_enroll_form.model_create_enroll_form
+msgid "Create Enroll Form"
+msgstr "إنشاء تقرير التأمين الاجتماعي"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.create_enroll_form_form
+msgid "Create Form"
+msgstr "إنشاء التقرير"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__create_uid
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__create_uid
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__create_date
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__create_date
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Day"
+msgstr "اليوم"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Disease insurance ratio :"
+msgstr "نسبة تأمين المرض :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__display_name
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__display_name
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Done in :"
+msgstr "تحريرا في :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields.selection,name:hr_insurance_enroll_form.selection__hr_insurance_enroll_form__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model,name:hr_insurance_enroll_form.model_hr_employee
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_form
+msgid "Employee Details"
+msgstr "بيانات الموظفين"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__employees_count
+msgid "Employees Count"
+msgstr "عدد الموظفين"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Employer or responsible manager :"
+msgstr "صاحب العمل أو المدير المسؤول :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__facility_number
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Facility Number"
+msgstr "رقم المنشأة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Facility Subscription Application"
+msgstr "طلب اشتراك منشأة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Facility address :"
+msgstr "عنوان المنشأة :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Facility name :"
+msgstr "اسم المنشأة :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Facility tax registration number :"
+msgstr "رقم تسجيل ضريبة المنشأة :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields.selection,name:hr_insurance_enroll_form.selection__create_enroll_form__method__fixed
+msgid "Fixed"
+msgstr "ثابت"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__form_id
+msgid "Form"
+msgstr "نموذج"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__form_date
+msgid "Form Date"
+msgstr "تاريخ النموذج"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__form_line_ids
+msgid "Form Line"
+msgstr "سطرالنموذج"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__form_number
+msgid "Form Number"
+msgstr "نموذج رقم"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Gross"
+msgstr "الأجر الشامل"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__gross_salary
+msgid "Gross Salary"
+msgstr "الراتب الشهري"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "I acknowledge"
+msgstr "أقر أنا"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__id
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__id
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__identification_id
+msgid "Identification"
+msgstr "القومي"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Identification Number"
+msgstr "الرقم القومي"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_needaction
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_has_error
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Injury insurance ratio :"
+msgstr "نسبة تأمين الإصابة :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__insurance_date
+msgid "Insurance Date"
+msgstr "تاريخ التأمين"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.actions.act_window,name:hr_insurance_enroll_form.hr_insurance_enroll_form_action
+#: model:ir.actions.report,name:hr_insurance_enroll_form.hr_insurance_enroll_form_report
+#: model:ir.model,name:hr_insurance_enroll_form.model_hr_insurance_enroll_form
+#: model:ir.ui.menu,name:hr_insurance_enroll_form.hr_insurance_enroll_form_menu
+msgid "Insurance Enroll Form"
+msgstr "نموذج التأمينات الاجتماعية"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model,name:hr_insurance_enroll_form.model_hr_insurance_enroll_form_line
+msgid "Insurance Enroll Form Line"
+msgstr "أسطر نموذج التأمينات الاجتماعية"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__insurance_name
+msgid "Insurance Name"
+msgstr "الاسم التأميني"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__insurance_number
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__insurance_number
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Insurance Number"
+msgstr "الرقم التأميني"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__insurance_office_id
+msgid "Insurance Office"
+msgstr "مكتب التأمين"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__insurance_owner
+msgid "Insurance Owner"
+msgstr "المالك"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__insurance_owner_position
+msgid "Insurance Owner Position"
+msgstr "وظيفة المالك"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__insurance_sector_ids
+msgid "Insurance Sector"
+msgstr "قطاع التأمين"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__insurance_type
+msgid "Insurance Type"
+msgstr "نوع التأمين"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Insured"
+msgstr " الأجر التأميني"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__insured_salary
+msgid "Insured Salary"
+msgstr "الراتب التأميني"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Joining Date"
+msgstr "تاريخ الالتحاق"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form____last_update
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form____last_update
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__write_uid
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__write_uid
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__write_date
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__write_date
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__legal_firm_id
+msgid "Legal Firm"
+msgstr "الشكل القانوني"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Legal firm of the facility :"
+msgstr "الشكل القانوني للمنشأة :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__method
+msgid "Method"
+msgstr "طريقة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__ministerial_decree_number
+msgid "Ministerial Decree Number"
+msgstr "قرار مجلس الوزراء رقم"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__ministerial_decree_year
+msgid "Ministerial Decree Year"
+msgstr "سنة القرار الوزاري"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Model No. ("
+msgstr "نموذج رقم ("
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Month"
+msgstr "الشهر"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "National Authority for Insurance"
+msgstr "الهيئة القومية للتأمين الاجتماعي"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Office :"
+msgstr "مكتب :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid ""
+"Or notification of modifying the data of the insured\n"
+"                    and their wages in"
+msgstr ""
+"أو إخطار تعديل بيانات المؤمن عليهم\n"
+"                        وأجورهم في"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Owner / Responsible Manager :"
+msgstr "المالك / المدير المسئول :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields.selection,name:hr_insurance_enroll_form.selection__create_enroll_form__method__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Piaster"
+msgstr "قرش"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Police center :"
+msgstr "القسم / المركز :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Pound"
+msgstr "جنيه"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__received_date
+msgid "Received Date"
+msgstr "تاريخ الوارد"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__received_number
+msgid "Received Number"
+msgstr "رقم الوارد"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Recipient of the form :"
+msgstr "مستلم الاستمارة :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_create_enroll_form__round_value
+msgid "Round Value"
+msgstr "قيمة التقريب"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_form
+msgid "Set to Draft"
+msgstr "تعيين إلى مسودة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Signature matched by :"
+msgstr "تمت مطابقة التوقيع بمعرفتي :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "State :"
+msgstr "المحافظة :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Stop / continue date :"
+msgstr "تاريخ التوقف / الاستمرار :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Stop reason :"
+msgstr "سبب التوقف :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Street :"
+msgstr "اسم الشارع :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Subscription Specialist :"
+msgstr "أخصائي الاشتراك :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "The date the ratio began :"
+msgstr "تاريخ بدء النسبة :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "The name of the insured"
+msgstr "اسم المؤمن عليه"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي."
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Village :"
+msgstr "الشياخة / القرية :"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,field_description:hr_insurance_enroll_form.field_hr_insurance_enroll_form__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_insurance_enroll_form
+#: model:ir.model.fields,help:hr_insurance_enroll_form.field_hr_insurance_enroll_form__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Worker"
+msgstr "عاملا"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "Workers"
+msgstr "عمال"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.hr_insurance_enroll_form_template
+msgid "Year"
+msgstr "السنة"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid ""
+"and all data in this form and its attachments\n"
+"                                are correct"
+msgstr ""
+"وأن جميع البيانات الواردة بهذه الاستمارة وملحقاتها\n"
+"                        صحيحة (الأجر الشامل لحساب اشتراكات التأمين الصحي الشامل)"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "and this month's wages are :"
+msgstr "وأن أجور الشهر الحالي :"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "as"
+msgstr "بصفتي"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid "that the total number of the insured"
+msgstr "بأن إجمالي أعداد المؤمن عليهم"
+
+#. module: hr_insurance_enroll_form
+#: model_terms:ir.ui.view,arch_db:hr_insurance_enroll_form.enroll_form_layout
+msgid ""
+"the data of this application were reviewed on\n"
+"                                the insured's applications and found to be\n"
+"                                correct"
+msgstr ""
+"روجعت بيانات هذا الطلب على\n"
+"                           طلبات اشتراك المؤمن عليهم ووجدت صحيحة"

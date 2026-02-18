@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_employee_overtime_form" model="ir.ui.view">
+        <field name="name">hr.employee.overtime.form</field>
+        <field name="model">hr.employee.overtime</field>
+        <field name="inherit_id" ref="aspl_hr_overtime_ee.aspl_hr_employee_overtime_from_view"/>
+        <field name="arch" type="xml">
+            <field name="overtime" position="after">
+                <field name="overtime_type"/>
+                <field name="overtime_leave_type_id"
+                       invisible="overtime_type = 'base_on_salary'"
+                       options="{'no_open': True, 'no_create': True}"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>

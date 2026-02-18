@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="line_template_budget_report" inherit_id="account_reports.line_template" primary="True">
+        <xpath expr="//div[hasclass('o_account_reports_domain_dropdown')]/*[last()]" position="before">
+            <t t-if="line['caret_options'] == 'budget'">
+                <a role="menuitem" tabindex="-1" t-att-data-id="line['id']" action="view_general_ledger" class="dropdown-item">General Ledger</a>
+                <a role="menuitem" tabindex="-1" t-att-data-id="line['id']" action="open_journal_entry" class="dropdown-item">Journal Items</a>
+            </t>
+        </xpath>
+    </template>
+</odoo>

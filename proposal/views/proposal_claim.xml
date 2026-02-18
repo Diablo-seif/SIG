@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="proposal_claim_form" model="ir.ui.view">
+        <field name="name">proposal.claim.form</field>
+        <field name="model">proposal.claim</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_propose" string="submit" type="object" invisible="state != 'draft'"
+                            class="oe_highlight"/>
+                    <button name="action_done" string="Done" type="object" invisible="state != 'propose'"
+                            class="oe_highlight"/>
+                    <button name="action_vendor_claim" string="Vendor Claim" type="object" invisible="state != 'done'"
+                            class="oe_highlight"/>
+                    <button name="action_create_invoice" string="Create Invoice" type="object"
+
+                            invisible="state != 'done'   or move_ids"
+                            class="oe_highlight"/>
+
+                    <field name="state" widget="statusbar" statusbar_visible="draft,propose,done"/>
+                </header>
+                <sheet>
+                    <div name="button_box" class="oe_button_box">
+                        <button name="action_view_vendor_claim" type="object" class="oe_stat_button"
+                                icon="fa-pencil-square-o" invisible="not vendor_claim_ids">
+                            <field name="vendor_claim_ids" string="Vendor Claim" widget="statinfo"/>
+                        </button>
+                        <button name="action_view_invoices" string="Invoices" type="object" class="oe_stat_button"
+                                icon="fa-pencil-square-o">
+                            <field name="move_ids" string="Invoices" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group class="o_label_nowrap">
+                        <group>
+                            <field name="proposal_id" readonly="state != 'draft'"
+                                   domain="[('state', '=', 'done'), ('sale_ids', '!=',False), ('financial_progress', '!=', 1)]"/>
+                            <field name="partner_id"/>
+                            <field name="analytic_account_id"/>
+                        </group>
+                        <group>
+                            <field name="claim_date" readonly="state != 'draft'"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="lines" string="Lines">
+                            <field name="line_ids" readonly="state == 'draft'">
+                                <list editable="bottom">
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="proposal_line_id" invisible="1" force_save="1"/>
+                                    <field name="product_id" readonly="1" force_save="1"/>
+                                    <field name="name" readonly="1" force_save="1"/>
+                                    <field name="uom_id" readonly="1" force_save="1"/>
+                                    <field name="original_qty" readonly="1" force_save="1" optional="show"
+                                           sum="Original Qty"/>
+                                    <field name="previous_qty" readonly="1" force_save="1" optional="show"
+                                           sum="Previous Qty"/>
+                                    <field name="remaining_qty" readonly="1" force_save="1" optional="show"
+                                           sum="Remaining Qty"/>
+                                    <field name="current_qty_percentage" widget="percentage" force_save="1"
+                                           readonly="cumulative_percentage" optional="show"/>
+                                    <field name="current_qty" force_save="1" readonly="cumulative_percentage"
+                                           optional="show" sum="Current Qty"/>
+                                    <field name="cumulative_qty" readonly="1" force_save="1" optional="show"
+                                           sum="Cumulative Qty"/>
+                                    <field name="cumulative_percentage" widget="percentage" readonly="1" force_save="1"
+                                           optional="show"/>
+                                    <field name="current_amount" readonly="1" force_save="1" optional="show"
+                                           sum="Current Amount"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="proposal_claim_tree" model="ir.ui.view">
+        <field name="name">proposal.claim.tree</field>
+        <field name="model">proposal.claim</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="claim_date"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="proposal_claim_action" model="ir.actions.act_window">
+        <field name="name">Proposal Claims</field>
+        <field name="res_model">proposal.claim</field>
+        <field name="view_mode">list,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new document
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="proposal_claim_menu"
+              name="Proposal Claims"
+              action="proposal_claim_action"
+              parent="proposal_root_menu"
+              sequence="10"/>
+
+</odoo>

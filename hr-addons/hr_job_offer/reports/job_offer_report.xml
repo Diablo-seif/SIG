@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="job_offer_template_id">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="hr_job_offer.job_offer_layout">
+                    <div class="page">
+                        <t t-if="o.applicant_id">
+                            <strong>
+                                <div>
+                                    <P>
+                                        Dear <t t-esc="o.applicant_id.partner_name or ''"/>,<br/>
+                                        <t t-esc="res_company.name"/> is delighted to offer you a <t t-esc="o.applicant_id.job_id.contract_type_id.name"/> position as <t t-esc="o.applicant_id.job_id.name"/> with an anticipated start date <t t-esc="o.applicant_id.availability and o.applicant_id.availability.strftime('%d,%b %Y') or ''"/>.
+                                    </P>
+                                    <p>
+                                        Please confirm your acceptance of this offer by signing and returning this letter before <t t-esc="o.validity_date and o.validity_date.strftime('%d,%b %Y') or ''"/>
+                                    </p>
+                                </div>
+                            </strong>
+                            <table class="table table-bordered">
+                                <tr>
+                                    <th colspan="2">Name</th>
+                                    <td colspan="4"><t t-esc="o.applicant_id.partner_name"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Nationality</th>
+                                    <td colspan="6"><t t-esc="o.applicant_id.country_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Job Title</th>
+                                    <td colspan="6"><t t-esc="o.applicant_id.job_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Reporting To</th>
+                                    <td colspan="6"><t t-esc="o.applicant_id.department_id.manager_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th width="20%" colspan="2">Job Grade</th>
+                                    <td width="30%" colspan="1"><t t-esc="o.applicant_id.job_id.job_level_id.name or ''"> </t></td>
+                                    <th width="20%" colspan="1">Location</th>
+                                    <td width="30%" colspan="4"><t t-esc="o.applicant_id.address_id.country_id.name"/>, <t t-esc="o.applicant_id.address_id.state_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Contract Type</th>
+                                    <td colspan="6"><t t-esc="o.applicant_id.job_id.contract_type_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Work Start Date</th>
+                                    <td colspan="6"><t t-esc="o.applicant_id.availability and o.applicant_id.availability.strftime('%d,%b %Y') or o.applicant_id.availability"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Monthly Salary</th>
+                                    <td colspan="6"><t t-esc="o.applicant_id.salary_proposed"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Social Insurance</th>
+                                    <td colspan="1">Effective from starting date</td>
+                                    <th colspan="1">Medical Insurance</th>
+                                    <td colspan="4">Self after probation period</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Working Days</th>
+                                    <td colspan="6"><t t-esc="o.applicant_id.resource_calendar_id.name"/></td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Annual Leaves</th>
+                                    <td colspan="6">As per <t t-esc="res_company.country_id and res_company.country_id.name or ''"/> labor law</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Probation Period</th>
+                                    <td colspan="6">the duration of probation period is 90 days</td>
+                                </tr>
+                                <tr>
+                                    <th colspan="2">Offer Validity</th>
+                                    <td colspan="6"> If this offer letter has not been received back signed before <t t-esc="o.validity_date and o.validity_date.strftime('%d,%b %Y') or ''"/>, it will be automatically assumed that you are no longer interested in the position and the offer will be null and void.</td>
+                                </tr>
+                            </table>
+                            <t t-if="o.applicant_id.sign_signature">
+                                <table class="table">
+                                    <thead class="thead-dark">
+                                        <tr>
+                                            <th width="20%" class="text-center">APPROVALS</th>
+                                            <th width="40%" class="text-center">SIGNATURE</th>
+                                            <th width="40%" class="text-center">DATE</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+
+                                            <td>HR Director</td>
+                                            <td><img t-attf-src="data:image/*;base64,{{o.applicant_id.sign_signature}}" style="width: 150px"/> </td>
+                                            <td class="text-center"><t t-esc="time.strftime('%d,%b %Y')"/></td>
+                                        </tr>
+                                        <tr>
+                                            <td>Applicant</td>
+                                            <td></td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </t>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="paperformat_job_offer" model="report.paperformat">
+        <field name="name">Custom A4</field>
+        <field name="default" eval="True" />
+        <field name="format">A4</field>
+        <field name="page_height">0</field>
+        <field name="page_width">0</field>
+        <field name="orientation">Portrait</field>
+        <field name="margin_top">40</field>
+        <field name="margin_bottom">20</field>
+        <field name="margin_left">7</field>
+        <field name="margin_right">7</field>
+        <field name="header_line" eval="False" />
+        <field name="header_spacing">35</field>
+        <field name="dpi">90</field>
+    </record>
+
+    <record id="job_offer_report" model="ir.actions.report">
+        <field name="name">Hr Job Offer</field>
+        <field name="model">hr.job.offer</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_job_offer.job_offer_template_id</field>
+        <field name="report_file">hr_job_offer.job_offer_template_id</field>
+        <field name="binding_type">report</field>
+        <field name="attachment_use" eval="True"/>
+        <field name="attachment">('%s Job Offer' % object.applicant_id.job_id and object.applicant_id.job_id.name or '')</field>
+        <field name="print_report_name">('%s Job Offer' % object.applicant_id.job_id and object.applicant_id.job_id.name or '')</field>
+        <field name="binding_model_id" ref="model_hr_job_offer"/>
+        <field name="groups_id" eval="[(4, ref('hr_job_offer.group_generate_job_offer'))]"/>
+        <field name="paperformat_id" ref="paperformat_job_offer"/>
+    </record>
+
+</odoo>

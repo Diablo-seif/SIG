@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="action_reason_tree" model="ir.ui.view">
+        <field name="name">action.reason.tree</field>
+        <field name="model">action.reason</field>
+        <field name="arch" type="xml">
+            <list editable="top">
+                <field name="name"/>
+                <field name="res_model" invisible="1"/>
+                <field name="model_id" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_reason_search" model="ir.ui.view">
+        <field name="name">action.reason.search</field>
+        <field name="model">action.reason</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="model_id"/>
+                <filter string="Model" name="group_model_id" context="{'group_by':'model_id'}"/>
+            </search>
+        </field>
+    </record>
+
+
+</odoo>

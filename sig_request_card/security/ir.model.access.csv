@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sig_job_position_user,model_sig_job_position,model_sig_job_position,,1,1,1,1
+access_sig_job_grade_user,model_sig_job_grade,model_sig_job_grade,,1,1,1,1
+access_request_card_governorate_user,model_request_card_governorate,model_request_card_governorate,,1,1,1,1
+access_request_card_associated_company_user,model_request_card_associated_company,model_associated_company,,1,1,1,1
+access_sig_request_cards_user,model_sig_request_cards,model_sig_request_cards,sig_request_card.group_access_request_card,1,0,0,0
+access_sig_request_cards_creation,create_model_sig_request_cards,model_sig_request_cards,sig_request_card.group_create_request_card,1,1,1,1

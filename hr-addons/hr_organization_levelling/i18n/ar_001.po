@@ -1,0 +1,149 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_organization_levelling
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-13 07:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_organization_levelling
+#: code:addons/hr_organization_levelling/models/hr_job_level.py:0
+#, python-format
+msgid "%s levelling cannot exceed %s levels"
+msgstr "%s المستويات لا يمكن أن تكون أكثر من %s مستويات"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: hr_organization_levelling
+#: model:ir.model,name:hr_organization_levelling.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_organization_levelling
+#: model:ir.model,name:hr_organization_levelling.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_organization_levelling
+#: model:ir.model,name:hr_organization_levelling.model_hr_job_level
+msgid "Job Level"
+msgstr "مستوى الوظيفة"
+
+#. module: hr_organization_levelling
+#: model:ir.actions.act_window,name:hr_organization_levelling.hr_job_level_action
+#: model:ir.ui.menu,name:hr_organization_levelling.hr_job_level_menu
+msgid "Job Levels"
+msgstr "مستويات الوظائف"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__level
+msgid "Level"
+msgstr "مستوى"
+
+#. module: hr_organization_levelling
+#: model:ir.model.constraint,message:hr_organization_levelling.constraint_hr_job_level_unique_level
+msgid "Level must be unique"
+msgstr "المستوى يجب أن لا يكون مكرر"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields.selection,name:hr_organization_levelling.selection__hr_job_level__schema__mid
+msgid "Mid Management"
+msgstr "الإدارة الوسطى"
+
+#. module: hr_organization_levelling
+#: model:ir.model.constraint,message:hr_organization_levelling.constraint_hr_job_level_unique_name
+msgid "Name must be unique"
+msgstr "الاسم يجب أن يكون غير مكرر"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_res_company__organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_res_config_settings__organization_levelling
+#: model_terms:ir.ui.view,arch_db:hr_organization_levelling.res_config_settings_organization_levelling_form
+msgid "Organization Levelling"
+msgstr "مستويات الشركة"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__schema
+msgid "Schema"
+msgstr "مخطط"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields.selection,name:hr_organization_levelling.selection__hr_job_level__schema__staff
+msgid "Staff"
+msgstr "طاقم"
+
+#. module: hr_organization_levelling
+#: code:addons/hr_organization_levelling/models/res_config_settings.py:0
+#, python-format
+msgid "The organization levelling cannot be a negative number."
+msgstr "رقم المستوى لا يمكن أن يكون قيمة سالبة."
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,help:hr_organization_levelling.field_res_config_settings__organization_levelling
+#: model_terms:ir.ui.view,arch_db:hr_organization_levelling.res_config_settings_organization_levelling_form
+msgid ""
+"This Configuration to ensure that organization levels wont exceed the "
+"selected level"
+msgstr "هذا الإعداد للتاكد من ان مستويات المؤسسة لن تتجاوز المستوي المحدد"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields,field_description:hr_organization_levelling.field_hr_job_level__name
+msgid "Title"
+msgstr "العنوان"
+
+#. module: hr_organization_levelling
+#: model:ir.model.fields.selection,name:hr_organization_levelling.selection__hr_job_level__schema__top
+msgid "Top Management"
+msgstr "الإدارة العليا"

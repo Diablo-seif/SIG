@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="rule_hr_payroll_deduction_access_tags" model="ir.rule">
+        <field name="name">Payroll Deduction Access Tags</field>
+        <field name="model_id" ref="sig_payroll.model_hr_payroll_deduction"/>
+        <field name="domain_force">[('employee_id.access_tags_ids', 'in', user.access_tags_ids.ids)]</field>
+    </record>
+</odoo>

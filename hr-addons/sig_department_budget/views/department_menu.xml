@@ -1,0 +1,16 @@
+<odoo>
+
+    <menuitem id="department_kanban_view"
+              name="Departments"
+              action="hr.hr_department_kanban_action"
+              parent="hr.menu_hr_department_kanban"
+              sequence="1"/>
+
+    <menuitem id="salary_budget_menu"
+              name="Salary Budget"
+              action="department_budget_line_action"
+              parent="hr.menu_hr_department_kanban"
+              groups="group_access_department_budget"
+              sequence="2"/>
+
+</odoo>

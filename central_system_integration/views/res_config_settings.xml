@@ -1,0 +1,27 @@
+<odoo>
+    <record id="res_config_settings_organization_integration_token_form" model="ir.ui.view">
+        <field name="name">res.config.settings.integration.token.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="base_setup.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//div[hasclass('app_settings_block')]/div[2]" position="inside">
+                <h2>Central System Integration</h2>
+                <div class="row mt16 o_settings_container" id="div_website_payment">
+                    <div class="col-12 col-lg-6 o_setting_box" id="website_payment">
+                        <div class="o_setting_right_pane">
+                            <label for="company_id" string="Generate integration token and send it to central system" />
+                            <div class="content-group">
+                                <div class="row mt8 ms-4">
+                                    <button name="action_generate_token" type="object"
+                                        string="Generate Token"
+                                        class="btn-primary col-auto"
+                                        confirm="Are you sure you want to generate a new token? (The current token will no longer work.)" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,368 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-10 00:25+0000\n"
+"PO-Revision-Date: 2020-11-10 00:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_eg
+#: model:ir.model,name:l10n_eg.model_account_chart_template
+msgid "Account Chart Template"
+msgstr "قالب مخطط الحساب"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_brokerage
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_brokerage
+msgid "Agency Commission and Brokerage Deduction TAX"
+msgstr "ضريبه خصم الوكالة بالعمولة و السمسرة"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_brokerage
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_brokerage
+msgid ""
+"Agency Commission and Brokerage Withholding TAX\n"
+"        "
+msgstr "ضريبه تحصيل الوكالة بالعمولة و السمسرة"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_oil_discounts
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_oil_discounts
+msgid ""
+"All discounts, grants and commissions granted by oil\n"
+"            companies to their distributors - Deduction TAX\n"
+"        "
+msgstr ""
+"الخصومات و المنح و العمولات والحوافز الاستثنائيه والاضافيه التي تمنحها شركات"
+" الدخان والاسمدة والاسمنت - ضريبة خصم"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_oil_discounts
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_oil_discounts
+msgid ""
+"All discounts, grants and commissions granted by oil\n"
+"            companies to their distributors - Withholding TAX\n"
+"        "
+msgstr ""
+"الخصومات و المنح و العمولات والحوافز الاستثنائيه والاضافيه التي تمنحها شركات"
+" الدخان والاسمدة والاسمنت - ضريبة تحصيل"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_contracting
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_contracting
+msgid "Contracting Deduction TAX"
+msgstr "ضريبة خصم مقاولات"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_contracting
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_contracting
+msgid "Contracting Withholding TAX"
+msgstr "ضريبة تحصيل مقاولات"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_courts_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_courts_collecting
+msgid ""
+"Courts Collecting from lawyers Deduction TAX\n"
+"        "
+msgstr "ضريبة خصم تحصيل المستشفيات من الاطباء"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_courts_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_courts_collecting
+msgid ""
+"Courts Collecting from lawyers Withholding TAX\n"
+"        "
+msgstr "ضريبة تحصيل - تحصيل المستشفيات من الاطباء"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_customs_clearance
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_customs_clearance
+msgid "Customs Clearance Deduction TAX"
+msgstr "تخليص جمركي"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_customs_clearance
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_customs_clearance
+msgid "Customs Clearance Withholding TAX"
+msgstr "ضريبة خصم تخليص جمركي"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_customs_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_customs_collecting
+msgid "Customs Collecting Deduction TAX"
+msgstr "ضريبة تحصيل تحصيل الجمارك"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_customs_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_customs_collecting
+msgid "Customs Collecting Withholding TAX"
+msgstr "ضريبة تحصيل - تحصيل الجمارك"
+
+#. module: l10n_eg
+#: model:ir.model.fields,field_description:l10n_eg.field_account_tax_template__deduction_code
+msgid "Deduction Code"
+msgstr "كود الخصم"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_smoke_fertilizer
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_smoke_fertilizer
+msgid ""
+"Discounts, grants, commissions and exceptional\n"
+"            incentives granted by smoke and fertilizer companies - Deduction TAX\n"
+"        "
+msgstr ""
+"ضريبة خصم الخصومات و المنح و العمولات والحوافز الاستثنائيه والاضافيه التي "
+"تمنحها شركات الدخان والاسمدة والاسمنت"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_smoke_fertilizer
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_smoke_fertilizer
+msgid ""
+"Discounts, grants, commissions and exceptional\n"
+"            incentives granted by smoke and fertilizer companies - Withholding\n"
+"            TAX\n"
+"        "
+msgstr ""
+"ضريبة تحصيل الخصومات و المنح و العمولات والحوافز الاستثنائيه والاضافيه التي "
+"تمنحها شركات الدخان والاسمدة والاسمنت"
+
+#. module: l10n_eg
+#: model:ir.model.fields,field_description:l10n_eg.field_account_chart_template__display_name
+#: model:ir.model.fields,field_description:l10n_eg.field_account_tax_template__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_exports
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_exports
+msgid ""
+"Export subsidies granted by the Export Development\n"
+"            Fund to the exporter as of 27-5-2013 - Deduction TAX\n"
+"        "
+msgstr ""
+"ضريبة خصم مساندة دعم الصادرات التي يمنحها صندوق تنمية الصادرات للمصدر اعتبار"
+" من 27-5-2013"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_exports
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_exports
+msgid ""
+"Export subsidies granted by the Export Development\n"
+"            Fund to the exporter as of 27-5-2013 - Withholding TAX\n"
+"        "
+msgstr ""
+"ضريبة خصم مساندة دعم الصادرات التي يمنحها صندوق تنمية الصادرات للمصدر اعتبار"
+" من 27-5-2013"
+
+#. module: l10n_eg
+#: model:res.country.group,name:l10n_eg.exports
+msgid "Exports"
+msgstr "صادرات"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_hospitals_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_hospitals_collecting
+msgid ""
+"Hospitals Collecting from Doctors Deduction TAX\n"
+"        "
+msgstr "ضريبة خصم - تحصيل المستشفيات من الاطباء"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_hospitals_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_hospitals_collecting
+msgid ""
+"Hospitals Collecting from Doctors Withholding TAX\n"
+"        "
+msgstr "ضريبة تحصيل - تحصيل المستشفيات من الاطباء"
+
+#. module: l10n_eg
+#: model:ir.model.fields,field_description:l10n_eg.field_account_chart_template__id
+#: model:ir.model.fields,field_description:l10n_eg.field_account_tax_template__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: l10n_eg
+#: model:ir.model.fields,field_description:l10n_eg.field_account_chart_template____last_update
+#: model:ir.model.fields,field_description:l10n_eg.field_account_tax_template____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_licenses_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_licenses_collecting
+msgid "Licenses Collecting Deduction TAX"
+msgstr "ضريبة خصم - تحصيل التراخيص"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_licenses_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_licenses_collecting
+msgid "Licenses Collecting Withholding TAX"
+msgstr "ضريبة تحصيل - تحصيل التراخيص"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_professional_5
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_professional_5
+msgid "Professional service Deduction TAX - 5.00%"
+msgstr "ضريبه خصم اتعاب مهنية - 5.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_professional_5
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_professional_5
+msgid "Professional service Withholding TAX - 5.00%"
+msgstr "ضريبه تحصيل اتعاب مهنية - 5.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_purchases
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_purchases
+msgid "Purchases Deduction TAX"
+msgstr "ضريبة خصم مشتريات"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_purchases
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_purchases
+msgid "Purchases Withholding TAX"
+msgstr "ضريبة تحصيل مشتريات"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_service_3
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_service_3
+msgid "Service Deduction TAX - 3.00%"
+msgstr "ضريبه خصم خدمات - 3.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_service_3
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_service_3
+msgid "Service Withholding TAX - 3.00%"
+msgstr "ضريبه تحصيل خدمات - 3.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_slaughters_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_slaughters_collecting
+msgid "Slaughters Collecting Deduction TAX"
+msgstr "ضريبة خصم تحصيل مجازر"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_slaughters_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_slaughters_collecting
+msgid "Slaughters Collecting Withholding TAX"
+msgstr "ضريبة تحصيل - تحصيل مجازر"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_supply_1
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_supply_1
+msgid "Supply Deduction TAX - 1.00%"
+msgstr "ضريبه خصم توريدات - 1.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_supply_1
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_supply_1
+msgid "Supply Withholding TAX - 1.00%"
+msgstr "ضريبه تحصيل توريدات - 1.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_purchase_table_tax_10
+#: model:account.tax,name:l10n_eg.1_tax_template_sale_table_tax_10
+#: model:account.tax.template,name:l10n_eg.tax_template_purchase_table_tax_10
+#: model:account.tax.template,name:l10n_eg.tax_template_sale_table_tax_10
+msgid "Table TAX - 10.00%"
+msgstr "ضريبة الجدول - 10.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_purchase_table_tax_5
+#: model:account.tax,name:l10n_eg.1_tax_template_sale_table_tax_5
+#: model:account.tax.template,name:l10n_eg.tax_template_purchase_table_tax_5
+#: model:account.tax.template,name:l10n_eg.tax_template_sale_table_tax_5
+msgid "Table TAX - 5.00%"
+msgstr "ضريبة الجدول - 5.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_purchase_table_tax_8
+#: model:account.tax,name:l10n_eg.1_tax_template_sale_table_tax_8
+#: model:account.tax.template,name:l10n_eg.tax_template_purchase_table_tax_8
+#: model:account.tax.template,name:l10n_eg.tax_template_sale_table_tax_8
+msgid "Table TAX - 8.00%"
+msgstr "ضريبة الجدول - 8.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_purchase_tax_exemption
+#: model:account.tax,name:l10n_eg.1_tax_template_sale_tax_exemption
+#: model:account.tax.template,name:l10n_eg.tax_template_purchase_tax_exemption
+#: model:account.tax.template,name:l10n_eg.tax_template_sale_tax_exemption
+msgid "Tax Exemption"
+msgstr "الاعفاء الضريبى"
+
+#. module: l10n_eg
+#: model:ir.model.fields,field_description:l10n_eg.field_account_tax_template__name
+msgid "Tax Name"
+msgstr "اسم الضريبة"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_purchase_tax_exports_0
+#: model:account.tax,name:l10n_eg.1_tax_template_sale_tax_exports_0
+#: model:account.tax.template,name:l10n_eg.tax_template_purchase_tax_exports_0
+#: model:account.tax.template,name:l10n_eg.tax_template_sale_tax_exports_0
+msgid "Tax on Exports - 0%"
+msgstr "ضريبة القيمه المضافه على التصدير - 0.00%"
+
+#. module: l10n_eg
+#: model:ir.model,name:l10n_eg.model_account_tax_template
+msgid "Templates for Taxes"
+msgstr "قوالب الضرائب"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_cooperation_associations
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_cooperation_associations
+msgid ""
+"The amounts paid by the cooperation associations for\n"
+"            transportation by car... Deduction TAX\n"
+"        "
+msgstr ""
+"ضريبة الخصم المبالغ التي تدفعها الجمعيات التعاونيه للنقل بالسيارات ..."
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_cooperation_associations
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_cooperation_associations
+msgid ""
+"The amounts paid by the cooperation associations for\n"
+"            transportation by car... Withholding TAX\n"
+"        "
+msgstr ""
+"ضريبة التحصيل المبالغ التي تدفعها الجمعيات التعاونيه للنقل بالسيارات ..."
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_deduction_traffic_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_deduction_traffic_collecting
+msgid "Traffic Collecting Deduction TAX"
+msgstr "ضريبة خصم - تحصيل مرور"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_withholding_traffic_collecting
+#: model:account.tax.template,name:l10n_eg.tax_template_withholding_traffic_collecting
+msgid "Traffic Collecting Withholding TAX"
+msgstr "ضريبة تحصيل - تحصيل مرور"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_purchase_vat_tax_14
+#: model:account.tax,name:l10n_eg.1_tax_template_sale_vat_tax_14
+#: model:account.tax.template,name:l10n_eg.tax_template_purchase_vat_tax_14
+#: model:account.tax.template,name:l10n_eg.tax_template_sale_vat_tax_14
+msgid "VAT TAX - 14.00%"
+msgstr "ضريبة القيمة المضافة - 14.00%"
+
+#. module: l10n_eg
+#: model:account.tax,name:l10n_eg.1_tax_template_purchase_vat_tax_5
+#: model:account.tax,name:l10n_eg.1_tax_template_sale_vat_tax_5
+#: model:account.tax.template,name:l10n_eg.tax_template_purchase_vat_tax_5
+#: model:account.tax.template,name:l10n_eg.tax_template_sale_vat_tax_5
+msgid "VAT TAX - 5.00%"
+msgstr "ضريبة القيمة المضافة - 5.00%"

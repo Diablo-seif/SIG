@@ -1,0 +1,15 @@
+<odoo>
+
+   <record id="hr_contract_wage_eg_net_gross_action" model="ir.actions.server">
+        <field name="name">Calculate Egypt Net To Gross</field>
+        <field name="model_id" ref="hr_contract.model_hr_contract"/>
+        <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="groups_id" eval="[(4,ref('hr_contract.group_hr_contract_manager'))]"/>
+        <field name="code">
+if records:
+    action = records.open_calculate_net_to_gross_wizard()
+        </field>
+    </record>
+</odoo>

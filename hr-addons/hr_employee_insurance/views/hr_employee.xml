@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="insurance_hr_employee_form" model="ir.ui.view">
+        <field name="name">insurance.hr.employee.form</field>
+        <field name="model">hr.employee</field>
+<!--        <field name="groups_id"-->
+<!--               eval="[(6,0,[ref('l10n_eg_social_insurance.group_social_insurance_manager')])]"/>-->
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <field name="job_title" position="before">
+                <field name="name_in_arabic" placeholder="Name In Arabic" class="d-block"/>
+            </field>
+            <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="insurance_details" string="Insurance Details">
+                    <group>
+                        <group>
+                            <field name="owner"/>
+                            <field name="insured"/>
+                            <field name="medical_insured"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="insurance_date"/>
+                            <field name="employee_insurance_number"/>
+                            <field name="insurance_sector_ids" invisible="1"/>
+                            <field name="insurance_sector_id"
+                                   options="{'no_open': True, 'no_create': True}"
+                                   domain="[('id', 'in', insurance_sector_ids)]"/>
+                            <field name="insurance_job_id"
+                                   options="{'no_open': True, 'no_create': True}"/>
+                            <field name="insured_salary"/>
+                            <field name="gross_salary"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="insurance_office_id"
+                                   options="{'no_open': True, 'no_create': True}"/>
+                            <field name="company_number"/>
+                            <field name="received_date"/>
+                            <field name="received_number"/>
+                            <field name="resignation_received_date" invisible="active = True"/>
+                            <field name="resignation_received_number" invisible="active = True"/>
+                        </group>
+                    </group>
+                    <field name="insurance_history_ids">
+                        <list editable="bottom">
+                            <field name="company"/>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <field name="insurance_salary"/>
+                            <field name="basic_salary"/>
+                            <field name="variable_salary"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="duration_years" date="Years"/>
+                            <field name="duration_months" date="Months"/>
+                            <field name="duration_days" date="Days"/>
+                            <field name="insurance_days" invisible="1"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//div[@name='button_box']" position="after">
+                <widget name="web_ribbon" text="Owner" bg_color="bg-danger"
+                        invisible="owner = False"
+                />
+<!--                        attrs="{'invisible': [('owner', '=', False)]}"-->
+            </xpath>
+        </field>
+    </record>
+
+    <record id="insurance_hr_employee_search" model="ir.ui.view">
+        <field name="name">insurance.hr.employee.search</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='activities_upcoming_all']" position="after">
+                <filter string="Owner" name="filter_owner" domain="[('owner','=',True)]"/>
+                <filter string="Insured" name="filter_insured" domain="[('insured','=',True)]"/>
+                <filter string="Not Insured" name="filter_not_insured" domain="[('insured','=',False)]"/>
+                <filter string="Insurance Enroll" name="insurance_enroll" domain="[('contract_id.state','=','open'),('insured','=',True)]"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

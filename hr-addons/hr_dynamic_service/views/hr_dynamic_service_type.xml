@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_dynamic_service_type_form" model="ir.ui.view">
+        <field name="name">hr.dynamic.service.type.form</field>
+        <field name="model">hr.dynamic.service.type</field>
+        <field name="arch" type="xml">
+            <form string="Dynamic Approval Type">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="icon" widget="icon_selector"/>
+                        </group>
+                        <group>
+                            <field name="id" invisible="1"/>
+                            <field name="sequence"/>
+                            <field name="company_id"
+                                   options="{'no_create': True}"
+                                   groups="base.group_multi_company"/>
+                        </group>
+                    </group>
+                    <group string="Subtypes"/>
+                    <field name="subtype_ids" context="{'service_type_id':id}"
+                           nolable="1">
+                        <list>
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+
+                        </list>
+                        <form>
+                            <group>
+                                <field name="sequence"/>
+                                <field name="name"/>
+                            </group>
+                        </form>
+                    </field>
+                    <group string="Stages"/>
+                    <field name="stage_ids"
+                           domain="[('stage_for_refused','=',False)]"
+                           context="{'service_type_id':id}" nolable="1">
+                        <list>
+                            <field name="sequence" widget="handle"/>
+                            <field name="name"/>
+                            <field name="action_name"/>
+                            <field name="can_edit"/>
+                            <field name="can_refuse"/>
+                            <field name="use_domain"/>
+                            <field name="group_ids"/>
+                            <field name="user_ids"/>
+                            <field name="his_direct_manager"/>
+                            <field name="his_department_head"/>
+                            <field name="this_employee"/>
+                            <field name="server_action_id" options="{'no_create_edit': True}"/>
+                            <field name="stage_for_refused"/>
+                        </list>
+                        <form>
+                            <group>
+                                <field name="sequence"/>
+                                <field name="name"/>
+                                <field name="action_name"
+                                       invisible="stage_for_refused = True"/>
+<!--                                       attrs="{'invisible': [('stage_for_refused', '=', True)]}"/>-->
+                                <field name="can_edit"/>
+                                <field name="can_refuse"
+                                       invisible="stage_for_refused = True"/>
+<!--                                       attrs="{'invisible': [('stage_for_refused', '=', True)]}"/>-->
+                                <field name="use_domain"/>
+                                <field name="domain" widget="domain"
+                                       options="{'model': 'hr.employee'}"
+                                       invisible="use_domain = False"
+                                       required="required = True"/>
+
+
+<!--                                       attrs="{'invisible': [('use_domain', '=', False)], 'required': [('use_domain', '=', True)]}"/>-->
+                                <field name="group_ids" widget="many2many_tags"
+                                       options="{'no_create_edit': True}"/>
+                                <field name="user_ids" widget="many2many_tags"
+                                       options="{'no_create_edit': True}"/>
+                                <field name="his_direct_manager"/>
+                                <field name="his_department_head"/>
+                                <field name="this_employee"/>
+                                <field name="server_action_id" options="{'no_create_edit': True}"/>
+                                <field name="stage_for_refused"
+                                       invisible="stage_for_refused = False"
+                                       readonly="1"/>
+                            </group>
+<!--                                       attrs="{'invisible': [('stage_for_refused', '=', False)]}"-->
+                        </form>
+                    </field>
+                    <group>
+                        <field name="refuse_stage_id"
+                               options="{'no_create': True}"
+                               domain="[('service_type_id','=',id),('stage_for_refused','=',True)]"/>
+                        <field name="delete_in_first_stage"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_dynamic_service_type_tree" model="ir.ui.view">
+        <field name="name">hr.dynamic.service.type.tree</field>
+        <field name="model">hr.dynamic.service.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="icon" widget="icon_selector"/>
+                <field name="subtype_ids"/>
+                <field name="stage_ids"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_hr_dynamic_service_type_action"
+            model="ir.actions.act_window">
+        <field name="name">Dynamic Approval Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.dynamic.service.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,31 @@
+# pylint: disable=missing-docstring,manifest-required-author
+{
+    'name': 'Loan Management',
+    'summary': 'Loan Management',
+    'author': 'Muhamed Abd El-Rhman, CORE B.P.O',
+    'website': 'http://www.core-bpo.com',
+    # 'version': '1.0.1',
+    'category': 'Human Resources',
+    'license': 'AGPL-3',
+    'depends': [
+        'hr_payroll',
+        'account',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'security/security.xml',
+        'wizard/hr_loan_register_payment.xml',
+        'views/hr_employee.xml',
+        'views/hr_loan.xml',
+        'views/hr_payroll.xml',
+        'views/loan_config_settings.xml',
+        'views/account_journal_dashboard.xml',
+        'views/menuitem.xml',
+        'data/ir_sequence.xml',
+        'data/hr_payslip_input_type.xml',
+        'data/mail_activity_type.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_transfer_allocation_wizard_form" model="ir.ui.view">
+        <field name="name">hr.transfer.allocation.form</field>
+        <field name="model">hr.transfer.allocation</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <field name="state" widget="statusbar" readonly="True" />
+                </header>
+                <sheet>
+
+                    <group>
+                        <group>
+                            <field name="name" required="1" />
+                            <field name="leave_ids" required="1"  widget="many2many_tags"/>
+                            <field name="employee_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="start_date" />
+                            <field name="method" widget="radio"/>
+                            <field name="to_leave_type_id" attrs="{'required': [('method', '=', 'transfer')], 'invisible': [('method', 'in', [False, 'reset'])]}"/>
+                            <field name="max_leaves" invisible="method in [False, 'reset']"/>
+<!--                            <field name="max_leaves" attrs="{'invisible': [('method', 'in', [False, 'reset'])]}"/>-->
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="schedule_action" string="Schedule" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_transfer_allocation_wizard_action" model="ir.actions.act_window">
+        <field name="name">Transfer/Reset Leave Balance</field>
+        <field name="res_model">hr.transfer.allocation</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="hr.model_hr_employee"/>
+        <field name="binding_view_types">list</field>
+        <field name="context">{'default_employee_ids': active_ids}</field>
+        <field name="view_id" ref="hr_transfer_allocation_wizard_form"/>
+    </record>
+
+</odoo>

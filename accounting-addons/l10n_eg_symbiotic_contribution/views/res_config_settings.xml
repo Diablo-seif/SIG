@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_symbiotic" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.symbiotic
+        </field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="taxcloud_settings" position="after">
+                <div class="col-12 col-lg-6 o_setting_box"
+                     id="tax_deferred_settings">
+                    <div class="o_setting_right_pane"
+                         name="account_tax_deferred_right_pane">
+                        <span class="o_form_label">Symbiotic Contribution Tax Settings</span>
+                        <div class="text-muted">
+                            Used to Generate Symbiotic Contribution Reports and Entries
+                        </div>
+                        <div>
+                        <label for="symbiotic_contribution_percentage"
+                               string="Symbiotic Contribution Percentage"/>
+                        <field name="symbiotic_contribution_percentage"/>
+                        </div>
+                        <div>
+                        <label for="symbiotic_account_ids"
+                               string="Revenue Accounts"/>
+                        <field name="symbiotic_account_ids"
+                               widget="many2many_tags"/>
+                        </div>
+                        <div>
+                        <label for="symbiotic_entry_from_account_id"
+                               string="Symbiotic Entry From Account"/>
+                        <field name="symbiotic_entry_from_account_id"/>
+                        </div>
+                        <div>
+                        <label for="symbiotic_entry_to_account_id"
+                               string="Symbiotic Entry To Account"/>
+                        <field name="symbiotic_entry_to_account_id"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>

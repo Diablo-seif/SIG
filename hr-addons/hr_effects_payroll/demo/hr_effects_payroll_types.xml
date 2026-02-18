@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="demo_additions_expenses" model="hr.effects.payroll.type">
+        <field name="name">Expenses</field>
+        <field name="code">EXP</field>
+        <field name="effects_category">additions</field>
+    </record>
+
+    <record id="demo_additions_reward" model="hr.effects.payroll.type">
+        <field name="name">Reward</field>
+        <field name="code">REW</field>
+        <field name="effects_category">additions</field>
+    </record>
+
+    <record id="demo_additions_overtime" model="hr.effects.payroll.type">
+        <field name="name">Overtime</field>
+        <field name="code">OVER</field>
+        <field name="effects_category">additions</field>
+    </record>
+
+    <record id="demo_deductions_late_attend" model="hr.effects.payroll.type">
+        <field name="name">Late Attend</field>
+        <field name="code">LATE</field>
+        <field name="effects_category">deductions</field>
+    </record>
+
+    <record id="demo_deductions_punishment" model="hr.effects.payroll.type">
+        <field name="name">Penalty</field>
+        <field name="code">PEN</field>
+        <field name="effects_category">deductions</field>
+    </record>
+
+</odoo>

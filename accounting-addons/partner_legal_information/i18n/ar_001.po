@@ -1,0 +1,146 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_legal_information
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-01 09:47+0000\n"
+"PO-Revision-Date: 2020-11-01 09:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type__active
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__code
+msgid "Code"
+msgstr ""
+
+#. module: partner_legal_information
+#: model:ir.model,name:partner_legal_information.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type__create_uid
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type__create_date
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type__display_name
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner__display_name
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type__id
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner__id
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type____last_update
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner____last_update
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type__write_uid
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type__write_date
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: partner_legal_information
+#: model:ir.actions.act_window,name:partner_legal_information.legal_entity_type_action
+#: model:ir.model,name:partner_legal_information.model_legal_entity_type
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner__legal_entity_type_id
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_users__legal_entity_type_id
+#: model:ir.ui.menu,name:partner_legal_information.legal_entity_type_menu
+msgid "Legal Entity Type"
+msgstr "نوع الكيان القانوني"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_legal_entity_type__name
+#: model:ir.model.fields,field_description:partner_legal_information.field_vat_department__name
+#: model_terms:ir.ui.view,arch_db:partner_legal_information.legal_entity_type_form
+#: model_terms:ir.ui.view,arch_db:partner_legal_information.vat_department_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner__national_id
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_users__national_id
+msgid "National ID"
+msgstr "الرقم القومي"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner__tax_card_number
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_users__tax_card_number
+msgid "Tax Card Number"
+msgstr "رقم البطاقة الضريبية"
+
+#. module: partner_legal_information
+#: model_terms:ir.ui.view,arch_db:partner_legal_information.res_partner_view_form
+msgid "Tax Details"
+msgstr "البيانات الضريبية"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner__tax_file_number
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_users__tax_file_number
+msgid "Tax File Number"
+msgstr "رقم الملف الضريبي"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner__vat
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_users__vat
+msgid "Tax Registration Number"
+msgstr "رقم السجل الضريبي"
+
+#. module: partner_legal_information
+#: model:ir.model.fields,help:partner_legal_information.field_res_partner__vat
+#: model:ir.model.fields,help:partner_legal_information.field_res_users__vat
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to "
+"government taxes. Used in some legal statements."
+msgstr ""
+"رقم التعريف الضريبي. قم بإكماله إذا كانت جهة الاتصال تخضع للضرائب الحكومية. "
+"يُستخدم في بعض المستندات القانونية."
+
+#. module: partner_legal_information
+#: model:ir.model,name:partner_legal_information.model_vat_department
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_partner__vat_department_id
+#: model:ir.model.fields,field_description:partner_legal_information.field_res_users__vat_department_id
+msgid "VAT Department"
+msgstr "جهة ضريبة القيمة المضافة"
+
+#. module: partner_legal_information
+#: model:ir.actions.act_window,name:partner_legal_information.vat_department_action
+#: model:ir.ui.menu,name:partner_legal_information.vat_department_menu
+msgid "VAT Departments"
+msgstr ""

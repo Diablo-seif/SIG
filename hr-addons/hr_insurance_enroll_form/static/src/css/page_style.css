@@ -1,0 +1,62 @@
+@font-face {
+    font-family: GeneratorBlack;
+    src: url('/hr_insurance_enroll_form/static/src/font/GeneratorBlack.ttf');
+}
+
+.table th, .table td, thead {
+    padding: 0.30rem 0.25rem;
+}
+
+.table td {
+    border-top: none;
+}
+
+.table-bordered, .table thead th {
+    border: 1px solid #141f1e !important;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+tr {
+    border: none;
+}
+
+tbody tr {
+    height: 35px;
+}
+
+.table-bordered td {
+    border: 1px solid #141f1e;
+}
+
+.table-bordered td {
+    border-right: 1px solid #141f1e;
+    border-left: 1px solid #141f1e;
+}
+
+th, td {
+    vertical-align: middle !important;
+}
+
+tbody {
+    font-size: 1.05rem;
+}
+
+thead {
+    text-align: center;
+}
+
+table {
+    line-height: 1.2;
+    font-family: GeneratorBlack;
+    margin-top: 10px;
+    border-style: double;
+    margin-bottom: 0;
+}
+
+.page-break {
+    page-break-after: always;
+    margin-bottom: 0;
+}

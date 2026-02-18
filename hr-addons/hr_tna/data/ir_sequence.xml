@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="tna_courses_sequence" model="ir.sequence">
+        <field name="name">TNA Courses</field>
+        <field name="code">tna.courses</field>
+        <field name="prefix">COURSE/</field>
+        <field name="padding">5</field>
+        <field name="number_increment">1</field>
+    </record>
+
+</odoo>

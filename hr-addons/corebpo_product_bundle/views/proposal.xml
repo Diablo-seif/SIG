@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="inherit_proposal_form_view" model="ir.ui.view">
+        <field name="name">proposal.form.view</field>
+        <field name="model">proposal.proposal</field>
+        <field name="inherit_id" ref="proposal.proposal_form" />
+        <field name="arch" type="xml">
+           <field name="financial_progress" position="after">
+                <field name="bundle_product_ids" widget="many2many_tags"/>
+           </field>
+        </field>
+    </record>
+
+</odoo>

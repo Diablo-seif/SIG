@@ -1,0 +1,2265 @@
+"id","code","name"
+insurance_job_0001, 11000, Chemical Doctor
+insurance_job_0002, 11100, general chemist
+insurance_job_0003, 11200, A chemist specializing in organic chemistry
+insurance_job_0004, 11300, A chemist specializing in inorganic chemistry
+insurance_job_0005, 11400, A chemist specializing in natural chemistry
+insurance_job_0006, 11500, A chemist specializes in analyzes
+insurance_job_0007, 11900, Other chemists
+insurance_job_0008, 12000, Geophysics
+insurance_job_0009, 12100, General physicist
+insurance_job_0010, 12200, Mechanic - physicist
+insurance_job_0011, 12300, Physicist specializing in heat
+insurance_job_0012, 12400, Physicist specializing in light
+insurance_job_0013, 12500, A physicist who specializes in sound
+insurance_job_0014, 12600, Physicist specializing in magnetism
+insurance_job_0015, 12700, Physicist specializing in electronics
+insurance_job_0016, 12800, Atomic physicist
+insurance_job_0017, 12900, Physicists - Others
+insurance_job_0018, 13200, Earth physics specialist
+insurance_job_0019, 13300, Geologist
+insurance_job_0020, 13400, Meteorologist
+insurance_job_0021, 13500, Astronomer
+insurance_job_0022, 13900, Specialists in natural sciences
+insurance_job_0023, 14200, Chemical technician
+insurance_job_0024, 14300, Physical technician
+insurance_job_0025, 14400, Geologist
+insurance_job_0026, 14900, Technicians in the natural sciences
+insurance_job_0027, 19000, Engineer
+insurance_job_0028, 20000, Consultant Engineer
+insurance_job_0029, 21000, Chief Engineer
+insurance_job_0030, 21200, Architect
+insurance_job_0031, 21400, City planning engineer
+insurance_job_0032, 22100, General civil engineer
+insurance_job_0033, 22150, Construction Engineer
+insurance_job_0034, 22200, Road engineer
+insurance_job_0035, 22250, Airport construction engineer
+insurance_job_0036, 22300, Railways construction engineer
+insurance_job_0037, 22350, Bridge construction engineer
+insurance_job_0038, 22400, Sanitary construction engineer
+insurance_job_0039, 22450, Irrigation and hydraulic engineer
+insurance_job_0040, 22500, Soil Mechanics Engineer
+insurance_job_0041, 22900, Other civil engineers
+insurance_job_0042, 23050, General electrical engineer
+insurance_job_0043, 23100, General electric engineer
+insurance_job_0044, 23200, Powerful electrical engineer
+insurance_job_0045, 23300, Electrical distribution and transmission engineer
+insurance_job_0046, 23400, Electrical equipment engineer
+insurance_job_0047, 23500, Communication engineer
+insurance_job_0048, 23600, Computer engineer - to computer
+insurance_job_0049, 23700, Network Engineer - Information
+insurance_job_0050, 23900, Other electrical engineers
+insurance_job_0051, 24100, General mechanical engineer
+insurance_job_0052, 24110, Strong mechanical engineer
+insurance_job_0053, 24150, Mechanical engineer and number machines
+insurance_job_0054, 24200, Mechanical engineer -machinery and motors
+insurance_job_0055, 24250, Marine engineer -marine machinery
+insurance_job_0056, 24300, Ship building engineer
+insurance_job_0057, 24350, flight engineer
+insurance_job_0058, 24400, Vehicle mechanical engineer
+insurance_job_0059, 24450, Mechanical engineer in spinning and weaving machines
+insurance_job_0060, 24500, HVAC engineer
+insurance_job_0061, 24550, Particle engineer
+insurance_job_0062, 24600, Maintenance Engineer
+insurance_job_0063, 24700, quality engineer
+insurance_job_0064, 24800, Sales engineer
+insurance_job_0065, 24900, Other mechanical engineers
+insurance_job_0066, 25100, General chemical engineer
+insurance_job_0067, 25300, Petroleum chemical engineer
+insurance_job_0068, 25900, Other chemical engineers
+insurance_job_0069, 26200, Mining Engineer
+insurance_job_0070, 26400, Natural Metal Engineer
+insurance_job_0071, 26900, Other metal engineers
+insurance_job_0072, 27100, Mining or general mining engineer
+insurance_job_0073, 27200, Coal Mine Engineer
+insurance_job_0074, 27300, Minerals engineer
+insurance_job_0075, 27400, Petroleum and natural gas engineer
+insurance_job_0076, 27900, Other mining engineers
+insurance_job_0077, 28000, Metal rolling engineer
+insurance_job_0078, 28100, Industrial efficiency engineer
+insurance_job_0079, 28200, Industrial production methods engineer
+insurance_job_0080, 28300, Time and motion study engineer
+insurance_job_0081, 28400, Quality control technology
+insurance_job_0082, 28900, Other industrial engineers
+insurance_job_0083, 29200, Glass and ceramic industry engineer
+insurance_job_0084, 29300, Agricultural machinery engineer
+insurance_job_0085, 29400, Engineer -food industries specialist
+insurance_job_0086, 29500, Traffic planning engineer
+insurance_job_0087, 29600, Industrial security engineer
+insurance_job_0088, 29700, Engineer Medical Devices
+insurance_job_0089, 29800, Agricultural engineer
+insurance_job_0090, 29900, Other engineers
+insurance_job_0091, 30000, Interior designer
+insurance_job_0092, 30100, Fashion designer engineer
+insurance_job_0093, 31100, Public area engineer
+insurance_job_0094, 31200, Ground engineer - engineer
+insurance_job_0095, 31300, Mining engineer
+insurance_job_0096, 31400, Marine engineer
+insurance_job_0097, 31500, Aerospace Specialist Engineer
+insurance_job_0098, 31900, Other specialists
+insurance_job_0099, 32000, Maintenance Specialist
+insurance_job_0100, 32010, Photocopier maintenance specialist
+insurance_job_0101, 32100, general painter
+insurance_job_0102, 32110, Engineering painter
+insurance_job_0103, 32150, Mechanical painter
+insurance_job_0104, 32200, Electrician
+insurance_job_0105, 32250, Structural painter - civil engineering
+insurance_job_0106, 32300, Architectural draftsman
+insurance_job_0107, 32350, Geologist - Earth layers
+insurance_job_0108, 32400, Cartographer
+insurance_job_0109, 32450, Technical Painter - Catalogs
+insurance_job_0110, 32500, A stone painter
+insurance_job_0111, 32900, Other painters
+insurance_job_0112, 33000, Engineer Assistant
+insurance_job_0113, 33100, Civil Engineering Technician - General
+insurance_job_0114, 33150, Road construction technician
+insurance_job_0115, 33200, Flat and cubic technician
+insurance_job_0116, 33250, Surveying Technician - Surveyor
+insurance_job_0117, 33300, Civil construction technician
+insurance_job_0118, 33310, Technician operating overhead cranes
+insurance_job_0119, 33350, Metal construction technician
+insurance_job_0120, 33400, Fingerprinting
+insurance_job_0121, 33450, Groundwater technician
+insurance_job_0122, 33460, Water treatment equipment technician
+insurance_job_0123, 33500, Architectural technician
+insurance_job_0124, 33510, Stone breaker operator
+insurance_job_0125, 33900, Civil Engineering Technicians
+insurance_job_0126, 34000, Mechanical technician
+insurance_job_0127, 34050, Electrical technician - general
+insurance_job_0128, 34100, Electronic technician - general
+insurance_job_0129, 34150, Electrical equipment technician
+insurance_job_0130, 34160, Photographic equipment technician
+insurance_job_0131, 34161, Camera technician
+insurance_job_0132, 34162, Photography Technician
+insurance_job_0133, 34170, Petroleum equipment maintenance technician
+insurance_job_0134, 34200, Electrical technician
+insurance_job_0135, 34210, Control technician
+insurance_job_0136, 34250, Cable production technician
+insurance_job_0137, 34260, Production technician
+insurance_job_0138, 34300, Communications technician
+insurance_job_0139, 34350, Electric locomotive repair technician
+insurance_job_0140, 34400, Ships Electrical Technician
+insurance_job_0141, 34450, Instrumentation technician
+insurance_job_0142, 34470, Equipment Operator
+insurance_job_0143, 34480, Metal rolling technician
+insurance_job_0144, 34500, General electronic equipment technician
+insurance_job_0145, 34550, TV technician
+insurance_job_0146, 34600, Electronic statistician technician
+insurance_job_0147, 34900, Electrical engineering technicians
+insurance_job_0148, 35100, Mechanical Engineering Technician - General
+insurance_job_0149, 35150, Mechanical and optical equipment technician
+insurance_job_0150, 35200, Technician Mechanical Engineering
+insurance_job_0151, 35210, Oxygen and electric welding technician
+insurance_job_0152, 35220, Metal drawing technician
+insurance_job_0153, 35250, Heat treatment technician
+insurance_job_0154, 35260, Kettle technician
+insurance_job_0155, 35300, Aviation engineering technician
+insurance_job_0156, 35350, Busy technician
+insurance_job_0157, 35400, Automotive Engineering Technician
+insurance_job_0158, 35450, Diesel locomotive repair technician
+insurance_job_0159, 35460, Cars inspector
+insurance_job_0160, 35500, Mechanical technician ventilation -heating and cooling
+insurance_job_0161, 35550, Steam locomotive repair technician
+insurance_job_0162, 35600, Railway wagon technician
+insurance_job_0163, 35650, Diesel ship technician
+insurance_job_0164, 35700, Steamship technician
+insurance_job_0165, 35750, Shipbuilding technician
+insurance_job_0166, 35900, Mechanical engineering technicians
+insurance_job_0167, 36100, Chemical Engineering Technician - General
+insurance_job_0168, 36150, Production technician for organic materials
+insurance_job_0169, 36200, Chemical technician in petroleum products
+insurance_job_0170, 36250, Porcelain and Chinese production technician
+insurance_job_0171, 36300, Plastic technician
+insurance_job_0172, 36350, Rubber production technician
+insurance_job_0173, 36400, Paper production technician
+insurance_job_0174, 36410, Binding technician
+insurance_job_0175, 36450, Leather tanning technician
+insurance_job_0176, 36900, Chemical engineering technicians
+insurance_job_0177, 37100, Metal Engineering Technician - General
+insurance_job_0178, 37200, Technician in extractive metals
+insurance_job_0179, 37300, Technician in natural metals
+insurance_job_0180, 37900, Metal engineering technicians
+insurance_job_0181, 38100, Mining technician - general
+insurance_job_0182, 38300, Technician in oil extraction
+insurance_job_0183, 38900, Mining Technicians - Others
+insurance_job_0184, 39000, Oven technician
+insurance_job_0185, 39200, Technician in production engineering
+insurance_job_0186, 39300, Technician in studying the production plan
+insurance_job_0187, 39400, Spinning technician
+insurance_job_0188, 39500, Textile technician
+insurance_job_0189, 39600, Dyeing and processing technician
+insurance_job_0190, 39700, Print technician
+insurance_job_0191, 39800, Artistic
+insurance_job_0192, 39810, Drilling technician
+insurance_job_0193, 39820, Maintenance technician
+insurance_job_0194, 39821, Maintenance technician for photocopiers
+insurance_job_0195, 39830, Alumetal technician
+insurance_job_0196, 39840, Gas molding technician
+insurance_job_0197, 39850, Boiler technician
+insurance_job_0198, 39900, Technicians in Engineering others
+insurance_job_0199, 41100, Pilot - General
+insurance_job_0200, 41200, Specialist pilot
+insurance_job_0201, 41300, Air navigator
+insurance_job_0202, 41400, Air engineer
+insurance_job_0203, 41500, Flight teacher
+insurance_job_0204, 42100, Master of the high seas
+insurance_job_0205, 42200, captain
+insurance_job_0206, 42300, Commander of a ship in the inland waters
+insurance_job_0207, 42400, A marine navigation officer
+insurance_job_0208, 42500, Guide
+insurance_job_0209, 42600, Maritime expert
+insurance_job_0210, 42900, Surface officers on ships and guides
+insurance_job_0211, 43200, Senior ship engineer
+insurance_job_0212, 43300, Ship engineer
+insurance_job_0213, 43800, Ship plan
+insurance_job_0214, 43900, Ship Engineers - Others
+insurance_job_0215, 51100, Biologist
+insurance_job_0216, 51200, Botany specialist
+insurance_job_0217, 51300, Zoologist
+insurance_job_0218, 51400, Animal husbandry science specialist
+insurance_job_0219, 51900, Biologists
+insurance_job_0220, 52200, Anatomy specialist
+insurance_job_0221, 52300, Biochemistry specialist
+insurance_job_0222, 52400, Specialist in physiology
+insurance_job_0223, 52500, Research specialist in bacteriology
+insurance_job_0224, 52600, Pathologist - human
+insurance_job_0225, 52700, Pathologist - veterinary
+insurance_job_0226, 52800, Pharmacy Research Specialist
+insurance_job_0227, 52900, Bacteriologists
+insurance_job_0228, 53000, Doctor - Agricultural Engineer
+insurance_job_0229, 53100, Agricultural engineer (specialist in agricultural sciences
+insurance_job_0230, 53150, Field crops specialist
+insurance_job_0231, 53200, Specialist in vegetables
+insurance_job_0232, 53250, Fruit specialist
+insurance_job_0233, 53300, Specialist in ornamental plants
+insurance_job_0234, 53350, Specialist in plant diseases
+insurance_job_0235, 53400, Specialist in agricultural insects and pests
+insurance_job_0236, 53450, Education science specialist - Terrain
+insurance_job_0237, 53460, Poultry breeding specialist
+insurance_job_0238, 53500, Cotton sorting specialist
+insurance_job_0239, 53550, Agricultural extension specialist
+insurance_job_0240, 53600, Specialist in the preservation of purity
+insurance_job_0241, 53650, Dairy specialist
+insurance_job_0242, 53700, Specialist in food industries
+insurance_job_0243, 53900, Agricultural science specialists
+insurance_job_0244, 54200, Technician in biology
+insurance_job_0245, 54300, Technician in medical sciences
+insurance_job_0246, 54400, Technician in bacteriology and pharmacy
+insurance_job_0247, 54500, A technician in agricultural sciences
+insurance_job_0248, 54600, Technician in animal husbandry science
+insurance_job_0249, 54900, Life Sciences Technicians
+insurance_job_0250, 60000, Medical Affairs Consultant
+insurance_job_0251, 60100, Advisor
+insurance_job_0252, 60200, Consultant analysis
+insurance_job_0253, 61100, General practitioner doctor
+insurance_job_0254, 61120, General internal medicine specialist doctor
+insurance_job_0255, 61140, Doctor -neurological and mental illness
+insurance_job_0256, 61160, Pediatrician doctor
+insurance_job_0257, 61180, Doctor -cardiovascular disease specialist
+insurance_job_0258, 61200, General surgeon doctor
+insurance_job_0259, 61220, Urologist doctor
+insurance_job_0260, 61240, Orthopedics doctor
+insurance_job_0261, 61260, Ophthalmologist and surgeon doctor
+insurance_job_0262, 61280, Plastic surgery specialist
+insurance_job_0263, 61300, Doctor -neurosurgeon
+insurance_job_0264, 61320, Gynecologist and obstetrician
+insurance_job_0265, 61340, Doctor -ear -nose and throat specialist
+insurance_job_0266, 61360, Doctor -chest and tuberculosis specialist
+insurance_job_0267, 61380, Dermatologist and reproductive physician
+insurance_job_0268, 61400, Anesthesiologist
+insurance_job_0269, 61420, Endocrinologist
+insurance_job_0270, 61440, Pathology laboratory physician
+insurance_job_0271, 61460, Bacteriology Laboratory
+insurance_job_0272, 61480, Toxicologist
+insurance_job_0273, 61500, Forensic doctor
+insurance_job_0274, 61520, A doctor specializing in blood transfusion
+insurance_job_0275, 61540, Aviation medicine specialist
+insurance_job_0276, 61560, Medical radiologist and medical doctor
+insurance_job_0277, 61580, Doctor specializing in natural medicine
+insurance_job_0278, 61600, Experimental medicine doctor
+insurance_job_0279, 61620, Industrial medicine specialist
+insurance_job_0280, 61640, A doctor specializing in public health and medicine
+insurance_job_0281, 61660, Doctor specializing in Tropical Medicine
+insurance_job_0282, 61680, A doctor specializing in tissues and cells
+insurance_job_0283, 61700, A doctor specializes in parasites
+insurance_job_0284, 61720, Doctor who specializes in medical analysis
+insurance_job_0285, 61900, Other human doctors
+insurance_job_0286, 62200, Medical analysis technician
+insurance_job_0287, 62400, Health Affairs Technician ے-Health Associate
+insurance_job_0288, 62900, Physicians auxiliaries - others
+insurance_job_0289, 63100, dentist
+insurance_job_0290, 63200, Oral and dental surgeon
+insurance_job_0291, 63300, Dentist
+insurance_job_0292, 63400, A doctor specializing in conservative treatment
+insurance_job_0293, 63500, Orthodontic doctor
+insurance_job_0294, 63900, Dentists - others
+insurance_job_0295, 64100, Dental assistant - dental technician
+insurance_job_0296, 65100, Veterinarian - general
+insurance_job_0297, 65200, Preventive veterinarian and general health
+insurance_job_0298, 65300, Pathology veterinarian
+insurance_job_0299, 65400, Veterinary Director
+insurance_job_0300, 65410, Medical Affairs Director
+insurance_job_0301, 65500, Pharmacy manager
+insurance_job_0302, 65900, Veterinarians - others
+insurance_job_0303, 66100, Veterinary assistant
+insurance_job_0304, 67200, Pharmacist preparing medicinal medicines
+insurance_job_0305, 67400, Pharmaceutical industry pharmacist
+insurance_job_0306, 67500, Preparation technician
+insurance_job_0307, 68100, Pharmacist Assistant
+insurance_job_0308, 69100, Food Specialist - General
+insurance_job_0309, 69200, A public health nutritionist
+insurance_job_0310, 69300, Food inspector
+insurance_job_0311, 69900, Healthy food and nutritionists
+insurance_job_0312, 71000, Head of a nursing body
+insurance_job_0313, 71010, Specialist Nursing
+insurance_job_0314, 71100, General nurse - general
+insurance_job_0315, 71200, A specialized qualified nurse
+insurance_job_0316, 71300, Public health nurse
+insurance_job_0317, 71310, Nurse - paramedic
+insurance_job_0318, 71400, Occupational diseases nurse
+insurance_job_0319, 71500, Wise
+insurance_job_0320, 71900, Qualified Nurses - Others
+insurance_job_0321, 72200, Assistant nurse
+insurance_job_0322, 72300, A healthy visitor
+insurance_job_0323, 72400, Unqualified nurse
+insurance_job_0324, 72900, Other nurses (itinerant nurse)
+insurance_job_0325, 73100, Homogenized birth
+insurance_job_0326, 74100, (Midwife)
+insurance_job_0327, 75000, ophthalmologist
+insurance_job_0328, 75100, A technician in the medical glasses industry
+insurance_job_0329, 75200, Medical equipment installation - maintenance and repair technician
+insurance_job_0330, 76000, Occupational Safety and Health Manager
+insurance_job_0331, 76100, Head of the Occupational Health Department
+insurance_job_0332, 76110, Occupational Safety and Health Specialist
+insurance_job_0333, 76200, Physiotherapist
+insurance_job_0334, 76300, Specialist in the treatment of occupational diseases
+insurance_job_0335, 76400, Massager
+insurance_job_0336, 77100, Ray technician
+insurance_job_0337, 79200, Orthopedics (orthopedics)
+insurance_job_0338, 79300, Health technician
+insurance_job_0339, 79310, Safety technician and occupational health
+insurance_job_0340, 79400, Technician in the treatment of deformation
+insurance_job_0341, 79900, Human doctors have not returned their professions
+insurance_job_0342, 81100, Statistics Professional - General
+insurance_job_0343, 81200, Specialist in Mathematics for Statistics
+insurance_job_0344, 81300, Specialist in applied statistics
+insurance_job_0345, 82200, Pure mathematics specialist
+insurance_job_0346, 82300, Applied Mathematics Specialist
+insurance_job_0347, 82400, Actuarial specialist
+insurance_job_0348, 82500, Graphic design specialist
+insurance_job_0349, 83000, Technical Support Specialist
+insurance_job_0350, 83100, Automated systems analysis and information specialist
+insurance_job_0351, 83200, Systems analyst
+insurance_job_0352, 84200, Technician in statistics
+insurance_job_0353, 84300, Software developer
+insurance_job_0354, 84400, Automated software specialist
+insurance_job_0355, 84500, Computer networks specialist
+insurance_job_0356, 84600, Computer networks technician
+insurance_job_0357, 84700, Computer programmer
+insurance_job_0358, 84800, Computer technician
+insurance_job_0359, 84900, Statistics and Mathematics Technicians
+insurance_job_0360, 85000, Web designer
+insurance_job_0361, 85200, Computer maintenance specialist
+insurance_job_0362, 85500, Data entry
+insurance_job_0363, 85510, Computer operator to
+insurance_job_0364, 90100, Economist - economic studies analyst
+insurance_job_0365, 91000, Information systems expert
+insurance_job_0366, 110100, Accountant Doctor
+insurance_job_0367, 110200, Accountant
+insurance_job_0368, 110210, Accountant
+insurance_job_0369, 110220, Accountant and international arbitration consultant
+insurance_job_0370, 110390, References
+insurance_job_0371, 110400, background of your accounts
+insurance_job_0372, 110500, Consumables
+insurance_job_0373, 110510, My specialist
+insurance_job_0374, 110511, Sales Specialist
+insurance_job_0375, 110512, Quality Control Specialist
+insurance_job_0376, 110513, Quality Assurance Specialist
+insurance_job_0377, 110514, Production Specialist
+insurance_job_0378, 110520, Marketing specialist (marketing specialist)
+insurance_job_0379, 110530, Planning specialist
+insurance_job_0380, 110540, Financing specialist
+insurance_job_0381, 110550, Department Head
+insurance_job_0382, 110551, Department Head
+insurance_job_0383, 110560, Chief Executive Officer
+insurance_job_0384, 110570, Head of a group
+insurance_job_0385, 110580, Division Head
+insurance_job_0386, 110581, Division Deputy
+insurance_job_0387, 110590, Deputy Head of the Department
+insurance_job_0388, 110600, Head of Accounts Department
+insurance_job_0389, 110610, Head of Import and Export Accounts Department
+insurance_job_0390, 110611, Accounts Supervisor
+insurance_job_0391, 110620, Head of planning and follow-up department
+insurance_job_0392, 110630, Head of Personnel Affairs Department
+insurance_job_0393, 110640, Head of the Insurance Department
+insurance_job_0394, 110650, Head of the Wages Department
+insurance_job_0395, 110660, Head of the Administrative Affairs Department
+insurance_job_0396, 110661, Administrative Affairs Supervisor
+insurance_job_0397, 110670, Head of the warehouse department
+insurance_job_0398, 110671, Overlooking the tanks
+insurance_job_0399, 110680, Head of the audit department
+insurance_job_0400, 110690, Head of Sales Department
+insurance_job_0401, 110700, Section head in a productive unit
+insurance_job_0402, 110710, Costs Section Head
+insurance_job_0403, 110720, Head of the Security Department
+insurance_job_0404, 110730, Head of the Quality Department
+insurance_job_0405, 110740, Head of the Maintenance Department
+insurance_job_0406, 110741, Head of the Department of Religious Tourism
+insurance_job_0407, 110750, Get a chair
+insurance_job_0408, 110760, supervisor
+insurance_job_0409, 110770, Chief Technical Officer
+insurance_job_0410, 110890, Treasury head
+insurance_job_0411, 110900, Accountants - Others
+insurance_job_0412, 121100, Lawyer
+insurance_job_0413, 121260, External purchasing specialist
+insurance_job_0414, 121261, Purchasing supervisor
+insurance_job_0415, 122100, Judge
+insurance_job_0416, 122200, Counsel
+insurance_job_0417, 122300, Legal Researcher
+insurance_job_0418, 122400, Legal representative
+insurance_job_0419, 123100, Public Prosecution Member
+insurance_job_0420, 129200, Administrative Prosecution Member
+insurance_job_0421, 129300, Member of the State Council - Administrative Court
+insurance_job_0422, 129400, Notarized - Real Estate Registration Authority
+insurance_job_0423, 129500, Legitimate law enforcement
+insurance_job_0424, 129600, Civil registrar
+insurance_job_0425, 129900, Other jurists
+insurance_job_0426, 131100, A faculty member at the university
+insurance_job_0427, 131150, Member of the teaching staff in literature
+insurance_job_0428, 131200, Member of the teaching staff in science
+insurance_job_0429, 131250, Member of the teaching staff in law
+insurance_job_0430, 131300, Member of the teaching staff in commercial sciences
+insurance_job_0431, 131350, A faculty member in social sciences
+insurance_job_0432, 131400, Member of the teaching staff in engineering sciences
+insurance_job_0433, 131450, Member of the teaching staff in sports science
+insurance_job_0434, 131500, Member of the teaching staff in the natural sciences
+insurance_job_0435, 131550, Member of the teaching staff in languages
+insurance_job_0436, 131600, Member of the teaching staff in medical sciences
+insurance_job_0437, 131650, Member of the teaching staff in agricultural sciences
+insurance_job_0438, 131700, Member of the teaching staff in religious sciences
+insurance_job_0439, 131710, professor
+insurance_job_0440, 131720, Professor- Department of Computer Science
+insurance_job_0441, 131900, Professors and teachers of universities and institutes
+insurance_job_0442, 131910, Re-instated
+insurance_job_0443, 131920, University lecturer
+insurance_job_0444, 132000, Linguist
+insurance_job_0445, 132100, Scientific Supervisor
+insurance_job_0446, 132110, teacher
+insurance_job_0447, 132120, First teacher
+insurance_job_0448, 132140, Professor
+insurance_job_0449, 132150, Arts teacher
+insurance_job_0450, 132200, Social studies teacher
+insurance_job_0451, 132250, Mathematics Teacher
+insurance_job_0452, 132290, English teacher
+insurance_job_0453, 132300, Language teacher
+insurance_job_0454, 132310, Arabic teacher
+insurance_job_0455, 132350, Teacher in natural sciences
+insurance_job_0456, 132400, Teacher in commercial sciences
+insurance_job_0457, 132450, Art teacher
+insurance_job_0458, 132500, Teacher of words
+insurance_job_0459, 132550, Housekeeping teacher and detailing
+insurance_job_0460, 132560, Physical Education teacher
+insurance_job_0461, 132570, Music teacher
+insurance_job_0462, 132600, Agricultural science teacher
+insurance_job_0463, 132650, Religious science teacher
+insurance_job_0464, 132900, Secondary school teachers - others
+insurance_job_0465, 133000, computer teacher
+insurance_job_0466, 133100, Primary school teacher
+insurance_job_0467, 134100, Teacher - supervisor at nursery schools
+insurance_job_0468, 135100, Teacher of special types of education
+insurance_job_0469, 135200, Special education teacher
+insurance_job_0470, 136100, Prep teacher
+insurance_job_0471, 137200, A teacher at secondary vocational training centers
+insurance_job_0472, 137400, Teacher at vocational training centers
+insurance_job_0473, 139200, Teacher recitation Quran
+insurance_job_0474, 139300, Specialist in teaching and communication methods
+insurance_job_0475, 139400, A specialist in educational aid
+insurance_job_0476, 139500, School Supervisor
+insurance_job_0477, 139600, school's agent
+insurance_job_0478, 139700, School manager
+insurance_job_0479, 139800, Directed
+insurance_job_0480, 139900, Teachers whose professions have not been returned
+insurance_job_0481, 141200, Preacher
+insurance_job_0482, 141300, Imam of the mosque
+insurance_job_0483, 141400, Composition
+insurance_job_0484, 141500, موءذن
+insurance_job_0485, 141600, A second degree reciter
+insurance_job_0486, 141800, Director of the Assembly of Islamic Jurists
+insurance_job_0487, 141900, Islamic clergy - others
+insurance_job_0488, 142200, bishop
+insurance_job_0489, 142300, priest
+insurance_job_0490, 142400, Deacon
+insurance_job_0491, 142900, Other Christian clergy (church recital)
+insurance_job_0492, 143100, Jewish cleric
+insurance_job_0493, 149100, A cleric whose profession was not mentioned previously
+insurance_job_0494, 151200, Literary writer
+insurance_job_0495, 151400, Art critic
+insurance_job_0496, 153000, Media Specialist
+insurance_job_0497, 157000, Correct
+insurance_job_0498, 157100, Newspaper designer
+insurance_job_0499, 157200, Newspaper coordinator
+insurance_job_0500, 157300, Newspaper outlet
+insurance_job_0501, 157600, Deputy Editor in Chief
+insurance_job_0502, 157700, Assistant Editor in Chief
+insurance_job_0503, 157800, Press director
+insurance_job_0504, 157900, Editing references
+insurance_job_0505, 158000, Under Training Editor
+insurance_job_0506, 158100, Journalist under training
+insurance_job_0507, 158800, Reporter
+insurance_job_0508, 158900, Press reporter
+insurance_job_0509, 159000, Sports Editor
+insurance_job_0510, 159100, Journalist - General
+insurance_job_0511, 159190, Editor-in-chief
+insurance_job_0512, 159200, Editor in Chief
+insurance_job_0513, 159300, Press editor
+insurance_job_0514, 159400, Journalist
+insurance_job_0515, 159500, Radio and television hanging
+insurance_job_0516, 159600, Ad editor
+insurance_job_0517, 159700, Advertising and publishing editor
+insurance_job_0518, 159800, Scientific Affairs Editor
+insurance_job_0519, 159900, Authors -journalists and others
+insurance_job_0520, 161200, Example
+insurance_job_0521, 161300, Itinerant painter
+insurance_job_0522, 161400, Cartoonist
+insurance_job_0523, 161410, Fine artist
+insurance_job_0524, 161500, Digging artist - digger
+insurance_job_0525, 161600, An artist dug by acid
+insurance_job_0526, 161700, Antiquities restorer
+insurance_job_0527, 161900, Examples and painters
+insurance_job_0528, 162000, Press equipment technician
+insurance_job_0529, 162100, Advertising technician
+insurance_job_0530, 162200, Commercial Advertising Artist - Designed & Implemented
+insurance_job_0531, 162300, Interior designer
+insurance_job_0532, 162400, Industrial and commercial products designer
+insurance_job_0533, 162500, Designer means of displaying goods
+insurance_job_0534, 162590, Decorative art
+insurance_job_0535, 162600, Decorative outlet
+insurance_job_0536, 162700, Designer
+insurance_job_0537, 162710, Fashion designer
+insurance_job_0538, 162720, Graphic designer
+insurance_job_0539, 162800, Montage technician
+insurance_job_0540, 162900, Editor
+insurance_job_0541, 163000, Head of the Photography Department
+insurance_job_0542, 163100, Head of the montage department
+insurance_job_0543, 163200, Photographer
+insurance_job_0544, 163300, Director of Photography - At the cinema
+insurance_job_0545, 163310, Director of the graphic studio
+insurance_job_0546, 163400, Press photographer
+insurance_job_0547, 163500, Cinematographer
+insurance_job_0548, 163600, TV cameraman
+insurance_job_0549, 163900, Photographers - others
+insurance_job_0550, 170000, author
+insurance_job_0551, 171200, Music composer
+insurance_job_0552, 171300, Musical composer
+insurance_job_0553, 171400, music composer
+insurance_job_0554, 171500, Musical band leader
+insurance_job_0555, 171600, music player
+insurance_job_0556, 171700, Singer - Singer - Singer Coral - Maddah
+insurance_job_0557, 171800, Voice Band Commander - Coral
+insurance_job_0558, 171900, Music composers and composers
+insurance_job_0559, 172000, Music recorder
+insurance_job_0560, 172200, Choreographer
+insurance_job_0561, 172400, Dancer - Dancer
+insurance_job_0562, 173200, actor
+insurance_job_0563, 173300, theater director
+insurance_job_0564, 173400, cinematic director
+insurance_job_0565, 173500, Radio and TV director
+insurance_job_0566, 173600, Director
+insurance_job_0567, 173900, Actors and Directors - Others
+insurance_job_0568, 174100, Production Manager
+insurance_job_0569, 174110, Distribution manager
+insurance_job_0570, 174200, Theatrical Producer - Artist Agent
+insurance_job_0571, 174300, Film product
+insurance_job_0572, 174400, Radio and TV producer
+insurance_job_0573, 174500, production assistant
+insurance_job_0574, 174900, Producers of art shows - others
+insurance_job_0575, 175200, clown
+insurance_job_0576, 175300, Hawi magician
+insurance_job_0577, 175400, Acrobatic games player - acrobat
+insurance_job_0578, 175500, Animal trainer in circus - tamed
+insurance_job_0579, 175600, Dog trainer
+insurance_job_0580, 175900, Other circus players
+insurance_job_0581, 179200, Radio broadcaster - television broadcaster
+insurance_job_0582, 179300, A bridal player
+insurance_job_0583, 179400, Extras
+insurance_job_0584, 179900, Music composers and performers
+insurance_job_0585, 180200, Professional athlete
+insurance_job_0586, 180300, Sports games coach
+insurance_job_0587, 180400, fitness trainer
+insurance_job_0588, 180900, Professional athletes
+insurance_job_0589, 191100, Lab Secretary
+insurance_job_0590, 191200, libarian
+insurance_job_0591, 191300, Archives Secretary
+insurance_job_0592, 191400, Museum curator
+insurance_job_0593, 191900, Other librarians
+insurance_job_0594, 192200, Sociologist
+insurance_job_0595, 192300, Psychologist
+insurance_job_0596, 192400, Anthropologist
+insurance_job_0597, 192500, Geography specialist
+insurance_job_0598, 192600, History Specialist - History
+insurance_job_0599, 192700, Political science specialist
+insurance_job_0600, 192900, Sociologists
+insurance_job_0601, 193000, Environmental Research Specialist
+insurance_job_0602, 193100, Social researcher. Social worker
+insurance_job_0603, 193200, Internal Supervisor (urban leader)
+insurance_job_0604, 193300, A rural pioneer
+insurance_job_0605, 193400, Economic researcher - economic analyst
+insurance_job_0606, 193500, Administrative Development Researcher
+insurance_job_0607, 193600, Researcher
+insurance_job_0608, 194200, Human Resource Specialist
+insurance_job_0609, 194300, Student career guidance specialist
+insurance_job_0610, 194400, Job Analysis Specialist
+insurance_job_0611, 194500, Organization and management specialist
+insurance_job_0612, 194700, Training Specialist
+insurance_job_0613, 194900, Personal and guidance affairs specialists
+insurance_job_0614, 195000, Translator
+insurance_job_0615, 195100, Signal interpreter for the deaf
+insurance_job_0616, 195200, Language specialist
+insurance_job_0617, 195300, Translator written article
+insurance_job_0618, 195400, Hadith interpreter
+insurance_job_0619, 195500, Public Relations Specialist
+insurance_job_0620, 199200, Home economist
+insurance_job_0621, 199300, Specialist in ancient Egyptian antiquities
+insurance_job_0622, 199400, Specialist in Islamic antiquities
+insurance_job_0623, 199500, Coptic antiquities specialist
+insurance_job_0624, 199900, Technical and scientific professionals
+insurance_job_0625, 200100, President of the Republic
+insurance_job_0626, 200200, Prime Minister
+insurance_job_0627, 200300, Chairman of the People's Assembly
+insurance_job_0628, 200400, Chairman of the Shura Council
+insurance_job_0629, 200500, Deputy Prime Minister
+insurance_job_0630, 200600, Minister
+insurance_job_0631, 200700, State Minister
+insurance_job_0632, 200800, governor
+insurance_job_0633, 201200, State Council member legislation
+insurance_job_0634, 201900, Legislators - Others
+insurance_job_0635, 202100, Head of sectors in the public sector
+insurance_job_0636, 202200, Head of a central administration (Ministry Undersecretary)
+insurance_job_0637, 202300, A director of public interest or administration
+insurance_job_0638, 202390, Library manager
+insurance_job_0639, 202400, Secretary General - Secretary General
+insurance_job_0640, 202410, Secretary - Executive
+insurance_job_0641, 202420, Executive Director
+insurance_job_0642, 202421, Architectural model manager
+insurance_job_0643, 202460, Editorial Discipline
+insurance_job_0644, 202470, Engineering software planner
+insurance_job_0645, 202480, Program manager
+insurance_job_0646, 202490, Manager
+insurance_job_0647, 202500, Head of the Department
+insurance_job_0648, 202510, Company manager
+insurance_job_0649, 202520, Office Manager
+insurance_job_0650, 202530, Director of the Chairman’s Office
+insurance_job_0651, 202540, Director of the Office of the Managing Director
+insurance_job_0652, 202550, Director of the Sector Head Office
+insurance_job_0653, 202600, City Council Chairman
+insurance_job_0654, 202700, Village Council President
+insurance_job_0655, 202900, Administrative administrators in the government
+insurance_job_0656, 203000, General Monitor
+insurance_job_0657, 203100, Observer quality
+insurance_job_0658, 203200, Financial watchdog
+insurance_job_0659, 203210, Observer and anti-money laundering official
+insurance_job_0660, 203300, Safe watch out
+insurance_job_0661, 203400, Tester quality
+insurance_job_0662, 203500, Cost Controller
+insurance_job_0663, 203600, Watch out for the time
+insurance_job_0664, 203700, Watched
+insurance_job_0665, 203710, Watch out for tanks
+insurance_job_0666, 203800, Occupational Safety and Health Monitor
+insurance_job_0667, 204200, Great
+insurance_job_0668, 204210, Chief Accountant
+insurance_job_0669, 204220, Senior auditors
+insurance_job_0670, 204230, Chief Lawyer
+insurance_job_0671, 204240, Chief Specialist
+insurance_job_0672, 204250, Chief Researcher
+insurance_job_0673, 204260, Great book
+insurance_job_0674, 204300, Chief technician
+insurance_job_0675, 204400, Senior Technical Supervisor
+insurance_job_0676, 204500, Security investigator
+insurance_job_0677, 204800, Adviser
+insurance_job_0678, 204810, Technical services adviser
+insurance_job_0679, 204900, Sharia advisor
+insurance_job_0680, 205000, The first human resources consultant
+insurance_job_0681, 206000, Tax consultant
+insurance_job_0682, 206100, Information Technology Consultant
+insurance_job_0683, 206200, Control Consultant
+insurance_job_0684, 206300, An expert
+insurance_job_0685, 206400, Economist
+insurance_job_0686, 206500, Product development expert
+insurance_job_0687, 206600, Director of the Development Department
+insurance_job_0688, 207000, Inspector
+insurance_job_0689, 207100, Production Inspector
+insurance_job_0690, 208900, President
+insurance_job_0691, 209000, Chief Operations
+insurance_job_0692, 209900, University's president
+insurance_job_0693, 210000, Chairman of the Board of Trustees
+insurance_job_0694, 210040, Dean
+insurance_job_0695, 210050, Dean of the Institute
+insurance_job_0696, 210100, University assistant teacher
+insurance_job_0697, 210150, Assistant Dean
+insurance_job_0698, 211000, Member of the Board of Trustees
+insurance_job_0699, 211200, Chairman of the Board of Directors of a public corporation
+insurance_job_0700, 211300, Chairman of the Board of Directors of a public body
+insurance_job_0701, 211400, Chairman of the Board of Directors of the company
+insurance_job_0702, 211500, General manager of a public institution
+insurance_job_0703, 211600, Director General of the General Authority
+insurance_job_0704, 211690, Sales General Manager
+insurance_job_0705, 211700, General manager of a company or department
+insurance_job_0706, 211710, General Director of Administrative Affairs
+insurance_job_0707, 211711, General Director of Financial Affairs
+insurance_job_0708, 211712, Inspection Director General
+insurance_job_0709, 211713, General Director of Legal Affairs
+insurance_job_0710, 211720, General manager of financial and administrative affairs
+insurance_job_0711, 211730, Director general
+insurance_job_0712, 211731, General Director of Security
+insurance_job_0713, 211740, Quality General Manager
+insurance_job_0714, 211750, Deputy General Manager
+insurance_job_0715, 211790, Managing Director
+insurance_job_0716, 211800, Delegated board member
+insurance_job_0717, 211810, Member of the Board of Directors and General Manager
+insurance_job_0718, 211820, Member of the Board of Directors
+insurance_job_0719, 211880, Sectional Head
+insurance_job_0720, 211881, Head of the implementation sectors
+insurance_job_0721, 211882, Head of the financial and legal sectors
+insurance_job_0722, 211890, Head of sector
+insurance_job_0723, 211900, Head of the financial and administrative sector
+insurance_job_0724, 211910, Head of the Marketing Sector
+insurance_job_0725, 211920, Head of the Industry Sector
+insurance_job_0726, 211930, Head of the Human Resources Sector
+insurance_job_0727, 211940, Deputy
+insurance_job_0728, 211950, Sector Vice President
+insurance_job_0729, 211960, Vice President of a company
+insurance_job_0730, 211980, Deputy Chief Secretary
+insurance_job_0731, 211990, Vice Chancellor
+insurance_job_0732, 212000, Vice Chairman of the Board of Directors
+insurance_job_0733, 212030, regional manager
+insurance_job_0734, 212090, Medical District Director
+insurance_job_0735, 212110, managing director
+insurance_job_0736, 212200, Maintenance manager
+insurance_job_0737, 212300, Sales Manager
+insurance_job_0738, 212310, Purchasing and Logistics Director
+insurance_job_0739, 212400, Director of Public Relations
+insurance_job_0740, 212410, relation's director
+insurance_job_0741, 212420, Media Director
+insurance_job_0742, 212490, E-Marketing Director
+insurance_job_0743, 212500, Marketing director
+insurance_job_0744, 212600, Director of Purchases Department
+insurance_job_0745, 212700, Store Manager
+insurance_job_0746, 212800, Director of Contracts Department
+insurance_job_0747, 212900, Director of the Export Department
+insurance_job_0748, 212910, Risk Management Director
+insurance_job_0749, 212920, Director of the Foreign Markets Department
+insurance_job_0750, 212930, Director of the electronic trading department
+insurance_job_0751, 213100, Director of Quality Control Department
+insurance_job_0752, 213190, Director of the Drilling Department
+insurance_job_0753, 213200, A manager alone in a financial facility
+insurance_job_0754, 213210, Finance manager
+insurance_job_0755, 213211, Investment manager
+insurance_job_0756, 213220, Director of the Department of Import and Export
+insurance_job_0757, 213230, Regional Director
+insurance_job_0758, 213231, Regional Director for Human Resources
+insurance_job_0759, 213240, Factory manager
+insurance_job_0760, 213300, A manager alone or a branch manager
+insurance_job_0761, 213400, A manager alone in an insurance facility
+insurance_job_0762, 214200, A manager alone in the transportation business
+insurance_job_0763, 214300, A manager alone in transportation
+insurance_job_0764, 214400, A manager alone in warehousing
+insurance_job_0765, 214500, Legal Affairs Director
+insurance_job_0766, 214510, Cases Management Director
+insurance_job_0767, 215000, Security Director
+insurance_job_0768, 215100, Industrial Security Director
+insurance_job_0769, 216000, Director of the cameras and internal control department
+insurance_job_0770, 218000, Computer Center Director
+insurance_job_0771, 218100, IT manager
+insurance_job_0772, 218850, Financial Sector Director
+insurance_job_0773, 218860, Administrative Sector Director
+insurance_job_0774, 218870, Director of the Training and Development Sector
+insurance_job_0775, 218880, Sector Director
+insurance_job_0776, 218890, Legal Affairs Sector Director
+insurance_job_0777, 218900, Human Resources Director
+insurance_job_0778, 219000, Director of Personnel Affairs (Director of Human Resources.)
+insurance_job_0779, 219060, Operations Development Specialist
+insurance_job_0780, 219070, Operations port
+insurance_job_0781, 219080, Operations Analyst
+insurance_job_0782, 219090, financial analyst
+insurance_job_0783, 219100, Financial Manager
+insurance_job_0784, 219110, Director of financial and administrative
+insurance_job_0785, 219120, Budget Specialist
+insurance_job_0786, 219140, Client account manager
+insurance_job_0787, 219150, Account Manager
+insurance_job_0788, 219160, Audit Manager
+insurance_job_0789, 219200, Planning and follow-up manager
+insurance_job_0790, 219300, Commercial manager -except for wholesale establishments
+insurance_job_0791, 219400, Manager or administrative supervisor
+insurance_job_0792, 219410, Deputy Director of Administration
+insurance_job_0793, 219420, Assistant
+insurance_job_0794, 219421, Assistant Director
+insurance_job_0795, 219422, assistant of a general manager
+insurance_job_0796, 219423, Assistant Director of the Cameras and Internal Control Department
+insurance_job_0797, 219424, Assistant head of a company
+insurance_job_0798, 219430, Coordinator
+insurance_job_0799, 219440, Customer Service Representative
+insurance_job_0800, 219450, Technical Manager
+insurance_job_0801, 219460, Director of Marketing Research and Studies
+insurance_job_0802, 219470, customer service supervisor
+insurance_job_0803, 219480, Lab manager
+insurance_job_0804, 219490, Customer Service Manager
+insurance_job_0805, 219500, projects manager
+insurance_job_0806, 219510, Director of Operations
+insurance_job_0807, 219590, Director of Engineering Affairs
+insurance_job_0808, 219600, Industrial Relationship Manager
+insurance_job_0809, 219610, Commercial consultant
+insurance_job_0810, 219620, commercial representative
+insurance_job_0811, 219630, economic consultant
+insurance_job_0812, 219640, financial consultant
+insurance_job_0813, 219650, Marketing and media consultant
+insurance_job_0814, 219660, Master discipline information
+insurance_job_0815, 219670, Political analyst
+insurance_job_0816, 219680, Marketing Analyst
+insurance_job_0817, 219690, Securities analyst
+insurance_job_0818, 219700, Contractor - contracting business manager
+insurance_job_0819, 219800, Real estate manager of lands or buildings
+insurance_job_0820, 219900, Other business managers
+insurance_job_0821, 230000, Head of the tickets reservation department
+insurance_job_0822, 300000, Unit head
+insurance_job_0823, 300100, The head alone is clerical
+insurance_job_0824, 310100, Responsible
+insurance_job_0825, 310110, Shipping official
+insurance_job_0826, 310120, Money Laundering Officer
+insurance_job_0827, 310130, Official responsible for his request
+insurance_job_0828, 310140, Responsible Discipline
+insurance_job_0829, 310150, Marketing Officer
+insurance_job_0830, 310160, Operating Officer
+insurance_job_0831, 310170, Party Officer
+insurance_job_0832, 310190, E-trading department employee
+insurance_job_0833, 310200, Employee
+insurance_job_0834, 310210, Administrative
+insurance_job_0835, 310220, An employee in the cameras and internal control department
+insurance_job_0836, 310300, Mayor - Sheikh before him
+insurance_job_0837, 310400, Sheikh of a country
+insurance_job_0838, 310500, registry office
+insurance_job_0839, 311200, Loading and unloading clerk
+insurance_job_0840, 311900, Explosive trading official
+insurance_job_0841, 321100, clerk
+insurance_job_0842, 321200, Shorthand
+insurance_job_0843, 321300, Writer is a writer
+insurance_job_0844, 321400, A writer on the telegraph
+insurance_job_0845, 321500, Telegraph clerk - Morris apparatus
+insurance_job_0846, 321600, Telex clerk
+insurance_job_0847, 321900, Written by stenographer and typewriter
+insurance_job_0848, 322200, Punching machine operator
+insurance_job_0849, 322400, Card review machine operator
+insurance_job_0850, 331100, Bookkeeping - General
+insurance_job_0851, 331200, Notebook clerk
+insurance_job_0852, 331300, Office cashier - treasurer
+insurance_job_0853, 331400, ATM
+insurance_job_0854, 331500, Commercial cashier
+insurance_job_0855, 331600, Transfer of Emirates property
+insurance_job_0856, 331700, Collector - except for transportation collectors
+insurance_job_0857, 331800, Ticket cashier - except for the collectors
+insurance_job_0858, 331810, Ticketing employee at a tourism company
+insurance_job_0859, 331820, Airline reservation officer
+insurance_job_0860, 339200, Cost clerk
+insurance_job_0861, 339300, Pay clerk
+insurance_job_0862, 339400, Financial affairs clerk
+insurance_job_0863, 339900, Masco notebooks and cashiers
+insurance_job_0864, 341108, Paper cutter
+insurance_job_0865, 341200, Bookkeeping machine operator
+insurance_job_0866, 341400, Calculator operator
+insurance_job_0867, 342200, Card tab operator
+insurance_job_0868, 342300, Card sorting machine operator
+insurance_job_0869, 342400, Cards tab operator
+insurance_job_0870, 342500, Computer operator
+insurance_job_0871, 342600, Gas charge and supply devices operator
+insurance_job_0872, 351200, Railway station warden
+insurance_job_0873, 351400, Railway station associate
+insurance_job_0874, 352200, Post Office Head - Post Agent
+insurance_job_0875, 352400, Head of the Telegraph and Telephone Office
+insurance_job_0876, 353000, Drilling rig head
+insurance_job_0877, 358000, Movement leader
+insurance_job_0878, 359150, Traffic inspector by road transport
+insurance_job_0879, 359200, Station warden by road transportation
+insurance_job_0880, 359250, Road transport inspector
+insurance_job_0881, 359260, Supervisor
+insurance_job_0882, 359261, General Supervisor
+insurance_job_0883, 359270, maintenance supervisor
+insurance_job_0884, 359280, Engineering graphics supervisor
+insurance_job_0885, 359290, Civil works supervisor
+insurance_job_0886, 359300, Transportation Supervisor
+insurance_job_0887, 359330, Ground movement officer
+insurance_job_0888, 359350, Air traffic control officer
+insurance_job_0889, 359360, Shipping officer
+insurance_job_0890, 359400, Aircraft relay
+insurance_job_0891, 359450, Supervisor of marine transportation
+insurance_job_0892, 359500, Supervisor by river transportation
+insurance_job_0893, 359550, Transportation associate of goods
+insurance_job_0894, 359900, Supervisors of the transportation and communications
+insurance_job_0895, 360200, Train collector - a track
+insurance_job_0896, 360300, Bus -tram or trolley collector
+insurance_job_0897, 360400, Note a sleeping cart and a railway
+insurance_job_0898, 360900, Collectors in transportation
+insurance_job_0899, 370200, Faraz at a post office
+insurance_job_0900, 370300, Post clerk - Postman
+insurance_job_0901, 370400, Mail dispatcher
+insurance_job_0902, 370500, Domestic courier
+insurance_job_0903, 370600, Subscription Distributor
+insurance_job_0904, 371000, Gas stove distributor
+insurance_job_0905, 380200, Telephone operator
+insurance_job_0906, 380300, Telephone aide - Telephone
+insurance_job_0907, 380400, Telegraph Associate - Telegraphic
+insurance_job_0908, 380500, Wireless operator at a ground station
+insurance_job_0909, 380600, Ship wireless officer
+insurance_job_0910, 380700, Airline officer
+insurance_job_0911, 380800, Switch operator
+insurance_job_0912, 380900, Telephone and telegraph operators
+insurance_job_0913, 391300, Records clerk at stores
+insurance_job_0914, 391400, Storekeeper - storekeeper
+insurance_job_0915, 391410, Store Keeper Assistant
+insurance_job_0916, 391500, Wazan - Qabbani
+insurance_job_0917, 392200, Material Records Clerk
+insurance_job_0918, 392400, Production planning clerk
+insurance_job_0919, 393100, Correspondence and Reports Writer - General
+insurance_job_0920, 393200, Personal Affairs Clerk
+insurance_job_0921, 393300, Judicial Affairs Clerk
+insurance_job_0922, 393400, Insurance business clerk
+insurance_job_0923, 393500, Lawyer clerk
+insurance_job_0924, 393600, Public clerk
+insurance_job_0925, 393900, Written by correspondence and reports
+insurance_job_0926, 394100, Receptionist - general
+insurance_job_0927, 394200, Hotel receptionist
+insurance_job_0928, 394300, Reception clerk at a hospital or clinic
+insurance_job_0929, 394400, Tourism clerk
+insurance_job_0930, 394900, Written by reception and travel organization
+insurance_job_0931, 395200, His clerk
+insurance_job_0932, 395400, Archives writer
+insurance_job_0933, 399200, Statistics clerk
+insurance_job_0934, 399250, Coding writer - coded
+insurance_job_0935, 399300, Budget writer
+insurance_job_0936, 399350, Tickets lender
+insurance_job_0937, 399400, Print reader proof
+insurance_job_0938, 399450, Meter reader
+insurance_job_0939, 399500, Production clerk
+insurance_job_0940, 399550, Customs broker - Facilitation
+insurance_job_0941, 399900, Clerks whose professions have not been returned
+insurance_job_0942, 400200, Director in wholesale trade
+insurance_job_0943, 400400, Director in retail operations
+insurance_job_0944, 410200, An employer and runs it in wholesale business
+insurance_job_0945, 410400, Business owner and run in the retail business
+insurance_job_0946, 421100, Sales Supervisor - Head of Sale
+insurance_job_0947, 421200, Supervisor in a production unit
+insurance_job_0948, 421300, Export supervisor
+insurance_job_0949, 421700, A delegate
+insurance_job_0950, 421710, Maintenance representative
+insurance_job_0951, 421720, Licensing Rep
+insurance_job_0952, 421730, Security representative and guards
+insurance_job_0953, 421740, Bank rep
+insurance_job_0954, 421750, Foreign licenses extract
+insurance_job_0955, 421760, Service Representative
+insurance_job_0956, 421800, Lawyer
+insurance_job_0957, 421810, Department Deputy
+insurance_job_0958, 421820, Management agent
+insurance_job_0959, 422100, Procurement representative
+insurance_job_0960, 422110, Packaged rep
+insurance_job_0961, 431200, Technical seller
+insurance_job_0962, 431400, Technical consultant provider for buyers
+insurance_job_0963, 432200, A commercial mobile (Apollasia - sales representative)
+insurance_job_0964, 432300, Distribution representative
+insurance_job_0965, 432400, Factory product distribution agent
+insurance_job_0966, 441200, Twin Seller Contract - Producer
+insurance_job_0967, 441300, Real estate contract seller - Real estate broker
+insurance_job_0968, 441400, Financial paper seller - stock broker
+insurance_job_0969, 441900, Brokers selling insurance contracts
+insurance_job_0970, 442200, Intermediary providing service in commercial business - Qomseongye
+insurance_job_0971, 442400, Commercial broker
+insurance_job_0972, 443000, Assistant Valuation Expert
+insurance_job_0973, 443100, Dalal Auctions - An Auction Appraiser Expert
+insurance_job_0974, 450000, Sayegh (Hawajerji)
+insurance_job_0975, 451200, Seller in wholesale business
+insurance_job_0976, 451300, Retailer in retail
+insurance_job_0977, 451400, Mannequin Model
+insurance_job_0978, 451500, Viewer of goods
+insurance_job_0979, 451600, Delivery of goods sold (control)
+insurance_job_0980, 451700, store worker
+insurance_job_0981, 451900, Sellers and their assistants - others
+insurance_job_0982, 452200, peddler
+insurance_job_0983, 452300, Distributor seller - milk - bread
+insurance_job_0984, 452400, Mbboui - a street vendor
+insurance_job_0985, 452500, A mobile seller in the markets
+insurance_job_0986, 452600, Newspaper seller
+insurance_job_0987, 452700, A livestock trader in the market
+insurance_job_0988, 452900, Street vendors and mobile sellers
+insurance_job_0989, 490100, medical representative
+insurance_job_0990, 490200, Scientific representative (propaganda)
+insurance_job_0991, 490300, Medical advertising supervisor
+insurance_job_0992, 490900, Other salesmen
+insurance_job_0993, 500500, Confectionery
+insurance_job_0994, 500600, Chef Pastry
+insurance_job_0995, 501200, Restaurant Manager
+insurance_job_0996, 501300, Assistant manager of a restaurant
+insurance_job_0997, 501400, Hotel manager
+insurance_job_0998, 501500, Deputy Hotel Manager
+insurance_job_0999, 501600, Reservation manager
+insurance_job_1000, 501610, Party Undertaker
+insurance_job_1001, 501700, Receptionist
+insurance_job_1002, 501800, Food and beverage manager
+insurance_job_1003, 501900, Managers in restaurants and hotels
+insurance_job_1004, 501910, Front Office Manager
+insurance_job_1005, 502000, Party manager
+insurance_job_1006, 502200, Director of entertainment services
+insurance_job_1007, 502300, Employee in recreational services
+insurance_job_1008, 502400, Director in personal services
+insurance_job_1009, 502900, Managers in the entertainment services
+insurance_job_1010, 503000, Pullman's suitcase holder
+insurance_job_1011, 510150, The owner of a restaurant he works in
+insurance_job_1012, 510200, The owner of a cafeteria where he works
+insurance_job_1013, 510250, The owner of a bar - a bar - works there
+insurance_job_1014, 510300, A coffee owner works there
+insurance_job_1015, 510350, The owner of a hotel he works in
+insurance_job_1016, 510400, Pension owner working in it
+insurance_job_1017, 510420, A pharmacy owner works out
+insurance_job_1018, 510450, The owner of an entertainment services facility he works in
+insurance_job_1019, 510500, The owner of a personal services facility where he works
+insurance_job_1020, 510510, Owner and manager of an accounting office
+insurance_job_1021, 510600, Car owner
+insurance_job_1022, 510700, Real estate owner with less than 250 pounds a year
+insurance_job_1023, 510800, 94-77 inherited by an individual facility owner - Ministerial Resolution
+insurance_job_1024, 510900, Owners of restaurants -hotels and other facilities
+insurance_job_1025, 520200, Supervisor of a public residence - hotel - hospital
+insurance_job_1026, 520300, Supervisor of a private residence
+insurance_job_1027, 520400, Host - air host
+insurance_job_1028, 520410, Crew chief
+insurance_job_1029, 520500, Head of class in hotels and hospitals
+insurance_job_1030, 520600, Head row on his ship
+insurance_job_1031, 520900, Supervisors of the establishment care and hygiene
+insurance_job_1032, 530000, kitchen worker
+insurance_job_1033, 531000, Head of the Sympathologist
+insurance_job_1034, 531100, Deputy head of the kitchen
+insurance_job_1035, 531200, Chef - chefs
+insurance_job_1036, 531300, Chef - Chef
+insurance_job_1037, 531400, Chef - cook - special
+insurance_job_1038, 531500, Chef - cooks a ship
+insurance_job_1039, 531600, Kababji (meat grill)
+insurance_job_1040, 531610, Shawarma grill
+insurance_job_1041, 531620, Chicken grill
+insurance_job_1042, 531700, My taste
+insurance_job_1043, 531800, Frying fish
+insurance_job_1044, 531900, Chefs - the others
+insurance_job_1045, 532000, Food and beverage supervisor
+insurance_job_1046, 532200, Host - host
+insurance_job_1047, 532300, Gerson (Food Provider)
+insurance_job_1048, 532400, My coffee - buffet worker
+insurance_job_1049, 532500, Barman's boot
+insurance_job_1050, 532600, My cover
+insurance_job_1051, 532900, Gersons and waterers -and the ones
+insurance_job_1052, 540200, Home Assistant
+insurance_job_1053, 540300, Data - Instructor
+insurance_job_1054, 540400, وصيفه
+insurance_job_1055, 540500, Accompanying
+insurance_job_1056, 540600, Supervisor of the service on deck
+insurance_job_1057, 540900, Personal service for families
+insurance_job_1058, 551200, Doorman
+insurance_job_1059, 551210, Amount and counter
+insurance_job_1060, 551300, Mattress - Courier
+insurance_job_1061, 551400, Elevator operator
+insurance_job_1062, 551500, Water lifting machine operator
+insurance_job_1063, 551700, The mosque servant
+insurance_job_1064, 551710, Church servant
+insurance_job_1065, 551900, Building care workers
+insurance_job_1066, 551910, Anavar cleaner and accessories
+insurance_job_1067, 551920, Badge worker and wings weight
+insurance_job_1068, 551930, Shaker & Termision - Cleaner
+insurance_job_1069, 551940, Cleaners are monsters and speculators
+insurance_job_1070, 552100, Building and residential cleaning worker
+insurance_job_1071, 560100, Ironing and washing agent - general
+insurance_job_1072, 560200, Laundry machine operator
+insurance_job_1073, 560300, Dry cleaning machine operator
+insurance_job_1074, 560400, Washer - washing machine
+insurance_job_1075, 560500, Ironing machine operator
+insurance_job_1076, 560600, Ironing - ironing - by hand
+insurance_job_1077, 560900, Laundry and cleaning workers
+insurance_job_1078, 570200, Ladies barber and hairdresser
+insurance_job_1079, 570300, Men's barber and hairdresser
+insurance_job_1080, 570400, Beauty Specialist
+insurance_job_1081, 570500, Bath massager - bag
+insurance_job_1082, 570600, Makeup Worker - Make Up
+insurance_job_1083, 581200, Fire cop
+insurance_job_1084, 581300, Extinguishing technician
+insurance_job_1085, 581400, A special firefighter
+insurance_job_1086, 581900, Firefighters and rescue
+insurance_job_1087, 582200, Policeman
+insurance_job_1088, 582400, Police detective - informant
+insurance_job_1089, 582900, Police and detectives - others
+insurance_job_1090, 583200, Police officer
+insurance_job_1091, 583300, Investigation officer
+insurance_job_1092, 583400, Fire officer
+insurance_job_1093, 583900, Other police officers
+insurance_job_1094, 585900, Supervisor security
+insurance_job_1095, 586000, Industrial Security Supervisor
+insurance_job_1096, 586100, Safe person
+insurance_job_1097, 586200, Bodyguard
+insurance_job_1098, 589200, Regular sentry
+insurance_job_1099, 589300, Private sentry - bodyguard
+insurance_job_1100, 589400, jailer
+insurance_job_1101, 589900, Security and prevention services workers
+insurance_job_1102, 591140, Tourism manager
+insurance_job_1103, 591150, Religious Tourism Director
+insurance_job_1104, 591190, Tourism representative
+insurance_job_1105, 591200, A tour guide
+insurance_job_1106, 591250, Tourist program specialist
+insurance_job_1107, 591300, Tourist group facilities
+insurance_job_1108, 591400, Ground hostess
+insurance_job_1109, 591500, Exhibition organizer
+insurance_job_1110, 592200, Hanauti
+insurance_job_1111, 592300, Laundry
+insurance_job_1112, 592400, Educate
+insurance_job_1113, 592900, Store and upbringing and from them
+insurance_job_1114, 599200, An ambulance
+insurance_job_1115, 599220, Mattress tents
+insurance_job_1116, 599240, Clothes dyeing agent
+insurance_job_1117, 599260, Stable politician
+insurance_job_1118, 599280, Saiss Garage
+insurance_job_1119, 599300, Car caller
+insurance_job_1120, 599320, Bone
+insurance_job_1121, 599340, Poor
+insurance_job_1122, 599360, Combs
+insurance_job_1123, 599380, Hypnotic
+insurance_job_1124, 599400, Mine
+insurance_job_1125, 599420, Palm reader
+insurance_job_1126, 599440, Tattoo maker - ect
+insurance_job_1127, 599460, Sweeper
+insurance_job_1128, 599480, shoeblack
+insurance_job_1129, 599500, Garbage collector
+insurance_job_1130, 599510, My magic
+insurance_job_1131, 599520, Toilet sweeper
+insurance_job_1132, 599900, Other service workers (Marajihi)
+insurance_job_1133, 600150, Director of a farm for general production
+insurance_job_1134, 600200, Director of a farm plant production
+insurance_job_1135, 600250, Director of a farm for animal production
+insurance_job_1136, 600300, Farm manager for fish production
+insurance_job_1137, 600310, Production Supervisor
+insurance_job_1138, 600350, Musharraf farm for public production
+insurance_job_1139, 600400, Musharraf farm for plant production
+insurance_job_1140, 600450, Musharraf farm for animal production
+insurance_job_1141, 600500, Musharraf farm for fish production
+insurance_job_1142, 600550, The farmer's supervisor
+insurance_job_1143, 600600, Technician - Associate - at his farm for general production
+insurance_job_1144, 600650, Technician - Associate - at a farm plant production
+insurance_job_1145, 600700, Associate farm technician for animal production
+insurance_job_1146, 600710, Animal production plant technician
+insurance_job_1147, 600750, Associate technician on farm for fish production
+insurance_job_1148, 600900, Farm managers and supervisors
+insurance_job_1149, 605600, Head of the Dairy Products Division
+insurance_job_1150, 611100, Peasant or farmer - holder - general
+insurance_job_1151, 611537, Ready meals
+insurance_job_1152, 612200, Peasant or farmer - holder - specialized in vegetables
+insurance_job_1153, 612300, Peasant - farmer - holder - specialized in plants
+insurance_job_1154, 612400, A farmer or farmer - a holder - specialized in fruit
+insurance_job_1155, 612500, Peasant or farmer - holder - specializing in nurseries
+insurance_job_1156, 612600, Peasant - farmer - holder - specialized in animal husbandry
+insurance_job_1157, 612900, Peasants and farmers - holders
+insurance_job_1158, 620000, Criminals
+insurance_job_1159, 621100, Agriculture worker - general
+insurance_job_1160, 621200, Abnormal agent - Madrawi
+insurance_job_1161, 621300, Sifting worker - sieves - blaster
+insurance_job_1162, 621400, Khouly - An infrared resource
+insurance_job_1163, 621900, Non-specialized agricultural workers
+insurance_job_1164, 622100, Field crop cultivation worker
+insurance_job_1165, 623100, Fruit planting agent
+insurance_job_1166, 623212, Selling decorative items
+insurance_job_1167, 624100, Animal breeder Claf
+insurance_job_1168, 624200, Sheep breeder - sheep
+insurance_job_1169, 624300, Farrier
+insurance_job_1170, 624400, A livestock keeper
+insurance_job_1171, 624500, Veterinary Tomerji
+insurance_job_1172, 624600, Livestock and sheep
+insurance_job_1173, 624900, Animal husbandry workers - others
+insurance_job_1174, 625100, Dairy farm worker - general
+insurance_job_1175, 625300, Milking agent milk yogurt - Hallab
+insurance_job_1176, 625900, Dairy farm workers - others
+insurance_job_1177, 626100, Poultry farm worker - general
+insurance_job_1178, 626200, Automatic hatchery worker
+insurance_job_1179, 626300, Traditional hatchery lab worker
+insurance_job_1180, 627200, Nursery worker
+insurance_job_1181, 627400, Decorative garden worker
+insurance_job_1182, 628200, Agricultural tractor driver
+insurance_job_1183, 628300, Irrigation machine operator
+insurance_job_1184, 628400, Study machine operator
+insurance_job_1185, 628500, Spray motor operator
+insurance_job_1186, 628900, Agricultural machinery operation workers
+insurance_job_1187, 629200, Slender - Reyes Bee
+insurance_job_1188, 629300, Silkworm breeder
+insurance_job_1189, 629400, Fruit evaporation worker
+insurance_job_1190, 629500, Experimental operator - experiment observer
+insurance_job_1191, 629600, Bahari with irrigation engineering - Munasib Monitor
+insurance_job_1192, 629700, Dalal area - measurement
+insurance_job_1193, 629900, Agricultural workers and animal husbandry and related matters
+insurance_job_1194, 641200, Fisherman nets and woven
+insurance_job_1195, 641300, A fisherman with boats to him
+insurance_job_1196, 641400, A sponge plunger
+insurance_job_1197, 641500, The oyster and crustacean hunter
+insurance_job_1198, 641900, Other fishermen
+insurance_job_1199, 642100, Fisherman
+insurance_job_1200, 642200, Bird hunter
+insurance_job_1201, 699900, Craftsman head
+insurance_job_1202, 700000, Observer or supervisor
+insurance_job_1203, 700001, Electricity Observer
+insurance_job_1204, 700002, Maintenance note
+insurance_job_1205, 700010, Observed or supervised in coal extraction
+insurance_job_1206, 700020, Observed or supervised in iron extraction
+insurance_job_1207, 700030, Observer or supervisor in the extraction of materials
+insurance_job_1208, 700040, Observer or supervisor in petroleum operations
+insurance_job_1209, 700050, Observer or supervisor in oil drilling
+insurance_job_1210, 700060, Observer or supervisor of quarry operations
+insurance_job_1211, 700070, Observer or supervisor in the operations of navigation
+insurance_job_1212, 700080, Observer or supervisor in drilling water wells
+insurance_job_1213, 700100, Observer or supervisor in the high oven
+insurance_job_1214, 700110, Observer or supervisor in steel preparation furnaces
+insurance_job_1215, 700120, Observer or supervisor in metal preparation furnaces
+insurance_job_1216, 700130, Observer or supervisor in the rolling of minerals
+insurance_job_1217, 700140, Observer or supervisor in metal melting furnaces
+insurance_job_1218, 700150, Observer or supervisor in the plumbing of metals
+insurance_job_1219, 700160, Observer or supervisor in heat treatment
+insurance_job_1220, 700170, Observing or supervising the withdrawal of minerals
+insurance_job_1221, 700180, Observer or supervisor in the metal coating
+insurance_job_1222, 700200, Observer or supervisor in the chemical industries
+insurance_job_1223, 700210, Observer or supervisor in the cement industry
+insurance_job_1224, 700220, Observer or supervisor of oil refining
+insurance_job_1225, 700230, Petroleum pipeline designer
+insurance_job_1226, 700250, Observer or supervisor in the operation and repair of metal products
+insurance_job_1227, 700260, Observer or supervisor in the work of refrigerator
+insurance_job_1228, 700270, Observing or supervising the operation of machines
+insurance_job_1229, 700280, Observer or supervisor in the blacksmith
+insurance_job_1230, 700290, Observer or supervisor in welding
+insurance_job_1231, 700300, Observer or supervisor in the works of iron sheet
+insurance_job_1232, 700310, Observer or supervisor in the car industry
+insurance_job_1233, 700320, Observer or supervisor in the motorcycle industry
+insurance_job_1234, 700330, Observer or supervisor in the aircraft industry
+insurance_job_1235, 700340, Observer or supervisor in the transport industry
+insurance_job_1236, 700350, Observer or supervisor in the manufacture and repair of ships
+insurance_job_1237, 700360, Observer or supervisor in the manufacture of machines except electrical
+insurance_job_1238, 700370, Observer or supervisor in the hardware industry
+insurance_job_1239, 700380, Observer or supervisor in photography and optics
+insurance_job_1240, 700420, Observer or supervisor in the manufacture of electrical machines
+insurance_job_1241, 700430, Observer or supervisor in the electrical equipment industry
+insurance_job_1242, 700440, General Observer or Cooling and Air Conditioning Mechanics
+insurance_job_1243, 700450, Observed or supervised in rubber products
+insurance_job_1244, 700460, Observer or supervisor in plastic products
+insurance_job_1245, 700470, Observer or supervisor in paper products
+insurance_job_1246, 700480, Observed or supervised in the synthetic materials
+insurance_job_1247, 700500, Observer or supervisor in the slaughter and preservation of meat
+insurance_job_1248, 700510, Observer or supervisor in the dairy industry
+insurance_job_1249, 700520, Observer or supervisor in the canning of vegetables and fruits
+insurance_job_1250, 700530, Observer or supervisor in canning fish
+insurance_job_1251, 700540, Observer or supervisor in grinding grain
+insurance_job_1252, 700550, Observer or supervisor in the bread industry
+insurance_job_1253, 700560, Observer or supervisor in the sugar industry
+insurance_job_1254, 700570, Observer or supervisor in the manufacture of chocolate and candy
+insurance_job_1255, 700580, Observer or supervisor in food products
+insurance_job_1256, 700590, Observer or supervisor in the distillation of drinks
+insurance_job_1257, 700600, Observer or supervisor in the beverage industry
+insurance_job_1258, 700610, Observer or supervisor in the olive industry
+insurance_job_1259, 700660, Observer or supervisor in the spinning and weaving industry
+insurance_job_1260, 700670, Observer or supervisor of the silk yarn industry
+insurance_job_1261, 700680, Observer or supervisor in the knitting industry
+insurance_job_1262, 700690, Observer or supervisor in the dyeing and preparation of textiles
+insurance_job_1263, 700700, Observer or supervisor of the rope industry
+insurance_job_1264, 700710, Observer or supervisor in the garment industry
+insurance_job_1265, 700730, Observer or supervisor of building operations
+insurance_job_1266, 700740, Observer or supervisor of construction
+insurance_job_1267, 700750, Observer or supervisor of sanitary installations
+insurance_job_1268, 700770, Observer or supervisor in electricity generation operations
+insurance_job_1269, 700780, Observer or supervisor in gas production operations
+insurance_job_1270, 700790, Observer or supervisor in water purification operations
+insurance_job_1271, 700800, Observer or supervisor of steam production operations
+insurance_job_1272, 700820, Observer or supervisor of the wood crafts
+insurance_job_1273, 700830, Observer or supervisor in the pulp
+insurance_job_1274, 700840, Observer or supervisor of leather tanning and processing
+insurance_job_1275, 700850, Observer or supervisor in the manufacture of smoke products
+insurance_job_1276, 700860, Observer or supervisor in the shoe industry
+insurance_job_1277, 700870, Observer or supervisor in the manufacture of leather products
+insurance_job_1278, 700880, Observer or supervisor of the stone cutting and shaping processes
+insurance_job_1279, 700890, Observer or supervisor in the manufacture of glass products
+insurance_job_1280, 700900, Observer or supervisor in the ceramics and Chinese industry
+insurance_job_1281, 700910, Observer or supervisor in printing
+insurance_job_1282, 700920, Observer or supervisor in the building materials industry
+insurance_job_1283, 700930, Observer or supervisor of storage operations
+insurance_job_1284, 700940, Observer or supervisor of sewer operations
+insurance_job_1285, 700950, Supervisor -Department of Cameras and Internal Control
+insurance_job_1286, 700990, Observers and production supervisors - others
+insurance_job_1287, 701000, Technician Refrigeration & Air Conditioning
+insurance_job_1288, 702000, Paints technician
+insurance_job_1289, 703000, Mining Technique
+insurance_job_1290, 704000, Press technician
+insurance_job_1291, 710000, Excavator
+insurance_job_1292, 711001, Water well drilling rig
+insurance_job_1293, 711050, Miner - General
+insurance_job_1294, 711100, Quarry worker - general
+insurance_job_1295, 711200, Mining cutter operator
+insurance_job_1296, 711300, Quarry drilling machine operator
+insurance_job_1297, 711400, Detonation worker
+insurance_job_1298, 711500, Steel worker underground caves
+insurance_job_1299, 711600, Miner sampling worker
+insurance_job_1300, 711900, Miners and quarries - others
+insurance_job_1301, 712200, Stone cutting agent
+insurance_job_1302, 712300, Mining Extractor Crusher Operator
+insurance_job_1303, 712400, Ore separating machine operator
+insurance_job_1304, 712500, Flotation filter operator
+insurance_job_1305, 712600, Precipitation agent
+insurance_job_1306, 712700, The agent of gold and silver treatment in the manner of the transmission
+insurance_job_1307, 712800, Gyar - a lime-making agent
+insurance_job_1308, 712900, Lab workers for mining extracts
+insurance_job_1309, 713100, Tower operator - tower operator
+insurance_job_1310, 713200, Oil well auger operator
+insurance_job_1311, 713300, Rope drilling machine operator
+insurance_job_1312, 713400, Oil and gas wells packaging worker
+insurance_job_1313, 713500, Acid well treatment agent
+insurance_job_1314, 713900, Well drilling workers and others - others
+insurance_job_1315, 721200, High oven worker
+insurance_job_1316, 721300, Electric reducing furnace worker
+insurance_job_1317, 721400, Martin Steel worker
+insurance_job_1318, 721500, Bessemer or Thomas steel transformer operator
+insurance_job_1319, 721600, Steel furnace worker
+insurance_job_1320, 721700, Oven agent for the conversion and purification of metals
+insurance_job_1321, 721900, Metal conversion and refining furnace workers
+insurance_job_1322, 722200, Iron mill rolling machine operator
+insurance_job_1323, 722300, - Roller mill machine operator - non-iron
+insurance_job_1324, 722400, Continuous rolling machine operator
+insurance_job_1325, 722500, Cold rolling machine operator
+insurance_job_1326, 722600, Pipe and tube pulling machine operator
+insurance_job_1327, 722700, Adjustment device operator in rolling machines
+insurance_job_1328, 722900, Metal rolling machine operators
+insurance_job_1329, 723200, Al Dust worker for melting metals
+insurance_job_1330, 723300, worker of Al-Sharouka for melting metals
+insurance_job_1331, 723400, Arc metal melting agent
+insurance_job_1332, 723500, Cast iron melting agent
+insurance_job_1333, 723600, Inverter oven worker - refereatory
+insurance_job_1334, 723700, Metal heating furnace agent
+insurance_job_1335, 723900, Metal smelting and reheating workers
+insurance_job_1336, 724200, Metal casting agent
+insurance_job_1337, 724300, Centrifugal casting machine worker
+insurance_job_1338, 724400, Metal casting machine operator
+insurance_job_1339, 724500, Non-iron casting machine
+insurance_job_1340, 724900, Metal casting workers - others
+insurance_job_1341, 725000, Healthy plumber
+insurance_job_1342, 725100, Metal foundry - general
+insurance_job_1343, 725200, Metal foundry by hand
+insurance_job_1344, 725300, Metal foundry machine
+insurance_job_1345, 725400, Manual flake maker
+insurance_job_1346, 725500, Thank you so much
+insurance_job_1347, 725900, Metal plumbers and seminal manufacturers
+insurance_job_1348, 726200, Fermentation agent
+insurance_job_1349, 726300, Mineral hardening agent
+insurance_job_1350, 726400, Packaging hardening agent
+insurance_job_1351, 726500, Metal heat review worker
+insurance_job_1352, 726900, Heat treatment workers - others
+insurance_job_1353, 727100, Mineral Drawing worker - General
+insurance_job_1354, 727200, A hand-held wire drawing machine operator
+insurance_job_1355, 727300, Electric powered pulling machine operator
+insurance_job_1356, 727400, Pipe pulling machine operator without welding
+insurance_job_1357, 727900, Metal drawing workers - others
+insurance_job_1358, 728200, Electroplating metals worker - general
+insurance_job_1359, 728300, Metal coating agent for dipping
+insurance_job_1360, 728400, Wire coating machine operator
+insurance_job_1361, 728500, worker in the mines of Monsarah
+insurance_job_1362, 728600, Copper tin coating agent
+insurance_job_1363, 728900, Metal coating workers - others
+insurance_job_1364, 729200, Metal sandblasting agent
+insurance_job_1365, 729400, Brush polishing agent
+insurance_job_1366, 729900, Metal processing workers - operation and preparation
+insurance_job_1367, 731200, Wood drying agent
+insurance_job_1368, 731400, Wood treatment worker with tar or others
+insurance_job_1369, 731900, Wood processing workers - raw - others
+insurance_job_1370, 732200, Log sawing machine
+insurance_job_1371, 732300, Manual saw blade cutter
+insurance_job_1372, 732400, Veneer cutter operator
+insurance_job_1373, 732500, The operator of the piston press machine
+insurance_job_1374, 732600, Particleboard making machine operator
+insurance_job_1375, 732700, Wood sorter
+insurance_job_1376, 732900, Wood sawing and plywood making workers
+insurance_job_1377, 733200, Wood pulp machine operator
+insurance_job_1378, 733300, worker of digesting paper pulp
+insurance_job_1379, 733400, Paper bleaching machine operator
+insurance_job_1380, 733500, A worker hitting a pulp
+insurance_job_1381, 733900, Paper pulp workers - others
+insurance_job_1382, 734200, Paper making machine operator - entrance number
+insurance_job_1383, 734300, Paper Maker worker - Number of outputs
+insurance_job_1384, 734400, Paper machine operator
+insurance_job_1385, 734500, Polishing machine and polishing machine
+insurance_job_1386, 734600, Paper maker by hand
+insurance_job_1387, 734900, Paper-making workers - others
+insurance_job_1388, 741200, A chemical engine worker
+insurance_job_1389, 741300, Chemical process cooking machine operator
+insurance_job_1390, 741400, Mixing machine operator in chemical processes
+insurance_job_1391, 741900, Harashi workers - cracking - others
+insurance_job_1392, 742200, Cooking agent in chemical processes
+insurance_job_1393, 742300, Roasting agent in chemical processes
+insurance_job_1394, 742400, Furnace agent in chemical processes
+insurance_job_1395, 742500, Graphite furnace operator
+insurance_job_1396, 742600, Cement kiln operator
+insurance_job_1397, 742900, Cooking and roasting workers - others
+insurance_job_1398, 743200, Pressure filter device operator
+insurance_job_1399, 743300, Circular tap filter device operator
+insurance_job_1400, 743400, worker of the chasing force separator
+insurance_job_1401, 743500, Raw oil and sand purification agent
+insurance_job_1402, 743900, Filtration and dismissal workers - others
+insurance_job_1403, 744200, Intermittent material distillation agent
+insurance_job_1404, 744300, Continuous distillation agent for materials
+insurance_job_1405, 744400, Chemical reaction agent
+insurance_job_1406, 744500, Steaming device operator
+insurance_job_1407, 744600, Wood distillation operator
+insurance_job_1408, 744900, Distillation and reactions workers
+insurance_job_1409, 745200, A raw device agent to rid it of sulfur
+insurance_job_1410, 745300, Pump worker in the petroleum refining industry
+insurance_job_1411, 745400, Distillation agent in the oil refining industry
+insurance_job_1412, 745500, Arbitration worker in the oil refining industry
+insurance_job_1413, 745600, Mixing agent in the petroleum refining industry
+insurance_job_1414, 745700, Asphalt mixing agent in the petroleum refining industry
+insurance_job_1415, 745800, Paraffin tower operator in the oil industry
+insurance_job_1416, 745900, Others - oil refining workers
+insurance_job_1417, 746000, Gas cylinder distribution and installation worker
+insurance_job_1418, 749200, Rubber mixing and heating agent
+insurance_job_1419, 749250, Coke preparation agent
+insurance_job_1420, 749300, Coal gas industry worker
+insurance_job_1421, 749350, Municipal and vegetable charcoal distillation
+insurance_job_1422, 749400, Industrial wrapping worker
+insurance_job_1423, 749450, A worker in chemical processes of materials
+insurance_job_1424, 749500, Aromatherapy
+insurance_job_1425, 749550, A kiln for charcoal production
+insurance_job_1426, 749600, Minutes of laboratory in chemical processes
+insurance_job_1427, 749900, Chemical process workers - others
+insurance_job_1428, 751150, Cotton sorting agent
+insurance_job_1429, 751200, Flax milling agent
+insurance_job_1430, 751250, Wool screening agent
+insurance_job_1431, 751300, Wool washing agent
+insurance_job_1432, 751350, Fiber mixing and mixing agent
+insurance_job_1433, 751400, Cotton cleaning machine operator
+insurance_job_1434, 751450, Layoff machine - Kurdish worker
+insurance_job_1435, 751500, Carding machine operator
+insurance_job_1436, 751550, Winding worker
+insurance_job_1437, 751600, Pull worker
+insurance_job_1438, 751650, Twirl worker
+insurance_job_1439, 751900, Other fiber processing workers
+insurance_job_1440, 752150, Yarn worker
+insurance_job_1441, 752200, Application worker
+insurance_job_1442, 752250, Zo worker
+insurance_job_1443, 752300, Spinning worker - Yarns
+insurance_job_1444, 752350, Paralysis worker - worker for weight - universe worker
+insurance_job_1445, 752900, Spinning and spinning workers - others
+insurance_job_1446, 753200, Loom Filling Mechanic
+insurance_job_1447, 753300, Mechanic for packing looms
+insurance_job_1448, 753400, Knitting machines mechanic
+insurance_job_1449, 753500, Sheet graphics transfer worker
+insurance_job_1450, 753600, Cardboard cutting agent
+insurance_job_1451, 753900, Textile machinery tuning and preparation workers
+insurance_job_1452, 754150, Bush worker
+insurance_job_1453, 754200, Clamping agent
+insurance_job_1454, 754250, Hand-folded tabriz
+insurance_job_1455, 754300, Agent of Tabriz Al-Mutawah
+insurance_job_1456, 754340, Textile
+insurance_job_1457, 754350, Manual textile fabric worker
+insurance_job_1458, 754400, Mechanical textile worker on a mechanical loom
+insurance_job_1459, 754450, Weaving worker of Jacquard loom
+insurance_job_1460, 754500, Textile worker strips
+insurance_job_1461, 754550, Carpet worker on handloom
+insurance_job_1462, 754600, Mechanical carpet weaving worker
+insurance_job_1463, 754650, Klim textile worker
+insurance_job_1464, 754700, Fabric worker - blankets
+insurance_job_1465, 754750, Textile Screening Agent - Sorter
+insurance_job_1466, 754800, Textile defect repair worker
+insurance_job_1467, 754900, Textile workers and others - others
+insurance_job_1468, 755200, Surface knitting machine operator
+insurance_job_1469, 755300, Circular knitting machine operator
+insurance_job_1470, 755400, Manual knitting machine operator
+insurance_job_1471, 755500, Hand knitwear
+insurance_job_1472, 755900, Other knitwear
+insurance_job_1473, 756150, Textile bleaching agent
+insurance_job_1474, 756200, Yarn dyeing worker
+insurance_job_1475, 756250, Fabric dyeing agent
+insurance_job_1476, 756300, Natural silk degumming agent
+insurance_job_1477, 756350, Moisturizing operator
+insurance_job_1478, 756400, Wool textile textile hat
+insurance_job_1479, 756450, Wool sewing machine operator
+insurance_job_1480, 756500, Textile fitting agent
+insurance_job_1481, 756550	, Castor worker
+insurance_job_1482, 756600, Pile burning worker
+insurance_job_1483, 756650, Textile treatment agent against water
+insurance_job_1484, 756700, Textile treatment agent to prevent shrinkage
+insurance_job_1485, 756750, Textile finishing machine operator
+insurance_job_1486, 756900, Bleaching and dyeing workers - others
+insurance_job_1487, 759150, Hand-held braiding agent
+insurance_job_1488, 759200, Machine controversy worker
+insurance_job_1489, 759250, Hand crocheted worker
+insurance_job_1490, 759300, Crochet machine worker
+insurance_job_1491, 759350, Fur hair cleaning machine operator
+insurance_job_1492, 759400, Felting agent from fur
+insurance_job_1493, 759450, Wool felt manufacturer
+insurance_job_1494, 759500, Medical cotton worker
+insurance_job_1495, 759550, Threaded working worker - analysis
+insurance_job_1496, 759600, Fabrics testing agent -job specification analysis
+insurance_job_1497, 759900, Textile Industry Workers - Others
+insurance_job_1498, 761200, Leather sorting agent
+insurance_job_1499, 761250, Welding agent and hair removal by hand
+insurance_job_1500, 761300, Welding and hair removal machine
+insurance_job_1501, 761350, Leather slitting worker
+insurance_job_1502, 761400, - Tanning agent - Madabaghi
+insurance_job_1503, 761450, Tanning bath preparation worker
+insurance_job_1504, 761500, Leather finishing agent
+insurance_job_1505, 761550, Leather dyeing agent
+insurance_job_1506, 761900, Tanning workers and other wool milling workers
+insurance_job_1507, 762100, Raw fur processing and finishing workers
+insurance_job_1508, 771200, Grain miller
+insurance_job_1509, 771300, Rice hitting and bleaching agent
+insurance_job_1510, 771400, Rice Miller
+insurance_job_1511, 771500, Coffee roasting and grinding agent
+insurance_job_1512, 771600, Spice Miller - Spices
+insurance_job_1513, 771700, Attar
+insurance_job_1514, 771900, Grain milling workers and others - others
+insurance_job_1515, 772200, Reed squeeze worker
+insurance_job_1516, 772300, Juice remediation and treating agent
+insurance_job_1517, 772400, Crystallization agent for the sugar industry and refining
+insurance_job_1518, 772500, Centrifuge sugar separator
+insurance_job_1519, 772900, Sugar and other refining industry workers
+insurance_job_1520, 773100, Butcher - General
+insurance_job_1521, 773200, Slaughtering agent - slaughter - Bashkar
+insurance_job_1522, 773300, Limb and gut cleaning agent - My Crunch
+insurance_job_1523, 773900, Butchers and meat processing workers - others
+insurance_job_1524, 774100, Meat Cooker for Preservation - General
+insurance_job_1525, 774150, Fish cooker to save
+insurance_job_1526, 774200, Fruit and vegetable cooking worker for safekeeping
+insurance_job_1527, 774250, Tomato sauce making agent
+insurance_job_1528, 774300, Food freezing agent
+insurance_job_1529, 774350, Food drying agent
+insurance_job_1530, 774400, Meat treatment worker
+insurance_job_1531, 774450, Fish salting agent
+insurance_job_1532, 774500, Fruit squeeze worker for preservation
+insurance_job_1533, 774550, Pickles making agent
+insurance_job_1534, 774900, Food Preservation Workers - Others
+insurance_job_1535, 775100, Dairy Product Worker - General
+insurance_job_1536, 775200, Milk worker
+insurance_job_1537, 775300, Butter making worker
+insurance_job_1538, 775400, Cheese maker
+insurance_job_1539, 775500, Ice Cream Maker - Gelato
+insurance_job_1540, 775900, Dairy products workers - others
+insurance_job_1541, 776100, public Baker
+insurance_job_1542, 776110, Fran's assistant
+insurance_job_1543, 776120, Longji
+insurance_job_1544, 776130, Male
+insurance_job_1545, 776140, Kneader head
+insurance_job_1546, 776150, Bread kneader
+insurance_job_1547, 776160, Bread Kneader Assistant
+insurance_job_1548, 776200, Wood chips
+insurance_job_1549, 776250, Pie Maker - Fatatry - Kanafani
+insurance_job_1550, 776300, Gateaux maker
+insurance_job_1551, 776350, Candy maker
+insurance_job_1552, 776400, Macaroni maker
+insurance_job_1553, 776450, Chocolate maker
+insurance_job_1554, 776500, Frankincense maker
+insurance_job_1555, 776550, Sweetmaker
+insurance_job_1556, 776600, Biscuit industry worker
+insurance_job_1557, 776900, Baking -pancake and dessert industries
+insurance_job_1558, 777200, Tea synthesis worker
+insurance_job_1559, 778100, Spiritual Drink Maker - General
+insurance_job_1560, 778200, Agent of the abbot
+insurance_job_1561, 778300, Multimeter furnace operator
+insurance_job_1562, 778400, Multitrailer
+insurance_job_1563, 778500, Fermentation worker
+insurance_job_1564, 778600, Brewer making yeast
+insurance_job_1565, 778700, The vinegar maker from the molt
+insurance_job_1566, 778800, Wine and wine tasting agent
+insurance_job_1567, 778900, Alcoholic beverage industry workers
+insurance_job_1568, 779200, Seed machine agent
+insurance_job_1569, 779250, Oil and fat refining machine operator
+insurance_job_1570, 779300, Hydrogenation of oils
+insurance_job_1571, 779350, The plate press machine operator
+insurance_job_1572, 779400, Fruit juice agent
+insurance_job_1573, 779450, Starch making worker
+insurance_job_1574, 779900, Food and beverage processing workers
+insurance_job_1575, 781200, worker of dividing the smoke into degrees
+insurance_job_1576, 781300, Smoke synthesis worker - khormangi
+insurance_job_1577, 781400, Smoke moisturizing agent
+insurance_job_1578, 781500, Hand smoothing agent of the legs of the smoke
+insurance_job_1579, 781600, Smoke legs flushing machine operator
+insurance_job_1580, 781700, Smoke grinder operator
+insurance_job_1581, 781900, Smoke supply workers - others
+insurance_job_1582, 782200, Cigar maker by hand
+insurance_job_1583, 782400, Cigar maker operator
+insurance_job_1584, 782900, Cigarette workers - Others
+insurance_job_1585, 783200, Cigarette maker by hand
+insurance_job_1586, 783400, Cigarette Maker Operator
+insurance_job_1587, 789200, Sniffing worker
+insurance_job_1588, 789400, Honey smoke making agent
+insurance_job_1589, 789900, Smoke supply workers and products - others
+insurance_job_1590, 791150, Tailor made-to-measure exchange - tarzan
+insurance_job_1591, 791200, Tailor instead of ready
+insurance_job_1592, 791250, Trousers tailor
+insurance_job_1593, 791300, Tailor shirts and pajamas to size
+insurance_job_1594, 791350, Tailor the size of women's clothes
+insurance_job_1595, 791400, Tailor ready-made women's clothing
+insurance_job_1596, 791450, Tailor of municipal clothes - Arab tailor
+insurance_job_1597, 791900, Tailor - Others
+insurance_job_1598, 792100, Tailor furs
+insurance_job_1599, 792900, Tailor's fur - others
+insurance_job_1600, 793100, Hat Maker - General
+insurance_job_1601, 793200, Ladies hatsmaker
+insurance_job_1602, 793300, Military cap worker
+insurance_job_1603, 793400, Labdanum manufacturer - for body
+insurance_job_1604, 793900, Workers making headdresses - others
+insurance_job_1605, 794200, Clothing Model Maker - Pattern
+insurance_job_1606, 794300, Hat & Cap Model Maker - Pattern
+insurance_job_1607, 794400, Fabric transfer agent
+insurance_job_1608, 794500, Ready-made garment worker
+insurance_job_1609, 794600, Leather cutting worker
+insurance_job_1610, 794700, Glove Cut worker - Except Leather
+insurance_job_1611, 794800, Leather glove cutting worker
+insurance_job_1612, 794900, Fashion modeling workers and storytellers
+insurance_job_1613, 795000, Edition
+insurance_job_1614, 795100, Hand and sewing machine worker - general
+insurance_job_1615, 795150, A hand sewing worker other than leather and furs
+insurance_job_1616, 795200, Leather sewing worker by hand
+insurance_job_1617, 795250, The worker sew the fur by hand
+insurance_job_1618, 795300, The garment sewing machine operator
+insurance_job_1619, 795350, Hand embroidery worker
+insurance_job_1620, 795400, Machine embroidery worker
+insurance_job_1621, 795450, Buttonhole worker
+insurance_job_1622, 795500, Akkad - Hariri
+insurance_job_1623, 795550, Reed embroidery worker - Qasbaji
+insurance_job_1624, 795600, Garment worker - Rafa
+insurance_job_1625, 795700, Tailor - Tailor
+insurance_job_1626, 795900, Garment -embroidery and broderage tailors
+insurance_job_1627, 796200, Upholstered Upholsterer - Upholstered Furniture
+insurance_job_1628, 796300, Upholstered vehicles - car saddles
+insurance_job_1629, 796400, Upholstered Baladi - upholstered mattresses - pillows
+insurance_job_1630, 796500, Baradei
+insurance_job_1631, 796900, Upholsterers and others - others
+insurance_job_1632, 799400, Hand made net
+insurance_job_1633, 799500, Machine-making net worker
+insurance_job_1634, 799600, Closed the tent - tent
+insurance_job_1635, 799700, Umbrella maker - umbrellas
+insurance_job_1636, 799800, Canvas Tailor - Tailor - Flower Bags Tailor
+insurance_job_1637, 799810, Tailor made by jute pal
+insurance_job_1638, 799820, Sewer sacks
+insurance_job_1639, 799830, Tailor Bal Pay
+insurance_job_1640, 799900, Tailor -tailors and upholsterers - the other
+insurance_job_1641, 801100, Shoe-making worker - jazzmami - general
+insurance_job_1642, 801200, Maker of sandals and slippers
+insurance_job_1643, 801300, Workman made
+insurance_job_1644, 801400, Shoe repair worker
+insurance_job_1645, 801900, Workers making and repairing shoes - others
+insurance_job_1646, 802150, Patron shoe preparation worker
+insurance_job_1647, 802200, Leather shoe detailing worker by hand
+insurance_job_1648, 802250, Leather shoe detailing machine driver
+insurance_job_1649, 802300, Leather Shoe Enabler - McKinney
+insurance_job_1650, 802350, Sole leather detailing agent
+insurance_job_1651, 802400, Interior and exterior sole processing worker
+insurance_job_1652, 802450, Shoe tension worker on the mold
+insurance_job_1653, 802500, The worker sewing the shoe's face with the sole by hand
+insurance_job_1654, 802550, The shoe sewing worker with the sole
+insurance_job_1655, 802600, Shoe finishing worker after operation
+insurance_job_1656, 802900, Workers to customize -equip and sew shoes
+insurance_job_1657, 803100, Leather products manufacturer and its alternatives
+insurance_job_1658, 803200, Saddle and accelerator worker - saddle
+insurance_job_1659, 803300, Women handbag making worker
+insurance_job_1660, 803400, worker making bags and the like
+insurance_job_1661, 803500, Leather detailing agent -excluding shoes
+insurance_job_1662, 803600, Leather hand sewing worker - except for shoes
+insurance_job_1663, 803700, Leather Sewing Machine Maker - Machinji
+insurance_job_1664, 803800, Leather industrial worker
+insurance_job_1665, 803900, Workers making leather products and substitutes
+insurance_job_1666, 811100, Carpenter Furniture - General
+insurance_job_1667, 811200, Home Carpenter Furniture
+insurance_job_1668, 811300, Carpenter office furniture
+insurance_job_1669, 811400, Carpenter chairs
+insurance_job_1670, 811900, Furniture Carpenters - Others
+insurance_job_1671, 812100, Woodworking machinery packing and operating
+insurance_job_1672, 812200, Scanner operator - mcnge
+insurance_job_1673, 812300, Sweet Machine Operator - Sweet Maker
+insurance_job_1674, 812400, Woodworking machine operator
+insurance_job_1675, 812500, A sawdust operator
+insurance_job_1676, 812600, Wood Lathe Machine Operator - Wood Turner
+insurance_job_1677, 812900, Woodworking machinery workers - others
+insurance_job_1678, 819200, Carpenter riding carts
+insurance_job_1679, 819220, Carpenter carriages
+insurance_job_1680, 819240, Hurry carpenter
+insurance_job_1681, 819260, Aranik Carpenter - Carpenter Plumbing Models
+insurance_job_1682, 819280, Carpenter -Wooden Models - Maquette
+insurance_job_1683, 819300, Carpenter sports tools
+insurance_job_1684, 819320, Vaccination carpenter - Marketplace Awsdji
+insurance_job_1685, 819340, Carpenter Imah - Imji
+insurance_job_1686, 819360, Carpenter making pints and mugs
+insurance_job_1687, 819380, Carpenter drums
+insurance_job_1688, 819400, Najar Baldi - Occupation - Medicine - Matarah
+insurance_job_1689, 819420, Carpenter -agricultural machinery -wood - Givawi
+insurance_job_1690, 819440, Automatic carpenter screeners
+insurance_job_1691, 819460, Sawdust my country
+insurance_job_1692, 819480, My wood Turner
+insurance_job_1693, 819500, Crust Adhesive Agent (Crustal
+insurance_job_1694, 819520, Relax
+insurance_job_1695, 819540, Religious
+insurance_job_1696, 819560, Lacquer furniture bainter
+insurance_job_1697, 819900, Carpenters -furniture and wooden articles - others
+insurance_job_1698, 820150, Stone sorting agent
+insurance_job_1699, 820200, Stone cutter
+insurance_job_1700, 820250, Stone sawing machine operator
+insurance_job_1701, 820300, Stone leveling machine operator
+insurance_job_1702, 820350, Machine stone polishing agent
+insurance_job_1703, 820400, Stone Polishing Agent by Hand - Clear
+insurance_job_1704, 820450, Lathe Stone Forming and Polishing Operator
+insurance_job_1705, 820500, A worker carving and carving stones and writing on them
+insurance_job_1706, 820550, worker engraving and engraving on the stones by hand
+insurance_job_1707, 820600, Stone mill roughing worker - mill stone debate
+insurance_job_1708, 820900, Other workers cut and carve stones
+insurance_job_1709, 830000, Professional
+insurance_job_1710, 830100, Great craftsman
+insurance_job_1711, 831100, Blacksmith - blacksmith anvil - general
+insurance_job_1712, 831200, Mechanical hammer with molds
+insurance_job_1713, 831300, Blacksmith piston operator
+insurance_job_1714, 831400, Decorative blacksmith - doors - windows - furniture
+insurance_job_1715, 831500, Blacksmith cars
+insurance_job_1716, 831600, Haddad Swaqi
+insurance_job_1717, 831900, Blacksmiths and mechanical hammer operators - others
+insurance_job_1718, 832000, Brad Molds
+insurance_job_1719, 832100, Brad several and hyena - General
+insurance_job_1720, 832200, Brad several
+insurance_job_1721, 832300, Brad Hyena
+insurance_job_1722, 832400, Aranic metal maker for foundry
+insurance_job_1723, 832500, Shankar worker - Porsche Metal
+insurance_job_1724, 832600, Brad Stone
+insurance_job_1725, 832700, Brad fittings
+insurance_job_1726, 832900, Prado Issue - Other Issue Makers
+insurance_job_1727, 833100, Metalworking machine tool operator - general
+insurance_job_1728, 833150, Mining worker - Mining Wood
+insurance_job_1729, 833200, The Essential worker of the Essence of the Tower
+insurance_job_1730, 833250, Lathe worker - cylinder lathe
+insurance_job_1731, 833300, Freezers - Freezers
+insurance_job_1732, 833350, Skimmer - refrigerator machinery - skimmer
+insurance_job_1733, 833400, Drill machine operator - refrigerator machinery
+insurance_job_1734, 833450, Grinding machine operator - refrigerator machinery
+insurance_job_1735, 833500, Crusher operator - refrigerator machinery
+insurance_job_1736, 833550, Metalworking machine worker
+insurance_job_1737, 833600, Machinery Software Card Slotting Agent
+insurance_job_1738, 833900, Metalworking machine workers
+insurance_job_1739, 834000, Machine operator
+insurance_job_1740, 834100, Metalworking operator - general
+insurance_job_1741, 834150, Metal lathe operator
+insurance_job_1742, 834200, Lathe lathe operator
+insurance_job_1743, 834250, Automatic lathe operator
+insurance_job_1744, 834300, Internal lathe worker - cylinder lathe
+insurance_job_1745, 834350, Freeze operator
+insurance_job_1746, 834400, Drill machine operator
+insurance_job_1747, 834450, Skimmer operator
+insurance_job_1748, 834500, Metal saw machine operator
+insurance_job_1749, 834900, Metalworking machinery operators - others
+insurance_job_1750, 835200, Polishing machine operator - brush worker
+insurance_job_1751, 835300, worker machine  of tine machines
+insurance_job_1752, 835400, worker tine of cuts - knives and scissors
+insurance_job_1753, 835500, Sawer and repair worker
+insurance_job_1754, 835600, worker tine for textile hairdos
+insurance_job_1755, 835900, Metal grinding and polishing workers -tooling tine - others
+insurance_job_1756, 839200, Metal press operator
+insurance_job_1757, 839300, Metal bending machine operator
+insurance_job_1758, 839400, Metal shearing machine operator
+insurance_job_1759, 839500, Locks and keys collection and repair agent
+insurance_job_1760, 839600, Firearms collector and repair worker
+insurance_job_1761, 839900, The Blacksmiths and Number Prado - the other number makers
+insurance_job_1762, 840000, Collector
+insurance_job_1763, 841100, Metal assembler and assembly worker
+insurance_job_1764, 841120, Metal artifact installer
+insurance_job_1765, 841140, Metal Assembler - Brad
+insurance_job_1766, 841160, Installer and assembler of metal spraying machines
+insurance_job_1767, 841180, worker for installing and assembling machines except for machines and spraying metals
+insurance_job_1768, 841200, Aircraft Structural Assembly and Assembling worker
+insurance_job_1769, 841220, Aircraft engine installer
+insurance_job_1770, 841240, Machinery fixer in place
+insurance_job_1771, 841260, Combustion maintenance and repair worker
+insurance_job_1772, 841280, Turbine maintenance and repair worker
+insurance_job_1773, 841300, Maintenance and repair of marine machinery
+insurance_job_1774, 841320, Maintenance and repair of workshop machines
+insurance_job_1775, 841340, Miner maintenance and repair worker
+insurance_job_1776, 841360, Maintenance and repair worker for printing machines
+insurance_job_1777, 841380, Maintenance and repair of textile machinery
+insurance_job_1778, 841400, Maintenance and repair worker for woodworking machines
+insurance_job_1779, 841420, Maintenance and repair of agricultural machinery
+insurance_job_1780, 841440, Maintenance and repair machinery for moving machines
+insurance_job_1781, 841460, Office machinery maintenance and repair worker
+insurance_job_1782, 841480, Maintenance and repair of refrigerators and air conditioning
+insurance_job_1783, 841500, Bicycle maintenance and repair worker - wheels
+insurance_job_1784, 841900, Workers to install -assemble and maintain machines - others
+insurance_job_1785, 842000, Mechanic of maintenance of machines
+insurance_job_1786, 842100, Precision instrument manufacture and repair worker - general
+insurance_job_1787, 842150, Watchmaker
+insurance_job_1788, 842200, Watch repair worker - watchmaker
+insurance_job_1789, 842250, Optical device manufacture and repair worker
+insurance_job_1790, 842300, Instrument repair worker
+insurance_job_1791, 842350, Mechanical meter repair worker
+insurance_job_1792, 842400, Aircraft meter manufacture and repair worker
+insurance_job_1793, 842450, Precision hardware installation and assembly worker
+insurance_job_1794, 842500, Artificial limbs making and repair worker
+insurance_job_1795, 842550, Photographer installation and repair worker
+insurance_job_1796, 842600, Sewing machine manufacture and repair worker
+insurance_job_1797, 842650, Workman for making and repairing cymbal and scales
+insurance_job_1798, 842900, Workers making and repairing watches and precision devices - others
+insurance_job_1799, 843200, Petrol car mechanic
+insurance_job_1800, 843300, Diesel car mechanic
+insurance_job_1801, 843400, Tractor Mechanic
+insurance_job_1802, 843500, Motorcycle Mechanic
+insurance_job_1803, 843600, Mechanic for repairing diesel locomotives
+insurance_job_1804, 843700, Mechanic for repairing steam locomotives
+insurance_job_1805, 843900, Motor vehicle mechanic - others
+insurance_job_1806, 844100, Regular aircraft engine mechanic - general
+insurance_job_1807, 844300, Jet engine repair mechanic
+insurance_job_1808, 849100, Maintenance worker - general
+insurance_job_1809, 849200, Heavy equipment mechanic
+insurance_job_1810, 849300, Home cook equipment repair mechanic
+insurance_job_1811, 849400, A worker who controls the quality of production in machinery and equipment factories
+insurance_job_1812, 849900, Workers to install -assemble and maintain machinery and precision equipment - others
+insurance_job_1813, 851100, Electrician Electrical Equipment - Electrician
+insurance_job_1814, 851150, Electrician install and repair engines -equipment and generators
+insurance_job_1815, 851200, Electrician install and repair transformers
+insurance_job_1816, 851250, Electrician installing and repairing distribution boards
+insurance_job_1817, 851300, Electric installation and repair of control devices
+insurance_job_1818, 851350, Electrician install and repair measuring devices
+insurance_job_1819, 851400, Electrician install and repair electric elevators
+insurance_job_1820, 851450, Electric installation and repair of refrigeration devices
+insurance_job_1821, 851500, Electrician install and repair cars
+insurance_job_1822, 851550, Electrician install and repair batteries
+insurance_job_1823, 851600, Electrician installing and repairing signal and control devices
+insurance_job_1824, 851650, Electrician to install and repair office machines
+insurance_job_1825, 851700, Electrician install and repair home appliances
+insurance_job_1826, 851800, Electrical installation and maintenance
+insurance_job_1827, 851900, Workers to install -repair and maintain electrical equipment - others
+insurance_job_1828, 852100, Electrician install and repair electronic equipment - general
+insurance_job_1829, 852200, Electrician -radio and television
+insurance_job_1830, 852300, Electric radar
+insurance_job_1831, 852400, Electric - wireless
+insurance_job_1832, 852500, Electrician - standard appliances
+insurance_job_1833, 852600, Electric - medical and industrial devices
+insurance_job_1834, 852700, Electric - electronic statistical machines
+insurance_job_1835, 852900, Workers to install and repair electronic devices
+insurance_job_1836, 853200, Electrical equipment assembly worker - fan heater ... etc
+insurance_job_1837, 853300, Electronic equipment assembly worker - TV radio .... etc
+insurance_job_1838, 853400, Electrical equipment wiring worker
+insurance_job_1839, 853410, Wire supply worker
+insurance_job_1840, 853500, Electric coil winding machine
+insurance_job_1841, 853600, Electric coil winding worker by hand
+insurance_job_1842, 853900, Electrical equipment assembly worker
+insurance_job_1843, 854200, Radio repair worker -radio -radio
+insurance_job_1844, 854400, TV - electric repair worker
+insurance_job_1845, 854900, Radio and television repair workers - others
+insurance_job_1846, 855100, General electrician connections
+insurance_job_1847, 855200, Electrician connections - buildings
+insurance_job_1848, 855300, Electrician connections - ships
+insurance_job_1849, 855400, Electrician connections - aircraft
+insurance_job_1850, 855500, Electrician Connections - Vehicles
+insurance_job_1851, 855600, Electrical connections - theater and studio
+insurance_job_1852, 855900, Coupling Electricians - Others
+insurance_job_1853, 856200, Telephone operator
+insurance_job_1854, 856300, Telegraph installation worker
+insurance_job_1855, 856400, Telephone repair worker - telephone mechanic
+insurance_job_1856, 856500, Telegraph repair worker - Telegraphic mechanic
+insurance_job_1857, 857200, worker - electrician of high pressure networks
+insurance_job_1858, 857300, worker - electrician low pressure networks
+insurance_job_1859, 857400, Electric lines operator for transportation
+insurance_job_1860, 857500, Electrical lines operator - Telegraph
+insurance_job_1861, 857600, Electrician-electric cable welder
+insurance_job_1862, 857900, Electric line workers and cable connections
+insurance_job_1863, 859200, Production quality control worker for electrical equipment
+insurance_job_1864, 859400, Mast mast operator
+insurance_job_1865, 859900, Workers to install -repair and maintain electrical equipment
+insurance_job_1866, 861200, The operator of transmitters for radio and television stations
+insurance_job_1867, 861300, Radio Equipment Operator - Radio
+insurance_job_1868, 861400, Radio and television equipment operator
+insurance_job_1869, 861900, Workers Studios - Others
+insurance_job_1870, 862200, Sound recording equipment operator
+insurance_job_1871, 862300, Sound transmission and transmission equipment operator
+insurance_job_1872, 862400, A mechanic of a transverse cinematic machine
+insurance_job_1873, 862900, Cinema Equipment Operators - Others
+insurance_job_1874, 871200, Plumber sanitary ware
+insurance_job_1875, 871300, Pipe fitting worker - pipe plumber
+insurance_job_1876, 871400, Pipe Fitting Worker - Plumber
+insurance_job_1877, 871500, Aircraft pipe and tube fitting worker
+insurance_job_1878, 871900, Sanitary ware -sanitary ware - others
+insurance_job_1879, 871910, Welding instructor
+insurance_job_1880, 872000, Arjun Weld
+insurance_job_1881, 872100, Oxegen and electricity weld
+insurance_job_1882, 872150, Cinnamon
+insurance_job_1883, 872200, Electrode welding by hand
+insurance_job_1884, 872250, Electric welding of the machine
+insurance_job_1885, 872300, Thermoforming welding
+insurance_job_1886, 872350, Welding with metal compounds
+insurance_job_1887, 872400, Electric resistance welding operator
+insurance_job_1888, 872450, Metal cutting agent by hand
+insurance_job_1889, 872460, Soldering and cutting underwater
+insurance_job_1890, 872500, Metal cutting machine with machine oxygen
+insurance_job_1891, 872900, Other welders and cutting workers
+insurance_job_1892, 873100, Thin metal sheet form worker - general
+insurance_job_1893, 873200, Worker - Automotive plumber
+insurance_job_1894, 873300, Worker - Aircraft - Aircraft Plumber
+insurance_job_1895, 873400, Air conditioner installation worker
+insurance_job_1896, 873500, Worker - Decorations - Khan Al-Khalili workers
+insurance_job_1897, 873600, Copper Sheet Forming worker - Copper Orex
+insurance_job_1898, 873700, Tinplate Form worker - My Plumber
+insurance_job_1899, 873900, Thin metal sheet workers
+insurance_job_1900, 874150, Shankar worker - Metal Construction
+insurance_job_1901, 874200, Forming agent in metal constructions
+insurance_job_1902, 874250, Installer - Metal construction worker
+insurance_job_1903, 874290, Fitting worker - railway
+insurance_job_1904, 874300, Shipboard forming worker
+insurance_job_1905, 874350, Metal hull installer
+insurance_job_1906, 874400, Elfen body correction agent
+insurance_job_1907, 874450, Steam boiler manufacture and repair worker
+insurance_job_1908, 874500, Worker - programmatic by hand
+insurance_job_1909, 874550, Worker - machine programmatic
+insurance_job_1910, 874900, Metal operation and construction workers - others
+insurance_job_1911, 880100, Jewels maker - general
+insurance_job_1912, 880200, Jewelry modifying agent
+insurance_job_1913, 880300, Precision cutting and polishing agent
+insurance_job_1914, 880400, Gemstone Fixer - Cobalt Fixture
+insurance_job_1915, 880500, Gold and silver maker
+insurance_job_1916, 880600, Pull - off machine operator
+insurance_job_1917, 880700, Precious metal foil maker
+insurance_job_1918, 880800, Gems
+insurance_job_1919, 880900, Jewelers - Others
+insurance_job_1920, 891200, Glass blower - except for laboratory devices
+insurance_job_1921, 891220, Glass blower for making laboratory equipment
+insurance_job_1922, 891240, Manual Press worker for Glass
+insurance_job_1923, 891260, Glass blowing machine operator
+insurance_job_1924, 891280, Glass pulling machine operator
+insurance_job_1925, 891300, Glass piston mechanical operator
+insurance_job_1926, 891320, Optic glass cutting worker
+insurance_job_1927, 891340, Optical grinding and polishing agent
+insurance_job_1928, 891360, Optic glass elution agent
+insurance_job_1929, 891380, Mirror Fluxing worker - My Mirrors
+insurance_job_1930, 891400, Glass tube bending agent
+insurance_job_1931, 891420, Glass flattening machine operator
+insurance_job_1932, 891440, Flat glass polishing agent
+insurance_job_1933, 891460, Glass cutting agent
+insurance_job_1934, 891480, Flat glass detection agent
+insurance_job_1935, 891500, Glass chamfering agent
+insurance_job_1936, 891520, Glass tube maker
+insurance_job_1937, 891540, Glass thread making worker
+insurance_job_1938, 891900, Forming -cutting -grinding and finishing workers
+insurance_job_1939, 892100, Ceramics and pottery maker - general
+insurance_job_1940, 892150, Chinese and porcelain designer products
+insurance_job_1941, 892200, Chinese mold maker
+insurance_job_1942, 892250, Porcelain and Chinese product formant
+insurance_job_1943, 892300, Ceramic and Chinese Turner
+insurance_job_1944, 892350, A casting agent for porcelain and Chinese dough by hand
+insurance_job_1945, 892400, Manual press operator for making porcelain and china
+insurance_job_1946, 892450, Mechanical press operator
+insurance_job_1947, 892500, Child extrusion machine operator
+insurance_job_1948, 892900, Porcelain and baby products workers
+insurance_job_1949, 893200, Glass melting furnace agent
+insurance_job_1950, 893300, Glass brewing agent
+insurance_job_1951, 893400, Porcelain and Chinese incinerator operator
+insurance_job_1952, 893500, A brick kiln operator
+insurance_job_1953, 893900, Glass -porcelain and Chinese oven workers
+insurance_job_1954, 894200, Glass digger
+insurance_job_1955, 894300, Glass Bainter
+insurance_job_1956, 894400, Glass sandblasting agent
+insurance_job_1957, 894900, Other glass drilling and engraving workers
+insurance_job_1958, 895200, Hand-painted glass worker
+insurance_job_1959, 895300, Handcrafted porcelain and Chinese painting agent
+insurance_job_1960, 895400, Porcelain and Chinese decoration worker
+insurance_job_1961, 895500, Spray and porcelain paint worker
+insurance_job_1962, 895600, Porcelain and Chinese dyeing agent
+insurance_job_1963, 895900, Painting and glazing and ceramics workers - others
+insurance_job_1964, 899200, Glass mixing agent
+insurance_job_1965, 899300, Ceramic coating preparation agent
+insurance_job_1966, 899400, Child grinding worker
+insurance_job_1967, 899500, Child mixing and imprisoning worker
+insurance_job_1968, 899600, Sandblasting agent
+insurance_job_1969, 899900, Glass -porcelain and chinaware workers - others
+insurance_job_1970, 901150, Rubber mixing machine operator
+insurance_job_1971, 901200, Rubber gantry machine operator
+insurance_job_1972, 901250, Rubber Extrusion Machine Operator
+insurance_job_1973, 901300, Rubber press machine operator
+insurance_job_1974, 901350, Rubber product collector
+insurance_job_1975, 901400, Injection molding machine operator
+insurance_job_1976, 901450, Plastic press machine operator
+insurance_job_1977, 901500, Plastic Extrusion Machine Operator
+insurance_job_1978, 901550, Plastics press operator
+insurance_job_1979, 901600, Plastic product collector
+insurance_job_1980, 901900, Workers in the rubber and plastics industries
+insurance_job_1981, 902200, Tire staple worker
+insurance_job_1982, 902300, Tire maker
+insurance_job_1983, 902400, Steam vulcanizing worker
+insurance_job_1984, 902500, Tire clamping worker
+insurance_job_1985, 902600, Rubber repair worker - rubber welding
+insurance_job_1986, 902900, Tires manufacturing and repair workers - others
+insurance_job_1987, 910200, Paper box maker by hand
+insurance_job_1988, 910300, Cardboard gluing machine operator
+insurance_job_1989, 910400, Cardboard education machine operator
+insurance_job_1990, 910500, Cardboard cutting machine operator
+insurance_job_1991, 910600, Cardboard box making machine operator
+insurance_job_1992, 910700, Paper bag making machine operator
+insurance_job_1993, 910800, Bag making machine operator
+insurance_job_1994, 910900, Paper and cardboard products workers - others
+insurance_job_1995, 921100, Printing worker - general
+insurance_job_1996, 921150, Lettering by hand - all manual
+insurance_job_1997, 921200, Casting machine operator - bucket
+insurance_job_1998, 921250, Linotype Machine Operator
+insurance_job_1999, 921300, Clear agent and tape machine operation
+insurance_job_2000, 921350, The Montibut machine operator - a plumber
+insurance_job_2001, 921400, Packaging worker
+insurance_job_2002, 921450, Lamination worker
+insurance_job_2003, 921500, Photocopier operator
+insurance_job_2004, 921550, Film casting film packing agent
+insurance_job_2005, 921900, Lettering workers manually and automatically - others
+insurance_job_2006, 922200, Cylinder printing machine operator
+insurance_job_2007, 922300, Flatbed printer operator
+insurance_job_2008, 922400, Rotary printing machine operator
+insurance_job_2009, 922500, Offset printing press agent
+insurance_job_2010, 922600, Direct lithographic printing worker - stone
+insurance_job_2011, 922700, Non-rotogravure
+insurance_job_2012, 922800, Wallpaper printing machine operator
+insurance_job_2013, 922900, Workers operating printing machines - other printers
+insurance_job_2014, 923200, Subformal agent - barbiturate
+insurance_job_2015, 923400, Electrification agent
+insurance_job_2016, 923900, The workers of pouring chopping and picking - others
+insurance_job_2017, 924150, Lithographic stone digger
+insurance_job_2018, 924200, Metal plate digger
+insurance_job_2019, 924250, Milling rig - barricades - manually
+insurance_job_2020, 924300, Rubber wood dredger
+insurance_job_2021, 924350, Excavator seals
+insurance_job_2022, 924400, Drilling of metal cylinders - machine
+insurance_job_2023, 924450, Automated drilling machine operator
+insurance_job_2024, 924500, The operator of the lithograph machine
+insurance_job_2025, 924550, Metal digger with chemical acid
+insurance_job_2026, 924900, Printing drills workers - count 1 drilling
+insurance_job_2027, 925100, Photographic Excavator - General
+insurance_job_2028, 925200, Photographer to
+insurance_job_2029, 925300, worker frills on springs
+insurance_job_2030, 925400, Image transfer worker on metal plates
+insurance_job_2031, 925500, Acid photographic digger
+insurance_job_2032, 925600, Frill worker on metal sheets
+insurance_job_2033, 925900, Photogravure workers - others
+insurance_job_2034, 926200, Binding worker by hand - folder
+insurance_job_2035, 926300, Machine Binding worker
+insurance_job_2036, 926400, worker of gilding books by hand
+insurance_job_2037, 926500, Machine gilding worker in the machine
+insurance_job_2038, 926900, Binding workers and others - others
+insurance_job_2039, 927200, Photographic acidifying agent
+insurance_job_2040, 927300, Black and white photographic development agent
+insurance_job_2041, 927400, Photographic worker
+insurance_job_2042, 927500, Photographic zoom worker
+insurance_job_2043, 927900, Development and photo printing workers
+insurance_job_2044, 929200, Silk net worker
+insurance_job_2045, 929300, Silk screen printing agent
+insurance_job_2046, 929400, Woodworking printing press
+insurance_job_2047, 929500, A worker printed on fabric
+insurance_job_2048, 929900, Print workers whose profession has not been returned - others
+insurance_job_2049, 931200, Buildings Bainter
+insurance_job_2050, 931400, Iron facilities and ship hulls bainter
+insurance_job_2051, 931900, Constructions Bainter - Others
+insurance_job_2052, 939100, Bainter and decoration worker - general
+insurance_job_2053, 939200, Brush bainter
+insurance_job_2054, 939300, Spray Bainter
+insurance_job_2055, 939400, Dip bainter by hand
+insurance_job_2056, 939500, Banner Bainter - calligrapher
+insurance_job_2057, 939600, Cars Bainter - Doku Bainter
+insurance_job_2058, 939900, Bainters whose professions were not mentioned previously - others
+insurance_job_2059, 941200, Musical instrument making worker
+insurance_job_2060, 941400, Workers repair and tuning musical instruments
+insurance_job_2061, 941900, Musical instrument making and tuning workers
+insurance_job_2062, 942150, Baskets maker - Hibernation - misfortune 000 etc.
+insurance_job_2063, 942200, Cage Maker - Cage
+insurance_job_2064, 942250, The maker of straw and bamboo furniture
+insurance_job_2065, 942300, Mills maker
+insurance_job_2066, 942350, Inventory Maker - Exclusive
+insurance_job_2067, 942400, Brush maker by hand
+insurance_job_2068, 942450, Broom maker (broom)
+insurance_job_2069, 942500, Maker made of jungle and shoots
+insurance_job_2070, 942900, Baskets workers - hibernation - and brushes
+insurance_job_2071, 943200, Concrete product making worker
+insurance_job_2072, 943300, Asbestos and cement products manufacturer
+insurance_job_2073, 943400, Casting agent
+insurance_job_2074, 943900, Mineral product making workers - others
+insurance_job_2075, 944200, Impurity cotton cleaning agent - Striking agent
+insurance_job_2076, 944300, Cotton ginning wheel feeding agent - cast iron wheel feeding worker
+insurance_job_2077, 944310, Escarto cupboard feed worker
+insurance_job_2078, 944320, Aspirator feed worker
+insurance_job_2079, 944400, Trowel wiring agent - Knife worker
+insurance_job_2080, 944500, Ginning ward repair worker cupboard carpenter
+insurance_job_2081, 944600, Spindle bonding agent - Rabbit
+insurance_job_2082, 944700, Cotton groomed waxing agent - hair waxing and contracting agent
+insurance_job_2083, 944800, Cotton seed evaporator worker - with incense burners
+insurance_job_2084, 944810, Agent Scaretho
+insurance_job_2085, 944900, Cotton ginning workers - others
+insurance_job_2086, 949150, Sandpaper maker
+insurance_job_2087, 949200, Flooring linoleum making worker
+insurance_job_2088, 949250, Tarpaulin manufacture
+insurance_job_2089, 949300, Ice machine operator
+insurance_job_2090, 949350, Buttons worker - Non-Metal
+insurance_job_2091, 949400, Crane making worker
+insurance_job_2092, 949450, Screeners and sieves maker
+insurance_job_2093, 949500, Toys maker
+insurance_job_2094, 949550, Linen give worker
+insurance_job_2095, 949600, Mummification of birds and animals
+insurance_job_2096, 949650, A filling and sealing machine operator and canning operator
+insurance_job_2097, 949700, worker packaging by hand
+insurance_job_2098, 949750, Wrapping machine operator - packaging machine
+insurance_job_2099, 949800, Paste machine operator
+insurance_job_2100, 949850, Rubber seals maker
+insurance_job_2101, 949900, Production workers whose occupations were not previously mentioned - others
+insurance_job_2102, 949910, Leper trainer
+insurance_job_2103, 949920, Tuber trainee
+insurance_job_2104, 951150, Bricklaying
+insurance_job_2105, 951200, Building with a shower
+insurance_job_2106, 951250, Silky brick construction - Building ovens
+insurance_job_2107, 951300, Tile fitting agent - tiled
+insurance_job_2108, 951350, Faience installer
+insurance_job_2109, 951400, Mosaic manufacture and installation worker
+insurance_job_2110, 951450, Marble trimmer and trimmer - marmakati
+insurance_job_2111, 951500, Tiled with shower
+insurance_job_2112, 951550, Al-Kahle worker
+insurance_job_2113, 951600, Street or brick paving worker
+insurance_job_2114, 951900, Bricklayers -Bricks -and Tile Installers - Others
+insurance_job_2115, 952200, Armed carpenter
+insurance_job_2116, 952300, Concrete reinforcement worker - armed blacksmith
+insurance_job_2117, 952400, worker-equipped arsenal - Therapeutic medicine
+insurance_job_2118, 952500, Mosaic terrazzo
+insurance_job_2119, 952600, Concrete mixing machine operator
+insurance_job_2120, 952900, Armed concrete workers and mosaic installers
+insurance_job_2121, 953100, Covering worker with materials
+insurance_job_2122, 953500, Agent
+insurance_job_2123, 954000, Carpenter
+insurance_job_2124, 954100, Joiner Fixtures - General
+insurance_job_2125, 954150, Carpenter making a door and nets
+insurance_job_2126, 954200, Carpenter -door and window fitting - Architectural Carpenter
+insurance_job_2127, 954250, Theater and studio carpenter - carpenter's decorations
+insurance_job_2128, 954300, Aircraft carpenter fittings
+insurance_job_2129, 954350, Joiner fittings with ships
+insurance_job_2130, 954400, Flak Carpenter
+insurance_job_2131, 954450, Heavy carpenter slab
+insurance_job_2132, 954500, Carpenter installing wood floors
+insurance_job_2133, 954550, Parquet carpenter installation
+insurance_job_2134, 954900, Construction Carpenters - Others
+insurance_job_2135, 955100, Bleach - general
+insurance_job_2136, 955200, Cement bleach
+insurance_job_2137, 955300, Decorative bleach
+insurance_job_2138, 955400, Bleach stain
+insurance_job_2139, 955500, Gypsum bleach
+insurance_job_2140, 955900, White workers - others
+insurance_job_2141, 956200, worker for the establishment of the Hazrat-e Azaleh
+insurance_job_2142, 956300, The agent of the class of the idolatrous idol
+insurance_job_2143, 956400, worker laying the foundation for the resurrection
+insurance_job_2144, 956600	, worker of the Classification of the Hazardous Wastewater Treatment Plant
+insurance_job_2145, 956900, Heat insulators
+insurance_job_2146, 957200, Building glazing worker
+insurance_job_2147, 957300, Glass brick installation worker
+insurance_job_2148, 957400, Vehicle glass mounting agent
+insurance_job_2149, 957500, Glass fitting worker in lead or copper tires
+insurance_job_2150, 957900, Glass installation workers - others
+insurance_job_2151, 959150, Asphalt floor installer
+insurance_job_2152, 959200, Rubber flooring worker
+insurance_job_2153, 959250, Linoleum flooring fixture operator - Linolium
+insurance_job_2154, 959300, Pipe fitting worker
+insurance_job_2155, 959350, Marine diver
+insurance_job_2156, 959400, Water well drilling rig
+insurance_job_2157, 959450, Scaffolding installation worker
+insurance_job_2158, 959500, Artificial stone industry worker
+insurance_job_2159, 959550, Manufacture worker and hitting bricks
+insurance_job_2160, 959900, Al-Bunawun Walnjarun -etc.
+insurance_job_2161, 960000, Mechanical turning
+insurance_job_2162, 961000, Mechanic
+insurance_job_2163, 961100, hydraulic mechanic
+insurance_job_2164, 961200, Mechanic running a diesel machine to generate strong
+insurance_job_2165, 961300, Mechanic and steam turbine operator
+insurance_job_2166, 961400, Water turbine mechanic
+insurance_job_2167, 961500, Mechanic running steam boilers
+insurance_job_2168, 961600, He led a steam boiler - thirsty
+insurance_job_2169, 961700, Load distribution worker at power stations
+insurance_job_2170, 961800, Distribution board operator at generating stations
+insurance_job_2171, 961900, Strong generating machine operators
+insurance_job_2172, 969100, Stationary machine operator - general
+insurance_job_2173, 969200, Air compressor operator - operator
+insurance_job_2174, 969300, Mechanical water pump operator
+insurance_job_2175, 969400, Cooling unit operator
+insurance_job_2176, 969500, Operator heating and air conditioning unit alone
+insurance_job_2177, 969600, Constant lubrication and lubrication worker
+insurance_job_2178, 969900, Hard worker operation workers
+insurance_job_2179, 971200, Shipping and unloading agent - marine
+insurance_job_2180, 971300, Freight and oil freight forwarder
+insurance_job_2181, 971400, Rail freight vehicle operator
+insurance_job_2182, 971410, Seed loading agent
+insurance_job_2183, 971420, Escarto and Paypal Relay Agent
+insurance_job_2184, 971500, Aircraft freight worker
+insurance_job_2185, 971600, In-store worker - Vest - Istgee - Stew Blossom
+insurance_job_2186, 971610, Stowing worker
+insurance_job_2187, 971700, Bale bonding agent - Packaging and packing agent
+insurance_job_2188, 971900, Port workers and loading and unloading workers
+insurance_job_2189, 972100, Rope fixing worker in lifting equipment
+insurance_job_2190, 972200, Ship Rope Stabilizer
+insurance_job_2191, 972400, Rope fixing worker in well drilling
+insurance_job_2192, 972500, Sling beads
+insurance_job_2193, 972900, Workers installing and beading ropes - others
+insurance_job_2194, 973200, Bridge winch operator
+insurance_job_2195, 973300, Winch-beige operator
+insurance_job_2196, 973400, Mobile winch operator on a vehicle
+insurance_job_2197, 973500, Drum winch operator
+insurance_job_2198, 973600, Cage winch operator
+insurance_job_2199, 973700, Forklift operator
+insurance_job_2200, 973900, Workers operating cranes and lifting machines
+insurance_job_2201, 974150, Shovel machine operator
+insurance_job_2202, 974200, Channel drilling machine operator
+insurance_job_2203, 974250, Kiyash machine operator
+insurance_job_2204, 974300, Asphalt mixer operator
+insurance_job_2205, 974350, Straightening machine operator and brushes
+insurance_job_2206, 974400, Asphalt mixing group operator
+insurance_job_2207, 974450, Paving machine operator
+insurance_job_2208, 974500, Herase operator
+insurance_job_2209, 974550, Foundation piling machine operator
+insurance_job_2210, 974600, Dumping machine operator
+insurance_job_2211, 974650, Crack operator
+insurance_job_2212, 974700, Bulldozer operator - heavy equipment driver
+insurance_job_2213, 974750, Ground leveling machine operator
+insurance_job_2214, 974900, Workers operating earth moving machines
+insurance_job_2215, 979200, Lubricant transport and moving equipment lubricant
+insurance_job_2216, 979900, Workers operating equipment for moving and moving materials
+insurance_job_2217, 981200, Nautical chief
+insurance_job_2218, 981300, Naval steering wheel - Domingue
+insurance_job_2219, 981400, Excellent nautical
+insurance_job_2220, 981500, Normal nautical
+insurance_job_2221, 981600, My boats without a license from the Department of Navigation licenses
+insurance_job_2222, 981700, Ship mooring agent
+insurance_job_2223, 981800, Ship lights operator
+insurance_job_2224, 981900, Sailors -ships and sailboats
+insurance_job_2225, 982200, Steam mechanic with ships
+insurance_job_2226, 982300, Ship diesel mechanic
+insurance_job_2227, 982400, Steam boiler mechanic with ships
+insurance_job_2228, 982500, He drove with ships
+insurance_job_2229, 982900, Ship mechanics and crews - others
+insurance_job_2230, 983200, Steam locomotive driver
+insurance_job_2231, 983300, Hadid Bokhariya
+insurance_job_2232, 983400, Electric railway driver
+insurance_job_2233, 983500, Diesel railway driver
+insurance_job_2234, 983900, Railroad drivers and drivers
+insurance_job_2235, 984200, Braking agent for railways - braking
+insurance_job_2236, 984300, Railway signal worker - worker
+insurance_job_2237, 984400, Rail transformation worker - transformer
+insurance_job_2238, 985100, Driver
+insurance_job_2239, 985200, Tram or Trolley Bus Driver
+insurance_job_2240, 985300, Car driver - my angel or rent
+insurance_job_2241, 985400, Bus driver
+insurance_job_2242, 985500, Transport vehicle driver
+insurance_job_2243, 985600, Motorcycle driver
+insurance_job_2244, 985700, Clark driver
+insurance_job_2245, 985900, Other motor vehicle drivers
+insurance_job_2246, 986200, Porter - sold
+insurance_job_2247, 986300, Driver - drawn animal ride - driver
+insurance_job_2248, 986400, Chauffeur-driven vehicle drawn animal
+insurance_job_2249, 986500, Horseman
+insurance_job_2250, 986600, Camel Raiser
+insurance_job_2251, 986900, Animal and vehicle drivers pulled by an animal
+insurance_job_2252, 989200, Vehicle driver pushing by hand - handbag
+insurance_job_2253, 989300, Vehicle replacement driver - Tricycle driver
+insurance_job_2254, 989400, Bridge opening operator -lock or gate
+insurance_job_2255, 989500, Railway sliding gate operator
+insurance_job_2256, 989600, Manara Observer - Fanar Observer - Jue A.
+insurance_job_2257, 989700, Transport lubricant and lubrication
+insurance_job_2258, 989800, Threshing worker - military threshing
+insurance_job_2259, 989900, Other transportation operators
+insurance_job_2260, 999200, Ship mooring agent
+insurance_job_2261, 999300, Actor - Ordinary worker - Relay worker
+insurance_job_2262, 999400, porter
+insurance_job_2263, 999500, ganger
+insurance_job_2264, 999999, Sir

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="ir_cron_auto_sent_invoice" model="ir.cron">
+        <field name="name">Account; Send invoice / credit note to E-invoice</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.now().replace(hour=2, minute=0) + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')" />
+        <field name="doall" eval="False"/>
+        <field name="model_id" ref="model_account_einvoice_outgoing"/>
+        <field name="code">model._auto_submit()</field>
+        <field name="state">code</field>
+    </record>
+    <record id="ir_cron_auto_submit_invoice" model="ir.cron">
+        <field name="name">Account; Submit invoice / credit note to E-invoice</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">hours</field>
+        <field name="numbercall">-1</field>
+        <field name="nextcall" eval="(DateTime.now().replace(hour=1, minute=0) + timedelta(days=1)).strftime('%Y-%m-%d %H:%M:%S')" />
+        <field name="doall" eval="False"/>
+        <field name="model_id" ref="model_account_move"/>
+        <field name="code">model._auto_submit()</field>
+        <field name="state">code</field>
+    </record>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_manager_hr_leave_type_tag,Access.HR.Manager.leave.type,model_hr_leave_type_tag,hr.group_hr_manager,1,1,1,1
+access_hr_user_hr_leave_type_tag,Access.HR.User.leave.type,model_hr_leave_type_tag,hr.group_hr_user,1,1,1,0
+access_hr_user_hr_allocation_tag,Access.HR.User.Hr.Allocation.Tag,model_hr_allocation_tag,hr.group_hr_user,1,1,1,1

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_act_window,user.access.act.window,base.model_ir_actions_act_window,base.group_user,1,0,0,0
+access_user_model,user.access.model,base.model_ir_model,base.group_user,1,0,0,0
+

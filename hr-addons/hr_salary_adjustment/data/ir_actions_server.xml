@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="salary_adjustment_server_action" model="ir.actions.server">
+        <field name="name">Salary Adjustment Report</field>
+        <field name="model_id" ref="model_salary_adjustment"/>
+        <field name="state">code</field>
+        <field name="code">
+            action = record.print_pdf()
+        </field>
+    </record>
+</odoo>

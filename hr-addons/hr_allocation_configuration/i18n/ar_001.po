@@ -1,0 +1,101 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_allocation_configuration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-13 09:25+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: hr_allocation_configuration
+#: code:addons/hr_allocation_configuration/models/hr_employee.py:0
+#, python-format
+msgid "%s Age exceeded %s years"
+msgstr "%s تجاوز العمر %s سنين"
+
+#. module: hr_allocation_configuration
+#: code:addons/hr_allocation_configuration/models/hr_employee.py:0
+#, python-format
+msgid "%s Insurance exceeded %s years"
+msgstr "%s الفترة التأمينية تجاوزت %s سنين"
+
+#. module: hr_allocation_configuration
+#: model:ir.actions.server,name:hr_allocation_configuration.hr_check_employee_insurance_cron_ir_actions_server
+#: model:ir.cron,cron_name:hr_allocation_configuration.hr_check_employee_insurance_cron
+#: model:ir.cron,name:hr_allocation_configuration.hr_check_employee_insurance_cron
+msgid "Check Employee Insurance"
+msgstr "التحقق من تامين الموظف"
+
+#. module: hr_allocation_configuration
+#: model:ir.model,name:hr_allocation_configuration.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: hr_allocation_configuration
+#: model:ir.model,name:hr_allocation_configuration.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: hr_allocation_configuration
+#: model:ir.model,name:hr_allocation_configuration.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_allocation_configuration
+#: model:ir.model.fields,field_description:hr_allocation_configuration.field_res_company__time_off_employee_age
+#: model:ir.model.fields,field_description:hr_allocation_configuration.field_res_config_settings__time_off_employee_age
+msgid "Employee Age"
+msgstr "عمر الموظف"
+
+#. module: hr_allocation_configuration
+#: model:ir.model.fields,help:hr_allocation_configuration.field_res_config_settings__time_off_employee_age
+#: model_terms:ir.ui.view,arch_db:hr_allocation_configuration.res_config_settings_allocation_configuration_form
+msgid "Employee age to change time off amount"
+msgstr "عمر الموظف لتغيير رصيد الاجازه"
+
+#. module: hr_allocation_configuration
+#: model_terms:ir.ui.view,arch_db:hr_allocation_configuration.res_config_settings_allocation_configuration_form
+msgid "Employee age to change time off amount."
+msgstr "عمر الموظف لتغيير رصيد الاجازه."
+
+#. module: hr_allocation_configuration
+#: model:ir.model.fields,field_description:hr_allocation_configuration.field_hr_employee__insurance_checked
+msgid "Insurance Checked"
+msgstr "تم التحقق من التأمين"
+
+#. module: hr_allocation_configuration
+#: model_terms:ir.ui.view,arch_db:hr_allocation_configuration.res_config_settings_allocation_configuration_form
+msgid "Time Off Allocations"
+msgstr "ترصيد الإجازات"
+
+#. module: hr_allocation_configuration
+#: model:ir.model.fields,field_description:hr_allocation_configuration.field_hr_employee__total_insurance_years
+msgid "Total Insurance Years"
+msgstr "إجمالي عدد السنوات التأمينية"
+
+#. module: hr_allocation_configuration
+#: model:ir.model.fields,field_description:hr_allocation_configuration.field_res_company__time_off_years_of_insurance
+#: model:ir.model.fields,field_description:hr_allocation_configuration.field_res_config_settings__time_off_years_of_insurance
+msgid "Years Of Insurance"
+msgstr "سنوات التأمين"
+
+#. module: hr_allocation_configuration
+#: model:ir.model.fields,help:hr_allocation_configuration.field_res_config_settings__time_off_years_of_insurance
+#: model_terms:ir.ui.view,arch_db:hr_allocation_configuration.res_config_settings_allocation_configuration_form
+msgid "Years of insurance to change time off amount"
+msgstr "سنوات التأمين لتغيير رصيد الإجازة"
+
+#. module: hr_allocation_configuration
+#: model_terms:ir.ui.view,arch_db:hr_allocation_configuration.res_config_settings_allocation_configuration_form
+msgid "Years of insurance to change time off amount."
+msgstr "سنوات التأمين لتغيير رصيد الإجازة."

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="report_manpower_planned">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <p style="page-break-after:always;"></p>
+                        <h2>
+                            <t t-esc="o['manpower'].name"/>
+                        </h2>
+
+                        <div class="row mb16 mt32">
+                            <div class="col-6">
+                                <strong>Planned Budget:</strong>
+                                <span class="m-2"
+                                      t-field="o['manpower'].planned_budget"/>
+                            </div>
+                            <div class="col-6">
+                                <strong>Current Budget:</strong>
+                                <span class="m-2"
+                                      t-field="o['manpower'].current_budget"/>
+                            </div>
+                        </div>
+                        <div class="row mb32 mt16">
+                            <div class="col-6">
+                                <strong>Approved Budget:</strong>
+                                <span class="m-2"
+                                      t-field="o['manpower'].approved_budget"/>
+                            </div>
+                            <div class="col-6">
+                                <strong>Actual Budget:</strong>
+                                <span class="m-2"
+                                      t-field="o['manpower'].actual_budget"/>
+                            </div>
+                        </div>
+                        <table class="table table-sm table-bordered" style="">
+                            <thead class="text-center">
+                                <tr>
+                                    <th rowspan="2"
+                                        style="vertical-align: middle;">
+                                        Position
+                                    </th>
+                                    <th colspan="3">Number Of Position</th>
+                                    <th rowspan="2"
+                                        style="vertical-align: middle;">
+                                        Reason
+                                    </th>
+                                    <th colspan="5">Budget</th>
+                                </tr>
+                                <tr>
+                                    <th>Current</th>
+                                    <th>Planned</th>
+                                    <th>Approved</th>
+                                    <th>Unit</th>
+                                    <th>Planned</th>
+                                    <th>Approved</th>
+                                    <th>Current</th>
+                                    <th>Actual</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o['departments_groups']"
+                                   t-as="dept_group">
+                                    <tr style="background-color: #dbd9d9; font-weight: bold;">
+                                        <td t-esc="dept_group.name"
+                                            colspan="6"/>
+                                        <td t-esc="o['departments_groups'][dept_group]['planned_total_budget']"/>
+                                        <td t-esc="o['departments_groups'][dept_group]['approved_total_budget']"/>
+                                        <td t-esc="o['departments_groups'][dept_group]['current_total_budget']"/>
+                                        <td t-esc="o['departments_groups'][dept_group]['actual_total_budget']"/>
+                                    </tr>
+                                    <t t-foreach="o['departments_groups'][dept_group]['lines']"
+                                       t-as="line">
+                                        <tr>
+                                            <td>
+                                                <t t-esc="line.job_id.name"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.no_of_employee"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.planned_no_of_position"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.approved_no_of_position"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="dict(line.fields_get(allfields=['reason'])['reason']['selection'])[line.reason]"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.unit_budget"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.total_budget"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.approved_budget"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.current_budget"/>
+                                            </td>
+                                            <td>
+                                                <t t-esc="line.actual_budget"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

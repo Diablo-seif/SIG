@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="create_vendor_claim_form" model="ir.ui.view">
+        <field name="name">create.vendor.claim.form</field>
+        <field name="model">create.vendor.claim</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="claim_id" invisible="1"/>
+                <field name="claim_wizard_line_ids">
+                    <list editable="bottom" create="0">
+                        <field name="proposal_claim_line_id" string="Line To Claim"/>
+                        <field name="product_id"/>
+                        <field name="partner_id"/>
+                        <field name="available_qty" force_save="1"/>
+                        <field name="qty"/>
+                    </list>
+                </field>
+                <footer>
+                    <button name="action_claim" string="Claim" type="object" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,193 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg_deduction_tax_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-18 18:43+0000\n"
+"PO-Revision-Date: 2020-11-18 18:43+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__currency_code
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__currency_label
+msgid "Currency Unit"
+msgstr "وحدة العملة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,help:l10n_eg_deduction_tax_report.field_deduction_line_report__currency_label
+msgid "Currency Unit Name"
+msgstr "اسم وحدة العملة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax_report.selection__deduction_line_report__tax_type__deduction
+msgid "Deduction"
+msgstr "الخصم"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__deduction_tax_id
+msgid "Deduction Tax"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.actions.act_window,name:l10n_eg_deduction_tax_report.deduction_line_report_action
+#: model:ir.model,name:l10n_eg_deduction_tax_report.model_deduction_line_report
+#: model:ir.ui.menu,name:l10n_eg_deduction_tax_report.menuitem_deduction_line_report
+msgid "Deduction Tax Report"
+msgstr "تقرير ضريبة الخصم"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__deduction_type
+msgid "Deduction Type"
+msgstr "نوع الخصم"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__duration
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "Duration"
+msgstr "الفترة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__file_number
+msgid "File Number"
+msgstr "رقم الملف"
+
+#. module: l10n_eg_deduction_tax_report
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "First Duration"
+msgstr "الفترة الأولي"
+
+#. module: l10n_eg_deduction_tax_report
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "Fourth Duration"
+msgstr "الفترة الرابعة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__month
+msgid "Month"
+msgstr "الشهر"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__national_id
+msgid "National ID"
+msgstr "الرقم القومي"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__payment_id
+msgid "Payment"
+msgstr "الدفعة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__payment_date
+msgid "Payment Date"
+msgstr "تاريخ السداد"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__registration_number
+msgid "Registration Number"
+msgstr "رقم التسجيل الضريبي للعميل"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__vat_department
+msgid "Related Department Code"
+msgstr "كود المأمورية المختصة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "Second Duration"
+msgstr "الفترة الثانية"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__tax_amount
+msgid "Tax Amount"
+msgstr "قيمة الضريبة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__tax_percentage
+msgid "Tax Percentage"
+msgstr "نسبة الضريبة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__tax_type
+msgid "Tax Type"
+msgstr "نوع الضريبة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "Third Duration"
+msgstr "الفترة الثالثة"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__transaction_base_amount
+msgid "Transaction Base Amount"
+msgstr "القيمة الصافية للتعامل"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__transaction_date
+msgid "Transaction Date"
+msgstr "تاريخ التعامل"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__transaction_total_amount
+msgid "Transaction Total Amount"
+msgstr "القيمة الاجمالية للتعامل"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__transaction_type
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "Transaction Type"
+msgstr "طبيعة التعامل"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__vendor_address
+msgid "Vendor Address"
+msgstr "عنوان الممول"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__vendor_name
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "Vendor Name"
+msgstr "اسم الممول"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax_report.selection__deduction_line_report__tax_type__withholding
+msgid "Withholding"
+msgstr "التحصيل"
+
+#. module: l10n_eg_deduction_tax_report
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax_report.field_deduction_line_report__year
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax_report.deduction_line_report_search_view
+msgid "Year"
+msgstr "السنة"

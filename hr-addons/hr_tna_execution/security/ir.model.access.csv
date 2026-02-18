@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_tna_course_execution,access.tna.course.execution,model_tna_course_execution,,1,1,1,1
+access_course_execution_line,access.course.execution.line,model_course_execution_line,,1,1,1,1

@@ -1,0 +1,104 @@
+<odoo>
+
+    <record id="hr_performance_template_tree" model="ir.ui.view">
+        <field name="name">hr_performance_template_tree</field>
+        <field name="model">hr.performance.template</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="job_id"/>
+                <field name="active" widget="boolean_toggle"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_performance_template_form" model="ir.ui.view">
+        <field name="name">hr_performance_template_form</field>
+        <field name="model">hr.performance.template</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name"
+                                   placeholder="CFO performance Template"/>
+                        </h1>
+                    </div>
+                    <group class="o_label_nowrap">
+                        <group>
+                            <field name="job_id" domain="['|',('performance_template_ids', '=', False), ('performance_template_ids.active', '=', False)]"/>
+                            <field name="objective_percentage" widget="percentage"/>
+                        </group>
+                        <group>
+                            <field name="company_id"
+                                   options="{'no_create': True}"
+                                   groups="base.group_multi_company"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="objective_lines" string="Objectives">
+                            <field name="objective_line_ids"
+                                   widget="section_and_note_one2many">
+                                <list editable="bottom">
+                                    <control>
+                                        <create name="add_line_control"
+                                                string="Add a key performance"/>
+                                        <create name="add_section_control"
+                                                string="Add a category"
+                                                context="{'default_display_type': 'line_section'}"/>
+                                    </control>
+                                    <field name="template_id" invisible="1"/>
+                                    <field name="display_type" invisible="1"/>
+                                    <field name="sequence" widget="handle"/>
+                                    <field name="name"
+                                           widget="section_and_note_text"/>
+                                    <field name="description" optional="show"/>
+                                    <field name="hint"/>
+                                    <field name="weightage" widget="percentage"/>
+                                </list>
+                                <form>
+                                    <field name="display_type" invisible="1"/>
+                                    <field name="sequence" invisible="1"/>
+                                    <field name="template_id" invisible="1"/>
+                                    <group>
+                                        <group>
+                                            <field name="name"/>
+                                            <field name="hint"/>
+                                        </group>
+                                        <group>
+                                            <field name="weightage"/>
+                                        </group>
+                                    </group>
+                                    <notebook>
+                                        <page string="Description">
+                                            <field name="description"/>
+                                        </page>
+                                    </notebook>
+                                </form>
+                            </field>
+                            <group name="note_group" col="6"
+                                   class="mt-2 mt-md-0">
+                                <group class="oe_subtotal_footer oe_right"
+                                       colspan="2">
+                                    <field name="total_weightage" widget="percentage"/>
+                                </group>
+                                <div class="oe_clear"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_performance_template_action" model="ir.actions.act_window">
+        <field name="name">Performance Template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.performance.template</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+</odoo>

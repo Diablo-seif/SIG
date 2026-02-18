@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_employee_documents_form" model="ir.ui.view">
+        <field name="name">hr.employee.documents.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="employee_documents" string="Employee Documents">
+                    <field name="document_line_ids">
+                        <list editable="bottom"
+                              decoration-danger="expiry_date and (expiry_date &lt;= current_date) or require_original != is_original"
+                              decoration-warning="attachment == True"
+                              decoration-success="attachment != False">
+                            <field name="document_id"/>
+                            <field name="has_expiration" invisible="True"/>
+                            <field name="require_original"/>
+                            <field name="is_original" attrs="{'readonly':[('require_original','=', False)]}"/>
+                            <field name="title"
+                                   invisible="True"/> <!-- Carry Attachment Title -->
+                            <field name="attachment" widget="binary" height="64"
+                                   filename="title"/>
+                            <field name="expiry_date"
+                                   attrs="{'required':[('has_expiration','=',True)]}"/>
+                        </list>
+                        <form>
+                            <field name="document_id"/>
+                            <field name="attachment" widget="pdf_viewer"/>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_employee_documents_search" model="ir.ui.view">
+        <field name="name">hr.employee.documents.search</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <filter string="Missing Documents"
+                        name="filter_missing_documents"
+                        domain="['|',('document_line_ids','=',False),('document_line_ids.attachment','=',False)]"/>
+                <filter string="Missing Original Documents"
+                        name="filter_missing_original_documents"
+                        domain="[('document_line_ids.require_original','=',True),('document_line_ids.is_original','=',False)]"/>
+                <filter string="Expired Documents"
+                        name="filter_expired_documents"
+                        domain="[('document_line_ids.expiry_date','&lt;=',current_date)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

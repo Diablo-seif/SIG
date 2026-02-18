@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inherit_hr_salary_rule_form" model="ir.ui.view">
+        <field name="name">inherit.hr.salary.rule.form</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="hr_payroll.hr_salary_rule_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='main_details']" position="after">
+                <group name="salary_adjustment" string="Salary Adjustment">
+                    <group>
+                        <field name="appears_on_salary_adjustment"/>
+                        <field name="highlight_on_salary_adjustment"/>
+                        <field name="sequence_on_salary_adjustment"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

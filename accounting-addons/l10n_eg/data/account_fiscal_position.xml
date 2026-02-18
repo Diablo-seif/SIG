@@ -1,0 +1,122 @@
+<odoo>
+
+    <record id="fiscal_position_exports"
+            model="account.fiscal.position.template">
+        <field name="name">Exports Fiscal Position</field>
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="auto_apply" eval="True"/>
+        <field name="country_group_id" ref="exports"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_export_1"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_exports"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_5"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exports_0"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_export_2"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_exports"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_8"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exports_0"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_export_3"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_exports"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_10"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exports_0"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_export_4"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_exports"/>
+        <field name="tax_src_id" ref="tax_template_sale_vat_tax_14"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exports_0"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_export_5"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_exports"/>
+        <field name="tax_src_id" ref="tax_template_sale_vat_tax_5"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exports_0"/>
+    </record>
+
+    <record id="fiscal_position_contracting"
+            model="account.fiscal.position.template">
+        <field name="name">Contracting companies (supply and structuring)</field>
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_contracting_1"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_contracting"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_8"/>
+        <field name="tax_dest_id" ref="tax_template_sale_vat_tax_5"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_contracting_2"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_contracting"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_10"/>
+        <field name="tax_dest_id" ref="tax_template_sale_vat_tax_5"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_contracting_3"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_contracting"/>
+        <field name="tax_src_id" ref="tax_template_sale_vat_tax_14"/>
+        <field name="tax_dest_id" ref="tax_template_sale_vat_tax_5"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_contracting_4"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_contracting"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_5"/>
+        <field name="tax_dest_id" ref="tax_template_sale_vat_tax_5"/>
+    </record>
+
+    <record id="fiscal_position_special_treating"
+            model="account.fiscal.position.template">
+        <field name="name">Facilities with a Special Tax treating
+        </field>
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_special_treating_1"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_special_treating"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_5"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exemption"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_special_treating_2"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_special_treating"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_8"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exemption"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_special_treating_3"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_special_treating"/>
+        <field name="tax_src_id" ref="tax_template_sale_table_tax_10"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exemption"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_special_treating_4"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_special_treating"/>
+        <field name="tax_src_id" ref="tax_template_sale_vat_tax_14"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exemption"/>
+    </record>
+
+    <record id="fiscal_position_tax_template_special_treating_5"
+            model="account.fiscal.position.tax.template">
+        <field name="position_id" ref="fiscal_position_special_treating"/>
+        <field name="tax_src_id" ref="tax_template_sale_vat_tax_5"/>
+        <field name="tax_dest_id" ref="tax_template_sale_tax_exemption"/>
+    </record>
+
+</odoo>

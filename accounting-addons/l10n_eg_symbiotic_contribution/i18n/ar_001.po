@@ -1,0 +1,222 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg_symbiotic_contribution
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-03 13:25+0000\n"
+"PO-Revision-Date: 2020-11-03 13:25+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.res_config_settings_view_form_symbiotic
+msgid "<span class=\"o_form_label\">Symbiotic Contribution Tax Settings</span>"
+msgstr "<span class=\"o_form_label\">إعدادات المساهمة التكافلية</span>"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model,name:l10n_eg_symbiotic_contribution.model_account_account
+msgid "Account"
+msgstr "حساب"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__account_move_id
+msgid "Account Move"
+msgstr "قيد الضريبة"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.symbiotic_contribution_computation_view_form
+msgid "Calculate"
+msgstr "حساب"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.symbiotic_contribution_computation_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: l10n_eg_symbiotic_contribution
+#: code:addons/l10n_eg_symbiotic_contribution/models/symbiotic_contribution.py:0
+#, python-format
+msgid "Cannot create journal entry with 0 amount"
+msgstr "لا يمكن انشاء قيد بقيمة صفر"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model,name:l10n_eg_symbiotic_contribution.model_res_company
+msgid "Companies"
+msgstr "شركات"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.symbiotic_contribution_computation_view_form
+msgid "Compute symbiotic contribution"
+msgstr "حساب المساهمة التكافلية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model,name:l10n_eg_symbiotic_contribution.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution_computation__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__create_date
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution_computation__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_account__display_name
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__display_name
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution_computation__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_account__id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_config_settings__id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution_computation__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model,name:l10n_eg_symbiotic_contribution.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_account____last_update
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_move____last_update
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_company____last_update
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution____last_update
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution_computation____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution_computation__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__write_date
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution_computation__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: l10n_eg_symbiotic_contribution
+#: code:addons/l10n_eg_symbiotic_contribution/models/symbiotic_contribution.py:0
+#, python-format
+msgid "Please add symbiotic contribution accounts in settings"
+msgstr "من فضلك اضف حسابات المساهمة التكافلية فى الإعدادات"
+
+#. module: l10n_eg_symbiotic_contribution
+#: code:addons/l10n_eg_symbiotic_contribution/models/symbiotic_contribution.py:0
+#, python-format
+msgid "Please enter a correct year"
+msgstr "برجاء إدخال السنة الصحيحة"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__revenue
+msgid "Revenue"
+msgstr "الربح"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.res_config_settings_view_form_symbiotic
+msgid "Revenue Accounts"
+msgstr "حسابات الايرادات"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_company__symbiotic_account_ids
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_config_settings__symbiotic_account_ids
+msgid "Symbiotic Account"
+msgstr "حساب المساهمة"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.actions.act_window,name:l10n_eg_symbiotic_contribution.symbiotic_contribution_action
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_account__symbiotic_contribution_id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_bank_statement_line__symbiotic_contribution_id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_move__symbiotic_contribution_id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_account_payment__symbiotic_contribution_id
+#: model:ir.ui.menu,name:l10n_eg_symbiotic_contribution.menuitem_symbiotic_contribution_report
+msgid "Symbiotic Contribution"
+msgstr "المساهمة التكافلية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__symbiotic_contribution_amount
+msgid "Symbiotic Contribution Amount"
+msgstr "قيمة المساهمة التكافلية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.actions.act_window,name:l10n_eg_symbiotic_contribution.symbiotic_contribution_computation_action
+#: model:ir.ui.menu,name:l10n_eg_symbiotic_contribution.menuitem_symbiotic_contribution_computation
+msgid "Symbiotic Contribution Calculation"
+msgstr "حساب المساهمة التكافلية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model,name:l10n_eg_symbiotic_contribution.model_symbiotic_contribution_computation
+msgid "Symbiotic Contribution Calculation Wizard"
+msgstr "حساب المساهمة التكافلية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_company__symbiotic_contribution_percentage
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_config_settings__symbiotic_contribution_percentage
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.res_config_settings_view_form_symbiotic
+msgid "Symbiotic Contribution Percentage"
+msgstr "نسبة المساهمة التكافلية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model,name:l10n_eg_symbiotic_contribution.model_symbiotic_contribution
+msgid "Symbiotic Contribution Tax"
+msgstr "المساهمة التكافلية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_company__symbiotic_entry_from_account_id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_config_settings__symbiotic_entry_from_account_id
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.res_config_settings_view_form_symbiotic
+msgid "Symbiotic Entry From Account"
+msgstr "قيد المساهمة التكافلية من حساب"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_company__symbiotic_entry_to_account_id
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_res_config_settings__symbiotic_entry_to_account_id
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.res_config_settings_view_form_symbiotic
+msgid "Symbiotic Entry To Account"
+msgstr "قيد المساهمة التكافلية الى حساب"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model_terms:ir.ui.view,arch_db:l10n_eg_symbiotic_contribution.res_config_settings_view_form_symbiotic
+msgid "Used to Generate Symbiotic Contribution Reports and Entries"
+msgstr "تستخدم لحساب تقارير و قيودالمساهمة التكافلية"
+
+#. module: l10n_eg_symbiotic_contribution
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution__year
+#: model:ir.model.fields,field_description:l10n_eg_symbiotic_contribution.field_symbiotic_contribution_computation__year
+msgid "Year"
+msgstr "السنة"

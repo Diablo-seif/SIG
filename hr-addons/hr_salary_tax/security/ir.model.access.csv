@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_user_hr_salary_tax,access.hr.user.hr.salary.tax,model_hr_salary_tax,hr_payroll.group_hr_payroll_user,1,0,0,0
+access_hr_user_hr_salary_tax_line,access.hr.user.hr.salary.tax.line,model_hr_salary_tax_line,hr_payroll.group_hr_payroll_user,1,0,0,0
+access_hr_user_hr_salary_tax_apply_level,access.hr.user.hr.salary.tax.apply.level,model_hr_salary_tax_apply_level,hr_payroll.group_hr_payroll_user,1,0,0,0
+access_hr_manager_hr_salary_tax,access.hr.manager.hr.salary.tax,model_hr_salary_tax,hr_payroll.group_hr_payroll_manager,1,1,1,1
+access_hr_manager_hr_salary_tax_line,access.hr.manager.hr.salary.tax.line,model_hr_salary_tax_line,hr_payroll.group_hr_payroll_manager,1,1,1,1
+access_hr_manager_hr_salary_tax_apply_level,access.hr.manager.hr.salary.tax.apply.level,model_hr_salary_tax_apply_level,hr_payroll.group_hr_payroll_manager,1,1,1,1

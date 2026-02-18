@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_manpower_plan_form" model="ir.ui.view">
+        <field name="name">hr.manpower.plan.form</field>
+        <field name="model">hr.manpower.plan</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_share" type="object" string="Share"
+                            class="oe_highlight"
+                            groups="hr_manpower_plan.group_manpower_plan_manager,hr.group_hr_manager"
+                            states="draft"/>
+                    <button name="action_submit" type="object" string="Submit"
+                            class="oe_highlight"
+                            groups="hr_manpower_plan.group_manpower_plan_manager,hr.group_hr_manager"
+                            states="preparation"
+                            confirm="Are you sure you want to submit this plan?"/>
+                    <button name="action_approve" type="object" string="Approve"
+                            class="oe_highlight"
+                            groups="hr_manpower_plan.group_manpower_plan_manager"
+                            states="submitted"/>
+                    <button name="action_reject" type="object" string="Reject"
+                            groups="hr_manpower_plan.group_manpower_plan_manager"
+                            states="submitted"/>
+                    <button name="action_start_recruitment" type="object"
+                            string="Start Recruitment"
+                            groups="hr.group_hr_manager" class="oe_highlight"
+                            states="approved"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,preparation,submitted,approved"/>
+                </header>
+                <sheet>
+                    <div name="button_box" class="oe_button_box">
+                        <button name="action_view_plan_lines" type="object"
+                                string="Department Plans"
+                                class="oe_stat_button" icon="fa-file-text-o"
+                                invisible="not manpower_line_ids"
+                                groups="hr_manpower_plan.group_manpower_plan_manager,hr.group_hr_manager">
+                        </button>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="date_from" string="Date"/>
+                            <div class="o_row">
+                                <span class="oe_form_field"> From </span>
+                                <field name="date_from"
+                                       readonly="state != 'draft' or is_readonly = True"/>
+                                <!--                                       attrs="{'readonly':['|',('state','!=','draft'),('is_readonly','=',True)]}"/>-->
+                                <span class="oe_form_field"> To </span>
+                                <field name="date_to"
+                                       readonly="state != 'draft' or is_readonly = True"/>
+                                <!--                                       attrs="{'readonly':['|',('state','!=','draft'),('is_readonly','=',True)]}"/>-->
+                            </div>
+                            <field name="deadline"
+                                   readonly="state != 'draft' or is_readonly = True"/>
+                            <!--                                   attrs="{'readonly':['|',('state','!=','draft'),('is_readonly','=',True)]}"/>-->
+                            <field name="planned_budget" widget="monetary"
+                                   groups='hr_manpower_plan.group_manpower_plan_budget'/>
+                            <field name="approved_budget" widget="monetary"
+                                   groups='hr_manpower_plan.group_manpower_plan_budget'/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="is_readonly" invisible="1"/>
+                        </group>
+                        <group>
+                            <field name="user_id"
+                                   readonly="state != 'draft' or is_readonly = True"/>
+
+                            <!--                                   attrs="{'readonly':['|',('state','!=','draft'),('is_readonly','=',True)]}"/>-->
+                            <field name="department_ids" widget="many2many_tags"
+                                   readonly="state != 'draft' or is_readonly = True"/>
+                            <!--                                   attrs="{'readonly':['|',('state','!=','draft'),('is_readonly','=',True)]}"/>-->
+                            <field name="current_budget" widget="monetary"
+                                   groups='hr_manpower_plan.group_manpower_plan_budget'/>
+                            <field name="actual_budget" widget="monetary"
+                                   groups='hr_manpower_plan.group_manpower_plan_budget'/>
+                        </group>
+                    </group>
+
+                    <notebook invisible="state == draft">
+                        <page string="Departments Requisitions">
+                            <field name="manpower_line_ids"
+                                   context="{'default_start_date':date_from, 'job_with_contract_type':True}"
+                                   readonly="state not in ['draft','preparation']">
+                                <list editable="bottom"
+                                      decoration-bf="state == 'draft'"
+                                      decoration-info="state == 'submitted'"
+                                      decoration-success="state == 'approved'"
+                                      decoration-danger="state == 'rejected'">
+                                    <field name="department_id"
+                                           readonly="state !=draft"/>
+                                    <field name="job_id"
+                                           context="{'job_with_contract_type':True}"
+                                           domain="[('department_id','=',department_id)]"
+                                           readonly="state !=draft"/>
+                                    <field name="no_of_employee"
+                                           optional="show"/>
+                                    <field name="planned_no_of_position"
+                                           optional="show"
+                                           readonly="state !=draft"/>
+                                    <field name="approved_no_of_position"
+                                           optional="show"
+                                           groups='hr_manpower_plan.group_manpower_plan_manager'
+                                           readonly="state != 'budgeted'"/>
+
+                                    <field name="reason" optional="show"
+                                           readonly="state !=draft"/>
+                                    <field name="start_date" optional="show"
+                                           readonly="state !=draft"/>
+                                    <field name="current_budget"
+                                           widget="monetary" optional="hide"
+                                           groups='hr_manpower_plan.group_manpower_plan_budget'
+                                           options="{'currency_field': 'currency_id'}"
+                                           readonly="True"/>
+                                    <!--                                           attrs="{'readonly': True}"/>-->
+                                    <field name="unit_budget" widget="monetary"
+                                           optional="hide"
+                                           groups='hr_manpower_plan.group_manpower_plan_budget'
+                                           options="{'currency_field': 'currency_id'}"
+                                           readonly="state != 'submitted'"/>
+                                    <!--                                           attrs="{'readonly':[('state','!=','submitted')]}"/>-->
+                                    <field name="total_budget" widget="monetary"
+                                           optional="hide"
+                                           groups='hr_manpower_plan.group_manpower_plan_budget'
+                                           sum="Planned Budget"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="approved_budget"
+                                           sum="Approved Budget"
+                                           widget="monetary" optional="hide"
+                                           groups='hr_manpower_plan.group_manpower_plan_budget'
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="actual_budget"
+                                           sum="Actual Budget"
+                                           widget="monetary" optional="hide"
+                                           groups='hr_manpower_plan.group_manpower_plan_budget'
+                                           options="{'currency_field': 'currency_id'}"
+                                           readonly="True"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="state"/>
+                                    <button name="action_submit" type="object"
+                                            icon="fa-check text-info"
+                                            invisible="state != draft"/>
+                                    <button name="action_budget" type="object"
+                                            icon="fa-dollar"
+                                            groups='hr_manpower_plan.group_manpower_plan_budget'
+                                            invisible="state != submitted"/>
+                                    <button name="action_approve" type="object"
+                                            icon="fa-check text-success"
+                                            groups="hr_manpower_plan.group_manpower_plan_manager"
+                                            invisible="state != budgeted"/>
+                                    <button name="action_reject" type="object"
+                                            icon="fa-ban text-danger"
+                                            groups="hr_manpower_plan.group_manpower_plan_manager"
+                                            invisible="state != budgeted"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <!--    <record id="manager_hr_manpower_plan_form" model="ir.ui.view">-->
+    <!--        <field name="name">manager.hr.manpower.plan.form</field>-->
+    <!--        <field name="model">hr.manpower.plan</field>-->
+    <!--        <field name="inherit_id" ref="hr_manpower_plan.hr_manpower_plan_form"/>-->
+    <!--        <field name="groups_id"-->
+    <!--               eval="[(4, ref('hr_manpower_plan.group_manpower_plan_manager')),(4,ref('hr.group_hr_manager'))]"/>-->
+    <!--        <field name="arch" type="xml">-->
+    <!--            <xpath expr="//field[@name='manpower_line_ids']"-->
+    <!--                   position="attributes">-->
+    <!--                <attribute name="attrs">-->
+    <!--                    {'readonly':[('state','not in',('draft','preparation','submitted'))]}-->
+    <!--                </attribute>-->
+    <!--            </xpath>-->
+    <!--        </field>-->
+    <!--    </record>-->
+
+    <record id="hr_manpower_plan_tree" model="ir.ui.view">
+        <field name="name">hr.manpower.plan.tree</field>
+        <field name="model">hr.manpower.plan</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_manpower_plan_action" model="ir.actions.act_window">
+        <field name="name">Manpower Plan</field>
+        <field name="res_model">hr.manpower.plan</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="manpower_plan_menu"
+              name="Manpower Plan"
+              action="hr_manpower_plan_action"
+              parent="hr_recruitment.menu_hr_recruitment_root"
+              sequence="3"/>
+
+</odoo>

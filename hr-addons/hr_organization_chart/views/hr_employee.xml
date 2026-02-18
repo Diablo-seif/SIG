@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_employee_org_chart" model="ir.ui.view">
+        <field name="name">hr.employee.org_chart</field>
+        <field name="model">hr.employee</field>
+        <field name="mode">primary</field>
+        <field name="arch" type="xml">
+            <org_chart />
+        </field>
+    </record>
+
+    <record id="hr.open_view_employee_list_my" model="ir.actions.act_window">
+        <field name="view_mode">kanban,tree,form,activity,org_chart</field>
+    </record>
+
+    <record id="hr_employee_level_search" model="ir.ui.view">
+        <field name="name">hr.employee.level.search</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <filter string="Levels"
+                        name="filter_group_level"
+                    context="{'group_by':'job_level_id'}" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

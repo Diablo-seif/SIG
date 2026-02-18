@@ -1,0 +1,202 @@
+<odoo>
+    <template id="portal_request_card_form" name="Request Card Form">
+        <t t-call="portal.frontend_layout">
+            <style>
+                header#top, footer.o_footer { display: none !important; }
+            </style>
+            <t t-set="additional_title">طلب إصدار كارت</t>
+            <div class="container mt-5 pt-4 mb-5 bg-light shadow-sm p-4" style="border-radius: 0.75rem;" dir="rtl">
+                <div class="position-relative text-center mb-5 mt-1">
+                    <h2 class="mb-0">بيانات وظيفية</h2>
+                </div>
+                <t t-if="error">
+                    <div class="alert alert-danger text-center">
+                        <t t-esc="error"/>
+                    </div>
+                </t>
+                <form action="/my/request-card/submit" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>الأسم بالكامل كما هو مدون فى بطاقه الرقم القومى</label>
+                        <input type="text" name="full_name" class="form-control text-end" required="required"
+                               t-att-value="post.get('full_name', '')"/>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>الرقم القومي</label>
+                        <input type="number" name="national_id" class="form-control text-end" required="required"
+                               t-att-value="post.get('national_id', '')"/>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>أرقام الإتصال (المحمول)</label>
+                        <input type="number" name="phone_number" class="form-control text-end" required="required"
+                               t-att-value="post.get('phone_number', '')"/>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>كود الوظيفة</label>
+                        <input type="text" name="job_code" class="form-control text-end" required="required"
+                               t-att-value="post.get('job_code', '')"/>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>الدرجة الوظيفية</label>
+                        <select name="job_grade_id" class="form-control text-end" required="required">
+                            <option value="">-- اختر الدرجة الوظيفية --</option>
+                            <t t-foreach="grades" t-as="grade">
+                                <option t-att-value="grade.id"
+                                        t-att-selected="str(grade.id) == post.get('job_grade_id')">
+                                    <t t-esc="grade.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>الوظيفة</label>
+                        <select name="job_position_id" class="form-control text-end" required="required">
+                            <option value="">-- اختر الوظيفة --</option>
+                            <t t-foreach="positions" t-as="position">
+                                <option t-att-value="position.id"
+                                        t-att-selected="str(position.id) == post.get('job_position_id')">
+                                    <t t-esc="position.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>المحافظة</label>
+                        <select name="governorate_id" class="form-control text-end" required="required">
+                            <option value="">-- اختر المحافظة --</option>
+                            <t t-foreach="governorates" t-as="governorate">
+                                <option t-att-value="governorate.id"
+                                        t-att-selected="str(governorate.id) == post.get('governorate_id')">
+                                    <t t-esc="governorate.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-4 text-end">
+   
+                     <label>صورة شخصية</label>
+                        <input type="file" name="image" class="form-control text-end" required="required"/>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary">إرسال</button>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+
+    <template id="portal_request_card_success" name="Request Card Success">
+        <t t-call="portal.portal_layout">
+            <t t-set="additional_title">تم إرسال طلب الكارت</t>
+            <div class="container mt-5 mb-5" dir="rtl">
+                <div class="alert alert-success text-center">
+                    <h4 class="alert-heading">تم إرسال طلب إصدار الكارت بنجاح!</h4>
+                    <!--                    <p>شكرًا لك. سيتم معالجة طلبك قريبًا.</p>-->
+                    <!--                    <hr/>-->
+                    <!--                    <a href="/my/request-card" class="btn btn-outline-primary">طلب كارت آخر؟</a>-->
+                </div>
+            </div>
+        </t>
+    </template>
+
+
+       <template id="portal_request_card_form_el_mesaha_el_Askareya" name="Request Card Form">
+        <t t-call="portal.frontend_layout">
+            <style>
+                header#top, footer.o_footer { display: none !important; }
+            </style>
+            <t t-set="additional_title">طلب إصدار كارت</t>
+            <div class="container mt-5 pt-4 mb-5 bg-light shadow-sm p-4" style="border-radius: 0.75rem;" dir="rtl">
+                <div class="position-relative text-center mb-5 mt-1">
+                    <h2 class="mb-0">بيانات وظيفية</h2>
+                </div>
+                <t t-if="error">
+                    <div class="alert alert-danger text-center">
+                        <t t-esc="error"/>
+                    </div>
+                </t>
+                <form action="/my/request-card-el_mesaha_el_Askareya/submit" method="POST" enctype="multipart/form-data">
+                    <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>الأسم بالكامل كما هو مدون فى بطاقه الرقم القومى</label>
+                        <input type="text" name="full_name" class="form-control text-end" required="required"
+                               t-att-value="post.get('full_name', '')"/>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>الرقم القومي</label>
+                        <input type="number" name="national_id" class="form-control text-end" required="required"
+                               t-att-value="post.get('national_id', '')"/>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>أرقام الإتصال (المحمول)</label>
+                        <input type="number" name="phone_number" class="form-control text-end" required="required"
+                               t-att-value="post.get('phone_number', '')"/>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>كود الوظيفة</label>
+                        <input type="text" name="job_code" class="form-control text-end" required="required"
+                               t-att-value="post.get('job_code', '')"/>
+                    </div>
+                    <div class="form-group mb-3 text-end">
+                        <label>الشركة التابع لها</label>
+                        <select name="associated_company_id" class="form-control text-end" required="required">
+                            <option value="">-- اختر الشركة --</option>
+                            <t t-foreach="companies" t-as="company">
+                                <option t-att-value="company.id"
+                                        t-att-selected="str(company.id) == post.get('associated_company_id')">
+                                    <t t-esc="company.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                    <div class="form-group mb-3 text-end">
+                        <label>الوظيفة</label>
+                        <select name="job_position_id" class="form-control text-end" required="required">
+                            <option value="">-- اختر الوظيفة --</option>
+                            <t t-foreach="positions" t-as="position">
+                                <option t-att-value="position.id"
+                                        t-att-selected="str(position.id) == post.get('job_position_id')">
+                                    <t t-esc="position.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+
+                    <div class="form-group mb-3 text-end">
+                        <label>المحافظة</label>
+                        <select name="governorate_id" class="form-control text-end" required="required">
+                            <option value="">-- اختر المحافظة --</option>
+                            <t t-foreach="governorates" t-as="governorate">
+                                <option t-att-value="governorate.id"
+                                        t-att-selected="str(governorate.id) == post.get('governorate_id')">
+                                    <t t-esc="governorate.name"/>
+                                </option>
+                            </t>
+                        </select>
+                    </div>
+                    <div class="form-group mb-4 text-end">
+                    <label>صورة شخصية</label>
+                        <input type="file" name="image" class="form-control text-end" required="required"/>
+                    </div>
+
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-primary">إرسال</button>
+                    </div>
+                </form>
+            </div>
+        </t>
+    </template>
+</odoo>

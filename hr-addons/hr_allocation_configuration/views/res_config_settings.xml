@@ -1,0 +1,54 @@
+<!--<?xml version="1.0" encoding="utf-8"?>-->
+<odoo>
+
+    <record id="res_config_settings_allocation_configuration_form"
+            model="ir.ui.view">
+        <field name="name">res.config.settings.employee.time.offs.form</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="hr.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//div[@data-key='hr']" position="inside">
+
+                <h2>Time Off Allocations</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box"
+                         title="Years of insurance to change time off amount.">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="time_off_years_of_insurance"/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    Years of insurance to change time off amount
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="time_off_years_of_insurance" class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-6 o_setting_box"
+                         title="Employee age to change time off amount.">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="time_off_employee_age"/>
+                            <div class="row">
+                                <div class="text-muted col-lg-8">
+                                    Employee age to change time off amount
+                                </div>
+                            </div>
+                            <div class="content-group">
+                                <div class="mt16">
+                                    <field name="time_off_employee_age" class="o_light_label"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </field>
+    </record>
+</odoo>

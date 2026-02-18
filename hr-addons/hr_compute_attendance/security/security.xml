@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_compute_attendance_company_rule" model="ir.rule" >
+        <field name="name">Compute Attendance multi-company</field>
+        <field name="model_id" ref="model_hr_compute_attendance"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="hr_compute_attendance_line_company_rule" model="ir.rule" >
+        <field name="name">Compute Attendance multi-company</field>
+        <field name="model_id" ref="model_hr_compute_attendance_line"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('compute_id.company_id','=',False),('compute_id.company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record id="hr_attendance_record_company_rule" model="ir.rule" >
+        <field name="name">Attendance Record multi-company</field>
+        <field name="model_id" ref="model_hr_attendance_record"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('employee_id.company_id','=',False),('employee_id.company_id', 'in', company_ids)]</field>
+    </record>
+</odoo>

@@ -1,0 +1,10 @@
+<odoo>
+
+    <menuitem id="vip_partners_menu"
+              name="VIP Contacts"
+              action="vip_partners_action"
+              parent="hr_recruitment.menu_hr_recruitment_configuration"
+              groups="group_access_vip_partner"
+              sequence="50"/>
+
+</odoo>

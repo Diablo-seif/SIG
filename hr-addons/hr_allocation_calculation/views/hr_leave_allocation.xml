@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="inherit_hr_leave_allocation_form" model="ir.ui.view">
+        <field name="name">inherit.hr.leave.allocation.form</field>
+        <field name="model">hr.leave.allocation</field>
+        <field name="inherit_id" ref="hr_holidays_accrual_advanced.hr_leave_allocation_view_form_manager"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='accrual_method']" position="after">
+                <field name="calculation_method" widget="radio" options="{'horizontal': True}"/>
+            </xpath>
+            <xpath expr="//label[@for='number_per_interval']" position="attributes">
+                <attribute name="attrs">{'invisible':[('calculation_method','=','automatic')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='number_per_interval']/parent::div" position="attributes">
+                <attribute name="attrs">{'invisible':[('calculation_method','=','automatic')]}</attribute>
+            </xpath>
+            <xpath expr="//field[@name='accrual_method']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='interval_number']" position="attributes">
+                <attribute name="attrs">{'invisible':[('interval_unit','=','days')]}</attribute>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

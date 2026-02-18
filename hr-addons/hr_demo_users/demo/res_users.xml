@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="user_employee" model="res.users">
+        <field name="partner_id" ref="partner_employee"/>
+        <field name="login">employee</field>
+        <field name="password">employee</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_employee2" model="res.users">
+        <field name="partner_id" ref="partner_employee2"/>
+        <field name="login">employee2</field>
+        <field name="password">employee2</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_employee3" model="res.users">
+        <field name="partner_id" ref="partner_employee3"/>
+        <field name="login">employee3</field>
+        <field name="password">employee3</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+
+    <record id="user_employee4" model="res.users">
+        <field name="partner_id" ref="partner_employee4"/>
+        <field name="login">employee4</field>
+        <field name="password">employee4</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_employee5" model="res.users">
+        <field name="partner_id" ref="partner_employee5"/>
+        <field name="login">employee5</field>
+        <field name="password">employee5</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_employee6" model="res.users">
+        <field name="partner_id" ref="partner_employee6"/>
+        <field name="login">employee6</field>
+        <field name="password">employee6</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_employee7" model="res.users">
+        <field name="partner_id" ref="partner_employee7"/>
+        <field name="login">employee7</field>
+        <field name="password">employee7</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+
+    <record id="user_manager" model="res.users">
+        <field name="partner_id" ref="partner_manager"/>
+        <field name="login">manager</field>
+        <field name="password">manager</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_manager2" model="res.users">
+        <field name="partner_id" ref="partner_manager2"/>
+        <field name="login">manager2</field>
+        <field name="password">manager2</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_manager3" model="res.users">
+        <field name="partner_id" ref="partner_manager3"/>
+        <field name="login">manager3</field>
+        <field name="password">manager3</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_department" model="res.users">
+        <field name="partner_id" ref="partner_department"/>
+        <field name="login">department</field>
+        <field name="password">department</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_department2" model="res.users">
+        <field name="partner_id" ref="partner_department2"/>
+        <field name="login">department2</field>
+        <field name="password">department2</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_department3" model="res.users">
+        <field name="partner_id" ref="partner_department3"/>
+        <field name="login">department3</field>
+        <field name="password">department3</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('base.group_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_hr_officer" model="res.users">
+        <field name="partner_id" ref="partner_hr_officer"/>
+        <field name="login">hr-officer</field>
+        <field name="password">hr-officer</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_user')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+
+    <record id="user_hr_manager" model="res.users">
+        <field name="partner_id" ref="partner_hr_manager"/>
+        <field name="login">hr-manager</field>
+        <field name="password">hr-manager</field>
+        <field name="tz">Egypt</field>
+        <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_manager')])]"/>
+        <field name="company_id" ref="base.main_company"/>
+    </record>
+</odoo>

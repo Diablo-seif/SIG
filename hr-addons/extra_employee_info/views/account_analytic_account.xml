@@ -1,0 +1,45 @@
+<odoo>
+    <record id="inhrite_account_analytic_account_form" model="ir.ui.view">
+        <field name="name">account.analytic.account.form</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_form" />
+        <field name="arch" type="xml">
+            <field name="partner_id" position="before">
+                <field name="type" widget="radio" options="{'horizontal': true}" />
+                <field name="start_date" />
+                <field name="end_date" />
+            </field>
+            <field name="plan_id" position="before">
+                <field name="is_opened" widget="boolean_toggle" />
+            </field>
+        </field>
+    </record>
+    <record id="account_analytic_account_view_tree" model="ir.ui.view">
+        <field name="name">account.analytic.account.view.tree</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_list" />
+        <field name="arch" type="xml">
+            <field name="plan_id" position="after">
+                <field name="start_date" optional="show" />
+                <field name="end_date" optional="show" />
+            </field>
+            <field name="plan_id" position="attributes">
+                <attribute name="optional">hide</attribute>
+            </field>
+        </field>
+    </record>
+
+    <record id="inherit_analytic_view_search" model="ir.ui.view">
+        <field name="name">account.analytic.account.view.search</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_search" />
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='inactive']" position="after">
+                <filter name="filter_opened" string="Opened"
+                    domain="[('is_opened', '=', True)]" />
+                <filter name="filter_closed" string="Closed"
+                    domain="[('is_opened', '=', False)]" />
+            </xpath>
+        </field>
+    </record>
+</odoo>

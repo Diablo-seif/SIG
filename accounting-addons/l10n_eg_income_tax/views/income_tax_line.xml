@@ -1,0 +1,36 @@
+<odoo>
+
+    <record id="view_income_tax_line_tree" model="ir.ui.view">
+        <field name="name">Income Tax Report</field>
+        <field name="model">income.tax.line</field>
+        <field name="arch" type="xml">
+            <list create="false" duplicate="false" edit="false" delete="false">
+                <field name="year"/>
+                <field name="net_profit"/>
+                <field name="accounting_depreciation"/>
+                <field name="above_seven"/>
+                <field name="tax_base"/>
+                <field name="tax_depreciation"/>
+                <field name="base"/>
+                <field name="deferred_losses"/>
+                <field name="base_after_losses"/>
+                <field name="income_tax"/>
+                <field name="company_id" invisible="1"/>
+                <field name="currency_id" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_income_tax_line_action" model="ir.actions.act_window">
+        <field name="name">Income Tax Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">income.tax.line</field>
+        <field name="view_mode">list</field>
+        <field name="target">current</field>
+    </record>
+
+    <menuitem id="menuitem_income_tax_line" name="Income Tax Report"
+              parent="account.account_reports_management_menu"
+              action="view_income_tax_line_action" sequence="3"/>
+
+</odoo>

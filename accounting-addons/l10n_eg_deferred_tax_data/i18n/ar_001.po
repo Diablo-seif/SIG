@@ -1,0 +1,132 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg_deferred_tax_data
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-01 10:20+0000\n"
+"PO-Revision-Date: 2020-11-01 10:20+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_eg_deferred_tax_data
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deferred_tax_data.res_config_settings_view_form_deferred
+msgid "<span class=\"o_form_label\">Deferred Tax Settings</span>"
+msgstr "<span class=\"o_form_label\">إعدادات الضريبة المؤجلة</span>"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model,name:l10n_eg_deferred_tax_data.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model,name:l10n_eg_deferred_tax_data.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:deferred.tax.percentage,name:l10n_eg_deferred_tax_data.deferred_taxes_default
+msgid "Default"
+msgstr "الاولى"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_res_company__deferred_tax_percentage_id
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_res_config_settings__deferred_tax_percentage_id
+#: model:ir.ui.menu,name:l10n_eg_deferred_tax_data.menuitem_deferred_taxes
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deferred_tax_data.res_config_settings_view_form_deferred
+msgid "Deferred Tax Percentage"
+msgstr "نسبة الضريبة المؤجلة"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.actions.act_window,name:l10n_eg_deferred_tax_data.deferred_taxes_action
+msgid "Deferred Tax Percentages"
+msgstr "نسب الضريبة المؤجلة"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage__id
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_res_config_settings__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_res_company____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:deferred.tax.percentage,name:l10n_eg_deferred_tax_data.deferred_taxes_mines
+msgid "Mines"
+msgstr "مناجم"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model.fields,field_description:l10n_eg_deferred_tax_data.field_deferred_tax_percentage__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: l10n_eg_deferred_tax_data
+#: code:addons/l10n_eg_deferred_tax_data/models/deferred_tax_percentage.py:0
+#, python-format
+msgid "Percentage should be greater than 0"
+msgstr "النسبة يجب الا تقل عن 0"
+
+#. module: l10n_eg_deferred_tax_data
+#: code:addons/l10n_eg_deferred_tax_data/models/deferred_tax_percentage.py:0
+#, python-format
+msgid "Percentage should be less than 100"
+msgstr "النسبة يجب ان تقل عن 100"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:deferred.tax.percentage,name:l10n_eg_deferred_tax_data.deferred_taxes_suez_canal
+msgid "Suez Canal"
+msgstr "قناة السويس"
+
+#. module: l10n_eg_deferred_tax_data
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deferred_tax_data.res_config_settings_view_form_deferred
+msgid "Used to Generate Deferred Tax Reports and Entries"
+msgstr "تستخدم لإنشاء تقارير و قيود للضريبة المؤجلة"
+
+#. module: l10n_eg_deferred_tax_data
+#: model:ir.model,name:l10n_eg_deferred_tax_data.model_deferred_tax_percentage
+msgid "deferred.tax.percentage"
+msgstr "نسب الضرائب المؤجلة"

@@ -1,0 +1,16 @@
+@font-face {
+    font-family: GeneratorBlack;
+    src: url('/hr_insurance_enroll_form/static/src/font/GeneratorBlack.ttf');
+}
+
+.header {
+    font-family: GeneratorBlack;
+}
+
+.footer {
+    font-family: GeneratorBlack;
+}
+
+.va-bottom {
+    vertical-align: text-bottom;
+}

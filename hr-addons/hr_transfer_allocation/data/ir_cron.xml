@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<odoo>
+
+    <record id="hr_transfer_allocation_cron_reset_transfer" model="ir.cron">
+        <field name="name">Scheduled Reset/Transfer</field>
+        <field name="model_id" ref="model_hr_transfer_allocation"/>
+        <field name="state">code</field>
+        <field name="code">model.reset_transfer_cron()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="True"/>
+    </record>
+
+</odoo>

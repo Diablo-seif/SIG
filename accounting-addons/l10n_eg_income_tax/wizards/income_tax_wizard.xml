@@ -1,0 +1,62 @@
+<odoo>
+
+    <record id="income_tax_wizard_form_view" model="ir.ui.view">
+        <field name="name">Change Password</field>
+        <field name="model">income.tax.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Income Tax">
+                <group>
+                    <field name="revenue_accounts" widget="many2many_tags"
+                           options="{'no_create':True}"/>
+                    <field name="cogs_accounts" widget="many2many_tags"
+                           options="{'no_create':True}"/>
+                    <field name="expenses_accounts" widget="many2many_tags"
+                           options="{'no_create':True}"/>
+                    <field name="depreciation_accounts"
+                           options="{'no_create':True}"
+                           widget="many2many_tags"/>
+                </group>
+                <group>
+                    <field name="partner_id"/>
+                    <field name="year"/>
+                    <field name="above_seven"/>
+                    <field name="deferred_losses"/>
+                    <field name="tax_depreciation"/>
+                    <field name="symbiotic_balance"/>
+                </group>
+                <group col="4" groups="base.group_no_one">
+                    <field name="revenue_balance"/>
+                    <field name="cogs_balance"/>
+                    <field name="expenses_balance"/>
+                    <field name="dep_balance"/>
+                </group>
+                <group>
+                    <field name="net_profit"/>
+                </group>
+                <footer>
+                    <button string="Calculate Net Profit"
+                            name="calculate_net_profit" type="object"
+                            class="btn-primary"/>
+                    <button string="Calculate Income Tax"
+                            name="calculate_income_tax" type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="income_tax_wizard_action" model="ir.actions.act_window">
+        <field name="name">Income Tax</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">income.tax.wizard</field>
+        <field name="view_id" ref="income_tax_wizard_form_view"/>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem id="menuitem_income_tax_wizard" name="Income Tax Calculation"
+              parent="account.account_reports_management_menu"
+              action="income_tax_wizard_action" sequence="2"/>
+
+</odoo>

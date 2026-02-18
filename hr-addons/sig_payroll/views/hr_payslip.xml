@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_payslip_tree_inherit_view" model="ir.ui.view">
+        <field name="name">hr.payslip.inherit.tree</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree" />
+        <field name="arch" type="xml">
+            <field name="net_wage" position="after">
+                <field name="basic" optional="hide" />
+                <field name="allowance" optional="hide" />
+                <field name="social_insurance_salary" optional="hide" />
+                <field name="other_allowance" optional="hide" />
+                <field name="transportation_allowances" optional="hide" />
+                <field name="incentives" optional="hide" />
+                <field name="special_bonus" optional="hide" />
+                <field name="medical_insurance" optional="hide" />
+                <field name="addition" optional="hide" />
+                <field name="gross" optional="hide" />
+                <field name="social_insurance_company_share" optional="hide" />
+                <field name="medical_insurance" optional="hide" />
+                <field name="social_insurance_employee_share" optional="hide" />
+                <field name="net_before_tax" optional="hide" />
+                <field name="salary_tax" optional="hide"/>
+                <field name="martyrs_fund" optional="hide" />
+                <field name="total_recurring_deductions" optional="hide" />
+                <field name="net_taxable_salary" optional="hide" />
+                <field name="deduction_leave" optional="hide" />
+                <field name="management_penalty" optional="hide" />
+                <field name="tardiness" optional="hide" />
+                <field name="unattended_days" optional="hide" />
+                <field name="absence_penalties" optional="hide" />
+                <field name="other_deduction" optional="hide" />
+                <field name="un_working_contract_days_penalties" optional="hide" />
+                <field name="loan" optional="hide" />               
+                <field name="total_other_deductions" optional="hide" />
+                <field name="net_salary" optional="hide" />
+                <field name="total_cost" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+</odoo>

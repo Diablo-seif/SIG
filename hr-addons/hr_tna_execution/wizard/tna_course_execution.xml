@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="tna_course_execution_form" model="ir.ui.view">
+        <field name="name">tna.course.execution.form</field>
+        <field name="model">tna.course.execution</field>
+        <field name="arch" type="xml">
+            <form>
+                <group invisible="context.get('action') == 'end'">
+                    <field name="leave_type_id"
+                           required="context.get('action') == 'start'"/>
+                </group>
+                <field name="execution_line_ids"
+                       context="{'action': context.get('action')}">
+                    <list editable="bottom">
+                        <field name="tna_courses_ids" widget="many2many_tags"
+                               invisible="1"/>
+                        <field name="course_id" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="employee_ids" widget="many2many_tags" options="{'no_open': True, 'no_create': True}"/>
+                        <field name="date_from" string="Start Date"
+                               required="context.get('action') == 'start'"
+                               invisible="context.get('action') == 'end'"/>
+                        <field name="date_to" string="End Date"
+                               required="context.get('action') == 'start'"
+                               invisible="context.get('action') == 'end'"/>
+                        <field name="all_day"
+                               invisible="context.get('action') == 'end'"/>
+                        <field name="time_from"
+                               invisible="context.get('action') == 'end'"
+                               readonly="all_day = True"
+                               required="all_day = False"/>
+<!--                               attrs="{'readonly':[('all_day','=',True)],'required':[('all_day','=',False)]}"/>-->
+                        <field name="time_to"
+                               invisible="context.get('action') == 'end'"
+                               readonly="all_day = True"
+                               required="all_day = False"/>
+<!--                               attrs="{'readonly':[('all_day','=',True)],'required':[('all_day','=',False)]}"/>-->
+                    </list>
+                </field>
+                <footer>
+                    <button name="start_course" string="Start Course"
+                            type="object" class="oe_highlight"
+                            invisible="context.get('action') == 'end'"/>
+                    <button name="end_course" string="End Course"
+                            type="object" class="oe_highlight"
+                            invisible="context.get('action') == 'start'"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="tna_start_course_action" model="ir.actions.act_window">
+        <field name="name">Start Course</field>
+        <field name="res_model">tna.course.execution</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'action':'start'}</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="hr_tna.model_hr_tna"/>
+    </record>
+
+    <record id="tna_end_course_action" model="ir.actions.act_window">
+        <field name="name">End Course</field>
+        <field name="res_model">tna.course.execution</field>
+        <field name="view_mode">form</field>
+        <field name="context">{'action':'end'}</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="hr_tna.model_hr_tna"/>
+    </record>
+
+</odoo>

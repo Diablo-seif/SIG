@@ -1,0 +1,18 @@
+<odoo>
+
+    <record id="deferred_taxes_default" model="deferred.tax.percentage">
+        <field name="name">Default</field>
+        <field name="percentage">22.5</field>
+    </record>
+
+    <record id="deferred_taxes_suez_canal" model="deferred.tax.percentage">
+        <field name="name">Suez Canal</field>
+        <field name="percentage">40</field>
+    </record>
+
+    <record id="deferred_taxes_mines" model="deferred.tax.percentage">
+        <field name="name">Mines</field>
+        <field name="percentage">44.5</field>
+    </record>
+
+</odoo>

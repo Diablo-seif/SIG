@@ -1,0 +1,81 @@
+<odoo>
+
+    <record id="hr_contract_form_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <button name="%(hr_contract_wage_eg_net_gross.hr_contract_wage_calculate_action)d"
+                        type="action" string="Calculate Egypt Net To Gross"/>
+            </field>
+            <xpath expr="//notebook" position="inside">
+                <page string="Egypt Net To Gross Info">
+                    <group>
+                        <field name="eg_net_amount"/>
+                    </group>
+                    <group string="Insurance Info">
+                        <field name="eg_with_social_insurance" string="With Insurance"/>
+                        <field name="eg_insurance_amount" invisible="eg_with_social_insurance != True"
+                               required="eg_with_social_insurance != True"/>
+                        <field name="eg_insurance_employee_percentage"
+                               invisible="eg_with_social_insurance != True"
+                               required="eg_with_social_insurance != True"/>
+                    </group>
+                    <group string="Tax Info">
+                        <field name="eg_tax_type"/>
+                        <field name="eg_fixed_percentage"
+                               invisible="eg_tax_type != 'percentage'"
+                               required="eg_tax_type = 'percentage'"/>
+                        <field name="hr_salary_tax_id"
+                               invisible="eg_tax_type != 'laws'"
+                               required="eg_tax_type = 'laws'"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_contract_view_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.tree.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_end']" position="after">
+                <field name="eg_net_amount"/>
+                <field name="wage"/>
+                <field name="eg_insurance_amount"/>
+                <field name="basic_salary" optional="hide"/>
+                <field name="allowance" optional="hide"/>
+                <field name="social_insurance_salary" optional="hide"/>
+                <field name="other_allowance" optional="hide"/>
+                <field name="transportation_allowance" optional="hide"/>
+                <field name="incentives" optional="hide"/>
+                <field name="special_bonus" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_calculate_incentives">
+        <field name="name">Calculate Incentives</field>
+        <field name="model_id" ref="hr_contract.model_hr_contract"/>
+        <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_calculate_incentives()
+        </field>
+    </record>
+
+    <record model="ir.actions.server" id="action_calculate_salary_input">
+        <field name="name">Calculate Salary Input Lines</field>
+        <field name="model_id" ref="hr_contract.model_hr_contract"/>
+        <field name="binding_model_id" ref="hr_contract.model_hr_contract"/>
+        <field name="binding_view_types">list,form</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = records.action_calculate_salary_input()
+        </field>
+    </record>
+
+</odoo>

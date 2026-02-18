@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hr_salary_tax_2023" model="hr.salary.tax">
+        <field name="name">Tax 2023</field>
+        <field name="exemption" eval="0"/>
+        <field name="rounding" eval="10"/>
+        <field name="rounding_method">ceil</field>
+        <field name="date_from" eval="time.strftime('2023-7-01')"/>
+        <field name="date_to" eval="time.strftime('2090-6-30')"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_line_1" model="hr.salary.tax.line">
+        <field name="level" eval="1"/>
+        <field name="salary_from" eval="1"/>
+        <field name="salary_to" eval="21000"/>
+        <field name="tax_percentage" eval="0"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_line_2" model="hr.salary.tax.line">
+        <field name="level" eval="2"/>
+        <field name="salary_from" eval="21000"/>
+        <field name="salary_to" eval="30000"/>
+        <field name="tax_percentage" eval="2.5"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_line_3" model="hr.salary.tax.line">
+        <field name="level" eval="3"/>
+        <field name="salary_from" eval="30000"/>
+        <field name="salary_to" eval="45000"/>
+        <field name="tax_percentage" eval="10"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_line_4" model="hr.salary.tax.line">
+        <field name="level" eval="4"/>
+        <field name="salary_from" eval="45000"/>
+        <field name="salary_to" eval="60000"/>
+        <field name="tax_percentage" eval="15"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_line_5" model="hr.salary.tax.line">
+        <field name="level" eval="5"/>
+        <field name="salary_from" eval="60000"/>
+        <field name="salary_to" eval="200000"/>
+        <field name="tax_percentage" eval="20"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_line_6" model="hr.salary.tax.line">
+        <field name="level" eval="6"/>
+        <field name="salary_from" eval="200000"/>
+        <field name="salary_to" eval="400000"/>
+        <field name="tax_percentage" eval="22.5"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_line_7" model="hr.salary.tax.line">
+        <field name="level" eval="7"/>
+        <field name="salary_from" eval="400000"/>
+        <field name="salary_to" eval="1200000"/>
+        <field name="tax_percentage" eval="25"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_line_8" model="hr.salary.tax.line">
+        <field name="level" eval="8"/>
+        <field name="salary_from" eval="1200000"/>
+        <field name="salary_to" eval="99999999999"/>
+        <field name="tax_percentage" eval="27.5"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+
+    <record id="hr_salary_tax_2023_apply_level_1" model="hr.salary.tax.apply.level">
+        <field name="level" eval="1"/>
+        <field name="salary_from" eval="0"/>
+        <field name="salary_to" eval="600000"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_apply_level_2" model="hr.salary.tax.apply.level">
+        <field name="level" eval="2"/>
+        <field name="salary_from" eval="600000"/>
+        <field name="salary_to" eval="700000"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_apply_level_3" model="hr.salary.tax.apply.level">
+        <field name="level" eval="3"/>
+        <field name="salary_from" eval="700000"/>
+        <field name="salary_to" eval="800000"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_apply_level_4" model="hr.salary.tax.apply.level">
+        <field name="level" eval="4"/>
+        <field name="salary_from" eval="800000"/>
+        <field name="salary_to" eval="900000"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_apply_level_5" model="hr.salary.tax.apply.level">
+        <field name="level" eval="5"/>
+        <field name="salary_from" eval="900000"/>
+        <field name="salary_to" eval="1200000"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+    <record id="hr_salary_tax_2023_apply_level_6" model="hr.salary.tax.apply.level">
+        <field name="level" eval="6"/>
+        <field name="salary_from" eval="1200000"/>
+        <field name="salary_to" eval="999999999999"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2023"/>
+    </record>
+
+</odoo>

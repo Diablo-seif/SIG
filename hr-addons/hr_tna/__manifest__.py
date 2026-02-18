@@ -1,0 +1,30 @@
+# pylint: skip-file
+{
+    'name': 'Training Needs Assessment',
+    'summary': 'Training Needs Assessment',
+    'author': "Muhamed Abd El-Rhman, CORE B.P.O",
+    'website': "http://www.core-bpo.com",
+    # 'version': '1.0.0',
+    'category': 'Human Resources',
+    'license': 'AGPL-3',
+    'depends': [
+        'hr_courses',
+    ],
+    'data': [
+        'security/res_groups.xml',
+        'security/ir.model.access.csv',
+        'views/hr_tna.xml',
+        'views/hr_tna_line.xml',
+        'views/hr_employee.xml',
+        'views/hr_tna_courses.xml',
+        'wizard/hr_tna_set_provider.xml',
+        'data/ir_cron.xml',
+        'data/ir_server_action.xml',
+        'data/ir_sequence.xml',
+        'report/tna_report.xml',
+        'report/tna_templates.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

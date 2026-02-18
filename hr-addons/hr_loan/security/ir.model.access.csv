@@ -1,0 +1,11 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_group_user_hr_loan,access.group.user.hr.loan,model_hr_loan,base.group_user,1,1,1,0
+access_group_user_hr_loan_line,access.group.user.hr.loan.line,model_hr_loan_line,base.group_user,1,0,0,0
+access_group_user_hr_job,access.group.user.hr.job,hr.model_hr_job,base.group_user,1,0,0,0
+access_group_hr_user_hr_loan,access.group.hr.user.hr.loan,model_hr_loan,hr.group_hr_user,1,1,1,1
+access_group_hr_user_hr_loan_line,access.group.hr.user.hr.loan.line,model_hr_loan_line,hr.group_hr_user,1,1,1,1
+access_group_hr_manager_hr_loan,access.group.hr.manager.hr.loan,model_hr_loan,hr.group_hr_manager,1,1,1,1
+access_group_hr_manager_hr_loan_line,access.group.hr.manager.hr.loan.line,model_hr_loan_line,hr.group_hr_manager,1,1,1,1
+access_group_hr_manager_hr_loan_company_settings,access.group.hr.manager.hr.loan.company_settings,base.model_res_company,hr.group_hr_manager,1,1,1,1
+access_hr_loan_register_payment_wizard,access.group.hr.manager.hr_loan_register_payment_wizard,model_hr_loan_register_payment_wizard,hr.group_hr_manager,1,1,1,1
+access_loan_config_settings,access.group.hr.manager.loan_config_settings,model_loan_config_settings,hr.group_hr_manager,1,1,1,1

@@ -1,0 +1,208 @@
+<odoo>
+
+    <record id="hr_evaluation_form" model="ir.ui.view">
+        <field name="name">hr_evaluation_form</field>
+        <field name="model">hr.evaluation</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_submit" string="Submit" class="oe_highlight"
+                            states="draft" type="object"/>
+                    <button name="action_done" string="Done"
+                            class="oe_highlight" states="send_to_manager"
+                            type="object"
+                            groups="hr_performance_evaluation.employee_performance_admin_group"/>
+                    <button name="action_cancel" string="Cancel"
+                            states="draft,send_to_manager"
+                            type="object"
+                            groups="hr_performance_evaluation.employee_performance_admin_group"/>
+                    <button name="action_reset_draft" string="Reset Draft"
+                            states="cancel" type="object"
+                            groups="hr_performance_evaluation.employee_performance_admin_group"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,send_to_manager,done"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group string="Employee Details">
+                            <field name="employee_done_evaluation" invisible="1"/>
+                            <field name="manager_done_evaluation" invisible="1"/>
+                            <field name="job_id" invisible="1"/>
+                            <field name="employee_id"
+                                   readonly="state !=draft"
+                                   context="{'search_default_group_department':1, 'search_default_group_job':1}"/>
+                            <field name="manager_id"/>
+                            <field name="performance_template_id"
+                                   readonly="state !=draft"/>
+                            <field name="company_id"
+                                   readonly="state !=draft"
+                                   options="{'no_create': True}"/>
+                            <!--                            <field name="total_objective_score_percentage" widget="percentage"/>-->
+                            <field name="evaluation_percentage" widget="percentage"/>
+                        </group>
+                        <group string="Period">
+                            <field name="period_id"
+                                   readonly="state !=draft"/>
+                            <field name="start_date"
+                                   readonly="state !=draft"/>
+                            <field name="end_date"
+                                   readonly="state !=draft"/>
+                            <field name="deadline_date"
+                                   readonly="state !=draft"/>
+                            <field name="performance_score_scale_id" string="Score Scale" options='{"no_open":True}'/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="objective" string="Objective">
+                            <field name="performance_line_ids"
+                                   attrs="{'readonly':[('state','=','done')]}"
+                                   widget="section_and_note_one2many"
+                                   force_save="1">
+                                <list editable="bottom">
+                                    <control>
+                                        <create name="add_line_control"
+                                                string="Add a key performance"/>
+                                        <create name="add_section_control"
+                                                string="Add a category"
+                                                context="{'default_display_type': 'line_section'}"/>
+                                    </control>
+                                    <field name="display_type" invisible="1"/>
+                                    <field name="evaluation_id" invisible="1"/>
+                                    <field name="sequence" widget="handle"
+                                           attrs="{'readonly':[('parent.state','!=','draft')]}"/>
+                                    <field name="name"
+                                           attrs="{'readonly':[('parent.state','!=','draft')]}"
+                                           widget="section_and_note_text"/>
+                                    <field name="description"
+                                           attrs="{'readonly':[('parent.state','!=','draft')]}"/>
+                                    <field name="weightage" widget="percentage"
+                                           attrs="{'readonly':[('parent.state','!=','draft')]}"/>
+                                    <field name="final_rating" widget="percentage"
+                                           attrs="{'readonly':[('parent.state','!=','send_to_manager')]}"/>
+                                    <field name="final_remark"
+                                           attrs="{'readonly':[('parent.state','!=','send_to_manager')]}"/>
+                                </list>
+                            </field>
+                            <group name="note_group" col="6"
+                                   class="mt-2 mt-md-0">
+
+                                <group colspan="4">
+                                </group>
+                                <group class="oe_subtotal_footer oe_right"
+                                       colspan="2">
+                                    <field name="performance_score_percentage" widget="percentage"/>
+                                </group>
+                                <div class="oe_clear"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_evaluation_tree" model="ir.ui.view">
+        <field name="name">hr_evaluation_tree</field>
+        <field name="model">hr.evaluation</field>
+        <field name="arch" type="xml">
+            <list sample="1" decoration-danger="deadline_date and deadline_date &lt; current_date">
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="performance_template_id" optional="show"/>
+                <field name="period_id" optional="show"/>
+                <field name="start_date" optional="show"/>
+                <field name="end_date" optional="show"/>
+                <field name="deadline_date" optional="show"/>
+                <field name="performance_line_ids" optional="show"/>
+                <field name="evaluation_percentage" widget="percentage"/>
+                <field name="state"
+                       decoration-success="state == 'done'"
+                       decoration-info="state == 'draft'"
+                       decoration-warning="state == 'send_to_manager'"
+                       widget="badge" optional="show"/>
+                <field name="message_needaction" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_evaluation_my_action" model="ir.actions.act_window">
+        <field name="name">My Evaluation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.evaluation</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('user_id.id', '=', uid)]</field>
+    </record>
+
+    <record id="hr_evaluation_my_team_action" model="ir.actions.act_window">
+        <field name="name">My Team Evaluation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.evaluation</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[
+            ('employee_id.parent_id.user_id.id', '=', uid)]
+        </field>
+    </record>
+
+    <record id="hr_evaluation_all_action" model="ir.actions.act_window">
+        <field name="name">All Evaluation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.evaluation</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain"></field>
+    </record>
+
+    <record id="hr_evaluation_pivot" model="ir.ui.view">
+        <field name="name">hr.evaluation.pivot</field>
+        <field name="model">hr.evaluation</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="job_id" type="row"/>
+                <field name="employee_id" type="row"/>
+                <field name="evaluation_percentage" type="measure" widget="percentage"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="employee_performance_action" model="ir.actions.act_window">
+        <field name="name">Employee Performance</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.evaluation</field>
+        <field name="view_mode">pivot</field>
+    </record>
+
+    <record id="hr_evaluation_mark_done_server_action" model="ir.actions.server">
+        <field name="name">Mark Done</field>
+        <field name="model_id" ref="model_hr_evaluation"/>
+        <field name="binding_model_id" ref="model_hr_evaluation"/>
+        <field name="binding_type">action</field>
+        <field name="groups_id" eval="[(6,0,[ref('hr_performance_evaluation.employee_performance_admin_group')])]"/>
+        <field name="state">code</field>
+        <field name="code">action = records.action_done()
+        </field>
+    </record>
+
+    <record id="hr_evaluation_cancel_server_action" model="ir.actions.server">
+        <field name="name">Cancel</field>
+        <field name="model_id" ref="model_hr_evaluation"/>
+        <field name="binding_model_id" ref="model_hr_evaluation"/>
+        <field name="binding_type">action</field>
+        <field name="groups_id" eval="[(6,0,[ref('hr_performance_evaluation.employee_performance_cancel_group')])]"/>
+        <field name="state">code</field>
+        <field name="sequence">100</field>
+        <field name="code">action = records.action_cancel()
+        </field>
+    </record>
+
+</odoo>

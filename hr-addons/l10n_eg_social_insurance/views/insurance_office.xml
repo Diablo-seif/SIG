@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="insurance_office_form" model="ir.ui.view">
+        <field name="name">insurance.office.form</field>
+        <field name="model">insurance.office</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="state_id"/>
+                            <field name="area_id"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="insurance_office_tree" model="ir.ui.view">
+        <field name="name">insurance.office.tree</field>
+        <field name="model">insurance.office</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="state_id"/>
+                <field name="area_id"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="insurance_office_search" model="ir.ui.view">
+        <field name="name">insurance.office.search</field>
+        <field name="model">insurance.office</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="state_id"/>
+                <field name="area_id"/>
+                <filter string="State" name="group_state_id" context="{'group_by':'state_id'}"/>
+                <filter string="Area" name="group_area_id" context="{'group_by':'area_id'}"/>
+            </search>
+        </field>
+    </record>
+
+
+    <record id="insurance_office_action" model="ir.actions.act_window">
+        <field name="name">Insurance Office</field>
+        <field name="res_model">insurance.office</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="insurance_office_menu"
+              name="Office"
+              action="insurance_office_action"
+              parent="insurance_menu"/>
+
+</odoo>

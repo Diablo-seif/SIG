@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_penalty_rule_form" model="ir.ui.view">
+            <field name="name">hr.penalty.rule.form</field>
+            <field name="model">hr.penalty.rule</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only"/>
+                            <h1>
+                                <field name="name" placeholder="Penalty Late In 30 Minutes."
+                                       required="True"/>
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="penalty_type"/>
+                                <field name="delay_from"/>
+                                <field name="deduction_type"/>
+                            </group>
+                            <group>
+                                <field name="calendar_id" required="1"/>
+                                <field name="delay_to"/>
+                            </group>
+                        </group>
+                        <group string="Penalty Rule Values with Redundant"/>
+                        <field name="penalty_redundant_ids">
+                            <list editable="buttom">
+                                <field name="redundant" />
+                                <field name="penalty_value" />
+                            </list>
+                            <form>
+                                <field name="redundant" />
+                                <field name="penalty_value" />
+                            </form>
+                        </field>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+    <record id="hr_penalty_rule_tree" model="ir.ui.view">
+            <field name="name">hr.penalty.rule.tree</field>
+            <field name="model">hr.penalty.rule</field>
+            <field name="arch" type="xml">
+                <list decoration-success="active == True"
+                      decoration-danger="active == False">
+                    <field name="name"/>
+                    <field name="delay_from"/>
+                    <field name="delay_to"/>
+                    <field name="penalty_type"/>
+                    <field name="calendar_id"/>
+                    <field name="deduction_type"/>
+                    <field name="penalty_redundant_ids" widget="many2many_tags"/>
+                    <field name="active"/>
+                </list>
+            </field>
+        </record>
+
+    <record id="hr_penalty_rule_action" model="ir.actions.act_window">
+            <field name="name">Penalty Rules</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.penalty.rule</field>
+            <field name="view_mode">list,form</field>
+        </record>
+
+    <record id="hr_attendance.menu_hr_attendance_settings" model="ir.ui.menu">
+            <field name="action" eval="False"/>
+    </record>
+
+    <menuitem id="menu_hr_penalty_rules" name="Penalty Rules"
+              parent="hr_attendance.menu_hr_attendance_settings"
+              sequence="80" action="hr_penalty_rule_action"
+              groups="hr_attendance.group_hr_attendance_manager"/>
+
+    <menuitem id="menu_hr_attendance_settings" name="Configuration"
+              parent="hr_attendance.menu_hr_attendance_settings"
+              sequence="99" action="hr_attendance.action_hr_attendance_settings"
+              groups="hr_attendance.group_hr_attendance_manager"/>
+
+</odoo>

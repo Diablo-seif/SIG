@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="over_budget_notification_cron" model="ir.cron">
+        <field name="name">Over Budget Notification</field>
+        <field name="model_id" ref="account_budget.model_crossovered_budget_lines"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="code">model._check_over_budget()</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="numbercall">-1</field>
+        <field name="doall" eval="True"/>
+    </record>
+
+</odoo>

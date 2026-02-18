@@ -1,0 +1,1283 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_compute_attendance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-02-11 19:46+0000\n"
+"PO-Revision-Date: 2021-02-11 21:54+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.4.2\n"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "&amp;nbsp;"
+msgstr "&amp;nbsp;"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid ""
+"&amp;nbsp;  &amp;nbsp; \n"
+"                         &amp;nbsp;"
+msgstr ""
+"&amp;nbsp;  &amp;nbsp; \n"
+"                         &amp;nbsp;"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_kanban
+msgid "<span>Date:</span>"
+msgstr "<span>تاريخ:</span>"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_kanban
+msgid "<span>Day:</span>"
+msgstr "<span>اليوم:</span>"
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/resource_calendar.py:0
+#, python-format
+msgid "Absent Deduction Value Per IntervalMust Be Positive."
+msgstr "يجب أن تكون قيمة الخصم عن الغياب لكل فترة زمنية موجبة."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__absent_interval
+msgid "Absent Interval"
+msgstr "مدة الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar__absent_ids
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.resource_calendar_form_inherit
+msgid "Absent Penalties"
+msgstr "عقوبات الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__absent_penalty_value
+msgid "Absent Penalty Value"
+msgstr "قيمة عقوبة الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__absent_value
+msgid "Absent Percentage"
+msgstr "نسبة خصم الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__absent_redundant
+msgid "Absent Redundant"
+msgstr "غياب زائد"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__absent_value
+msgid "Absent Value"
+msgstr "مدة الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_needaction
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_needaction
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_needaction
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء مطلوب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__actual_working_hours
+msgid "Actual Working Hours"
+msgstr "ساعات العمل الفعلية"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__allow_attend_after_schedule
+msgid "Allow Attend After Schedule"
+msgstr "السماح بالحضور بعد الجدول"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__allow_attend_before_schedule
+msgid "Allow Attend Before Schedule"
+msgstr "السماح بالحضور قبل الجدول"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__allow_form_datetime
+msgid "Allow Form Datetime"
+msgstr "السماح من وقت"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__allow_to_datetime
+msgid "Allow To Datetime"
+msgstr "السماح حتى وقت"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__allowed_from
+msgid "Allowed From"
+msgstr "السماح من"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__allowed_from_midday
+msgid "Allowed From Midday"
+msgstr "السماح من منتصف اليوم"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__allowed_to
+msgid "Allowed To"
+msgstr "السماح حتى"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__allowed_to_midday
+msgid "Allowed To Midday"
+msgstr "السماح حتى منتصف اليوم"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_attachment_count
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_attachment_count
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_attachment_count
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__attend_interval
+msgid "Attend Interval"
+msgstr "فترة الحضور"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_hr_attendance
+msgid "Attendance"
+msgstr "الحضور"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.resource_calendar_form_inherit
+msgid "Attendance Penalties"
+msgstr "عقوبات الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.actions.act_window,name:hr_compute_attendance.view_hr_attendance_record_action
+#: model:ir.ui.menu,name:hr_compute_attendance.menu_hr_attendance_record
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_filter
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "Attendance Records"
+msgstr "سجلات الحضور"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__attendance_ids
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "Attendances"
+msgstr "الحضور"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__compute_id
+msgid "Compute"
+msgstr "احسب"
+
+#. module: hr_compute_attendance
+#: model:ir.actions.act_window,name:hr_compute_attendance.view_hr_compute_attendance_action
+#: model:ir.model,name:hr_compute_attendance.model_hr_compute_attendance
+#: model:ir.ui.menu,name:hr_compute_attendance.menu_hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid "Compute Attendance"
+msgstr "حساب الحضور"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_hr_compute_attendance_line
+msgid "Compute Attendance Lines"
+msgstr "حساب الحضور"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.res_config_settings_view_form
+msgid "Compute Attendance Records:"
+msgstr "حساب سجلات الحضور:"
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/hr_compute_attendance.py:0
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__compute_ids
+#, python-format
+msgid "Compute Lines"
+msgstr "حساب الأيام"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.res_config_settings_view_form
+msgid "Compute Missing Hours Based on:"
+msgstr "حساب الساعات الناقصة بناء على:"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.res_config_settings_view_form
+msgid ""
+"Compute Missing Hours Without Delay\n"
+"                                In Minutes."
+msgstr "حساب الساعات الناقصة بدون  دقائق الحضور المتأخرة."
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.res_config_settings_view_form
+msgid ""
+"Compute Missing Hours Without Early\n"
+"                                Out Minutes."
+msgstr "حساب الساعات الناقصة بدون دقائق المغادرة المبكرة."
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid "Computed Lines"
+msgstr "حساب بنود"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: hr_compute_attendance
+#: model:ir.ui.menu,name:hr_compute_attendance.menu_hr_attendance_settings
+msgid "Configuration"
+msgstr "إعداد"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__count_lines
+msgid "Count Lines"
+msgstr "عدد الصفوف"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__create_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__create_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__create_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__create_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__create_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__create_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__create_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__create_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__create_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__create_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__create_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__create_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__create_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__create_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__res_config_settings__start_month__current
+msgid "Current Month"
+msgstr "الشهر الحالي"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__name
+msgid "Data"
+msgstr "بيانات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance__date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__date
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_filter
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "Date and Employee:"
+msgstr "التاريخ والموظف:"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__name
+msgid "Day"
+msgstr "يوم"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_res_config_settings__day_start_month
+msgid "Day Start Month"
+msgstr "يوم بداية الشهر"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__deduction_type
+msgid "Deduction Type"
+msgstr "نوع الجزاء"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__delay_in
+msgid "Delay In"
+msgstr "تأخير الحضور"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__delay_from
+msgid "Delay Minutes From"
+msgstr "دقائق التأخير من"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__delay_to
+msgid "Delay Minutes To"
+msgstr "دقائق التأخير حتى"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__department_ids
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid "Departments"
+msgstr "الأقسام"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__description
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_employee__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_attendance__display_name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__hr_compute_attendance__state__done
+msgid "Done"
+msgstr "المنتهية"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__hr_compute_attendance__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__early_out
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__hr_penalty_rule__penalty_type__early_out
+msgid "Early Out"
+msgstr "المغادرة المبكرة"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_hr_employee
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__employee_id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__employee_ids
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid "Employees and Departments"
+msgstr "الموظفون والأقسام"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__end_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__end_date
+msgid "End Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__end_datetime
+msgid "End Datetime"
+msgstr "تاريخ ووقت النهاية"
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/hr_attendance_record.py:0
+#, python-format
+msgid "Error !! Cannot Fined `resource_id` For Employee: %s"
+msgstr "خطأ !! لا يمكن ايجاد `resource_id` للموظف: %s"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__hr_penalty_rule__deduction_type__fixed_amount
+msgid "Fixed Amount"
+msgstr "مبلغ"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_attendance__flexible_id
+msgid "Flexibility"
+msgstr "المرونة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_follower_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_follower_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_follower_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_channel_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_channel_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_channel_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_partner_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_partner_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_partner_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_filter
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_hr_attendance_interval
+msgid "HR Attendance Interval"
+msgstr "فترة حضور شئون الموظفين"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_hr_attendance_record
+msgid "HR Attendance Record"
+msgstr "سجل حضور شئون الموظفين"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_hr_penalty_redundant
+msgid "HR Penalty Redundant Lines"
+msgstr "بنود الخصم المتكرر"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_employee__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_res_config_settings__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_attendance__id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid ""
+"If Not Selected Any Employees or Any Department\n"
+"                                The Computed Will Run For All Employees"
+msgstr ""
+"إذا لم يتم اختيار أي موظف أو أي قسم\n"
+"                                سيتم تشغيل حساب لجميع الموظفين"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_absent_penalty_rule__message_needaction
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_absent_penalty_rule__message_unread
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_attendance_record__message_needaction
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_attendance_record__message_unread
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_compute_attendance__message_needaction
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_compute_attendance__message_unread
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_penalty_rule__message_needaction
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_penalty_rule__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_absent_penalty_rule__message_has_error
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_absent_penalty_rule__message_has_sms_error
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_attendance_record__message_has_error
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_attendance_record__message_has_sms_error
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_compute_attendance__message_has_error
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_compute_attendance__message_has_sms_error
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_penalty_rule__message_has_error
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_penalty_rule__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__hr_compute_attendance__state__in_progress
+msgid "In Progress"
+msgstr "قيد المعالجة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__interval_count
+msgid "Interval Count"
+msgstr "عدد الفترات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__interval_ids
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "Intervals"
+msgstr "الفترات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__is_attend
+msgid "Is Attend"
+msgstr "حاضر"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar__is_flexible
+msgid "Is Flexible"
+msgstr "مرن"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_is_follower
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_is_follower
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_is_follower
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__last_computed
+msgid "Last Computed"
+msgstr "أخر حساب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_employee____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_attendance____last_update
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__write_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__write_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__write_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__write_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__write_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__write_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__write_uid
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__write_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__write_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__write_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__write_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__write_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__write_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__write_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__hr_penalty_rule__penalty_type__late_in
+msgid "Late In"
+msgstr "حضور متأخر"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar__absent_deduction_value_per_day
+msgid "Maximum Absent Deduction Value Per Day"
+msgstr "الحد الأقصى لقيمة الخصم في اليوم"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.resource_calendar_form_inherit
+msgid "Maximum Deduction"
+msgstr "الحد الأقصى للخصم"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar__maximum_deduction_per_day
+msgid "Maximum Penalty Per Day (For Deduction Percentage only)"
+msgstr "الحد الأقصى لنسبة الجزاء في اليوم (نسبة قط)"
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/resource_calendar.py:0
+#, python-format
+msgid "Maximum Penalty Per Day Must Be Positive."
+msgstr "الحد الأقصى للعقوبة في اليوم يجب أن يكون موجب."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_has_error
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_has_error
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_has_error
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_res_config_settings__midday_time
+msgid "Midday Time"
+msgstr "وقت نهاية اليوم"
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/res_config_settings.py:0
+#, python-format
+msgid "Midday Time Must Be In Range [00:00 to 23:57]."
+msgstr "وقت نهاية اليوم يجب أن يكون بين [00:00 - 23:57]."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__min_hours_attend
+msgid "Min Hours Attend"
+msgstr "أقل ساعات حضور"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__day_hours
+msgid "Minimum number of hours per day"
+msgstr "أقل عدد ساعات في اليوم"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__missing_hours
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__hr_penalty_rule__penalty_type__missing_hours
+msgid "Missing Hours"
+msgstr "الساعات المفقودة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_res_config_settings__missing_without_delay_in
+msgid "Missing Without Delay In"
+msgstr "مفقودة بدون تأخير الدخول"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_res_config_settings__missing_without_early_out
+msgid "Missing Without Early Out"
+msgstr "مفقودة بدون الخروج المبكر"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__month
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__month
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_filter
+msgid "Month"
+msgstr "الشهر"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__month_deduction_hours
+msgid "Month Deduction Hours"
+msgstr "خصم عدد  الساعات الشهري"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__must_attend_hours
+msgid "Must Attend Hours"
+msgstr "يجب أن يحضر ساعات"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_filter
+msgid "Not Within Contract Duration"
+msgstr "ليس ضمن مدة العقد"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_absent_penalty_rule__message_needaction_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_attendance_record__message_needaction_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_compute_attendance__message_needaction_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_penalty_rule__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_absent_penalty_rule__message_has_error_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_attendance_record__message_has_error_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_compute_attendance__message_has_error_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_penalty_rule__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_absent_penalty_rule__message_unread_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_attendance_record__message_unread_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_compute_attendance__message_unread_counter
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_penalty_rule__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid "Open"
+msgstr "فتح"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_line_form
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_line_tree
+msgid "Open Details"
+msgstr "افتح التفاصيل"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+msgid "Open Lines"
+msgstr "اعرض التفاصيل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_in_id
+msgid "Penalty In"
+msgstr "عقوبة الحضور متأخرا"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_in_amount
+msgid "Penalty In Amount"
+msgstr "قيمة العقوبة الحضور متأخرا"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_in_percentage
+msgid "Penalty In Percentage"
+msgstr "نسبة العقوبة الحضور متأخرا"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_in_redundant
+msgid "Penalty In Redundant"
+msgstr "خصم التكرار"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.hr_penalty_rule_form
+msgid "Penalty Late In 30 Minutes."
+msgstr "خصم تأخير الحضور 30 دقيقة."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_missing_id
+msgid "Penalty Missing Hours"
+msgstr "خصم ساعات المفقودة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_missing_amount
+msgid "Penalty Missing Hours Amount"
+msgstr "قيمة عقوبة ساعات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_missing_percentage
+msgid "Penalty Missing Hours Percentage"
+msgstr "نسبة عقوبة الساعات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_missing_redundant
+msgid "Penalty Missing Redundant"
+msgstr "تكرار جزاء خصم ساعات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_out_id
+msgid "Penalty Out"
+msgstr "جزاء الخروج مبكرا"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_out_amount
+msgid "Penalty Out Amount"
+msgstr "قيمة عقوبة مغادرة مبكرا"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_out_percentage
+msgid "Penalty Out Percentage"
+msgstr "نسبة عقوبة مغادرة مبكرا"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__penalty_out_redundant
+msgid "Penalty Out Redundant"
+msgstr "جزاء تكرار الخروج"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__penalty_redundant_ids
+msgid "Penalty Redundant Lines"
+msgstr "بنود تكرار الجزاء"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__penalty_id
+msgid "Penalty Rule"
+msgstr "نظام الجزاء"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.hr_penalty_rule_form
+msgid "Penalty Rule Values with Redundant"
+msgstr "قيم تكرار الجزاء"
+
+#. module: hr_compute_attendance
+#: model:ir.actions.act_window,name:hr_compute_attendance.hr_penalty_rule_action
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar__penalty_ids
+#: model:ir.ui.menu,name:hr_compute_attendance.menu_hr_penalty_rules
+msgid "Penalty Rules"
+msgstr "نظام الجزاءات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__penalty_type
+msgid "Penalty Type"
+msgstr "نوع الجزاء"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__penalty_value
+msgid "Penalty Value"
+msgstr "قيمة الجزاء"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__hr_penalty_rule__deduction_type__percentage
+msgid "Percentage"
+msgstr "نسبة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields.selection,name:hr_compute_attendance.selection__res_config_settings__start_month__previous
+msgid "Previous Month"
+msgstr "الشهر السابق"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_form
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_compute_attendance_line_form
+msgid "Re-Compute"
+msgstr "اعادة حساب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__record_id
+msgid "Record"
+msgstr "السجل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__redundant
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_redundant__redundant
+msgid "Redundant"
+msgstr "تكرار"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_resource_calendar_flexible
+msgid "Resource Calendar Flexible"
+msgstr "تقويم الموارد مرن"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__leave_ids
+msgid "Resource Leaves"
+msgstr "اجازات العناصر البشرية"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_resource_calendar
+msgid "Resource Working Time"
+msgstr "فترة عمل المورد"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.res_config_settings_view_form
+msgid ""
+"Select Start Day Of Month Started\n"
+"                                <br/>\n"
+"                                From ['Current' or 'Previous'] The\n"
+"                                Month."
+msgstr ""
+"اختر بدء اليوم لهذا الشهر\n"
+"                                <br/>\n"
+"                                من  ['الحالي' او 'السابق'] \n"
+"                                للشهر."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__name
+msgid "Sequence"
+msgstr "المسلسل"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.resource_calendar_form_inherit
+msgid ""
+"Set Maximum Absent Deduction Value Per\n"
+"                                    Day\n"
+"                                    (One\n"
+"                                    Record) - Positive Float\n"
+"                                    Number."
+msgstr ""
+"تعيين الحد الأقصى لقيمة الخصم الغائب لكل\n"
+"                                     يوم\n"
+"                                     (واحد\n"
+"                                     سجل) - تعويم إيجابي\n"
+"                                     رقم."
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.resource_calendar_form_inherit
+msgid ""
+"Set Maximum Penalty Percentage Per Day (One\n"
+"                                    Record) - Positive Float Number."
+msgstr ""
+"حدد اقصي لنسبة خصم لليوم(سجل\n"
+"                                واحد) - رقم عشري موجب."
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.res_config_settings_view_form
+msgid ""
+"Set Midday Time (the last hours in\n"
+"                                day) - range [00:00 to 23:57]."
+msgstr ""
+"حدد وقت نهاية اليوم (اخر ساعة\n"
+"                                لليوم) - فترة [من 00:00 الي 23:57]."
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.res_config_settings_view_form
+msgid ""
+"Set Start Day of Month -\n"
+"                                Range [1 to 28]."
+msgstr ""
+"حدد بدء يوم للشهر -\n"
+"                                فترة [من 1 الي 28]."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__start_date
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__start_date
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__start_datetime
+msgid "Start Datetime"
+msgstr "بدء التاريخ والوقت"
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/res_config_settings.py:0
+#, python-format
+msgid "Start Day In Month Must Be In Range [1 to 28]."
+msgstr "يجب ان يكون يوم بدء الشهر  فترة [من 1 الي 28]."
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_res_config_settings__start_month
+msgid "Start Month"
+msgstr "بدء الشهر"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_absent_interval
+msgid "Sum Absent Interval"
+msgstr "اجمالي تكرار الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_absent_penalty_value
+msgid "Sum Absent Penalty Value"
+msgstr "اجمالي مجموع خصم الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_attend_interval
+msgid "Sum Attend Interval"
+msgstr "اجمالي حضور الفترات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_interval_count
+msgid "Sum Interval Count"
+msgstr "اجمالي عدد الفترات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_total_actual_working_hours
+msgid "Sum Total Actual Working Hours"
+msgstr "اجمالي ساعات العمل الفعلية"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_total_missing_hours
+msgid "Sum Total Missing Hours"
+msgstr "اجمالي ساعات المفقودة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_total_penalty_amount
+msgid "Sum Total Penalty Amount"
+msgstr "قيمة العقوبات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_total_penalty_percentage
+msgid "Sum Total Penalty Percentage"
+msgstr "نسبة العقوبات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__sum_working_schedule_hours
+msgid "Sum Working Schedule Hours"
+msgstr "اجمالي ساعات العمل جدول العمل"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "Time Off"
+msgstr "الاجازة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__name
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_resource_calendar_flexible__name
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_resource_calendar_flexible_form
+msgid "Title"
+msgstr "العنوان"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__total_actual_working_hours
+msgid "Total Actual Working Hours"
+msgstr "ساعات العمل الفعلية"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__total_missing_hours
+msgid "Total Missing Hours"
+msgstr "ساعات المفقودة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__total_penalty_amount
+msgid "Total Penalty Amount"
+msgstr "فيمة العقوبة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__total_penalty_percentage
+msgid "Total Penalty Percentage"
+msgstr "نسبة العقوبات"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_unread
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_unread
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_unread
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__message_unread_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__message_unread_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__message_unread_counter
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__website_message_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__website_message_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__website_message_ids
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_absent_penalty_rule__website_message_ids
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_attendance_record__website_message_ids
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_compute_attendance__website_message_ids
+#: model:ir.model.fields,help:hr_compute_attendance.field_hr_penalty_rule__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance_line__week_deduction_hours
+msgid "Week Deduction Hours"
+msgstr "خصم عدد الساعات الاسبوعي خلال الفترة"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__weekday
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_filter
+msgid "Weekday"
+msgstr "يوم العمل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__within_contract_duration
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_filter
+msgid "Within Contract Duration"
+msgstr "خلال فترة العقد"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_resource_calendar_attendance
+msgid "Work Detail"
+msgstr "تفاصيل العمل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_interval__working_hours
+msgid "Working Hours"
+msgstr "ساعات العمل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_absent_penalty_rule__calendar_id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__resource_calendar_id
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_penalty_rule__calendar_id
+#: model:ir.ui.menu,name:hr_compute_attendance.menu_resource_calendar
+msgid "Working Schedule"
+msgstr "جدول العمل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_attendance_record__working_schedule_hours
+msgid "Working Schedule Hours"
+msgstr "ساعات جدول العمل"
+
+#. module: hr_compute_attendance
+#: model:ir.model.fields,field_description:hr_compute_attendance.field_hr_compute_attendance__year
+msgid "Year"
+msgstr "سنة"
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/hr_compute_attendance.py:0
+#, python-format
+msgid "You Can Delete Only in Draft Status."
+msgstr "يمكن حذف اذا كان مسوده."
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/hr_attendance_record.py:0
+#, python-format
+msgid ""
+"You Cannot Compute Attendance For Employee: %s Not Assigned to Work "
+"Schedule."
+msgstr "لا يمكنك حساب الحضور للموظف: %s غير مخصص له جدول العمل.."
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/hr_attendance_record.py:0
+#, python-format
+msgid ""
+"You Cannot Compute Attendance For Employee: %s Without Contract Duration In "
+"%s."
+msgstr "لا يمكنك حساب الحضور للموظف: %s بدون مدة العقد في %s."
+
+#. module: hr_compute_attendance
+#: code:addons/hr_compute_attendance/models/hr_penalty_rule.py:0
+#, python-format
+msgid ""
+"You Cannot have 2 Penalty Rules that have Overlaps on Minutes With Work "
+"schedule: %s and Penalty Type: %s"
+msgstr ""
+"لا يمكن أن يكون لديك قاعدتان للعقوبة تحتويان على التداخل في دقائق مع جدول "
+"العمل:: %s ونوع الجزاء: %s"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "absent_interval"
+msgstr "اجمالي فترة الغياب"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "absent_penalty_value"
+msgstr "اجمالي قيمة خصم الغياب"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "attend_interval"
+msgstr "اجمالي فترات الحضور"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "delay_in"
+msgstr "اجمالي تأخير في الحضور"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "early_out"
+msgstr "اجمالي المغادرة مبكرا"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_hr_absent_penalty_rule
+msgid "hr absent penalty rules"
+msgstr "قواعد الغياب"
+
+#. module: hr_compute_attendance
+#: model:ir.model,name:hr_compute_attendance.model_hr_penalty_rule
+msgid "hr penalty rules"
+msgstr "قواعد الخصم"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "interval_count"
+msgstr "اجمالي عدد الفترات"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "must_attend_hours"
+msgstr "مجموع عدد الساعات المطلوبة للحضور"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "penalty_in_amount"
+msgstr "قيمة العقوبة الحضور متأخرا"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "penalty_in_percentage"
+msgstr "اجمالي قيمة جزاء الدخول"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "penalty_missing_amount"
+msgstr "قيمة عقوبة ساعات"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "penalty_missing_percentage"
+msgstr "اجمالي قيمة جزاء عدم وجود بصمة"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "penalty_out_amount"
+msgstr "قيمة عقوبة مغادرة مبكرا"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_form
+msgid "penalty_out_percentage"
+msgstr "اجمالي قيمة جزاء الخروج"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "total_actual_working_hours"
+msgstr "ساعات العمل الفعلية"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "total_missing_hours"
+msgstr "ساعات المفقودة"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "total_penalty_amount"
+msgstr "فيمة العقوبة"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "total_penalty_percentage"
+msgstr " قيمة العقوبة"
+
+#. module: hr_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_attendance.view_hr_attendance_record_tree
+msgid "working_schedule_hours"
+msgstr "اجمالي ساعات جدول العمل"

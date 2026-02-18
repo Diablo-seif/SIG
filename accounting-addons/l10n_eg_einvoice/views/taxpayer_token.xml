@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="taxpayer_token_tree" model="ir.ui.view">
+        <field name="name">taxpayer.token.tree</field>
+        <field name="model">taxpayer.token</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="access_token"/>
+                <field name="expire_date"/>
+            </list>
+        </field>
+    </record>
+    
+    <record id="taxpayer_token_action" model="ir.actions.act_window">
+        <field name="name">Taxpayer Token</field>
+        <field name="res_model">taxpayer.token</field>
+        <field name="view_mode">list</field>
+    </record>
+    
+    <menuitem id="taxpayer_token_menu" 
+              name="Taxpayer Token" 
+              action="taxpayer_token_action" 
+              parent="account.menu_finance_configuration"
+              sequence="200"/>
+
+</odoo>

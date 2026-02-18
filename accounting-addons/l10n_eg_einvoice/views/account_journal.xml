@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_account_journal_form" model="ir.ui.view">
+        <field name="name">inherit.account.journal.form</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page name="e_invoice" string="E-Invoice"
+                      invisible="type != sale"
+                >
+<!--                      attrs="{'invisible':[('type','!=','sale')]}"-->
+                    <group>
+                        <group>
+                            <field name="submit_einvoice"/>
+                            <field name="einvoice_purpose" widget="radio" options="{'horizontal': True}" invisible="submit_einvoice = False"/>
+                            <field name="einvoice_version" widget="radio" options="{'horizontal': True}" invisible="submit_einvoice = False"/>
+<!--                            attrs="{'invisible':[('submit_einvoice','=',False)]}"-->
+                            <field name="client_id"                            required="submit_einvoice = True" invisible="submit_einvoice = False"/>
+                            <field name="client_secret"                        required="submit_einvoice = True" invisible="submit_einvoice = False"/>
+                            <field name="min_individual_vat_amount"            required="submit_einvoice = True" invisible="submit_einvoice = False"/>
+<!--                            attrs="{'required':[('submit_einvoice','=',True)],'invisible':[('submit_einvoice','=',False)]}"-->
+
+                        </group>
+                    </group>
+
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

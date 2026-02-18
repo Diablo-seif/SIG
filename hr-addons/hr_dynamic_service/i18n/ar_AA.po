@@ -1,0 +1,670 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_dynamic_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190827\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-11 13:41+0000\n"
+"PO-Revision-Date: 2019-11-11 16:16+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: aa\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__delete_in_first_stage
+msgid "Able to Delete The Request in First Stage?"
+msgstr "قادر على حذف الطلب في المرحلة الأولى؟"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__action_name
+msgid "Action Name"
+msgstr "اسم الإجراء"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_needaction
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_needaction
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_needaction
+msgid "Action Needed"
+msgstr "إجراء مطلوب"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_approved
+msgid "Approved"
+msgstr "وافق"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_loan_approved_dep
+msgid "Approved by Department Head"
+msgstr "وافق عليها رئيس القسم"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_loan_approved_manager
+msgid "Approved by Manager"
+msgstr "وافق عليها المدير"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_attachment_count
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__can_edit
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__can_edit
+msgid "Can Edit?"
+msgstr "يمكن تحرير؟"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__can_refuse
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__can_refuse
+msgid "Can Refuse?"
+msgstr "يمكن أن يتم الرفض؟"
+
+#. module: hr_dynamic_service
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_refuse_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_car_loan
+msgid "Car Loan"
+msgstr "قرض سيارة"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_confirmed
+msgid "Confirmed"
+msgstr "مؤكد"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_create_email
+msgid "Create New Email"
+msgstr "انشاء بريد جديد"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__create_uid
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_refuse__create_uid
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__create_uid
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__create_uid
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__create_date
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_refuse__create_date
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__create_date
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__create_date
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/models/hr_dynamic_service.py:89
+#, python-format
+msgid "Current Stage Object Not Found. "
+msgstr "كائن المرحلة الحالي غير موجود."
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_delete_email
+msgid "Delete Email"
+msgstr "حذف البريد الالكتروني"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__department_id
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_filter
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__name
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__display_name
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_refuse__display_name
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__display_name
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__display_name
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_done
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_loan_done
+msgid "Done"
+msgstr "تم"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service,stage:hr_dynamic_service.hr_dynamic_service_loan_request
+#: model:hr.dynamic.service,stage:hr_dynamic_service.hr_dynamic_service_request
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_draft
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_loan_draft
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_meeting_draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_dynamic_service
+#: model:ir.ui.menu,name:hr_dynamic_service.menuitem_hr_dynamic_service_root
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_filter
+msgid "Dynamic Approval"
+msgstr "الخدمات الذاتية"
+
+#. module: hr_dynamic_service
+#: model:ir.actions.act_window,name:hr_dynamic_service.view_hr_dynamic_service_refuse_action
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_refuse_form
+msgid "Dynamic Approval Refuse"
+msgstr "رفض طلب الخدمات الذاتية"
+
+#. module: hr_dynamic_service
+#: model:ir.actions.act_window,name:hr_dynamic_service.view_hr_dynamic_service_action
+#: model:ir.model,name:hr_dynamic_service.model_hr_dynamic_service
+#: model:ir.ui.menu,name:hr_dynamic_service.menuitem_hr_dynamic_service_request
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_form
+msgid "Dynamic Approval Request"
+msgstr "طلب الخدمات الذاتية"
+
+#. module: hr_dynamic_service
+#: model:ir.model,name:hr_dynamic_service.model_hr_dynamic_service_stage
+msgid "Dynamic Approval Stages"
+msgstr "مراحل الخدمات الذاتية"
+
+#. module: hr_dynamic_service
+#: model:ir.model,name:hr_dynamic_service.model_hr_dynamic_service_subtype
+msgid "Dynamic Approval Subtype"
+msgstr "نوع الفرعي للخدمات الذاتية"
+
+#. module: hr_dynamic_service
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_filter
+msgid "Dynamic Approval Subype"
+msgstr "نوع الفرعي للخدمات الذاتية"
+
+#. module: hr_dynamic_service
+#: model:ir.actions.act_window,name:hr_dynamic_service.view_hr_dynamic_service_type_action
+#: model:ir.model,name:hr_dynamic_service.model_hr_dynamic_service_type
+#: model:ir.ui.menu,name:hr_dynamic_service.menuitem_hr_dynamic_service_type
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_filter
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_type_form
+msgid "Dynamic Approval Type"
+msgstr "نوع  للخدمات الذاتية"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.type,name:hr_dynamic_service.hr_dynamic_service_type_email
+msgid "Email"
+msgstr "بريد الالكتروني"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_change_password_email
+msgid "Email Change Password"
+msgstr "تغيير كلمة سر البريد الالكتروني"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_filter
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__his_department_head
+msgid "Employee Department Head?"
+msgstr "رئيس قسم الموظف؟"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__his_direct_manager
+msgid "Employee Direct Manager?"
+msgstr "الموظف المدير المباشر؟"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__domain
+msgid "Employee Domain"
+msgstr "فرز الموظف"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_error_email
+msgid "Error In Email"
+msgstr "خطأ في البريد الالكتروني"
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/wizard/hr_dynamic_service_refuse.py:35
+#, python-format
+msgid "Error! No Refuse Stage."
+msgstr "خطأ! لا يوجد مرحلة الرفض."
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/tests/test_hr_dynamic_service.py:232
+#: code:addons/hr_dynamic_service/wizard/hr_dynamic_service_refuse.py:33
+#, python-format
+msgid "Error! You Cannot Refuse this Stage."
+msgstr "خطأ! لا يمكنك رفض في تلك المرحلة."
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/wizard/hr_dynamic_service_refuse.py:41
+#, python-format
+msgid "Error! You do not have a permission to refused this request."
+msgstr "خطأ! ليس لديك الصلاحية لرفض الطلب في هذه المرحلة."
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__first_stage_id
+msgid "First Stage"
+msgstr "المرحلة الاولي"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__fold
+msgid "Folded in kanban view"
+msgstr "مطوية في طريقة عرض كانبان"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_follower_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_channel_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_channel_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_partner_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_dynamic_service
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_filter
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__group_ids
+msgid "Groups"
+msgstr "المجموعات"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_house_loan
+msgid "House Loan"
+msgstr "قرض المنزل"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__id
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_refuse__id
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__id
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__id
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service__message_unread
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_stage__message_unread
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_type__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service__message_needaction
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_stage__message_needaction
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_type__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service__message_has_error
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_stage__message_has_error
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_type__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_is_follower
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_is_follower
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__is_refused
+msgid "Is Refused"
+msgstr "مرفوض"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service____last_update
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_refuse____last_update
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage____last_update
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype____last_update
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__write_uid
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_refuse__write_uid
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__write_uid
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__write_uid
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__write_date
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_refuse__write_date
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__write_date
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__write_date
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.type,name:hr_dynamic_service.hr_dynamic_service_type_loan
+msgid "Loan"
+msgstr "قرض"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_room1
+msgid "Meeting Room #1"
+msgstr "غرفة الاجتماعات رقم 1"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_room2
+msgid "Meeting Room #2"
+msgstr "غرفة الاجتماعات رقم 2"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.subtype,name:hr_dynamic_service.hr_dynamic_service_subtype_room3
+msgid "Meeting Room #3"
+msgstr "غرفة الاجتماعات رقم 3"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.type,name:hr_dynamic_service.hr_dynamic_service_type_meeting
+msgid "Meeting Room Reservation"
+msgstr "حجز غرفة الاجتماعات"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_has_error
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_has_error
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_dynamic_service
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_form
+msgid "More Details"
+msgstr "المزيد من التفاصيل"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__stage
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__name
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__next_stage_user_ids
+msgid "Next Approval"
+msgstr "الموافقة التالية"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__next_stage_id
+msgid "Next Stage"
+msgstr "المرحلة التالية"
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/models/hr_dynamic_service.py:91
+#, python-format
+msgid "Next Stage Not Found. "
+msgstr "المرحلة التالية غير موجودة."
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__notes
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الأخطاء"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service__message_needaction_counter
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_stage__message_needaction_counter
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_type__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service__message_has_error_counter
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_stage__message_has_error_counter
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_type__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service__message_unread_counter
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_stage__message_unread_counter
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_type__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/models/hr_dynamic_service_type.py:39
+#: code:addons/hr_dynamic_service/models/hr_dynamic_service_type.py:40
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_form
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_refuse_form
+#, python-format
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__refuse_reason
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_refuse__refuse_reason
+msgid "Refuse Reason"
+msgstr "سبب الرفض"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__refuse_stage_id
+msgid "Refuse Stage"
+msgstr "مرحلة الرفض"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__refused_by_id
+msgid "Refused By"
+msgstr "مرفوض بواسطة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__server_action_id
+msgid "Related Server Action"
+msgstr "إجراء الخادم ذا العلاقة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__request_date
+msgid "Request Date"
+msgstr "تاريخ الطلب"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_meeting_reserved
+msgid "Reserved"
+msgstr "محجوز"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__sequence
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__sequence
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__sequence
+msgid "Sequence"
+msgstr "التسلسل"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__stage_id
+msgid "Service Stage"
+msgstr "المرحلة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__service_subtype_id
+msgid "Service Subtype"
+msgstr "نوع الخدمة الفرعي"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__service_type_id
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__service_type_id
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__service_type_id
+msgid "Service Type"
+msgstr "نوع الخدمة"
+
+#. module: hr_dynamic_service
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_filter
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_form
+msgid "Stage"
+msgstr "المرحلة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__stage_for_refused
+msgid "Stage For Refused"
+msgstr "مرحلة الرفض"
+
+#. module: hr_dynamic_service
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_type_form
+msgid "Stages"
+msgstr "المراحل"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__stage_ids
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_dynamic_service
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_loan_submitted
+#: model:hr.dynamic.service.stage,name:hr_dynamic_service.hr_dynamic_service_stage_meeting_submitted
+msgid "Submitted"
+msgstr "قدمت"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_subtype__name
+msgid "Subtype Name"
+msgstr "اسم النوع الفرعي"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__subtype_ids
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_type_form
+msgid "Subtypes"
+msgstr "الانواع الفرعية"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__this_employee
+msgid "The Employee?"
+msgstr "الموظف؟"
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/models/hr_dynamic_service.py:97
+#, python-format
+msgid "The requested operation cannot be completed due to security restrictions."
+msgstr "لا يمكن إكمال العملية المطلوبة بسبب صلاحيات."
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_unread
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_unread
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__message_unread_counter
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__message_unread_counter
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__use_domain
+msgid "Use Employee Search?"
+msgstr "استخدم فرز الموظف"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__user_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__user_ids
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__website_message_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_stage__website_message_ids
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service_type__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service__website_message_ids
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_stage__website_message_ids
+#: model:ir.model.fields,help:hr_dynamic_service.field_hr_dynamic_service_type__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_dynamic_service
+#: model:ir.model,name:hr_dynamic_service.model_hr_dynamic_service_refuse
+msgid "Wizard Dynamic Approval Refuse"
+msgstr "معالج رفض الخدمة الذاتية"
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/models/hr_dynamic_service_stage.py:41
+#, python-format
+msgid "You Can Not Delete Refuse Stage."
+msgstr "لا يمكنك حذف في مرحلة الرفض."
+
+#. module: hr_dynamic_service
+#: code:addons/hr_dynamic_service/models/hr_dynamic_service.py:46
+#, python-format
+msgid "You Cannot Delete this Request."
+msgstr "لا يمكنك حذف هذا الطلب"
+
+#. module: hr_dynamic_service
+#: model:ir.model.fields,field_description:hr_dynamic_service.field_hr_dynamic_service__is_first_stage
+msgid "is First Stage ?"
+msgstr "هي المرحلة الأولى؟"
+
+#. module: hr_dynamic_service
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_refuse_form
+msgid "or"
+msgstr "أو"
+
+#. module: hr_dynamic_service
+#: model_terms:ir.ui.view,arch_db:hr_dynamic_service.view_hr_dynamic_service_stage_form
+msgid "service Stage"
+msgstr "المرحلة"

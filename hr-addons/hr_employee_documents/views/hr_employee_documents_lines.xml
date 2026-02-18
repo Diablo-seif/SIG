@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_employee_documents_lines_tree" model="ir.ui.view">
+        <field name="name">hr.employee.documents.lines.tree</field>
+        <field name="model">hr.employee.documents.lines</field>
+        <field name="arch" type="xml">
+            <list create="false" edit="false" import="false">
+                <field name="document_id"/>
+                <field name="require_original"/>
+                <field name="is_original"/>
+                <field name="title"
+                       invisible="True"/> <!-- Carry Attachment Title -->
+                <field name="attachment" widget="binary" height="64"
+                       filename="title"/>
+                <field name="expiry_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_employee_documents_lines_search" model="ir.ui.view">
+        <field name="name">hr.employee.documents.lines.search</field>
+        <field name="model">hr.employee.documents.lines</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id"/>
+                <field name="document_id"/>
+                <group expand="1" string="Group By">
+                    <filter string="Missing Documents"
+                            name="filter_missing_documents"
+                            domain="[('attachment','=',False)]"/>
+                    <filter string="Missing Original Documents"
+                        name="filter_missing_original_documents"
+                        domain="[('require_original','=',True),('is_original','=',False)]"/>
+                    <filter string="Employee" name="group_by_employee_id"
+                            context="{'group_by':'employee_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_employee_documents_lines_action" model="ir.actions.act_window">
+        <field name="name">Employee Documents</field>
+        <field name="res_model">hr.employee.documents.lines</field>
+        <field name="context">
+            {
+            'search_default_filter_missing_documents': '1',
+            'search_default_filter_missing_original_documents': '1',
+            'search_default_group_by_employee_id': '1'
+            }
+        </field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <menuitem id="hr_missing_employee_documents_menu"
+              name="Employee Documents"
+              action="hr_employee_documents_lines_action"
+              parent="hr.menu_hr_employee_payroll"
+              sequence="4"/>
+
+</odoo>

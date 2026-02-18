@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_transfer_allocation_tree" model="ir.ui.view">
+        <field name="name">hr.transfer.allocation.tree</field>
+        <field name="model">hr.transfer.allocation</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="method"/>
+                <field name="start_date"/>
+                <field name="to_leave_type_id"/>
+                <field name="max_leaves"/>
+                <field name="state" />
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_transfer_allocation_form" model="ir.ui.view">
+        <field name="name">hr.transfer.allocation.form</field>
+        <field name="model">hr.transfer.allocation</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <field name="state" widget="statusbar" readonly="True" />
+                </header>
+                <sheet>
+
+                    <group>
+                        <group>
+                            <field name="name" required="1" />
+                            <field name="leave_ids" required="1"  widget="many2many_tags"/>
+                            <field name="employee_ids" widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <field name="start_date" />
+                            <field name="method" widget="radio"/>
+                            <field name="to_leave_type_id" invisible="method in [False, 'reset']" required="method = transfer" />
+                            <field name="max_leaves" invisible="method in [False, 'reset']"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_transfer_allocation_action" model="ir.actions.act_window">
+        <field name="name">Scheduled Time Off Transfer</field>
+        <field name="res_model">hr.transfer.allocation</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">main</field>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_hr_transfer_allocation_tree_view">
+            <field name="sequence" eval="1"/>
+            <field name="view_mode">list</field>
+            <field name="view_id" ref="hr_transfer_allocation_tree"/>
+            <field name="act_window_id" ref="hr_transfer_allocation_action"/>
+    </record>
+
+    <record model="ir.actions.act_window.view" id="action_hr_transfer_allocation_form_view">
+            <field name="sequence" eval="2"/>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="hr_transfer_allocation_form"/>
+            <field name="act_window_id" ref="hr_transfer_allocation_action"/>
+    </record>
+
+    <menuitem id="hr_transfer_allocation_menu"
+        name="Scheduled Time Off Transfer"
+        parent="hr_holidays.menu_hr_holidays_approvals"
+        groups="hr.group_hr_manager"
+        sequence="4"
+        action="hr_transfer_allocation_action"/>
+</odoo>

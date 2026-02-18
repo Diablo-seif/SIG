@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="access_tags_tree" model="ir.ui.view">
+        <field name="name">access.tags.tree</field>
+        <field name="model">access.tags</field>
+        <!--<field name="field_parent">children_ids if_want_to_add_Childs</field>-->
+        <field name="arch" type="xml">
+            <list editable="top" decoration-muted="active == False">
+                <field name="name"/>
+                <field name="color" widget="color_picker"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="access_tags_action" model="ir.actions.act_window">
+        <field name="name">Access Tags</field>
+        <field name="res_model">access.tags</field>
+        <field name="view_mode">list</field>
+        <field name="context">{'active_test': False}</field>
+    </record>
+
+    <menuitem id="access_tags_menu"
+            name="Access Tags"
+            action="access_tags_action"
+            parent="base.menu_users"
+            sequence="50"/>
+
+</odoo>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+    <record id="queue_job_sequence" model="ir.sequence">
+        <field name="name">queue.job</field>
+        <field name="code">queue.job</field>
+        <field name="prefix">QJ/</field>
+        <field name="padding">6</field>
+    </record>
+</odoo>

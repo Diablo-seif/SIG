@@ -1,0 +1,131 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* budget_update
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-10 23:51+0000\n"
+"PO-Revision-Date: 2020-11-10 23:51+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: budget_update
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget__amount
+#: model:ir.model.fields.selection,name:budget_update.selection__crossovered_budget__amount_type__amount
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: budget_update
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget__amount_type
+msgid "Amount Type"
+msgstr "نوع المبلغ"
+
+#. module: budget_update
+#: code:addons/budget_update/models/crossovered_budget.py:0
+#: code:addons/budget_update/models/crossovered_budget.py:0
+#: model:ir.model,name:budget_update.model_crossovered_budget
+#, python-format
+msgid "Budget"
+msgstr "الموازنة"
+
+#. module: budget_update
+#: model:ir.model,name:budget_update.model_crossovered_budget_lines
+msgid "Budget Line"
+msgstr "خط الموازنة"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Budget Lines"
+msgstr "بنود الموازنة"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: budget_update
+#: code:addons/budget_update/models/crossovered_budget.py:0
+#, python-format
+msgid "Confirm updated budget %s"
+msgstr "تأكيد تحديث الموازنة %s"
+
+#. module: budget_update
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget_lines__difference_amount
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Difference Amount"
+msgstr "فرق المبلغ"
+
+#. module: budget_update
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget__display_name
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget_lines__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Entries..."
+msgstr "القيود..."
+
+#. module: budget_update
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget__id
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget_lines__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: budget_update
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget____last_update
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget_lines____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: budget_update
+#: model:ir.model.fields,field_description:budget_update.field_crossovered_budget_lines__new_amount
+msgid "New Amount"
+msgstr "المبلغ الجديد"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "New Planned Amount"
+msgstr "المبلغ المخطط الجديد"
+
+#. module: budget_update
+#: model:ir.model.fields.selection,name:budget_update.selection__crossovered_budget__amount_type__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Period"
+msgstr "الفترة"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Planned Amount"
+msgstr "المبلغ المخطط"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Practical Amount"
+msgstr "المبلغ الفعلي"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.update_crossovered_budget_form
+msgid "Theoretical Amount"
+msgstr "المبلغ المتوقع"
+
+#. module: budget_update
+#: model_terms:ir.ui.view,arch_db:budget_update.inherit_crossovered_budget_form
+msgid "Update Budget"
+msgstr "تحديث الموازنة"

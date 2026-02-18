@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_dynamic_service_subtype_create_email" model="hr.dynamic.service.subtype">
+        <field name="sequence">1</field>
+        <field name="name">Create New Email</field>
+    </record>
+
+    <record id="hr_dynamic_service_subtype_change_password_email" model="hr.dynamic.service.subtype">
+        <field name="sequence">2</field>
+        <field name="name">Email Change Password</field>
+    </record>
+
+    <record id="hr_dynamic_service_subtype_delete_email" model="hr.dynamic.service.subtype">
+        <field name="sequence">3</field>
+        <field name="name">Delete Email</field>
+    </record>
+
+    <record id="hr_dynamic_service_subtype_error_email" model="hr.dynamic.service.subtype">
+        <field name="sequence">4</field>
+        <field name="name">Error In Email</field>
+    </record>
+
+    <record id="hr_dynamic_service_stage_draft" model="hr.dynamic.service.stage">
+        <field name="sequence">1</field>
+        <field name="name">Draft</field>
+        <field name="action_name">Set To Draft</field>
+        <field name="can_edit" eval="True"/>
+        <field name="this_employee" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_confirmed" model="hr.dynamic.service.stage">
+        <field name="sequence">2</field>
+        <field name="name">Confirmed</field>
+        <field name="action_name">Confirm</field>
+        <field name="can_refuse" eval="True"/>
+        <field name="this_employee" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_approved" model="hr.dynamic.service.stage">
+        <field name="sequence">3</field>
+        <field name="name">Approved</field>
+        <field name="action_name">Approve</field>
+        <field name="can_refuse" eval="True"/>
+        <field name="his_direct_manager" eval="True"/>
+        <field name="his_department_head" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_done" model="hr.dynamic.service.stage">
+        <field name="sequence">4</field>
+        <field name="name">Done</field>
+        <field name="action_name">Done</field>
+        <field name="can_refuse" eval="True"/>
+        <field name="group_ids" eval="[(4, ref('hr.group_hr_manager'))]"/>
+    </record>
+
+    <record id="hr_dynamic_service_type_email" model="hr.dynamic.service.type">
+        <field name="sequence">1</field>
+        <field name="name">Email</field>
+        <field name="icon">fa-envelope</field>
+        <field name="subtype_ids"
+               eval="[(4, ref('hr_dynamic_service_subtype_create_email')),
+               (4, ref('hr_dynamic_service_subtype_change_password_email')),
+               (4, ref('hr_dynamic_service_subtype_delete_email')),
+               (4, ref('hr_dynamic_service_subtype_error_email'))]"/>
+        <field name="stage_ids"
+               eval="[(4, ref('hr_dynamic_service_stage_draft')),
+               (4, ref('hr_dynamic_service_stage_confirmed')),
+               (4, ref('hr_dynamic_service_stage_approved')),
+               (4, ref('hr_dynamic_service_stage_done'))]"/>
+    </record>
+
+    <record id="hr_dynamic_service_request" model="hr.dynamic.service">
+        <field name="name">Change Email Password</field>
+        <field name="employee_id" ref="hr.employee_qdp"/>
+        <field name="service_type_id" ref="hr_dynamic_service_type_email"/>
+        <field name="service_subtype_id" ref="hr_dynamic_service_subtype_change_password_email"/>
+        <field name="notes">I Want to change my email password to 123456</field>
+    </record>
+
+    <record id="hr_dynamic_service_subtype_house_loan" model="hr.dynamic.service.subtype">
+        <field name="sequence">1</field>
+        <field name="name">House Loan</field>
+    </record>
+
+    <record id="hr_dynamic_service_subtype_car_loan" model="hr.dynamic.service.subtype">
+        <field name="sequence">2</field>
+        <field name="name">Car Loan</field>
+    </record>
+
+    <record id="hr_dynamic_service_stage_loan_draft" model="hr.dynamic.service.stage">
+        <field name="sequence">1</field>
+        <field name="name">Draft</field>
+        <field name="action_name">Reset to Draft</field>
+        <field name="can_edit" eval="True"/>
+        <field name="this_employee" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_loan_submitted" model="hr.dynamic.service.stage">
+        <field name="sequence">2</field>
+        <field name="name">Submitted</field>
+        <field name="action_name">Submit to Manager</field>
+        <field name="this_employee" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_loan_approved_manager" model="hr.dynamic.service.stage">
+        <field name="sequence">3</field>
+        <field name="name">Approved by Manager</field>
+        <field name="action_name">Approve</field>
+        <field name="can_refuse" eval="True"/>
+        <field name="his_direct_manager" eval="True"/>
+        <field name="his_department_head" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_loan_approved_dep" model="hr.dynamic.service.stage">
+        <field name="sequence">4</field>
+        <field name="name">Approved by Department Head</field>
+        <field name="action_name">Approve</field>
+        <field name="can_refuse" eval="True"/>
+        <field name="his_department_head" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_loan_done" model="hr.dynamic.service.stage">
+        <field name="sequence">5</field>
+        <field name="name">Done</field>
+        <field name="action_name">Close</field>
+        <field name="group_ids"
+               eval="[(4, ref('hr.group_hr_manager'))]"/>
+    </record>
+
+    <record id="hr_dynamic_service_type_loan" model="hr.dynamic.service.type">
+        <field name="sequence">2</field>
+        <field name="name">Loan</field>
+        <field name="icon">fa-money</field>
+        <field name="subtype_ids"
+               eval="[(4, ref('hr_dynamic_service_subtype_house_loan')),
+               (4, ref('hr_dynamic_service_subtype_car_loan'))]"/>
+        <field name="stage_ids"
+               eval="[(4, ref('hr_dynamic_service_stage_loan_draft')),
+               (4, ref('hr_dynamic_service_stage_loan_submitted')),
+               (4, ref('hr_dynamic_service_stage_loan_approved_manager')),
+               (4, ref('hr_dynamic_service_stage_loan_approved_dep')),
+               (4, ref('hr_dynamic_service_stage_loan_done'))]"/>
+    </record>
+
+    <record id="hr_dynamic_service_loan_request" model="hr.dynamic.service">
+        <field name="name">Hundai Verna Loan</field>
+        <field name="employee_id" ref="hr.employee_qdp"/>
+        <field name="service_type_id" ref="hr_dynamic_service_type_loan"/>
+        <field name="service_subtype_id" ref="hr_dynamic_service_subtype_car_loan"/>
+        <field name="notes">Loan for a Hundai Verna.</field>
+    </record>
+
+    <record id="hr_dynamic_service_subtype_room1" model="hr.dynamic.service.subtype">
+        <field name="sequence">1</field>
+        <field name="name">Meeting Room #1</field>
+    </record>
+
+    <record id="hr_dynamic_service_subtype_room2" model="hr.dynamic.service.subtype">
+        <field name="sequence">2</field>
+        <field name="name">Meeting Room #2</field>
+    </record>
+
+    <record id="hr_dynamic_service_subtype_room3" model="hr.dynamic.service.subtype">
+        <field name="sequence">3</field>
+        <field name="name">Meeting Room #3</field>
+    </record>
+
+    <record id="hr_dynamic_service_stage_meeting_draft" model="hr.dynamic.service.stage">
+        <field name="sequence">1</field>
+        <field name="name">Draft</field>
+        <field name="action_name">Set To Draft</field>
+        <field name="can_edit" eval="True"/>
+        <field name="this_employee" eval="True"/>
+        <field name="his_direct_manager" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_meeting_submitted" model="hr.dynamic.service.stage">
+        <field name="sequence">2</field>
+        <field name="name">Submitted</field>
+        <field name="action_name">Submit</field>
+        <field name="can_refuse" eval="True"/>
+        <field name="this_employee" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_stage_meeting_reserved" model="hr.dynamic.service.stage">
+        <field name="sequence">3</field>
+        <field name="name">Reserved</field>
+        <field name="action_name">Reserve</field>
+        <field name="his_direct_manager" eval="True"/>
+    </record>
+
+    <record id="hr_dynamic_service_type_meeting" model="hr.dynamic.service.type">
+        <field name="sequence">2</field>
+        <field name="name">Meeting Room Reservation</field>
+        <field name="icon">fa-calendar-o</field>
+        <field name="subtype_ids"
+               eval="[(4, ref('hr_dynamic_service_subtype_room1')),
+               (4, ref('hr_dynamic_service_subtype_room2')),
+               (4, ref('hr_dynamic_service_subtype_room3'))]"/>
+        <field name="stage_ids"
+               eval="[(4, ref('hr_dynamic_service_stage_meeting_draft')),
+               (4, ref('hr_dynamic_service_stage_meeting_submitted')),
+               (4, ref('hr_dynamic_service_stage_meeting_reserved'))]"/>
+    </record>
+
+</odoo>

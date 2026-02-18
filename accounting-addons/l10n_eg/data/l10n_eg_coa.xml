@@ -1,0 +1,13 @@
+<odoo noupdate="1">
+
+    <!-- Account Tax Group -->
+    <record id="l10n_eg_account_chart_template" model="account.chart.template">
+        <field name="name">Egypt - Chart of Accounts</field>
+        <field name="code_digits">9</field>
+        <field name="bank_account_code_prefix">1010102</field>
+        <field name="cash_account_code_prefix">1010101</field>
+        <field name="transfer_account_code_prefix">101060017</field>
+        <field name="currency_id" ref="base.EGP"/>
+    </record>
+
+</odoo>

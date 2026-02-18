@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manager_manpower_plan,access.manager.manpower.plan,model_hr_manpower_plan,group_manpower_plan_manager,1,1,1,1
+access_manager_manpower_plan_line,access.manager.manpower.plan.line,model_hr_manpower_plan_line,group_manpower_plan_manager,1,1,1,1
+access_manager_manpower_hr_job,access.manager.manpower.hr.job,hr.model_hr_job,group_manpower_plan_manager,1,0,0,0
+access_manager_manpower_hr_department,access.manager.manpower.hr.department,hr.model_hr_department,group_manpower_plan_manager,1,0,0,0
+access_user_manpower_plan,access.user.manpower.plan,model_hr_manpower_plan,group_manpower_plan_user,1,1,0,0
+access_user_manpower_plan_line,access.user.manpower.plan.line,model_hr_manpower_plan_line,group_manpower_plan_user,1,1,1,0
+access_user_manpower_hr_job,access.user.manpower.hr.job,hr.model_hr_job,group_manpower_plan_user,1,0,0,0
+access_user_manpower_hr_department,access.user.manpower.hr.department,hr.model_hr_department,group_manpower_plan_user,1,0,0,0
+access_hr_manager_manpower_plan,access.hr.manager.manpower.plan,model_hr_manpower_plan,hr.group_hr_manager,1,1,1,0
+access_hr_manager_manpower_plan_line,access.hr.manager.manpower.plan.line,model_hr_manpower_plan_line,hr.group_hr_manager,1,1,1,0
+access_manpower_recruitment,access.manpower.recruitment,model_manpower_recruitment,,1,1,1,1

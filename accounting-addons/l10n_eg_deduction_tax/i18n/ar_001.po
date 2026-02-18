@@ -1,0 +1,565 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg_deduction_tax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-18 12:55+0000\n"
+"PO-Revision-Date: 2020-11-18 12:55+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_account_move_deduction_line
+msgid "Account Move Deduction Line"
+msgstr "بند حركة الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__res_partner__deduction_tax_exemption_status__advanced
+msgid "Advanced Payment"
+msgstr "الدفعات المقدمه"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__deduction_type__discount
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__deduction_type__discount
+msgid "Allowed Discount"
+msgstr "خصم مسموح به"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__deduction_payment_type__amount
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__deduction_payment_type__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__amount_in_words
+msgid "Amount In Words"
+msgstr "المبلغ بالحروف"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__available_payment_method_ids
+msgid "Available Payment Method"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__base_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__base_amount
+msgid "Base Amount"
+msgstr "المبلغ الأساسي"
+
+#. module: l10n_eg_deduction_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.deduction_register_payment_view_form
+msgid "Cancel"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__deduction_type__com_return
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__deduction_type__com_return
+msgid "Commercial Discount"
+msgstr "رد تجاري"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__company_id
+msgid "Company"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__company_currency_id
+msgid "Company Currency"
+msgstr "عملة المؤسسة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: l10n_eg_deduction_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.deduction_register_payment_view_form
+msgid "Create Payment"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__create_date
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__create_date
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_res_currency
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__currency_id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__currency_id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_currency__currency_subunit_label
+msgid "Currency Subunit"
+msgstr "الوحدة الفرعية للعملة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,help:l10n_eg_deduction_tax.field_res_currency__currency_subunit_label
+msgid "Currency Subunit Name"
+msgstr "اسم الوحدة الفرعية للعملة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_currency__currency_unit_label
+msgid "Currency Unit"
+msgstr "وحدة العملة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,help:l10n_eg_deduction_tax.field_res_currency__currency_unit_label
+msgid "Currency Unit Name"
+msgstr "اسم وحدة العملة"
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/wizard/deduction_register_payment.py:0
+#, python-format
+msgid "Customer Payment"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/wizard/deduction_register_payment.py:0
+#, python-format
+msgid "Customer Reimbursement"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__tax_type__deduction
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__tax_type__deduction
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.account_payment_search_view_inherit
+msgid "Deduction"
+msgstr "الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__deduction_invoice_id
+msgid "Deduction Invoice"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__deduction_line_ids
+msgid "Deduction Line"
+msgstr "بند الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_account_payment_deduction_line
+msgid "Deduction Lines on Payment"
+msgstr "بند الخصم علي الدفعة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_bank_statement_line__deduction_payment_ids
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move__deduction_payment_ids
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__deduction_payment_ids
+msgid "Deduction Payment"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__deduction_payment_type
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__deduction_payment_type
+msgid "Deduction Payment Type"
+msgstr "نوع سداد ضريبة الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_deduction_register_payment_wizard
+msgid "Deduction Register Payment Wizard"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__deduction_tax_id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_product_product__deduction_tax_id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_product_template__deduction_tax_id
+msgid "Deduction Tax"
+msgstr "ضرائب الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_partner__deduction_tax_exemption_status
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_users__deduction_tax_exemption_status
+msgid "Deduction Tax Exemption Status"
+msgstr "حالة االإعفاء من ضريبة الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_line__deduction_tax_percent
+msgid "Deduction Tax Percent"
+msgstr "نسبة ضريبة الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_bank_statement_line__deduction_tax_residual_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move__deduction_tax_residual_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__deduction_tax_residual_amount
+msgid "Deduction Tax Residual Amount"
+msgstr "مبلغ ضريبة الخصم المتبقي"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_bank_statement_line__deduction_tax_line_ids
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move__deduction_tax_line_ids
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__deduction_tax_line_ids
+msgid "Deduction Taxes"
+msgstr "ضرائب الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__deduction_type
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__deduction_type
+msgid "Deduction Type"
+msgstr "نوع الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_line__entry_deduction_tax_id
+msgid "Deduction/Withholding Tax"
+msgstr "ضريبة الخصم والأضافة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_product_template__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_currency__display_name
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_partner__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__edit_payment
+msgid "Edit Payment"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__res_partner__deduction_tax_exemption_status__exempt
+msgid "Exempt"
+msgstr "معفي"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_partner__exemption_expire_date
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_users__exemption_expire_date
+msgid "Exemption Expire Date"
+msgstr "تاريخ انتهاء الإعفاء"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__deduction_payment_type__full
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__deduction_payment_type__full
+msgid "Full"
+msgstr "كامل"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__hide_payment_method
+msgid "Hide Payment Method"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_line__id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_product_template__id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_currency__id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_partner__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_bank_statement_line__invoice_filter_type_ded_domain
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move__invoice_filter_type_ded_domain
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__invoice_filter_type_ded_domain
+msgid "Invoice Filter Type Ded Domain"
+msgstr "نطاق ضرائب الخصم بناء علي نوع الفاتورة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__journal_id
+msgid "Journal"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_product_template____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_currency____last_update
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__write_date
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__write_date
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__ref
+msgid "Memo"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/wizard/deduction_register_payment.py:0
+#, python-format
+msgid "Missing required account in %s."
+msgstr "لا يوجد حساب في تعريف ضريبة %s."
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__move_id
+msgid "Move"
+msgstr "قيد اليومية"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__res_partner__deduction_tax_exemption_status__not_exempt
+msgid "Not Exempt"
+msgstr "غير معفي"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__paid_amount
+msgid "Paid Amount"
+msgstr "المبلغ المدفوع"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__paid_percentage
+msgid "Paid Percentage"
+msgstr "نسبة المدفوع"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__payment_id
+msgid "Payment"
+msgstr "الدفعة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__payment_date
+msgid "Payment Date"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__payment_method_id
+msgid "Payment Method"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_account_payment
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__deduction_payment_type__percentage
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__deduction_payment_type__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/models/account_move.py:0
+#, python-format
+msgid "Please create deduction/withholding journal first"
+msgstr "برجاء انشاء دفتر يومية خاص بضريبة الخصم/التحصيل"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model,name:l10n_eg_deduction_tax.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.actions.server,name:l10n_eg_deduction_tax.invoice_register_deduct_server_action
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.account_move_form_view
+msgid "Register Deduction Tax"
+msgstr "تسجيل ضريبة خصم"
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/models/account_move.py:0
+#, python-format
+msgid "Register Deduction/Withholding Tax Payment"
+msgstr "تسجيل دفع ضريبة خصم/تحصيل"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.actions.act_window,name:l10n_eg_deduction_tax.deduction_register_payment_action
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.deduction_register_payment_view_form
+msgid "Register Payment"
+msgstr "تسجيل دفعة"
+
+#. module: l10n_eg_deduction_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.account_move_form_view
+msgid "Register Withholding Tax"
+msgstr "تسجيل ضريبة تحصيل"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__residual_amount
+msgid "Residual Amount"
+msgstr "المبلغ المتبقي"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__residual_taxation_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__residual_taxation_amount
+msgid "Residual Taxation Amount"
+msgstr "المبلغ الضريبى المتبقى"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__deduction_type__returns
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__deduction_type__returns
+msgid "Returns"
+msgstr "مردودات"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__deduction_tax_id
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.account_move_form_view
+msgid "Tax Allowance"
+msgstr "ضريبة الخصم والتحصيل"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__tax_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__tax_amount
+msgid "Tax Amount"
+msgstr "قيمة الضريبة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__tax_amount_in_company_currency
+msgid "Tax Amount In Company Currency"
+msgstr "مبلغ الضريبة بعملة المؤسسة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__tax_percentage
+msgid "Tax Percentage"
+msgstr "نسبة الضريبة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__tax_type
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__tax_type
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__tax_type
+msgid "Tax Type"
+msgstr "نوع الضريبة"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_line__deduction_tax_id
+msgid "Tax allowance"
+msgstr "ضريبة الخصم والتحصيل"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_line__deduction_tax_amount
+msgid "Tax allowance Amount"
+msgstr "مبلغ ضريبة الخصم او التحصيل"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__taxation_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__taxation_amount
+msgid "Taxation Amount"
+msgstr "المبلغ الضريبى"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__taxation_percent
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__taxation_percent
+msgid "Taxation Percent"
+msgstr "نسبة الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,help:l10n_eg_deduction_tax.field_account_payment_deduction_line__currency_id
+msgid "The payment's currency."
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_bank_statement_line__deduction_tax_total_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move__deduction_tax_total_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__deduction_tax_total_amount
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.account_move_form_view
+msgid "Total Allowance amount"
+msgstr "إجمالى مبلغ الخصم"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_move_deduction_line__total_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment_deduction_line__total_amount
+msgid "Total Amount"
+msgstr "المبلغ الإجمالي"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_account_payment__total_taxation_amount
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_deduction_register_payment_wizard__total_taxation_amount
+msgid "Total Taxation Amount"
+msgstr "اجمالى المبلغ الضرييى"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__deduction_type__unspecified
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__deduction_type__unspecified
+msgid "Unspecified"
+msgstr "غير محدد"
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/wizard/deduction_register_payment.py:0
+#, python-format
+msgid "Vendor Payment"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/wizard/deduction_register_payment.py:0
+#, python-format
+msgid "Vendor Reimbursement"
+msgstr ""
+
+#. module: l10n_eg_deduction_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.account_move_form_view
+msgid "View Payments"
+msgstr "عرض الدفعات"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__account_payment__tax_type__withholding
+#: model:ir.model.fields.selection,name:l10n_eg_deduction_tax.selection__deduction_register_payment_wizard__tax_type__withholding
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.account_payment_search_view_inherit
+msgid "Withholding"
+msgstr "التحصيل"
+
+#. module: l10n_eg_deduction_tax
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_product_product__withholding_tax_id
+#: model:ir.model.fields,field_description:l10n_eg_deduction_tax.field_product_template__withholding_tax_id
+msgid "Withholding Tax"
+msgstr "ضريبة التحصيل"
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/models/account_move.py:0
+#, python-format
+msgid ""
+"You can only apply Taxes allowances on posted, not fully taxed, and not paid"
+" vendor invoices."
+msgstr ""
+"يمكن فقط دفع ضريبة الخصم للفواتير المرحلة و غير المدفوعة بالكامل و الخاضعة "
+"لضريبة الخصم و غير محصلة بالكامل."
+
+#. module: l10n_eg_deduction_tax
+#: code:addons/l10n_eg_deduction_tax/models/account_payment.py:0
+#, python-format
+msgid "You can't pay amount more than the residual"
+msgstr "لا يمكن دفع مبلغ أكبر من المستحق"
+
+#. module: l10n_eg_deduction_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_deduction_tax.account_move_form_view
+msgid "residual amount"
+msgstr "المبلغ المتبقي"

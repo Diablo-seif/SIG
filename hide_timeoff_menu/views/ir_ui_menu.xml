@@ -1,0 +1,5 @@
+<odoo>
+        <record id="hr_holidays.menu_hr_holidays_root" model="ir.ui.menu">
+                <field name="groups_id" eval="[(6,0,[ref('hide_timeoff_menu.group_show_timeoff_menu')])]" />
+        </record>
+</odoo>

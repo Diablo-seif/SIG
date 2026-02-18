@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Tags in leave type -->
+    <record id="21_days_leave_15" model="hr.leave.type.tag">
+        <field name="allocation_tag_id" eval="ref('21_days')" />
+        <field name="number_of_days">15</field>
+        <field name="leave_type_id" eval="ref('holiday_status_annual')" />
+    </record>
+
+    <record id="30_days_leave_24" model="hr.leave.type.tag">
+        <field name="allocation_tag_id" eval="ref('30_days')" />
+        <field name="number_of_days">24</field>
+        <field name="leave_type_id" eval="ref('holiday_status_annual')" />
+    </record>
+
+
+    <record id="21_days_leave_6" model="hr.leave.type.tag">
+        <field name="allocation_tag_id" eval="ref('21_days')" />
+        <field name="number_of_days">6</field>
+        <field name="leave_type_id" eval="ref('holiday_status_casual')" />
+    </record>
+
+    <record id="30_days_leave_6" model="hr.leave.type.tag">
+        <field name="allocation_tag_id" eval="ref('30_days')" />
+        <field name="number_of_days">6</field>
+        <field name="leave_type_id" eval="ref('holiday_status_casual')" />
+    </record>
+
+</odoo>
+
+

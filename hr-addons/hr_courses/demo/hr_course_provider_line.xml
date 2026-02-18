@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="provider_1" model="hr.course.provider.line">
+        <field name="partner_id" ref='base.res_partner_1' />
+        <field name="course_id" ref='course_1' />
+        <field name="certification_id" ref='hr_skills.resume_type_education' />
+        <field name="minimum_no_of_participants">15</field>
+        <field name="cost_per_participant">1500</field>
+        <field name="provider_type">internal</field>
+    </record>
+
+    <record id="provider_2" model="hr.course.provider.line">
+        <field name="partner_id" ref='base.res_partner_2' />
+        <field name="course_id" ref='course_1' />
+        <field name="certification_id" ref='hr_skills.resume_type_education' />
+        <field name="minimum_no_of_participants">10</field>
+        <field name="cost_per_participant">1250</field>
+        <field name="provider_type">external</field>
+    </record>
+
+    <record id="provider_3" model="hr.course.provider.line">
+        <field name="partner_id" ref='base.res_partner_2' />
+        <field name="course_id" ref='course_1' />
+        <field name="certification_id" ref='hr_skills.resume_type_education' />
+        <field name="minimum_no_of_participants">10</field>
+        <field name="cost_per_participant">1000</field>
+        <field name="provider_type">internal</field>
+    </record>
+
+    <record id="provider_4" model="hr.course.provider.line">
+        <field name="partner_id" ref='base.res_partner_3' />
+        <field name="course_id" ref='course_2' />
+        <field name="certification_id" ref='hr_skills.resume_type_education' />
+        <field name="minimum_no_of_participants">20</field>
+        <field name="cost_per_participant">2000</field>
+        <field name="provider_type">external</field>
+    </record>
+
+    <record id="provider_5" model="hr.course.provider.line">
+        <field name="partner_id" ref='base.res_partner_1' />
+        <field name="course_id" ref='course_2' />
+        <field name="certification_id" ref='hr_skills.resume_type_education' />
+        <field name="minimum_no_of_participants">13</field>
+        <field name="cost_per_participant">2400</field>
+        <field name="provider_type">internal</field>
+    </record>
+
+    <record id="provider_6" model="hr.course.provider.line">
+        <field name="partner_id" ref='base.res_partner_2' />
+        <field name="course_id" ref='course_3' />
+        <field name="certification_id" ref='hr_skills.resume_type_education' />
+        <field name="minimum_no_of_participants">3</field>
+        <field name="cost_per_participant">5000</field>
+        <field name="provider_type">internal</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,1275 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg_vat
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-08 14:19+0000\n"
+"PO-Revision-Date: 2020-11-08 14:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,help:l10n_eg_vat.field_res_company__vat_warning_day
+#: model:ir.model.fields,help:l10n_eg_vat.field_res_config_settings__vat_warning_day
+msgid "# day accountant should check the VAT report"
+msgstr "موعد فحص تقرير القيمة المضافة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_close_report__close_month__10
+msgid "10"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_close_report__close_month__11
+msgid "11"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_close_report__close_month__12
+msgid "12"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.res_config_settings_view_form_vat
+msgid ""
+"<br/>\n"
+"                    <br/>\n"
+"                    <span class=\"o_form_label\">VAT Warning Email</span>\n"
+"                    <span class=\"fa fa-lg\"/>"
+msgstr ""
+"<br/>\n"
+"                    <br/>\n"
+"                    <span class=\"o_form_label\">تذكير لفحص تقرير القيمة المضافة</span>\n"
+"                    <span class=\"fa fa-lg\"/>"
+
+#. module: l10n_eg_vat
+#: model:mail.template,body_html:l10n_eg_vat.mail_template_warning_check_vat_report
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    Dear ${object.name}\n"
+"                    <br/><br/>\n"
+"                    Please check VAT report for month\n"
+"                    % if datetime.date.today().month == 1:\n"
+"                        11, ${datetime.date.today().year-1}\n"
+"                    % else:\n"
+"                        % if datetime.date.today().month == 2:\n"
+"                            12, ${datetime.date.today().year-1}\n"
+"                        % else:\n"
+"                            ${datetime.date.today().month-2},\n"
+"                            ${datetime.date.today().year}\n"
+"                        % endif\n"
+"                    % endif\n"
+"                    <br/><br/>\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                <p style=\"margin: 0px; padding: 0px; font-size: 13px;\">\n"
+"                    عزيزنا ${object.name}\n"
+"                    <br/><br/>\n"
+"                    برجاء فحص تقرير القيمة المضافة عن شهر \n"
+"                    % if datetime.date.today().month == 1:\n"
+"                        11, ${datetime.date.today().year-1}\n"
+"                    % else:\n"
+"                        % if datetime.date.today().month == 2:\n"
+"                            12, ${datetime.date.today().year-1}\n"
+"                        % else:\n"
+"                            ${datetime.date.today().month-2},\n"
+"                            ${datetime.date.today().year}\n"
+"                        % endif\n"
+"                    % endif\n"
+"                    <br/><br/>\n"
+"                </p>\n"
+"            </div>\n"
+"        "
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line__account_vat_tax_invoice_domain
+msgid "Account Vat Tax Invoice Domain"
+msgstr "مجال فاتورة ضريبة القيمة المضافة للحساب"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line__account_vat_tax_types_domain_table
+msgid "Account Vat Tax Types Domain Table"
+msgstr "جدول مجال أنواع ضريبة القيمة المضافة للحساب"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line__account_vat_tax_types_domain_vat
+msgid "Account Vat Tax Types Domain Vat"
+msgstr "حساب أنواع ضريبة القيمة المضافة ضريبة القيمة المضافة المجال"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product__account_vat_tax_types_in_domain_table
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template__account_vat_tax_types_in_domain_table
+msgid "Account Vat Tax Types In Domain Table"
+msgstr "أنواع ضريبة القيمة المضافة للحساب في جدول المجال"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product__account_vat_tax_types_in_domain_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template__account_vat_tax_types_in_domain_vat
+msgid "Account Vat Tax Types In Domain Vat"
+msgstr "أنواع ضريبة القيمة المضافة للحساب في ضريبة القيمة المضافة على النطاق"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product__account_vat_tax_types_out_domain_table
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template__account_vat_tax_types_out_domain_table
+msgid "Account Vat Tax Types Out Domain Table"
+msgstr "أنواع ضريبة القيمة المضافة للحساب خارج جدول المجال"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product__account_vat_tax_types_out_domain_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template__account_vat_tax_types_out_domain_vat
+msgid "Account Vat Tax Types Out Domain Vat"
+msgstr ""
+"أنواع ضريبة القيمة المضافة للحساب خارج ضريبة القيمة المضافة على النطاق"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_tax_adjustment_name__adjustment
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__product_type_name__adjustment
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_tax_adjustment_name__adjustment
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__product_type_name__adjustment
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_tax_adjustment_name__adjustment
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__product_type_name__adjustment
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Adjustment"
+msgstr "تسوية"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__tax_adjustment_year_month
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__tax_adjustment_year_month
+msgid "Adjustment Year Month 'YYYYMM'"
+msgstr "سنة التعديل الشهر \"YYYYMM\""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_air_conditions
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_air_conditions_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_air_conditions
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_air_conditions_out
+msgid "Air conditions"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_alcoholic_beer
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_alcoholic_beer_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_alcoholic_beer
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_alcoholic_beer_out
+msgid "Alcoholic beer"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_alcoholic_drinks
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_alcoholic_drinks_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_alcoholic_drinks
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_alcoholic_drinks_out
+msgid "Alcoholic drinks"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_animal_oils
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_animal_oils_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_animal_oils
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_animal_oils_out
+msgid "Animal oils"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_tax_adjustment_name__bill
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_tax_adjustment_name__bill
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_tax_adjustment_name__bill
+msgid "Bill"
+msgstr "فاتورة شراء"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_close_report_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_carbonated_water
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_carbonated_water_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_carbonated_water
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_carbonated_water_out
+msgid "Carbonated water"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_cars_1600
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_cars_1600_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_cars_1600
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_cars_1600_out
+msgid "Cars 1600"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_cars_2000
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_cars_2000_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_cars_2000
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_cars_2000_out
+msgid "Cars 2000"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_cars_importe_3000
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_cars_importe_3000_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_cars_importe_3000
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_cars_importe_3000_out
+msgid "Cars imported 3000"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__close_month
+msgid "Close Month"
+msgstr "إغلاق شهر"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__close_year
+msgid "Close Year"
+msgstr "السنة"
+
+#. module: l10n_eg_vat
+#: code:addons/l10n_eg_vat/report/vat_sales_report.py:0
+#: code:addons/l10n_eg_vat/report/vat_sales_report_grouped.py:0
+#, python-format
+msgid "Close report for month"
+msgstr "إغلاق التقرير عن شهر"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__code
+msgid "Code"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_commodities
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_commodities
+msgid "Commodities"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_res_company
+msgid "Companies"
+msgstr "شركات"
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الاعدادات"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_construction_contracting
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_construction_contracting_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_construction_contracting
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_construction_contracting_out
+msgid "Construction, Contracting"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_cosmetics_perfumes
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_cosmetics_perfumes_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_cosmetics_perfumes
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_cosmetics_perfumes_out
+msgid "Cosmetics and perfumes"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__create_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__create_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__create_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__create_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_crisps
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_crisps_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_crisps
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_crisps_out
+msgid "Crisps"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__currency_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__currency_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__currency_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type__out_refund
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type_desc__out_refund
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_type__out_refund
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type__out_refund
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type_desc__out_refund
+msgid "Customer Credit Note"
+msgstr "إشعار خصم لعميل"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__account_vat_tax_types__invoice_type__out
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type__out_invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type_desc__out_invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_type__out_invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type__out_invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type_desc__out_invoice
+msgid "Customer Invoice"
+msgstr "فاتورة العميل"
+
+#. module: l10n_eg_vat
+#: code:addons/l10n_eg_vat/models/res_company.py:0
+#, python-format
+msgid "Day should between 1..31"
+msgstr "اليوم بين 1 و 31"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__res_config_settings__vat_email_interval_type__days
+msgid "Days"
+msgstr "الأيام"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__description
+msgid "Description"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__display_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__document_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__document_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__document_type
+msgid "Document Type"
+msgstr "نوع المستند"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exemptions
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exemptions_in
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exemptions_t1
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exemptions_t1_out
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exemptions_t2
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exemptions_t2_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exemptions
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exemptions_in
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exemptions_t1
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exemptions_t1_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exemptions_t2
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exemptions_t2_out
+msgid "Exemptions"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exports
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exports_t1
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exports_t1_out
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exports_t2
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_exports_t2_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exports
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exports_t1
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exports_t1_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exports_t2
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_exports_t2_out
+msgid "Exports"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_fertilizers_pesticides
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_fertilizers_pesticides_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_fertilizers_pesticides
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_fertilizers_pesticides_out
+msgid "Fertilizers and pesticides"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__file_number
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__file_number
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__file_number
+msgid "File Number"
+msgstr "رقم الملف الضريبي للعميل"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_golf_cars
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_golf_cars_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_golf_cars
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_golf_cars_out
+msgid "Golf cars"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.account_vat_tax_types_search
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_monthly_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_gypsum
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_gypsum_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_gypsum
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_gypsum_out
+msgid "Gypsum"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_config_settings__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_config_settings__vat_email_interval_type
+msgid "Interval Unit"
+msgstr "وحدة الفاصل"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_tax_adjustment_name__invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_tax_adjustment_name__invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_tax_adjustment_name__invoice
+msgid "Invoice"
+msgstr "فاتورة بيع"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__invoice_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__invoice_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__invoice_date
+msgid "Invoice Date"
+msgstr "تاريخ الفاتورة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__invoice_no
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__invoice_no
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__invoice_no
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Invoice No"
+msgstr "رقم الفاتورة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__invoice_tax_adjustment
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__invoice_tax_adjustment
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__invoice_tax_adjustment
+msgid "Invoice Tax Adjustment"
+msgstr "تسوية"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__invoice_tax_adjustment_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__invoice_tax_adjustment_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__invoice_tax_adjustment_name
+msgid "Invoice Tax Adjustment Name"
+msgstr "تسوية"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__invoice_tax_reported
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__invoice_tax_reported
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__invoice_tax_reported
+msgid "Invoice Tax Reported"
+msgstr "تم إقرارها"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.account_vat_tax_types_search
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Invoice Type"
+msgstr "النوع"
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_account_move
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type__entry
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type_desc__entry
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_type__entry
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type__entry
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type_desc__entry
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر اليومية"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_company____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report____last_update
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__write_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__write_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__write_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__write_date
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__line_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__line_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__line_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__line_tax_one
+msgid "Line Tax One"
+msgstr "بند ضريبة واحد"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_local
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_local
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__product_type_name__local
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__product_type_name__local
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__product_type_name__local
+msgid "Local"
+msgstr "محلى"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_local_cars_3000
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_local_cars_3000_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_local_cars_3000
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_local_cars_3000_out
+msgid "Local cars 3000"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_machine
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_machine_in
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_machine
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_machine_in
+msgid "Machine parts"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_machinery
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_machinery_in
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_machinery
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_machinery_in
+msgid "Machinery and equipment"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_manufactured_potatoes
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_manufactured_potatoes_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_manufactured_potatoes
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_manufactured_potatoes_out
+msgid "Manufactured potatoes"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_close_report__mark_as_reported
+msgid "Mark As Reported"
+msgstr "تم إقراره"
+
+#. module: l10n_eg_vat
+#: model:ir.actions.server,name:l10n_eg_vat.vat_sales_report_generate_action
+#: model:ir.actions.server,name:l10n_eg_vat.vat_sales_report_generate_grouped_action
+msgid "Mark Invoices"
+msgstr "إقرار فاتورة"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_close_report_view_form
+msgid "Mark invoices of month"
+msgstr "إقرار الفواتير عن شهر"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_media_production
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_media_production_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_media_production
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_media_production_out
+msgid "Media production"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__month
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__month
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__month
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__month
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_close_report_view_form
+msgid "Month"
+msgstr "الشهر"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__monthly_id
+msgid "Monthly"
+msgstr "شهرى"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__monthly_line_ids
+msgid "Monthly Line"
+msgstr "تفاصيل شهرية"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__move_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__move_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__move_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__move_id
+msgid "Move"
+msgstr "قيد اليومية"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__name
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.account_vat_tax_types_form
+msgid "Name"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__national_no
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__national_no
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__national_no
+msgid "National No"
+msgstr "الرقم القومي / رقم جواز السفر"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_nonalcoholic_beer
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_nonalcoholic_beer_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_nonalcoholic_beer
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_nonalcoholic_beer_out
+msgid "Nonalcoholic beer"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Not Adjustment"
+msgstr "فاتورة"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_oil
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_oil_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_oil
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_oil_out
+msgid "Oil"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__partner_address
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__partner_address
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__partner_address
+msgid "Partner Address"
+msgstr "العنوان"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__partner_mobile
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__partner_mobile
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__partner_mobile
+msgid "Partner Mobile"
+msgstr "رقم الموبيل"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__partner_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__partner_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__partner_name
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Partner Name"
+msgstr "اسم العميل"
+
+#. module: l10n_eg_vat
+#: code:addons/l10n_eg_vat/wizards/vat_close_report.py:0
+#, python-format
+msgid "Please select a month."
+msgstr "من فضلك إختار شهر."
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__price_subtotal
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__price_subtotal
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__price_subtotal
+msgid "Price Subtotal"
+msgstr "المبلغ الصافي"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__price_unit
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__price_unit
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__price_unit
+msgid "Price Unit"
+msgstr "سعر الوحدة"
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_product_product
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__product_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__product_id
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__product_code
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__product_code
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__product_code
+msgid "Product Code"
+msgstr "كود المنتج"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__product_kind
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__product_kind
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__product_kind
+msgid "Product Kind"
+msgstr "نوع سلع الجدول"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__product_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__product_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__product_name
+msgid "Product Name"
+msgstr "إسم المنتج"
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_product_template
+msgid "Product Template"
+msgstr "قالب المنتج"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product__account_vat_tax_types_in_ids
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_product__account_vat_tax_types_out_ids
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template__account_vat_tax_types_in_ids
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_product_template__account_vat_tax_types_out_ids
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__product_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__product_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__product_type
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Product Type"
+msgstr "نوع المنتج"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__product_type_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__product_type_name
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__product_type_name
+msgid "Product Type Name"
+msgstr "نوع المنتج"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__product_uom
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__product_uom
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__product_uom
+msgid "Product Uom"
+msgstr "وحدة قياس المنتج"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line__account_vat_tax_types_ids
+msgid "Product type (VAT)"
+msgstr "نوع المنتج(ضريبة القيمة المضافة)"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_professional_services
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_professional_services_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_professional_services
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_professional_services_out
+msgid "Professional services"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Purchase"
+msgstr "شراء"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type__in_receipt
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type_desc__in_receipt
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_type__in_receipt
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type__in_receipt
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type_desc__in_receipt
+msgid "Purchase Receipt"
+msgstr "ايصال الشراء"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__purchase_total_amount
+msgid "Purchase Total"
+msgstr "إجمالى الضريبة على المشتريات"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__quantity
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__quantity
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__quantity
+msgid "Quantity"
+msgstr "كمية المنتج"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__registration_number
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__registration_number
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__registration_number
+msgid "Registration Number"
+msgstr "رقم التسجيل الضريبي للعميل"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,help:l10n_eg_vat.field_res_config_settings__vat_email_interval_number
+msgid "Repeat Send VAT Report Check every"
+msgstr "إرسال إيميل فحص تقرير القيمة المضافة كل"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_config_settings__vat_email_interval_number
+msgid "Repeat every"
+msgstr "تكرار كل"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__report_date
+msgid "Report Date"
+msgstr "تاريخ التقرير"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_monthly_report_view_form
+msgid "Report Details"
+msgstr "تفاصيل التقرير"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Sales"
+msgstr "المبيعات"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type__out_receipt
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type_desc__out_receipt
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_type__out_receipt
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type__out_receipt
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type_desc__out_receipt
+msgid "Sales Receipt"
+msgstr "استلام المبيعات"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__sales_total_amount
+msgid "Sales Total"
+msgstr "إجمالى الضريبة على المبيعات"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_close_report_view_form
+msgid "Save"
+msgstr "حفظ"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__invoice_type
+msgid "Scope"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__product_type_name__service
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__product_type_name__service
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__product_type_name__service
+msgid "Service"
+msgstr "الخدمة"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_services
+msgid "Services"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_soap_cleaning
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_soap_cleaning_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_soap_cleaning
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_soap_cleaning_out
+msgid "Soap and cleaning"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__product_type_name__consu
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__product_type_name__consu
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__product_type_name__consu
+msgid "Stock"
+msgstr "سلعى"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_bank_statement_line__supplier_invoice_number
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move__supplier_invoice_number
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_payment__supplier_invoice_number
+msgid "Supplier Invoice Number"
+msgstr "رقم فاتورة المورد"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__account_vat_tax_types__tax_type__table1
+msgid "Table 1"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__account_vat_tax_types__tax_type__table2
+msgid "Table 2"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__table_product_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__table_product_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__table_product_type
+msgid "Table Product Type"
+msgstr "نوع سلع الجدول"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__tax_id
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_bank_statement_line__tax_adjustment
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move__tax_adjustment
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_payment__tax_adjustment
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.view_account_invoice_filter_inherit
+msgid "Tax Adjustment"
+msgstr "تسوية ضريبية"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_bank_statement_line__tax_adjustment_year_month
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move__tax_adjustment_year_month
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_payment__tax_adjustment_year_month
+msgid "Tax Adjustment Year Month"
+msgstr "شهر سنة التعديل الضريبي"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__tax_amount
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__tax_amount
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__tax_amount
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__tax_amount
+msgid "Tax Amount"
+msgstr "قيمة الضريبة"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.view_account_invoice_filter_inherit
+msgid "Tax Not Reported"
+msgstr "لم يتم إقرارها"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__tax_percentage
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__tax_percentage
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__tax_percentage
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Tax Percentage"
+msgstr "نسبة الضريبة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_bank_statement_line__tax_reported
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move__tax_reported
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_payment__tax_reported
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.view_account_invoice_filter_inherit
+msgid "Tax Reported"
+msgstr "تم إقرارها"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_vat_tax_types__tax_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__tax_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__tax_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__tax_type
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.account_vat_tax_types_search
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_search_view
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_search_view
+msgid "Tax Type"
+msgstr "نوع الضريبة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_config_settings__module_l10n_eg_tax_included_in_price
+msgid "Tax included in price"
+msgstr "الضريبة مشمولة في السعر"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line__tax_ids
+msgid "Taxes"
+msgstr "الضرائب"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,help:l10n_eg_vat.field_account_move_line__tax_ids
+msgid "Taxes that apply on the base amount"
+msgstr "ضرائب تطبق على القيمة الاساسية"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_telecommunications_services
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_telecommunications_services_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_telecommunications_services
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_telecommunications_services_out
+msgid "Telecommunications Services"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_televisions_refrigerators
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_televisions_refrigerators_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_televisions_refrigerators
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_televisions_refrigerators_out
+msgid "Televisions and refrigerators"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: code:addons/l10n_eg_vat/report/vat_sales_report.py:0
+#: code:addons/l10n_eg_vat/report/vat_sales_report_grouped.py:0
+#, python-format
+msgid "There are no active invoice"
+msgstr "برجاء اختيار فاتورة أولًا"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_tobacco
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_tobacco_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_tobacco
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_tobacco_out
+msgid "Tobacco"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__total_amount
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__price_total
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__price_total
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__price_total
+msgid "Total"
+msgstr "الإجمالي"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__total_tax_with_sign
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__total_tax_with_sign
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__total_tax_with_sign
+msgid "Total Tax With Sign"
+msgstr "إجمالي الضريبة مع تسجيل الدخول"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_transportation_conditioners
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_transportation_conditioners_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_transportation_conditioners
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_transportation_conditioners_out
+msgid "Transportation and air conditioners"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__invoice_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__invoice_type_desc
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__invoice_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__invoice_type
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__invoice_type_desc
+msgid "Type"
+msgstr "النوع"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__user_id
+msgid "User"
+msgstr "المستخدم"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__account_vat_tax_types__tax_type__vat
+msgid "VAT"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_monthly_report_view_form
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_grouped_tree
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_sales_report_tree
+msgid "VAT Amount"
+msgstr "قيمة الضريبة المضافة"
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_vat_close_report
+msgid "VAT Close Report"
+msgstr "إقرار تقرير القيمة المضافة"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_monthly_report_view_form
+msgid "VAT Monthly Report"
+msgstr "تقرير القيمة المضافة شهرى"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.res_config_settings_view_form_vat
+msgid "VAT Report Check Warning Email Day"
+msgstr "موعد التذكير بفحص تقرير ضريبة القيمة المضافة"
+
+#. module: l10n_eg_vat
+#: model:ir.actions.act_window,name:l10n_eg_vat.vat_sales_report_action
+#: model:ir.model,name:l10n_eg_vat.model_vat_sales_report
+#: model:ir.ui.menu,name:l10n_eg_vat.menuitem_vat_sales_report
+msgid "VAT Tax Report"
+msgstr "تقرير ضريبة القيمة المضافة"
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_vat_sales_report_grouped
+#: model:ir.ui.menu,name:l10n_eg_vat.menuitem_vat_sales_report_grouped
+msgid "VAT Tax Report Grouped"
+msgstr "تقرير ضريبة القيمة المضافة مجمع"
+
+#. module: l10n_eg_vat
+#: model:ir.actions.act_window,name:l10n_eg_vat.vat_sales_report_grouped_monthly_action
+#: model:ir.model,name:l10n_eg_vat.model_vat_monthly_report
+msgid "VAT Tax Report Grouped Monthly"
+msgstr "تقرير القيمة المضافة شهرى"
+
+#. module: l10n_eg_vat
+#: model:ir.ui.menu,name:l10n_eg_vat.menuitem_vat_sales_report_grouped_monthly
+msgid "VAT Tax Report Grouped Monthly "
+msgstr "تقرير القيمة المضافة شهرى "
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_vat_monthly_report_line
+msgid "VAT Tax Report Grouped Monthly Lines"
+msgstr "تفاصيل تقرير القيمة المضافة شهرى"
+
+#. module: l10n_eg_vat
+#: model:ir.actions.act_window,name:l10n_eg_vat.vat_sales_report_grouped_action
+msgid "VAT Tax Report [Grouped]"
+msgstr "تقرير ضريبة القيمة المضافة مجمع"
+
+#. module: l10n_eg_vat
+#: model:ir.actions.act_window,name:l10n_eg_vat.account_vat_tax_types_action
+#: model:ir.model,name:l10n_eg_vat.model_account_vat_tax_types
+#: model:ir.ui.menu,name:l10n_eg_vat.menuitem_account_vat_tax_types
+msgid "VAT Tax Types"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_bank_statement_line__vat_tax_line_ids
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move__vat_tax_line_ids
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_payment__vat_tax_line_ids
+msgid "VAT Taxes"
+msgstr "ضريبة القية المضافة"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.res_config_settings_view_form_vat
+msgid "VAT Warning Email DAY"
+msgstr "تذكير بفحص تقرير القيمة المضافة يوم"
+
+#. module: l10n_eg_vat
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.res_config_settings_view_form_vat
+msgid "VAT Warning Email Day"
+msgstr "يوم البريد الإلكتروني للتحذير من ضريبة القيمة المضافة"
+
+#. module: l10n_eg_vat
+#: model:ir.actions.server,name:l10n_eg_vat.vat_warning_monthly_cron_ir_actions_server
+#: model:ir.cron,cron_name:l10n_eg_vat.vat_warning_monthly_cron
+#: model:ir.cron,name:l10n_eg_vat.vat_warning_monthly_cron
+msgid "VAT Warning Monthly"
+msgstr "التذكير بفحص تقرير القيمة المضافة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_company__vat_warning_day
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_res_config_settings__vat_warning_day
+msgid "VAT warning Delay"
+msgstr "موعد التذكير بفحص تقرير القيمة المضافة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_account_move_line_tax__vat_product_kind
+msgid "Vat Product Kind"
+msgstr "نوع منتج ضريبة القيمة المضافة"
+
+#. module: l10n_eg_vat
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_vegetable_oils
+#: model:account.vat.tax.types,description:l10n_eg_vat.account_vat_tax_types_vegetable_oils_out
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_vegetable_oils
+#: model:account.vat.tax.types,name:l10n_eg_vat.account_vat_tax_types_vegetable_oils_out
+msgid "Vegetable oils"
+msgstr ""
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__account_vat_tax_types__invoice_type__in
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type__in_invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type_desc__in_invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_type__in_invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type__in_invoice
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type_desc__in_invoice
+msgid "Vendor Bill"
+msgstr "فاتورة المورد"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type__in_refund
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_monthly_report_line__invoice_type_desc__in_refund
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report__invoice_type__in_refund
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type__in_refund
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__vat_sales_report_grouped__invoice_type_desc__in_refund
+msgid "Vendor Credit Note"
+msgstr "إشعار خصم المورد"
+
+#. module: l10n_eg_vat
+#: model:mail.template,subject:l10n_eg_vat.mail_template_warning_check_vat_report
+msgid ""
+"Warning: Check VAT Report for Month ${datetime.date.today().month == 1 and  "
+"(11, datetime.date.today().year-1) or   (datetime.date.today().month == 2 "
+"and  (12, datetime.date.today().year-1) or (datetime.date.today().month-2))}"
+msgstr ""
+"تحذير: برجاء فحص تقرير القيمة المضافة عن شهر ${datetime.date.today().month "
+"== 1 and  (11, datetime.date.today().year-1) or   "
+"(datetime.date.today().month == 2 and  (12, datetime.date.today().year-1) or"
+" (datetime.date.today().month-2))}"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields.selection,name:l10n_eg_vat.selection__res_config_settings__vat_email_interval_type__weeks
+msgid "Weeks"
+msgstr "أسابيع"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report__year
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_monthly_report_line__year
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__year
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__year
+#: model_terms:ir.ui.view,arch_db:l10n_eg_vat.vat_monthly_report_grouped_search_view
+msgid "Year"
+msgstr "السنة"
+
+#. module: l10n_eg_vat
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report__year_month
+#: model:ir.model.fields,field_description:l10n_eg_vat.field_vat_sales_report_grouped__year_month
+msgid "Year Month 'YYYYMM'"
+msgstr "سنة شهر YYYYMM"
+
+#. module: l10n_eg_vat
+#: model:ir.model,name:l10n_eg_vat.model_account_move_line_tax
+msgid "account.move.line.tax"
+msgstr "ضرائب الفواتير"

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="tna_report">
+        <t t-call="web.html_container">
+            <t t-call="web.internal_layout">
+                <t t-foreach="docs" t-as="o">
+                    <div class="page">
+                        <p style="page-break-after:always;"></p>
+                        <h2><t t-esc="o['tna'].name"/></h2>
+
+                        <div class="row mb16 mt32" id="informations">
+                            <div class="col-6">
+                                <strong>Planned Budget:</strong>
+                                <span class="m-2" t-field="o['tna'].planned_budget"/>
+                            </div>
+
+                            <div class="col-6">
+                                <strong>Course Budget(internal):</strong>
+                                <span class="m-2" t-field="o['tna'].internal_budget"/>
+                            </div>
+                        </div>
+
+                        <div class="row mb32 mt16" id="informations">
+                            <div class="col-6">
+                                <strong>Approved Budget :</strong>
+                                <span class="m-2" t-field="o['tna'].approved_budget"/>
+                            </div>
+
+                            <div class="col-6">
+                                <strong>Course Budget(External):</strong>
+                                <span class="m-2" t-field="o['tna'].external_budget"/>
+                            </div>
+                        </div>
+                        <table class="table table-sm table-bordered" style="">
+                            <thead class="text-center">
+                                <tr>
+                                    <th rowspan="2" style="vertical-align: middle;">Job</th>
+                                    <th rowspan="2" style="vertical-align: middle;">Course</th>
+                                    <th rowspan="2" style="vertical-align: middle;">Provider</th>
+                                    <th rowspan="2" style="vertical-align: middle;">Type</th>
+                                    <th colspan="2">Number Of Participants</th>
+                                    <th colspan="3">Budget </th>
+                                </tr>
+                                <tr>
+                                    <th>Planned</th>
+                                    <th>Approved</th>
+                                    <th>Unit</th>
+                                    <th>Planned</th>
+                                    <th>Approved</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <t t-foreach="o['departments_groups']" t-as="dept_group">
+                                    <tr style="background-color: #dbd9d9; font-weight: bold;">
+                                        <td t-esc="dept_group.name" colspan="7"/>
+                                        <td t-esc="o['departments_groups'][dept_group]['planned_total_budget']"/>
+                                        <td t-esc="o['departments_groups'][dept_group]['approved_total_budget']"/>
+                                    </tr>
+                                    <t t-foreach="o['departments_groups'][dept_group]['lines']" t-as="line">
+                                        <tr>
+                                            <td><t t-esc="line.job_id.name"/></td>
+                                            <td><t t-esc="line.course_id.name"/></td>
+                                            <td><t t-esc="line.provider_id.partner_id.name"/></td>
+                                            <td><t t-esc="dict(line.provider_id.fields_get(allfields=['provider_type'])['provider_type']['selection'])[line.provider_id.provider_type]"/></td>
+                                            <td><t t-esc="line.no_of_participants"/></td>
+                                            <td><t t-esc="line.approved_no_of_participants"/></td>
+                                            <td><t t-esc="line.unit_budget"/></td>
+                                            <td><t t-esc="line.planned_budget"/></td>
+                                            <td><t t-esc="line.approved_budget"/></td>
+                                        </tr>
+                                    </t>
+                                </t>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

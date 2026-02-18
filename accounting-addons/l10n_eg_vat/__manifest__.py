@@ -1,0 +1,31 @@
+# pylint: skip-file
+{
+    'name': 'Egyptian VAT',
+    'summary': 'Egyptian VAT Taxation',
+    'author': "Eslam Abdelmaaboud, Hassan Ibrahim Ali, CORE B.P.O",
+    'website': "http://www.core-bpo.com",
+    'category': 'Localization',
+    # 'version': '0.1.0',
+    'license': 'AGPL-3',
+    'depends': [
+        'partner_legal_information',
+        'account_tax_group_type',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/ir_cron.xml',
+        'data/mail_template.xml',
+        'data/account_vat_tax_types.xml',
+        'views/account_move.xml',
+        'views/product_template.xml',
+        'views/account_vat_tax_types.xml',
+        'report/vat_sales_report.xml',
+        'report/vat_sales_report_grouped.xml',
+        'report/vat_monthly_report.xml',
+        'views/res_config_settings.xml',
+        'wizards/vat_close_report.xml',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

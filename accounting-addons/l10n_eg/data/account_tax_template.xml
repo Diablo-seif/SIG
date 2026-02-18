@@ -1,0 +1,1735 @@
+<odoo>
+
+    <!--sales taxes-->
+    <!--table-->
+    <record id="tax_template_sale_table_tax_5" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Table TAX - 5.00%</field>
+        <field name="description">Table TAX - 5.00%</field>
+        <field name="amount">5</field>
+        <field name="sequence">1</field>
+        <field name="include_base_amount">True</field>
+        <field name="type_tax_use">sale</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_sales_table_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received01'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received01'),
+            }),
+        ]"/>
+    </record>
+
+    <record id="tax_template_sale_table_tax_8" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Table TAX - 8.00%</field>
+        <field name="description">Table TAX - 8.00%</field>
+        <field name="amount">8</field>
+        <field name="sequence">2</field>
+        <field name="include_base_amount">True</field>
+        <field name="type_tax_use">sale</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_sales_table_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received02'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received02'),
+            }),
+        ]"/>
+    </record>
+
+    <record id="tax_template_sale_table_tax_10" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Table TAX - 10.00%</field>
+        <field name="description">Table TAX - 10.00%</field>
+        <field name="amount">10</field>
+        <field name="sequence">3</field>
+        <field name="include_base_amount">True</field>
+        <field name="type_tax_use">sale</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_sales_table_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received03'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received03'),
+            }),
+        ]"/>
+    </record>
+
+    <!--vat-->
+    <record id="tax_template_sale_vat_tax_14" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">VAT TAX - 14.00%</field>
+        <field name="description">VAT TAX - 14.00%</field>
+        <field name="amount">14</field>
+        <field name="sequence">4</field>
+        <field name="type_tax_use">sale</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_sales_vat"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received'),
+            }),
+        ]"/>
+    </record>
+
+    <record id="tax_template_sale_vat_tax_5" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">VAT TAX - 5.00%</field>
+        <field name="description">VAT TAX - 5.00%</field>
+        <field name="amount">5</field>
+        <field name="sequence">5</field>
+        <field name="type_tax_use">sale</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_sales_vat"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received05'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received05'),
+            }),
+        ]"/>
+    </record>
+
+    <record id="tax_template_sale_tax_exports_0" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Tax on Exports - 0%</field>
+        <field name="description">Tax on Exports - 0%</field>
+        <field name="amount">0</field>
+        <field name="sequence">6</field>
+        <field name="type_tax_use">sale</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_sales_vat"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received06'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received06'),
+            }),
+        ]"/>
+    </record>
+
+    <!--withholding-->
+    <!--1-->
+    <record id="tax_template_withholding_contracting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Contracting Withholding TAX</field>
+        <field name="description">Contracting Withholding TAX</field>
+        <field name="amount">-1</field>
+        <field name="sequence">7</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--2-->
+    <record id="tax_template_withholding_supply_1" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Supply Withholding TAX - 1.00%</field>
+        <field name="description">Supply Withholding TAX - 1.00%</field>
+        <field name="amount">-1</field>
+        <field name="sequence">7</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--3-->
+    <record id="tax_template_withholding_purchases"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Purchases Withholding TAX</field>
+        <field name="description">Purchases Withholding TAX</field>
+        <field name="amount">-1</field>
+        <field name="sequence">7</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--4-->
+    <record id="tax_template_withholding_service_3"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Service Withholding TAX - 3.00%</field>
+        <field name="description">Service Withholding TAX - 3.00%</field>
+        <field name="amount">-3</field>
+        <field name="sequence">7</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--5-->
+    <record id="tax_template_withholding_cooperation_associations"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">The amounts paid by the cooperation associations for
+            transportation by car... Withholding TAX
+        </field>
+        <field name="description">The amounts paid by the cooperation
+            associations for
+            transportation by car... Withholding TAX
+        </field>
+        <field name="amount">-1</field>
+        <field name="sequence">7</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--6-->
+    <record id="tax_template_withholding_brokerage"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Agency Commission and Brokerage Withholding TAX
+        </field>
+        <field name="description">Agency Commission and Brokerage Withholding
+            TAX
+        </field>
+        <field name="amount">-5</field>
+        <field name="sequence">7</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--7-->
+    <record id="tax_template_withholding_smoke_fertilizer"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Discounts, grants, commissions and exceptional
+            incentives granted by smoke and fertilizer companies - Withholding
+            TAX
+        </field>
+        <field name="description">Discounts, grants, commissions and exceptional
+            incentives granted by smoke and fertilizer companies - Withholding
+            TAX
+        </field>
+        <field name="amount">-5</field>
+        <field name="sequence">7</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--8-->
+    <record id="tax_template_withholding_oil_discounts"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">All discounts, grants and commissions granted by oil
+            companies to their distributors - Withholding TAX
+        </field>
+        <field name="description">All discounts, grants and commissions granted
+            by oil companies to their distributors - Withholding TAX
+        </field>
+        <field name="amount">-2</field>
+        <field name="sequence">7</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--9-->
+    <record id="tax_template_withholding_exports" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Export subsidies granted by the Export Development
+            Fund to the exporter as of 27-5-2013 - Withholding TAX
+        </field>
+        <field name="description">Export subsidies granted by the Export
+            Development Fund to the exporter as of 27-5-2013 - Withholding TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">7</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--10-->
+    <record id="tax_template_withholding_professional_5"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Professional service Withholding TAX - 5.00%</field>
+        <field name="description">Professional service Withholding TAX - 5.00%
+        </field>
+        <field name="amount">-5</field>
+        <field name="sequence">8</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--11-->
+    <record id="tax_template_withholding_licenses_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Licenses Collecting Withholding TAX</field>
+        <field name="description">Licenses Collecting Withholding TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">8</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--12-->
+    <record id="tax_template_withholding_customs_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Customs Collecting Withholding TAX</field>
+        <field name="description">Customs Collecting Withholding TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">8</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--13-->
+    <record id="tax_template_withholding_slaughters_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Slaughters Collecting Withholding TAX</field>
+        <field name="description">Slaughters Collecting Withholding TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">8</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--14-->
+    <record id="tax_template_withholding_traffic_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Traffic Collecting Withholding TAX</field>
+        <field name="description">Traffic Collecting Withholding TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">8</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--15-->
+    <record id="tax_template_withholding_courts_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Courts Collecting from lawyers Withholding TAX
+        </field>
+        <field name="description">Courts Collecting from lawyers Withholding TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">8</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--16-->
+    <record id="tax_template_withholding_hospitals_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Hospitals Collecting from Doctors Withholding TAX
+        </field>
+        <field name="description">Hospitals Collecting from Doctors Withholding
+            TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">8</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--17-->
+    <record id="tax_template_withholding_customs_clearance"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Customs Clearance Withholding TAX</field>
+        <field name="description">Customs Clearance Withholding TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">8</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">withholding</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_withholding_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_withholding_tax'),
+            }),
+        ]"/>
+    </record>
+
+    <!-- exemption -->
+    <record id="tax_template_sale_tax_exemption" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Tax Exemption</field>
+        <field name="description">Tax Exemption</field>
+        <field name="amount">0</field>
+        <field name="amount_type">fixed</field>
+        <field name="sequence">10</field>
+        <field name="type_tax_use">sale</field>
+        <field name="tax_group_id" ref="account.tax_group_taxes"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets17'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets17'),
+            }),
+        ]"/>
+    </record>
+    <!--purchases taxes-->
+
+    <!--table-->
+    <record id="tax_template_purchase_table_tax_5" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Table TAX - 5.00%</field>
+        <field name="description">Table TAX - 5.00%</field>
+        <field name="amount">5</field>
+        <field name="sequence">11</field>
+        <field name="include_base_amount">True</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_purchase_table_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets12'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets12'),
+            }),
+        ]"/>
+    </record>
+
+    <record id="tax_template_purchase_table_tax_8" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Table TAX - 8.00%</field>
+        <field name="description">Table TAX - 8.00%</field>
+        <field name="amount">8</field>
+        <field name="sequence">12</field>
+        <field name="include_base_amount">True</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_purchase_table_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets13'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets13'),
+            }),
+        ]"/>
+    </record>
+
+    <record id="tax_template_purchase_table_tax_10"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Table TAX - 10.00%</field>
+        <field name="description">Table TAX - 10.00%</field>
+        <field name="amount">10</field>
+        <field name="sequence">13</field>
+        <field name="include_base_amount">True</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_purchase_table_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets14'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets14'),
+            }),
+        ]"/>
+    </record>
+
+    <!--vat-->
+    <record id="tax_template_purchase_vat_tax_14" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">VAT TAX - 14.00%</field>
+        <field name="description">VAT TAX - 14.00%</field>
+        <field name="amount">14</field>
+        <field name="sequence">14</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_purchase_vat"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_paid'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_paid'),
+            }),
+        ]"/>
+    </record>
+
+    <record id="tax_template_purchase_vat_tax_5" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">VAT TAX - 5.00%</field>
+        <field name="description">VAT TAX - 5.00%</field>
+        <field name="amount">5</field>
+        <field name="sequence">15</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_purchase_vat"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets15'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets15'),
+            }),
+        ]"/>
+    </record>
+
+    <record id="tax_template_purchase_tax_exports_0"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Tax on Exports - 0%</field>
+        <field name="description">Tax on Exports - 0%</field>
+        <field name="amount">0</field>
+        <field name="sequence">16</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_purchase_vat"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets16'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('current_assets16'),
+            }),
+        ]"/>
+    </record>
+
+    <!--deduction-->
+    <!--1-->
+    <record id="tax_template_deduction_contracting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Contracting Deduction TAX</field>
+        <field name="description">Contracting Deduction TAX</field>
+        <field name="amount">-1</field>
+        <field name="sequence">17</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="1"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--2-->
+    <record id="tax_template_deduction_supply_1" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Supply Deduction TAX - 1.00%</field>
+        <field name="description">Supply Deduction TAX - 1.00%</field>
+        <field name="amount">-1</field>
+        <field name="sequence">17</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="deduction_code" eval="2"/>
+        <field name="active">0</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--3-->
+    <record id="tax_template_deduction_purchases" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Purchases Deduction TAX</field>
+        <field name="description">Purchases Deduction TAX</field>
+        <field name="amount">-1</field>
+        <field name="sequence">17</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="3"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--4-->
+    <record id="tax_template_deduction_service_3" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Service Deduction TAX - 3.00%</field>
+        <field name="description">Service Deduction TAX - 3.00%</field>
+        <field name="amount">-3</field>
+        <field name="sequence">19</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="deduction_code" eval="4"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--5-->
+    <record id="tax_template_deduction_cooperation_associations"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">The amounts paid by the cooperation associations for
+            transportation by car... Deduction TAX
+        </field>
+        <field name="description">The amounts paid by the cooperation
+            associations for
+            transportation by car... Deduction TAX
+        </field>
+        <field name="amount">-1</field>
+        <field name="sequence">17</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="5"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--6-->
+    <record id="tax_template_deduction_brokerage" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Agency Commission and Brokerage Deduction TAX</field>
+        <field name="description">Brokerage Deduction TAX</field>
+        <field name="amount">-5</field>
+        <field name="sequence">17</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="6"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--7-->
+    <record id="tax_template_deduction_smoke_fertilizer"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Discounts, grants, commissions and exceptional
+            incentives granted by smoke and fertilizer companies - Deduction TAX
+        </field>
+        <field name="description">Discounts, grants, commissions and exceptional
+            incentives granted by smoke and fertilizer companies - Deduction TAX
+        </field>
+        <field name="amount">-5</field>
+        <field name="sequence">17</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="7"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--8-->
+    <record id="tax_template_deduction_oil_discounts"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">All discounts, grants and commissions granted by oil
+            companies to their distributors - Deduction TAX
+        </field>
+        <field name="description">All discounts, grants and commissions granted
+            by oil companies to their distributors - Deduction TAX
+        </field>
+        <field name="amount">-2</field>
+        <field name="sequence">17</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="8"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--9-->
+    <record id="tax_template_deduction_exports" model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Export subsidies granted by the Export Development
+            Fund to the exporter as of 27-5-2013 - Deduction TAX
+        </field>
+        <field name="description">Export subsidies granted by the Export
+            Development Fund to the exporter as of 27-5-2013 - Deduction TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">17</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="9"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--10-->
+    <record id="tax_template_deduction_professional_5"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Professional service Deduction TAX - 5.00%</field>
+        <field name="description">Professional service Deduction TAX - 5.00%
+        </field>
+        <field name="amount">-5</field>
+        <field name="sequence">17</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="deduction_code" eval="10"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--11-->
+    <record id="tax_template_deduction_licenses_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Licenses Collecting Deduction TAX</field>
+        <field name="description">Licenses Collecting Deduction TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">17</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="deduction_code" eval="11"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--12-->
+    <record id="tax_template_deduction_customs_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Customs Collecting Deduction TAX</field>
+        <field name="description">Customs Collecting Deduction TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">17</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="12"/>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--13-->
+    <record id="tax_template_deduction_slaughters_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Slaughters Collecting Deduction TAX</field>
+        <field name="description">Slaughters Collecting Deduction TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">17</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="13"/>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--14-->
+    <record id="tax_template_deduction_traffic_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Traffic Collecting Deduction TAX</field>
+        <field name="description">Traffic Collecting Deduction TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">17</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="14"/>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--15-->
+    <record id="tax_template_deduction_courts_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Courts Collecting from lawyers Deduction TAX
+        </field>
+        <field name="description">Courts Collecting from lawyers Deduction TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">17</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="15"/>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--16-->
+    <record id="tax_template_deduction_hospitals_collecting"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Hospitals Collecting from Doctors Deduction TAX
+        </field>
+        <field name="description">Hospitals Collecting from Doctors Deduction
+            TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">17</field>
+        <field name="active">0</field>
+        <field name="deduction_code" eval="16"/>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+    <!--17-->
+    <record id="tax_template_deduction_customs_clearance"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Customs Clearance Deduction TAX</field>
+        <field name="description">Customs Clearance Deduction TAX
+        </field>
+        <field name="amount">0</field>
+        <field name="sequence">17</field>
+        <field name="active">0</field>
+        <field name="type_tax_deduction">deduction</field>
+        <field name="tax_type">tax_withholding</field>
+        <field name="deduction_code" eval="17"/>
+        <field name="tax_group_id" ref="account_tax_group_type.account_tax_group_deduction_tax"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('account_deduction_tax'),
+            }),
+        ]"/>
+    </record>
+
+    <!-- exemption -->
+    <record id="tax_template_purchase_tax_exemption"
+            model="account.tax.template">
+        <field name="chart_template_id" ref="l10n_eg_account_chart_template"/>
+        <field name="name">Tax Exemption</field>
+        <field name="description">Tax Exemption</field>
+        <field name="amount">0</field>
+        <field name="amount_type">fixed</field>
+        <field name="sequence">20</field>
+        <field name="type_tax_use">purchase</field>
+        <field name="tax_group_id" ref="account.tax_group_taxes"/>
+        <field name="invoice_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received07'),
+            }),
+        ]"/>
+        <field name="refund_repartition_line_ids" eval="[(5, 0, 0),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'base',
+            }),
+            (0,0, {
+                'factor_percent': 100,
+                'repartition_type': 'tax',
+                'account_id': ref('tax_received07'),
+            }),
+        ]"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="area_res_country_state_form" model="ir.ui.view">
+        <field name="name">inherit.res.country.state.form</field>
+        <field name="model">res.country.state</field>
+        <field name="inherit_id" ref="base.view_country_state_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="after">
+                <notebook>
+                    <page string="Areas">
+                        <field name="area_ids">
+                            <list editable="bottom">
+                                <field name="name"/>
+                            </list>
+                        </field>
+                    </page>
+                    <page string="Insurance Office" groups="l10n_eg_social_insurance.group_social_insurance_manager">
+                        <field name="insurance_office_ids">
+                            <list editable="bottom">
+                                <field name="name"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

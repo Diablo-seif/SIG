@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_job_level_tree" model="ir.ui.view">
+        <field name="name">hr.job.level.tree</field>
+        <field name="model">hr.job.level</field>
+        <field name="arch" type="xml">
+            <list editable="bottom" default_order="code,name">
+                <field name="code" widget="handle"/>
+                <field name="level"/>
+                <field name="name"/>
+                <field name="schema"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+
+    <record id="hr_job_level_action" model="ir.actions.act_window">
+        <field name="name">Job Levels</field>
+        <field name="res_model">hr.job.level</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="hr_job_level_menu"
+              name="Job Levels"
+              groups="base.group_no_one,hr.group_hr_manager"
+              action="hr_job_level_action"
+              parent="hr.menu_human_resources_configuration"
+              sequence="4"/>
+
+</odoo>

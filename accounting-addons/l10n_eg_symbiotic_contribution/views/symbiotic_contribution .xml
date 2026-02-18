@@ -1,0 +1,41 @@
+<odoo>
+    <record id="symbiotic_contribution_action" model="ir.actions.act_window">
+        <field name="name">Symbiotic Contribution</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">symbiotic.contribution</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+    <record id="symbiotic_contribution_tree" model="ir.ui.view">
+        <field name="name">symbiotic.contribution.tree</field>
+        <field name="model">symbiotic.contribution</field>
+        <field name="arch" type="xml">
+            <list create="0" edit="0" delete="0" >
+                <field name="year"/>
+                <field name="percentage"/>
+                <field name="revenue"/>
+                <field name="symbiotic_contribution_amount"/>
+            </list>
+        </field>
+    </record>
+    <record id="symbiotic_contribution_form" model="ir.ui.view">
+        <field name="name">symbiotic.contribution.form</field>
+        <field name="model">symbiotic.contribution</field>
+        <field name="arch" type="xml">
+            <form create="0" edit="0" delete="0">
+                <sheet>
+                    <group>
+                        <field name="year"/>
+                        <field name="percentage"/>
+                        <field name="revenue"/>
+                        <field name="symbiotic_contribution_amount"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <menuitem id="menuitem_symbiotic_contribution_report"
+              name="Symbiotic Contribution"
+              parent="account.account_reports_management_menu"
+              action="symbiotic_contribution_action" sequence="1"/>
+</odoo>

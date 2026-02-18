@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_compute_attendance_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.compute.attendance.tree.inherit</field>
+        <field name="model">hr.compute.attendance</field>
+        <field name="inherit_id"
+               ref="hr_compute_attendance.view_hr_compute_attendance_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='state']" position="before">
+                <field name="progress" widget="progressbar"/>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="view_hr_compute_attendance_form_inherit" model="ir.ui.view">
+        <field name="name">hr.compute.attendance.form.inherit</field>
+        <field name="model">hr.compute.attendance</field>
+        <field name="inherit_id"
+               ref="hr_compute_attendance.view_hr_compute_attendance_form"/>
+        <field name="arch" type="xml">
+
+            <button name="action_compute" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </button>
+            <button name="action_compute" position="after">
+                <button name="action_progress"
+                        string="Schedule Actions To Progress"
+                        class="oe_highlight" states="draft" type="object"/>
+                <button name="action_re_progress"
+                        string="Re-Schedule All Actions To Progress"
+                        class="oe_highlight" states="in_progress,done"
+                        type="object"/>
+                <button name="action_failed_progress"
+                        string="Re-Schedule Failed Actions To Progress"
+                        class="oe_highlight" states="in_progress"
+                        type="object"/>
+            </button>
+            <button name="open_compute_lines" position="attributes">
+                <attribute name="context">{'search_default_pending': 1,
+                    'search_default_enqueued': 1,
+                    'search_default_started': 1,
+                    'search_default_failed': 1}
+                </attribute>
+            </button>
+
+            <xpath expr="//button[@name='open_compute_lines']" position="before">
+                <button name="open_compute_lines" type="object"
+                        invisible="state in 'draft'"
+                        class="oe_inline oe_stat_button"
+                        context="{'search_default_done': 1}">
+<!--                        attrs="{'invisible': [('state', 'in', ('draft'))]}"-->
+
+                    <field name="done_count" string="Done"
+                           widget="percentpie"/>
+                </button>
+
+                <button name="open_compute_lines" type="object"
+                        invisible="state in draft]}"
+                        class="oe_inline oe_stat_button"
+                        context="{'search_default_failed': 1}">
+<!--                        attrs="{'invisible': [('state', 'in', ('draft'))]}"-->
+                    <field name="failed_count" string="Failed"
+                           widget="percentpie"/>
+
+                </button>
+
+                <button name="open_compute_lines" type="object"
+                        invisible="state in draft]}"
+                        class="oe_inline oe_stat_button"
+                        context="{'search_default_pending': 1,
+                            'search_default_enqueued': 1,
+                            'search_default_started': 1}">
+<!--                        attrs="{'invisible': [('state', 'in', ('draft'))]}"-->
+                    <field name="progress_count" string="Progress"
+                           widget="percentpie"/>
+
+                </button>
+
+            </xpath>
+
+            <xpath expr="//field[@name='compute_ids']/list"
+                   position="attributes">
+                <attribute name="decoration-danger">state == 'failed'</attribute>
+                <attribute name="decoration-warning">state == 'pending'</attribute>
+                <attribute name="decoration-info">state == 'enqueued'</attribute>
+                <attribute name="decoration-bf">state == 'started'</attribute>
+                <attribute name="decoration-success">state == 'done'</attribute>
+            </xpath>
+            <xpath expr="//field[@name='compute_ids']/list//button[@name='compute_line']"
+                   position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//field[@name='compute_ids']/list//field[@name='last_computed']"
+                   position="after">
+                <field name="state"/>
+                <button name="re_progress"
+                        string="Re-Schedule"
+                        type="object"/>
+            </xpath>
+
+            <xpath expr="//field[@name='compute_ids']/form//field[@name='sum_absent_penalty_value']"
+                   position="after">
+                <field name="queue_job_id" readonly="1"/>
+                <field name="state" readonly="1"/>
+                <field name="exc_info"/>
+            </xpath>
+
+        </field>
+    </record>
+
+
+</odoo>

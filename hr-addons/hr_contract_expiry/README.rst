@@ -1,0 +1,21 @@
+.. class:: text-left
+
+HR Contract Expiry
+==================
+
+Features
+--------
+
+#. Add filter to contract with expiration date
+#. Mark Contracts before date end comes
+
+.. class:: text-left
+
+Credits
+-------
+
+.. |copy| unicode:: U+000A9 .. COPYRIGHT SIGN
+.. |tm| unicode:: U+2122 .. TRADEMARK SIGN
+
+- `Hashem Aly <hashem.aly@core-bpo.com>`_ |copy|
+  `CORE B.P.O <http://www.core-bpo.com>`_ |tm| 2020

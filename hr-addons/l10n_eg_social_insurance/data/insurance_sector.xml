@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="governmental_sector" model="insurance.sector" >
+        <field name="name">Governmental sector / livelihood</field>
+    </record>
+
+    <record id="public_sector" model="insurance.sector" >
+        <field name="name">Public sector / pension for others</field>
+    </record>
+
+    <record id="private_sector" model="insurance.sector" >
+        <field name="name">Private sector</field>
+    </record>
+
+    <record id="contracting_sector" model="insurance.sector" >
+        <field name="name">Contracting sector</field>
+    </record>
+
+    <record id="drivers_sector" model="insurance.sector" >
+        <field name="name">Drivers sector</field>
+    </record>
+
+    <record id="bakery_sector" model="insurance.sector" >
+        <field name="name">Bakery sector</field>
+    </record>
+
+    <record id="abroad_sector" model="insurance.sector" >
+        <field name="name">Workers abroad sector</field>
+    </record>
+
+    <record id="business_sector" model="insurance.sector" >
+        <field name="name">Business sector</field>
+    </record>
+
+    <record id="free_professions_sector" model="insurance.sector" >
+        <field name="name">Free professions sector</field>
+    </record>
+
+</odoo>

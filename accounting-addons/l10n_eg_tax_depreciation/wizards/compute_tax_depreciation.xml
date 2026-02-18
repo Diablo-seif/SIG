@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="compute_tax_depreciation_view_form" model="ir.ui.view">
+        <field name="name">compute.tax.depreciation.form</field>
+        <field name="model">compute.tax.depreciation</field>
+        <field name="arch" type="xml">
+            <form string="Compute tax deprecation for tax category">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="recalculate" readonly="1"
+                                   force_save="1"/>
+                            <field name="compute_all"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_compute" string="Compute"
+                            type="object"/>
+                    <button string="Cancel" class="btn btn-default"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

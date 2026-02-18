@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="enroll_form_layout_assets">
+        <link rel="stylesheet"
+              href="/hr_insurance_enroll_form/static/src/css/layout_style.css"/>
+        <script type="text/javascript"
+                src="/hr_insurance_enroll_form/static/src/js/helpers.js"/>
+    </template>
+
+    <template id="enroll_form_layout">
+        <div class="header" dir="rtl">
+            <t t-call="hr_insurance_enroll_form.enroll_form_layout_assets"/>
+            <div class="border-bottom border-dark row"
+                 style="margin-bottom: 10px;padding-bottom: 10px;">
+                <table class="col-12">
+                    <tbody>
+                        <tr>
+                            <td width="30%"
+                                style="visibility: hidden;"/>
+                            <td width="40%" rowspan="4">
+                                <div class="col-12 text-center">
+                                    <img src="/hr_insurance_enroll_form/static/src/img/insurance.jpg"
+                                         width="90px" height="90px"/>
+                                </div>
+                            </td>
+                            <td width="70%"
+                                style="visibility: hidden;"/>
+                        </tr>
+                        <tr align="right">
+                            <td>
+                                <div class="font-weight-bold">
+                                    National Authority for Insurance
+                                </div>
+                            </td>
+                            <td align="left">
+                                Model No. (
+                                <t t-esc="o.form_number or ' .....'"/>
+                                ) Ministerial Decree No. (
+                                <t t-esc="o.ministerial_decree_number or ' .....'"/>
+                                ) of
+                                <t t-esc="o.ministerial_decree_year or ' .....'"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="right">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <div class="font-weight-bold d-inline">
+                                            Area :
+                                        </div>
+                                        <span t-esc="o.insurance_office_id.area_id.name or o.company_id.insurance_office_id.area_id.name or ' .................'"/>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 ">
+                                        <div class="font-weight-bold d-inline">
+                                            Office :
+                                        </div>
+                                        <span t-esc="o.insurance_office_id.name or o.company_id.insurance_office_id.name or ' .................'"/>
+                                    </div>
+                                </div>
+                            </td>
+                            <td align="left">
+                                <div class="d-inline">
+                                    Facility Number
+                                </div>
+                                <div class="d-inline">
+                                    <t t-foreach="8" t-as="digit">
+                                        <span t-if="len(str((o.company_insurance_number or o.company_id.company_insurance_number or 0))) > digit"
+                                              class="border border-dark text-center pl-2 pr-2"
+                                              style="font-size:90%"
+                                              t-esc="str((o.company_insurance_number or o.company_id.company_insurance_number or 0))[::-1][digit]"/>
+                                        <span t-else=""
+                                              class="border border-dark text-center pl-2 pr-2"
+                                              style="font-size:90%"
+                                              t-esc="'0'"/>
+                                    </t>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="row" align="center">
+                <div class="col-12 font-weight-bold">
+                    Facility Subscription Application
+                </div>
+            </div>
+            <div class="row" align="center">
+                <div class="col-12 font-weight-bold">
+                    Or notification of modifying the data of the insured
+                    and their wages in
+                    <t t-esc="o.form_date and o.form_date.strftime('%Y/%m/%d') or ' ..... .... ....'"
+                       style="letter-spacing: 4px;"/>
+                </div>
+            </div>
+
+            <div class="container font-weight-bold" align="right">
+                <div class="row">
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Facility name :
+                            </label>
+                            <t t-esc="o.insurance_name or o.company_id.insurance_name or ' .....................................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Owner / Responsible Manager :
+                            </label>
+                            <t t-esc="o.insurance_owner or o.company_id.insurance_owner or ' ......................................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Legal firm of the facility :
+                            </label>
+                            <t t-esc="o.legal_firm_id.name or o.company_id.legal_firm_id.name or ' ................'"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Facility address :
+                            </label>
+                            <label class="col-form-label">
+                                Building number :
+                            </label>
+                            <t t-esc="o.company_id.building_number or ' ........'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">Street :</label>
+                            <t t-esc="o.company_id.insurance_street or ' ............................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">Village :</label>
+                            <t t-esc="o.company_id.insurance_city or ' .................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">Police center :
+                            </label>
+                            <t t-esc="o.company_id.area or ' .................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">State :</label>
+                            <t t-esc="o.company_id.insurance_state or ' .................'"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Disease insurance ratio :
+                            </label>
+                            <t t-esc="' .....................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                The date the ratio began :
+                            </label>
+                            <t t-esc="' .....................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Injury insurance ratio :
+                            </label>
+                            <t t-esc="' .....................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                The date the ratio began :
+                            </label>
+                            <t t-esc="' .....................'"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Stop / continue date :
+                            </label>
+                            <t t-esc="' ..... .... ....'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">Stop reason :</label>
+                            <t t-esc="' .........................................................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Activity start date :
+                            </label>
+                            <t style="letter-spacing: 4px;"
+                               t-esc="o.start_date and o.start_date.strftime('%Y/%m/%d') or ' ..... .... ....'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Facility tax registration number :
+                            </label>
+                            <t dir="rtl" t-esc="o.company_id.vat or ' .................'"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="article" dir="rtl">
+            <t t-call="hr_insurance_enroll_form.enroll_form_layout_assets"/>
+            <t t-raw="0"/>
+        </div>
+        <div class="footer" dir="rtl">
+            <t t-call="hr_insurance_enroll_form.enroll_form_layout_assets"/>
+            <div class="container font-weight-bold" align="right">
+                <div class="row">
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">I acknowledge</label>
+                            <t t-esc="o.insurance_owner or ' .............................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">as</label>
+                            <t t-esc="o.insurance_owner_position or ' ....................................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                that the total number of the insured
+                            </label>
+                            <t t-esc="o.employees_count"/>
+                            <label t-if="total_employees_len &gt; 10"
+                                   class="col-form-label">Worker
+                            </label>
+                            <label t-else="" class="col-form-label">Workers
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label ml-1 mt-4">
+                                and this month's wages are :
+                            </label>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <table width="20%"
+                                   class="ml-2 pl-0 pr-0 text-center">
+                                <tr>
+                                    <td>Piaster</td>
+                                    <td>Pound</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <t t-esc="get_piaster(total_insured) or ' .........'"/>
+                                    </td>
+                                    <td>
+                                        <t t-esc="int(total_insured) or ' .........'"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label mt-4">
+                                and all data in this form and its attachments
+                                are correct
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Employer or responsible manager :
+                            </label>
+                            <t t-esc="' ..................................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                the data of this application were reviewed on
+                                the insured's applications and found to be
+                                correct
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Recipient of the form :
+                            </label>
+                            <t t-esc="' ....................................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Signature matched by :
+                            </label>
+                            <t t-esc="' ....................................'"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Subscription Specialist :
+                            </label>
+                            <t t-esc="' ....................................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Automatically recorded :
+                            </label>
+                            <t t-esc="' ....................................'"/>
+                        </div>
+                    </div>
+                    <div class="d-inline ml-2">
+                        <div class="form-group">
+                            <label class="col-form-label">
+                                Check back automatically :
+                            </label>
+                            <t t-esc="' ....................................'"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-9" align="right">
+                        Done in :
+                        <t t-esc="o.form_date and o.form_date.strftime('%Y/%m/%d') or ' ..... .... ....'"
+                           style="letter-spacing: 4px;"/>
+                    </div>
+                    <div class="col-3 hide-last-page" align="left">
+                        ( Look behind paper )
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+</odoo>

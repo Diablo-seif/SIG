@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="job_offer_mail_template_id" model="mail.template">
+        <field name="name">Job Offer</field>
+        <field name="email_from">${user.email_formatted | safe}</field>
+        <field name="email_to">${object.applicant_id.email_from | safe}</field>
+        <field name="subject">${object.applicant_id.job_id and object.applicant_id.job_id.name or ''} Job Offer</field>
+        <field name="model_id" ref="model_hr_job_offer"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="report_template" ref="job_offer_report"/>
+        <field name="report_name">${object.applicant_id.job_id and object.applicant_id.job_id.name or ''} Job Offer.pdf</field>
+        <field name="body_html">
+        <![CDATA[
+            <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+                <table cellspacing="0" cellpadding="0" style="width:600px;background:inherit;color:inherit">
+                    <tbody><tr>
+                        <td valign="center" width="200" style="padding:10px 10px 10px 5px;font-size: 12px">
+                            <img src="/logo.png" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${user.company_id and user.company_id.name}">
+                        </td>
+                    </tr></tbody>
+                </table>
+            </div>
+            <div style="padding:0px;width:600px;margin:auto;background: #FFFFFF repeat top /100%;color:#777777">
+                <p>Dear <b>${object.applicant_id.partner_name}</b>,</p>
+                <p>
+                    ${user.company_id and user.company_id.name} is delighted to offer you a ${object.applicant_id.job_id.contract_type_id and object.applicant_id.job_id.contract_type_id.name or ''} position as ${object.applicant_id.job_id and object.applicant_id.job_id.name or ''} <br/>
+                    with an anticipated start date ${object.applicant_id.availability and object.applicant_id.availability.strftime('%d,%b %Y') or ''}
+                </p>
+                <p>
+                    Please confirm your acceptance of this offer by signing and returning this letter before ${object.validity_date and object.validity_date.strftime('%d,%b %Y') or ''}.
+                </p>
+                <p>Best regards,</p>
+            </div>
+        ]]>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_income_tax" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.income.tax
+        </field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="taxcloud_settings" position="after">
+                <div class="col-12 col-lg-6 o_setting_box"
+                     id="income_tax_settings">
+                    <div class="o_setting_right_pane"
+                         name="account_income_tax_right_pane">
+                        <span class="o_form_label">Income Tax Settings</span>
+                        <div class="text-muted">
+                            Used to Generate Income Tax Reports and Entries
+                        </div>
+                        <div>
+                        <label for="income_tax_entry_from_account_id"
+                               string="Income Tax Entry From Account"/>
+                        <field name="income_tax_entry_from_account_id"/>
+                        </div>
+                        <div>
+                        <label for="income_tax_rounding"
+                               string="Income Tax Rounding "/>
+                        <field name="income_tax_rounding"/>
+                        </div>
+                        <div>
+                        <label for="income_tax_rounding_base"
+                               string="Income Tax Rounding Base"/>
+                        <field name="income_tax_rounding_base"/>
+                        </div>
+                        <div>
+                        <label for="base_after_losses_rounding"
+                               string="Base After Losses Rounding"/>
+                        <field name="base_after_losses_rounding"/>
+                        </div>
+                        <div>
+                        <label for="base_after_losses_rounding_base"
+                               string="Base After Losses Rounding Base"/>
+                        <field name="base_after_losses_rounding_base"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>

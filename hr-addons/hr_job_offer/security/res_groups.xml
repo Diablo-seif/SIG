@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="category_job_offer" model="ir.module.category" >
+        <field name="name">Job Offer</field>
+    </record>
+    
+    <record id="group_set_job_offer" model="res.groups">
+        <field name="name">Set Job Offer</field>
+        <field name="category_id" ref="category_job_offer"/>
+    </record>
+
+    <record id="group_generate_job_offer" model="res.groups">
+        <field name="name">Generate Job Offer</field>
+        <field name="category_id" ref="category_job_offer"/>
+        <field name="implied_ids" eval="[(4, ref('hr_job_offer.group_set_job_offer'))]"/>
+    </record>
+    
+    <record id="group_approve_job_offer" model="res.groups">
+        <field name="name">Approve Job Offer</field>
+        <field name="category_id" ref="category_job_offer"/>
+        <field name="implied_ids" eval="[(4, ref('hr_job_offer.group_set_job_offer'))]"/>
+    </record>
+
+</odoo>

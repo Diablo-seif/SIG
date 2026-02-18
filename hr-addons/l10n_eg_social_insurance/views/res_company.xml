@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="insurance_res_company_form" model="ir.ui.view">
+        <field name="name">insurance.res.company.form</field>
+        <field name="model">res.company</field>
+        <field name="inherit_id" ref="base.view_company_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Insurance Details">
+                    <group>
+                        <group>
+                            <field name="insurance_name"/>
+                            <field name="legal_firm_id"/>
+                            <field name="company_number"/>
+                            <field name="company_insurance_number"/>
+                            <field name="start_date"/>
+                        </group>
+                        <group>
+                            <field name="insurance_owner"/>
+                            <field name="insurance_owner_position"/>
+                            <field name="insurance_type"/>
+                            <field name="insurance_office_id"/>
+                            <field name="insurance_sector_ids"
+                                   widget="many2many_tags"/>
+                        </group>
+                        <group>
+                            <label for="street" string="Address"/>
+                            <div class="o_address_format">
+                                <field name="building_number" placeholder="Building Number" class="o_address_street"/>
+                                <field name="insurance_street" placeholder="Street..." class="o_address_street"/>
+                                <field name="insurance_street2" placeholder="Street 2..." class="o_address_street"/>
+                                <field name="area" placeholder="Area"/>
+                                <field name="insurance_city" placeholder="City" class="d-inline mr-2" style="width:32%"/>
+                                <field name="insurance_state" placeholder="State" class="d-inline mr-2" style="width:32%"/>
+                                <field name="insurance_zip" placeholder="ZIP" class="d-inline" style="width:32%"/>
+                                <field name="insurance_country" placeholder="Country" class="o_address_country"/>
+                            </div>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <menuitem id="insurance_menu"
+              name="Insurance Details"
+              groups="l10n_eg_social_insurance.group_social_insurance_manager"
+              parent="hr.menu_human_resources_configuration"/>
+
+</odoo>

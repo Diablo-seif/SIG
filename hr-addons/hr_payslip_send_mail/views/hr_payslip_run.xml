@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_payslip_run_form_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.run.form.inherit</field>
+        <field name="model">hr.payslip.run</field>
+        <field name="inherit_id" ref="hr_payroll.hr_payslip_run_form"/>
+        <field name="arch" type="xml">
+            <field name="state" position="before">
+                <button name="compute_payslips" type="object"
+                        groups="base.group_no_one"
+                        invisible="state in ['compute_progress','computed', 'confirm_progress', 'confirmed'] or  payslip_count = 0"
+                        string="Compute Payslips" class="oe_highlight"/>
+<!--                        attrs="{'invisible': ['|',('state', 'in', ('compute_progress','computed', 'confirm_progress', 'confirmed')),('payslip_count','=', 0)]}"-->
+                <button name="schedule_compute_batch" type="object"
+                        invisible="state in ['compute_progress','computed', 'confirm_progress', 'confirmed'] or  payslip_count = 0"
+                        string="Schedule Compute Payslips"/>
+<!--                        attrs="{'invisible': ['|',('state', 'in', ('compute_progress','computed', 'confirm_progress', 'confirmed')),('payslip_count','=', 0)]}"
+-->
+                <button name="re_schedule_all_compute_batch" type="object"
+
+                        invisible="state in ('compute_progress', 'confirm_progress', 'confirmed') or compute_progress = -1"
+                        string="Re-Schedule All Compute Payslips"/>
+
+                <button name="re_schedule_failed_compute_batch" type="object"
+                        invisible="state in ('draft','compute_progress', 'confirm_progress','confirmed') or compute_progress &lt; 0 or compute_progress = 100"
+                        string="Re-Schedule Failed Compute Payslips"/>
+
+
+                <button string="SEND BY EMAIL" name="action_send"
+                        invisible="mark_as_send = True or state != confirmed"
+                        type="object" class="oe_highlight"/>
+
+                <button name="action_confirm" type="object"
+                        groups="base.group_no_one"
+                        invisible="state in ('draft','compute_progress', 'confirm_progress', 'confirmed')"
+                        string="Confirm Payslips" class="oe_highlight"/>
+
+                <button name="schedule_batch_done" type="object"
+                        invisible="{'': [('state','in', ('draft','compute_progress', 'confirm_progress', 'confirmed'))]}"
+                        string="Schedule Confirm Payslips"/>
+
+                <button name="re_schedule_failed_batch_done" type="object"
+                        invisible="confirm_progress <  0 or confirm_progress == 100"
+                        string="Re-Schedule Failed Confirm Payslips"/>
+
+            </field>
+
+            <xpath expr="//field[@name='company_id']/.." position="after">
+                <group>
+                    <field name="compute_progress" widget="progressbar"/>
+                    <field name="confirm_progress" widget="progressbar"/>
+                    <field name="mark_as_send" readonly="1"
+                            invisible="mark_as_send == False"/>
+                </group>
+            </xpath>
+
+            <field name="name" position="attributes">
+                <attribute name="readonly">
+                    state == 'confirmed'
+                </attribute>
+            </field>
+            <field name="date_start" position="attributes">
+                <attribute name="readonly">
+                    state == 'confirmed'
+
+                </attribute>
+            </field>
+            <field name="date_end" position="attributes">
+                <attribute name="readonly">
+                    state == 'confirmed'
+                </attribute>
+            </field>
+
+        </field>
+    </record>
+
+</odoo>

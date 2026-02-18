@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hr_holidays_status_mission" model="hr.leave.type">
+        <field name="name">Mission</field>
+        <field name="category">mission</field>
+        <field name="color_name">blue</field>
+        <field name="request_unit">hour</field>
+        <field name="allocation_validation_type">no</field>
+    </record>
+
+</odoo>

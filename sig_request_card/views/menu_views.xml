@@ -1,0 +1,24 @@
+<odoo>
+
+    <menuitem id="menu_sig_request_cards_root" name="Request Cards" groups="group_access_request_card"
+              web_icon="sig_request_card,static/src/img/logo.png"/>
+
+    <menuitem id="menu_request_card" name="Requests" parent="menu_sig_request_cards_root"
+        action="action_sig_request_cards_view" />
+
+    <menuitem id="menu_sig_request_cards_config" name="Configuration"
+        parent="menu_sig_request_cards_root" />
+
+    <menuitem id="menu_associated_company" name="Companies" parent="menu_sig_request_cards_config"
+        action="action_sig_associated_company_view" />
+
+    <menuitem id="menu_jop_position" name="Job Position" parent="menu_sig_request_cards_config"
+        action="action_sig_job_position_view" />
+
+    <menuitem id="menu_jop_grade" name="Job Grade" parent="menu_sig_request_cards_config"
+        action="action_sig_job_grade_view" />
+
+    <menuitem id="menu_request_card_governorate" name="Governorate" parent="menu_sig_request_cards_config"
+        action="action_request_card_governorate_view" />
+
+</odoo>

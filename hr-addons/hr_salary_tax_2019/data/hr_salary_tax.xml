@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hr_salary_tax_2019" model="hr.salary.tax">
+        <field name="exemption" eval="7000"/>
+        <field name="rounding" eval="10"/>
+        <field name="rounding_method">ceil</field>
+        <field name="date_from" eval="time.strftime('2019-7-01')"/>
+        <field name="date_to" eval="time.strftime('2020-6-30')"/>
+    </record>
+
+    <record id="hr_salary_tax_2019_line_1" model="hr.salary.tax.line">
+        <field name="level" eval="1"/>
+        <field name="salary_from" eval="0"/>
+        <field name="salary_to" eval="8000"/>
+        <field name="tax_percentage" eval="0"/>
+        <field name="refund_percentage" eval="0"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2019"/>
+    </record>
+
+    <record id="hr_salary_tax_2019_line_2" model="hr.salary.tax.line">
+        <field name="level" eval="2"/>
+        <field name="salary_from" eval="8000"/>
+        <field name="salary_to" eval="30000"/>
+        <field name="tax_percentage" eval="10"/>
+        <field name="refund_percentage" eval="85"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2019"/>
+    </record>
+
+    <record id="hr_salary_tax_2019_line_3" model="hr.salary.tax.line">
+        <field name="level" eval="3"/>
+        <field name="salary_from" eval="30000"/>
+        <field name="salary_to" eval="45000"/>
+        <field name="tax_percentage" eval="15"/>
+        <field name="refund_percentage" eval="45"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2019"/>
+    </record>
+
+    <record id="hr_salary_tax_2019_line_4" model="hr.salary.tax.line">
+        <field name="level" eval="4"/>
+        <field name="salary_from" eval="45000"/>
+        <field name="salary_to" eval="200000"/>
+        <field name="tax_percentage" eval="20"/>
+        <field name="refund_percentage" eval="7.5"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2019"/>
+    </record>
+
+    <record id="hr_salary_tax_2019_line_5" model="hr.salary.tax.line">
+        <field name="level" eval="5"/>
+        <field name="salary_from" eval="200000"/>
+        <field name="salary_to" eval="999999999999"/>
+        <field name="tax_percentage" eval="22.5"/>
+        <field name="refund_percentage" eval="0"/>
+        <field name="salary_tax_id" ref="hr_salary_tax_2019"/>
+    </record>
+
+</odoo>

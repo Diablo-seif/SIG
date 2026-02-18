@@ -1,0 +1,45 @@
+<odoo>
+
+    <record id="loan_config_settings_form" model="ir.ui.view">
+        <field name="name">loan.config.settings.form</field>
+        <field name="model">loan.config.settings</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="company_id" invisible="1"/>
+                            <label for="loan_max">Loan Max</label>
+                            <div class="o_row">
+                                <field name="loan_type"/>
+                                <field name="loan_max"
+                                       required="loan_type != False"/>
+                                <!--                                       attrs="{'required': [('loan_type', '!=', False)]}"/>-->
+                            </div>
+                            <field name="loan_max_months"/>
+                            <field name="loan_contract_months"/>
+                            <field name="loan_allow_multiple"/>
+                            <field name="loan_approve"/>
+                            <field name="loan_hr_user_id" required="1"/>
+                            <field name="loan_journal_id" required="1" domain="[('type', '=', 'general')]"/>
+                            <field name="loan_account_id" required="1"/>
+                        </group>
+                    </group>
+                    <footer>
+                        <button string="Save" class="oe_highlight"
+                                special="save"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="loan_config_settings_action" model="ir.actions.act_window">
+        <field name="name">Loan Config Settings</field>
+        <field name="res_model">loan.config.settings</field>
+        <field name="target">new</field>
+        <field name="view_mode">form</field>
+    </record>
+
+</odoo>

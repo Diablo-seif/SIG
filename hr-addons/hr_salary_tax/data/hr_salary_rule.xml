@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+        <record id="non_taxable_salary_rule" model="hr.salary.rule">
+            <field name="name">Non Taxable</field>
+            <field name="sequence">170</field>
+            <field name="code">NNTXBL</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.full_time_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result=categories.NNTXBL
+            </field>
+        </record>
+
+        <record id="net_before_tax_salary_rule" model="hr.salary.rule">
+            <field name="name">Net Before Tax</field>
+            <field name="sequence">150</field>
+            <field name="code">NBT</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.full_time_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result=categories.TXBL
+            </field>
+        </record>
+
+        <record id="tax_salary_rule" model="hr.salary.rule">
+            <field name="name">Tax</field>
+            <field name="sequence">155</field>
+            <field name="code">TAX</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.full_time_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+amount=NBT
+tax=employee.env['hr.salary.tax']._get_employee_taxes(payslip=payslip, salary_code='NBT', taxable_amount=amount, average=False)
+result=tax
+
+# :param payslip: Current payslip
+# :param salary_code: Taxable salary rule code in s.structure
+# :param taxable_amount: Current taxable amount
+# :param average: (Boolean) get tax based on tax average
+# :return: Tax amount
+            </field>
+        </record>
+
+        <record id="unreconciled_tax_salary_rule" model="hr.salary.rule">
+            <field name="name">Unreconciled Tax</field>
+            <field name="sequence">156</field>
+            <field name="code">URECTAX</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.full_time_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+amount=NBT
+tax=employee.env['hr.salary.tax']._get_employee_taxes(payslip=payslip, salary_code='NBT', taxable_amount=amount, average=True)
+result=tax
+
+# :param payslip: Current payslip
+# :param salary_code: Taxable salary rule code in s.structure
+# :param taxable_amount: Current taxable amount
+# :param average: (Boolean) get tax based on tax average
+# :return: Tax amount
+            </field>
+        </record>
+
+        <record id="tax_reconciliation_salary_rule" model="hr.salary.rule">
+            <field name="name">Tax Reconciliation</field>
+            <field name="sequence">160</field>
+            <field name="code">TAXREC</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.full_time_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+try:
+    amount=URECTAX
+    tax = employee.env['hr.salary.tax']._get_employee_taxes_reconcile(payslip=payslip, tax_code='URECTAX', tax_reconcile_code='TAXREC', tax_amount=amount)
+    result=tax
+except:
+    result = 0
+
+# :param payslip: Current payslip
+# :param tax_code: Tax rule code in s.structure
+# :param tax_reconcile_code: Tax reconcile rule code in s.structure
+# :param tax_amount: Current payslip tax amount
+# :return: Tax reconcile amount
+            </field>
+        </record>
+
+        <record id="practical_tax_salary_rule" model="hr.salary.rule">
+            <field name="name">Practical Tax</field>
+            <field name="sequence">165</field>
+            <field name="code">PTAX</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.full_time_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result=URECTAX + TAXREC
+            </field>
+        </record>
+
+        <record id="due_tax_salary_rule" model="hr.salary.rule">
+            <field name="name">Due Tax</field>
+            <field name="sequence">166</field>
+            <field name="code">DTAX</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.full_time_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result=PTAX - TAX
+            </field>
+        </record>
+
+        <record id="owner_non_taxable_salary_rule" model="hr.salary.rule">
+            <field name="name">Non Taxable</field>
+            <field name="sequence">170</field>
+            <field name="code">NNTXBL</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.owner_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result=categories.NNTXBL
+            </field>
+        </record>
+
+        <record id="owner_net_before_tax_salary_rule" model="hr.salary.rule">
+            <field name="name">Net Before Tax</field>
+            <field name="sequence">150</field>
+            <field name="code">NBT</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.owner_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+result=categories.TXBL
+            </field>
+        </record>
+
+        <record id="owner_tax_salary_rule" model="hr.salary.rule">
+            <field name="name">Tax</field>
+            <field name="sequence">155</field>
+            <field name="code">TAX</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.owner_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+amount=NBT
+tax=employee.env['hr.salary.tax']._get_employee_taxes(payslip=payslip, salary_code='NBT', taxable_amount=amount)
+result=tax
+
+# :param payslip: Current payslip
+# :param salary_code: Taxable salary rule code in s.structure
+# :param taxable_amount: Current taxable amount
+# :return: Tax amount
+            </field>
+        </record>
+
+        <record id="owner_tax_reconciliation_salary_rule" model="hr.salary.rule">
+            <field name="name">Tax Reconciliation</field>
+            <field name="sequence">160</field>
+            <field name="code">TAXREC</field>
+            <field name="category_id" ref="tax_salary_category"/>
+            <field name="struct_id" ref="l10n_eg_payroll.owner_salary_structure"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+try:
+    amount=TAX
+    tax = employee.env['hr.salary.tax']._get_employee_taxes_reconcile(payslip=payslip, tax_code='TAX', tax_reconcile_code='TAXREC', tax_amount=amount)
+    result=tax
+except:
+    result = 0
+
+# :param payslip: Current payslip
+# :param tax_code: Tax rule code in s.structure
+# :param tax_reconcile_code: Tax reconcile rule code in s.structure
+# :param tax_amount: Current payslip tax amount
+# :return: Tax reconcile amount
+            </field>
+        </record>
+
+</odoo>

@@ -1,0 +1,74 @@
+<odoo>
+
+    <record id="hr_payslip_form_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.form.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='account_info']" position="after">
+            </xpath>
+            <page string="Payment Info" name="payment_info"
+                  invisible="not payment_line_ids">
+                <group>
+                    <group>
+                        <field name="bank_account_id" force_save="1" readonly="1"/>
+                        <field name="bank_id" force_save="1" readonly="1"/>
+                        <field name="paid_amount" force_save="1"/>
+                        <field name="payment_method_ids" force_save="1"
+                               widget="many2many_tags"/>
+                        <field name="is_paid" invisible="1" force_save="1"/>
+                        <field name="payment_line_ids" invisible="1" force_save="1"/>
+                    </group>
+                </group>
+            </page>
+            <xpath expr="//div[hasclass('oe_button_box')]" position="inside">
+                <button name="action_open_payment" type="object"
+                        class="oe_stat_button" icon="fa-usd"
+                        invisible="payment_count = 0)]}">
+                    <field name="payment_count" widget="statinfo"
+                           string="Payment Orders"/>
+                </button>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="hr_payslip_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.tree.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='net_wage']" position="after">
+                <field name="paid_amount" widget="monetary"
+                       options="{'currency_field': 'currency_id'}"
+                       decoration-bf="1" optional="hide"/>
+                <field name="payment_method_ids" widget="many2many_tags"
+                       optional="hide"/>
+                <field name="bank_account_id"/>
+                <field name="bank_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_payslip_search_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.search.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='credit_note']" position="after">
+                <separator/>
+                <filter string="Waiting Paid" name="waiting_paid"
+                        domain="[('is_paid', '=', False)]"/>
+                <filter string="Paid" name="is_paid"
+                        domain="[('is_paid', '=', True)]"/>
+                <separator/>
+                <filter string="With Bank Account" name="with_bank_account"
+                        domain="[('bank_account_id', '!=', False)]"/>
+                <filter string="Without Bank Account"
+                        name="without_bank_account"
+                        domain="[('bank_account_id', '=', False)]"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

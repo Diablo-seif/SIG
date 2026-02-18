@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="footer_hr_job_offer_form" model="ir.ui.view">
+        <field name="name">hr.job.offer.form</field>
+        <field name="model">hr.job.offer</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <sheet>
+                    <group>
+                        <field name="applicant_id"/>
+                        <field name="validity_date"/>
+                    </group>
+                    <footer>
+                        <button name="action_job_offer_send" type="object"
+                                string="Send Job Offer" class="oe_highlight"/>
+                        <button name="report_print" type="object"
+                                string="Print Job Offer"/>
+                        <button string="Cancel" special="cancel"/>
+                    </footer>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="header_hr_job_offer_form" model="ir.ui.view">
+        <field name="name">hr.job.offer.form</field>
+        <field name="model">hr.job.offer</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <button name="action_job_offer_send" type="object"
+                            string="Send Job Offer" class="oe_highlight"/>
+
+                    <button name="report_print" type="object"
+                            string="Print Job Offer"/>
+
+                    <button name="action_approve" class="oe_highlight"
+                            states="sent" type="object" string="approve"/>
+                    <button name="%(job_offer_reject_action)d" states="sent"
+                            type="action" string="Reject"/>
+
+                    <field name="state" widget="statusbar" readonly="True"/>
+                </header>
+                <sheet>
+                    <group>
+                        <field name="applicant_id"/>
+                        <field name="validity_date"/>
+                        <field name="generate_date"/>
+                        <field name="action_reason_ids"
+                               widget="many2many_tags"
+                               options="{'color_field': 'color'}"
+                               invisible="state != rejected"/>
+<!--                               attrs="{'invisible':[('state','!=','rejected')]}"/>-->
+                    </group>
+                    <notebook>
+                        <page string="Notes">
+                            <field name="note" placeholder="Notes ..."/>
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <chatter/>
+<!--<div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_job_offer_tree" model="ir.ui.view">
+        <field name="name">hr.job.offer.tree</field>
+        <field name="model">hr.job.offer</field>
+        <field name="arch" type="xml">
+            <list create="0">
+                <field name="name"/>
+                <field name="validity_date"/>
+                <field name="generate_date"/>
+                <field name="state"/>
+                <field name="action_reason_ids"
+                       widget="many2many_tags"
+                       options="{'color_field': 'color'}"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_job_offer_action" model="ir.actions.act_window">
+        <field name="name">Job Offer</field>
+        <field name="res_model">hr.job.offer</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">new</field>
+        <field name="view_id" ref="hr_job_offer.footer_hr_job_offer_form"/>
+    </record>
+
+    <record id="view_hr_job_offer_action" model="ir.actions.act_window">
+        <field name="name">Job Offers</field>
+        <field name="res_model">hr.job.offer</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_ids" eval="[
+            (5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('hr_job_offer_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('header_hr_job_offer_form')})
+        ]"/>
+    </record>
+
+</odoo>

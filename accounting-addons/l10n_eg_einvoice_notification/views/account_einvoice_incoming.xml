@@ -1,0 +1,67 @@
+<odoo>
+
+    <record id="account_einvoice_incoming_view_form" model="ir.ui.view">
+        <field name="name">account_einvoice_incoming_view_form</field>
+        <field name="model">account.einvoice.incoming</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+
+                    <notebook>
+                        <page string="Request">
+                            <group>
+                                <group string="Notification Info">
+                                    <field name="request_id"/>
+                                    <field name="request_type"/>
+                                    <field name="request_message"/>
+                                </group>
+                                <group string="Technical Info">
+                                    <field name="request_url"/>
+                                    <field name="request_method"/>
+                                    <field name="request_header"/>
+                                    <field name="request_data"/>
+                                    <field name="request_params"/>
+                                </group>
+
+                            </group>
+                        </page>
+                        <page string="Response">
+                            <group>
+                                <field name="result"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="account_einvoice_incoming_view_tree" model="ir.ui.view">
+        <field name="name">account_einvoice_incoming_view_tree</field>
+        <field name="model">account.einvoice.incoming</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="id"/>
+                <field name="create_date"/>
+                <field name="request_method"/>
+                <field name="request_url"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="account_einvoice_incoming_action" model="ir.actions.act_window">
+        <field name="name">Incoming</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.einvoice.incoming</field>
+        <field name="context">{'create': False, 'edit': False}</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+
+    <record id="incoming_einvoice_menu" model="ir.ui.menu">
+        <field name="name">Incoming</field>
+        <field name="action" ref="account_einvoice_incoming_action"/>
+        <field name="parent_id" ref="l10n_eg_einvoice.einvoice_category_menu"/>
+    </record>
+
+</odoo>

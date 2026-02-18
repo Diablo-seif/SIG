@@ -1,0 +1,502 @@
+<odoo noupdate="1">
+    <!-- sales -->
+    <record id="account_vat_tax_types_local" model="account.vat.tax.types">
+        <field name="name">Local</field>
+        <field name="code">1</field>
+        <field name="description">Local</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <record id="account_vat_tax_types_exports" model="account.vat.tax.types">
+        <field name="name">Exports</field>
+        <field name="code">2</field>
+        <field name="description">Exports</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <record id="account_vat_tax_types_machinery" model="account.vat.tax.types">
+        <field name="name">Machinery and equipment</field>
+        <field name="code">5</field>
+        <field name="description">Machinery and equipment</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <record id="account_vat_tax_types_machine" model="account.vat.tax.types">
+        <field name="name">Machine parts</field>
+        <field name="code">6</field>
+        <field name="description">Machine parts</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <record id="account_vat_tax_types_exemptions" model="account.vat.tax.types">
+        <field name="name">Exemptions</field>
+        <field name="code">7</field>
+        <field name="description">Exemptions</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <!-- purchase -->
+    <record id="account_vat_tax_types_commodities" model="account.vat.tax.types">
+        <field name="name">Commodities</field>
+        <field name="code">3</field>
+        <field name="description">Commodities</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <record id="account_vat_tax_types_services" model="account.vat.tax.types">
+        <field name="name">Services</field>
+        <field name="code">4</field>
+        <field name="description"></field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <record id="account_vat_tax_types_machinery_in" model="account.vat.tax.types">
+        <field name="name">Machinery and equipment</field>
+        <field name="code">5</field>
+        <field name="description">Machinery and equipment</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <record id="account_vat_tax_types_machine_in" model="account.vat.tax.types">
+        <field name="name">Machine parts</field>
+        <field name="code">6</field>
+        <field name="description">Machine parts</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <record id="account_vat_tax_types_exemptions_in" model="account.vat.tax.types">
+        <field name="name">Exemptions</field>
+        <field name="code">7</field>
+        <field name="description">Exemptions</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">vat</field>
+    </record>
+    <!-- table 1 -->
+    <record id="account_vat_tax_types_exports_t1" model="account.vat.tax.types">
+        <field name="name">Exports</field>
+        <field name="code">2</field>
+        <field name="description">Exports</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_exemptions_t1" model="account.vat.tax.types">
+        <field name="name">Exemptions</field>
+        <field name="code">7</field>
+        <field name="description">Exemptions</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_tobacco" model="account.vat.tax.types">
+        <field name="name">Tobacco</field>
+        <field name="code">8</field>
+        <field name="description">Tobacco</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_oil" model="account.vat.tax.types">
+        <field name="name">Oil</field>
+        <field name="code">9</field>
+        <field name="description">Oil</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_vegetable_oils" model="account.vat.tax.types">
+        <field name="name">Vegetable oils</field>
+        <field name="code">10</field>
+        <field name="description">Vegetable oils</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_animal_oils" model="account.vat.tax.types">
+        <field name="name">Animal oils</field>
+        <field name="code">11</field>
+        <field name="description">Animal oils</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_crisps" model="account.vat.tax.types">
+        <field name="name">Crisps</field>
+        <field name="code">12</field>
+        <field name="description">Crisps</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_manufactured_potatoes" model="account.vat.tax.types">
+        <field name="name">Manufactured potatoes</field>
+        <field name="code">13</field>
+        <field name="description">Manufactured potatoes</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_fertilizers_pesticides" model="account.vat.tax.types">
+        <field name="name">Fertilizers and pesticides</field>
+        <field name="code">14</field>
+        <field name="description">Fertilizers and pesticides</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_gypsum" model="account.vat.tax.types">
+        <field name="name">Gypsum</field>
+        <field name="code">15</field>
+        <field name="description">Gypsum</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_construction_contracting" model="account.vat.tax.types">
+        <field name="name">Construction, Contracting</field>
+        <field name="code">16</field>
+        <field name="description">Construction, Contracting</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_soap_cleaning" model="account.vat.tax.types">
+        <field name="name">Soap and cleaning</field>
+        <field name="code">17</field>
+        <field name="description">Soap and cleaning</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_transportation_conditioners" model="account.vat.tax.types">
+        <field name="name">Transportation and air conditioners</field>
+        <field name="code">18</field>
+        <field name="description">Transportation and air conditioners</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_professional_services" model="account.vat.tax.types">
+        <field name="name">Professional services</field>
+        <field name="code">19</field>
+        <field name="description">Professional services</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_media_production" model="account.vat.tax.types">
+        <field name="name">Media production</field>
+        <field name="code">20</field>
+        <field name="description">Media production</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <!-- table 2 -->
+    <record id="account_vat_tax_types_exports_t2" model="account.vat.tax.types">
+        <field name="name">Exports</field>
+        <field name="code">2</field>
+        <field name="description">Exports</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_exemptions_t2" model="account.vat.tax.types">
+        <field name="name">Exemptions</field>
+        <field name="code">7</field>
+        <field name="description">Exemptions</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_carbonated_water" model="account.vat.tax.types">
+        <field name="name">Carbonated water</field>
+        <field name="code">21</field>
+        <field name="description">Carbonated water</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_nonalcoholic_beer" model="account.vat.tax.types">
+        <field name="name">Nonalcoholic beer</field>
+        <field name="code">22</field>
+        <field name="description">Nonalcoholic beer</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_alcoholic_drinks" model="account.vat.tax.types">
+        <field name="name">Alcoholic drinks</field>
+        <field name="code">23</field>
+        <field name="description">Alcoholic drinks</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_alcoholic_beer" model="account.vat.tax.types">
+        <field name="name">Alcoholic beer</field>
+        <field name="code">24</field>
+        <field name="description">Alcoholic beer</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_cosmetics_perfumes" model="account.vat.tax.types">
+        <field name="name">Cosmetics and perfumes</field>
+        <field name="code">25</field>
+        <field name="description">Cosmetics and perfumes</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_televisions_refrigerators" model="account.vat.tax.types">
+        <field name="name">Televisions and refrigerators</field>
+        <field name="code">26</field>
+        <field name="description">Televisions and refrigerators</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_air_conditions" model="account.vat.tax.types">
+        <field name="name">Air conditions</field>
+        <field name="code">27</field>
+        <field name="description">Air conditions</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_golf_cars" model="account.vat.tax.types">
+        <field name="name">Golf cars</field>
+        <field name="code">28</field>
+        <field name="description">Golf cars</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_cars_1600" model="account.vat.tax.types">
+        <field name="name">Cars 1600</field>
+        <field name="code">29</field>
+        <field name="description">Cars 1600</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_cars_2000" model="account.vat.tax.types">
+        <field name="name">Cars 2000</field>
+        <field name="code">30</field>
+        <field name="description">Cars 2000</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_local_cars_3000" model="account.vat.tax.types">
+        <field name="name">Local cars 3000</field>
+        <field name="code">31</field>
+        <field name="description">Local cars 3000</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_cars_importe_3000" model="account.vat.tax.types">
+        <field name="name">Cars imported 3000</field>
+        <field name="code">32</field>
+        <field name="description">Cars imported 3000</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_telecommunications_services" model="account.vat.tax.types">
+        <field name="name">Telecommunications Services</field>
+        <field name="code">32</field>
+        <field name="description">Telecommunications Services</field>
+        <field name="invoice_type">in</field>
+        <field name="tax_type">table2</field>
+    </record>
+
+
+
+    <!-- table 1 out -->
+    <record id="account_vat_tax_types_exports_t1_out" model="account.vat.tax.types">
+        <field name="name">Exports</field>
+        <field name="code">2</field>
+        <field name="description">Exports</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_exemptions_t1_out" model="account.vat.tax.types">
+        <field name="name">Exemptions</field>
+        <field name="code">7</field>
+        <field name="description">Exemptions</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_tobacco_out" model="account.vat.tax.types">
+        <field name="name">Tobacco</field>
+        <field name="code">8</field>
+        <field name="description">Tobacco</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_oil_out" model="account.vat.tax.types">
+        <field name="name">Oil</field>
+        <field name="code">9</field>
+        <field name="description">Oil</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_vegetable_oils_out" model="account.vat.tax.types">
+        <field name="name">Vegetable oils</field>
+        <field name="code">10</field>
+        <field name="description">Vegetable oils</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_animal_oils_out" model="account.vat.tax.types">
+        <field name="name">Animal oils</field>
+        <field name="code">11</field>
+        <field name="description">Animal oils</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_crisps_out" model="account.vat.tax.types">
+        <field name="name">Crisps</field>
+        <field name="code">12</field>
+        <field name="description">Crisps</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_manufactured_potatoes_out" model="account.vat.tax.types">
+        <field name="name">Manufactured potatoes</field>
+        <field name="code">13</field>
+        <field name="description">Manufactured potatoes</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_fertilizers_pesticides_out" model="account.vat.tax.types">
+        <field name="name">Fertilizers and pesticides</field>
+        <field name="code">14</field>
+        <field name="description">Fertilizers and pesticides</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_gypsum_out" model="account.vat.tax.types">
+        <field name="name">Gypsum</field>
+        <field name="code">15</field>
+        <field name="description">Gypsum</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_construction_contracting_out" model="account.vat.tax.types">
+        <field name="name">Construction, Contracting</field>
+        <field name="code">16</field>
+        <field name="description">Construction, Contracting</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_soap_cleaning_out" model="account.vat.tax.types">
+        <field name="name">Soap and cleaning</field>
+        <field name="code">17</field>
+        <field name="description">Soap and cleaning</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_transportation_conditioners_out" model="account.vat.tax.types">
+        <field name="name">Transportation and air conditioners</field>
+        <field name="code">18</field>
+        <field name="description">Transportation and air conditioners</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_professional_services_out" model="account.vat.tax.types">
+        <field name="name">Professional services</field>
+        <field name="code">19</field>
+        <field name="description">Professional services</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <record id="account_vat_tax_types_media_production_out" model="account.vat.tax.types">
+        <field name="name">Media production</field>
+        <field name="code">20</field>
+        <field name="description">Media production</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table1</field>
+    </record>
+    <!-- table 2 -->
+    <record id="account_vat_tax_types_exports_t2_out" model="account.vat.tax.types">
+        <field name="name">Exports</field>
+        <field name="code">2</field>
+        <field name="description">Exports</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_exemptions_t2_out" model="account.vat.tax.types">
+        <field name="name">Exemptions</field>
+        <field name="code">7</field>
+        <field name="description">Exemptions</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_carbonated_water_out" model="account.vat.tax.types">
+        <field name="name">Carbonated water</field>
+        <field name="code">21</field>
+        <field name="description">Carbonated water</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_nonalcoholic_beer_out" model="account.vat.tax.types">
+        <field name="name">Nonalcoholic beer</field>
+        <field name="code">22</field>
+        <field name="description">Nonalcoholic beer</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_alcoholic_drinks_out" model="account.vat.tax.types">
+        <field name="name">Alcoholic drinks</field>
+        <field name="code">23</field>
+        <field name="description">Alcoholic drinks</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_alcoholic_beer_out" model="account.vat.tax.types">
+        <field name="name">Alcoholic beer</field>
+        <field name="code">24</field>
+        <field name="description">Alcoholic beer</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_cosmetics_perfumes_out" model="account.vat.tax.types">
+        <field name="name">Cosmetics and perfumes</field>
+        <field name="code">25</field>
+        <field name="description">Cosmetics and perfumes</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_televisions_refrigerators_out" model="account.vat.tax.types">
+        <field name="name">Televisions and refrigerators</field>
+        <field name="code">26</field>
+        <field name="description">Televisions and refrigerators</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_air_conditions_out" model="account.vat.tax.types">
+        <field name="name">Air conditions</field>
+        <field name="code">27</field>
+        <field name="description">Air conditions</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_golf_cars_out" model="account.vat.tax.types">
+        <field name="name">Golf cars</field>
+        <field name="code">28</field>
+        <field name="description">Golf cars</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_cars_1600_out" model="account.vat.tax.types">
+        <field name="name">Cars 1600</field>
+        <field name="code">29</field>
+        <field name="description">Cars 1600</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_cars_2000_out" model="account.vat.tax.types">
+        <field name="name">Cars 2000</field>
+        <field name="code">30</field>
+        <field name="description">Cars 2000</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_local_cars_3000_out" model="account.vat.tax.types">
+        <field name="name">Local cars 3000</field>
+        <field name="code">31</field>
+        <field name="description">Local cars 3000</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_cars_importe_3000_out" model="account.vat.tax.types">
+        <field name="name">Cars imported 3000</field>
+        <field name="code">32</field>
+        <field name="description">Cars imported 3000</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+    <record id="account_vat_tax_types_telecommunications_services_out" model="account.vat.tax.types">
+        <field name="name">Telecommunications Services</field>
+        <field name="code">32</field>
+        <field name="description">Telecommunications Services</field>
+        <field name="invoice_type">out</field>
+        <field name="tax_type">table2</field>
+    </record>
+
+</odoo>

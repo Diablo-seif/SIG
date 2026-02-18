@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="inherit_hr_employee_form" model="ir.ui.view">
+        <field name="name">inherit.hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='identification_group']" position="after">
+                <group string="Time Off" name="time_off_group">
+                    <field name="allocation_tag_id"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

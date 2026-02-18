@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_contract_view_search_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.filter.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_search"/>
+        <field name="arch" type="xml">
+            <filter name="current_employee" position="after">
+                <separator/>
+                <filter string="Expired Within a Month"
+                        name="expired_1_month"
+                        icon="terp-stock_align_left_24"
+                        domain="[('date_end', '&lt;=',(context_today()+relativedelta(months=1)).strftime('%%Y-%%m-%%d')  ) ,('date_end', '&gt;=',time.strftime('%%Y-%%m-%%d'))]"/>
+                <filter string="Expired Within 2 Months"
+                        name="expired_2_month"
+                        icon="terp-stock_align_left_24"
+                        domain="[('date_end', '&lt;=',(context_today()+relativedelta(months=2)).strftime('%%Y-%%m-%%d')  ) ,('date_end', '&gt;=',time.strftime('%%Y-%%m-%%d'))]"/>
+                <filter string="Expired Within 3 Months"
+                        name="expired_3_month"
+                        icon="terp-stock_align_left_24"
+                        domain="[('date_end', '&lt;=',(context_today()+relativedelta(months=3)).strftime('%%Y-%%m-%%d')  ) ,('date_end', '&gt;=',time.strftime('%%Y-%%m-%%d'))]"/>
+            </filter>
+        </field>
+    </record>
+
+    <record id="hr_contract_view_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.contract.tree.inherit</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='date_end']" position="after">
+                <field name="state"/>
+                <field name="alert_number" invisible="1"/>
+            </xpath>
+            <xpath expr="//list" position="attributes">
+                <attribute name="decoration-warning">alert_number==3 or alert_number==2</attribute>
+                <attribute name="decoration-danger">alert_number==1</attribute>
+                <attribute name="decoration-info">alert_number==9</attribute>
+                <attribute name="decoration-success">alert_number==10</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

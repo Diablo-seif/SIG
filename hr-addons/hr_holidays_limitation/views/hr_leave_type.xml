@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inherit_hr_leave_type_form" model="ir.ui.view">
+        <field name="name">inherit.hr.leave.type.form</field>
+        <field name="model">hr.leave.type</field>
+        <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group[@name='allocation_validation']" position="after">
+                <group name="limitations" string="Request Period Limitations">
+                    <field name="contract_limitation"/>
+                    <field name="no_of_days"
+                           readonly="state != budgeted"/>
+                    <field name="no_of_hours"
+                           readonly="request_unit not in ['hour','half_day']"/>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="soft_skill_course_type" model="hr.course.type">
+        <field name="name">Soft Skills</field>
+    </record>
+
+    <record id="technical_course_type" model="hr.course.type">
+        <field name="name">Technical</field>
+    </record>
+
+</odoo>

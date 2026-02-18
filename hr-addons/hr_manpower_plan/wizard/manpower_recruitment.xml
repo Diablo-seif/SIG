@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="manpower_recruitment_form" model="ir.ui.view">
+        <field name="name">manpower.recruitment.form</field>
+        <field name="model">manpower.recruitment</field>
+        <field name="arch" type="xml">
+            <form>
+                <p>Choose how no. of vacancies will be set in job positions</p>
+                <field name="recruitment_method" widget="radio"/>
+                <footer>
+                    <button name="action_start_recruitment" type="object" string="Start Recruitment" class="oe_highlight" />
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="manpower_recruitment_action" model="ir.actions.act_window">
+        <field name="name">Manpower Recruitment</field>
+        <field name="res_model">manpower.recruitment</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+</odoo>

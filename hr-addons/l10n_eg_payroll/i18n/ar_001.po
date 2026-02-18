@@ -1,0 +1,229 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-17 13:23+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.allowance_salary_category
+msgid "Allowance"
+msgstr "بدل"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.basic_salary_category
+msgid "Basic"
+msgstr "أساسي"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.basic_insured_salary_category
+msgid "Basic Insured"
+msgstr "الراتب التأميني"
+
+#. module: l10n_eg_payroll
+#: model:ir.model,name:l10n_eg_payroll.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.company_contribution_salary_category
+msgid "Company Contribution"
+msgstr "مساهمة المؤسسة"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule,name:l10n_eg_payroll.social_insurance_company_share_salary_rule
+msgid "Company Insurance Share"
+msgstr "حصة الشركة من التأمين"
+
+#. module: l10n_eg_payroll
+#: model:ir.model,name:l10n_eg_payroll.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields.selection,name:l10n_eg_payroll.selection__res_company__month_start__current
+msgid "Current"
+msgstr "الجاري"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_hr_payslip_run__date_start
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_hr_payslip_run__date_end
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.deduction_salary_category
+msgid "Deduction"
+msgstr "الاستقطاعات"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule,name:l10n_eg_payroll.social_insurance_employee_share_salary_rule
+msgid "Employee Insurance Share"
+msgstr "حصة الموظف من التأمين"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_hr_payslip__date_from
+msgid "From"
+msgstr "من"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.gross_salary_category
+msgid "Gross"
+msgstr "الإجمالي"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.information_salary_category
+msgid "Information"
+msgstr "معلومات"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.medical_insurance_salary_category
+msgid "Medical Insurance"
+msgstr "التأمين الصحي"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_res_company__month_start
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_res_config_settings__month_start
+msgid "Month Start"
+msgstr "يوم بداية الشهر"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_res_company__month_start_day
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_res_config_settings__month_start_day
+msgid "Month Start Day"
+msgstr "يوم بداية الشهر"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.net_salary_category
+msgid "Net"
+msgstr "صافي"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.net_before_tax_salary_category
+msgid "Net Before Tax"
+msgstr "الصافي قبل الضريبة"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.net_taxable_salary_salary_category
+msgid "Net Taxable Salary"
+msgstr "الصافي القابل للضريبة"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule,name:l10n_eg_payroll.non_taxable_salary_rule
+msgid "Non Taxable"
+msgstr "معفي من الضريبة"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.non_taxable_allowance_salary_category
+msgid "Non Taxable Allowance"
+msgstr "البدلات المعفية من الضريبة"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.non_taxable_deduction_salary_category
+msgid "Non Taxable Deduction"
+msgstr "الخصومات المعفية من الضريبة"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.non_taxable_salary_category
+msgid "Non taxable"
+msgstr "معفي من الضريبة"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.other_allowance_salary_category
+msgid "Other Allowance"
+msgstr "بدلات أخرى"
+
+#. module: l10n_eg_payroll
+#: model:ir.model,name:l10n_eg_payroll.model_hr_payslip
+msgid "Pay Slip"
+msgstr "إيصال المرتب"
+
+#. module: l10n_eg_payroll
+#: model:ir.model,name:l10n_eg_payroll.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "دفعات إيصال المرتب"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_hr_payslip__payslip_month
+msgid "Payslip Month"
+msgstr "بيان الراتب الشهري"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields.selection,name:l10n_eg_payroll.selection__res_company__month_start__previous
+msgid "Previous"
+msgstr "السابق"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_hr_payroll_structure__salary_resource_calendar_id
+msgid "Salary Based"
+msgstr "براتب"
+
+#. module: l10n_eg_payroll
+#: code:addons/l10n_eg_payroll/models/hr_payslip.py:0
+#: code:addons/l10n_eg_payroll/tests/test_hr_payslip.py:0
+#, python-format
+msgid "Salary Slip"
+msgstr "إيصال المرتب"
+
+#. module: l10n_eg_payroll
+#: model:ir.model,name:l10n_eg_payroll.model_hr_payroll_structure
+msgid "Salary Structure"
+msgstr "هيكل المرتب"
+
+#. module: l10n_eg_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_eg_payroll.payroll_res_config_settings_form
+msgid "Select Month Start Day Will Be From ['Current' or 'Previous']  Month."
+msgstr "تاريخ بداية الشهر سوف يكون من الشهر الحالي أو السابق."
+
+#. module: l10n_eg_payroll
+#: model_terms:ir.ui.view,arch_db:l10n_eg_payroll.payroll_res_config_settings_form
+msgid "Set Month Start Date"
+msgstr "تحديد يوم بداية الشهر"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.social_insurance_salary_category
+msgid "Social Insurance"
+msgstr "التأمين الاجتماعي"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule,name:l10n_eg_payroll.tax_salary_rule
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.tax_salary_category
+msgid "Tax"
+msgstr "الضريبة"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule,name:l10n_eg_payroll.tax_reconciliation_salary_rule
+msgid "Tax Reconciliation"
+msgstr "تسوية الضرائب"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule,name:l10n_eg_payroll.taxable_salary_rule
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.taxable_salary_category
+msgid "Taxable"
+msgstr "قابل للضريبة"
+
+#. module: l10n_eg_payroll
+#: model:ir.model.fields,field_description:l10n_eg_payroll.field_hr_payslip__date_to
+msgid "To"
+msgstr "إلى"
+
+#. module: l10n_eg_payroll
+#: model:hr.salary.rule.category,name:l10n_eg_payroll.total_deductions_salary_category
+msgid "Total Deductions"
+msgstr "إجمالي الخصومات"

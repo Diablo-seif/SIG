@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_employee_type_base_user,access.employee_type.base_user,extra_employee_info.model_employee_type,base.group_user,1,1,1,1
+access_hr_office_base_user,access.hr_office.base_user,extra_employee_info.model_hr_office,base.group_user,1,1,1,1
+ir_module_module_group_user,access.ir_module_module.base_user,base.model_ir_module_module,base.group_user,0,0,0,0

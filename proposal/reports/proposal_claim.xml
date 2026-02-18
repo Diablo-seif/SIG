@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="proposal_claim_template">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <div class="page">
+                        <h2 class="text-center mb-4"><span t-field="o.name"/></h2>
+                        <table class="table table-condensed table-sm">
+                            <tr>
+                                <th>Partner</th>
+                                <td><span t-field="o.partner_id"/></td>
+                                <th>Date</th>
+                                <td><span t-field="o.claim_date"/></td>
+                            </tr>
+                        </table>
+                        <table class="table table-bordered table-sm">
+                            <thead class="text-center table-primary">
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Description</th>
+                                    <th>Original Qty</th>
+                                    <th>Previous Qty</th>
+                                    <th>Current Qty Percentage</th>
+                                    <th>Current Qty</th>
+                                    <th>Cumulative Qty</th>
+                                    <th>Cumulative Percentage</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr t-foreach="o.line_ids" t-as="line">
+                                    <td><span t-field="line.product_id"/></td>
+                                    <td><span t-field="line.name"/></td>
+                                    <td><span t-field="line.uom_id"/></td>
+                                    <td><span t-field="line.original_qty"/></td>
+                                    <td><span t-field="line.previous_qty"/></td>
+                                    <td><span t-esc="line.current_qty_percentage * 100"/>%</td>
+                                    <td><span t-field="line.current_qty"/></td>
+                                    <td><span t-field="line.cumulative_qty"/></td>
+                                    <td><span t-esc="line.cumulative_percentage * 100"/>%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <record id="proposal_claim_report" model="ir.actions.report">
+        <field name="name">Claim</field>
+        <field name="model">proposal.claim</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">proposal.proposal_claim_template</field>
+        <field name="report_file">proposal.proposal_claim_template</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="model_proposal_claim"/>
+        <field name="attachment_use" eval="True"/>
+        <field name="attachment">object.name + ".pdf"</field>
+        <field name="print_report_name">object.name</field>
+    </record>
+
+</odoo>

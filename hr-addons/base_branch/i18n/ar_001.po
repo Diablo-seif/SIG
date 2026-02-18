@@ -1,0 +1,731 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* base_branch
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200401\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-06-04 10:28+0000\n"
+"PO-Revision-Date: 2020-06-04 15:36+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.2\n"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__active_lang_count
+msgid "Active Lang Count"
+msgstr "تنشيط عدد اللغة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تنسيق النشاط الاستثنائي"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__additional_info
+msgid "Additional info"
+msgstr "معلومات اضافية"
+
+#. module: base_branch
+#: model_terms:ir.ui.view,arch_db:base_branch.view_res_branch_form
+msgid "Address"
+msgstr "العنوان"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__type
+msgid "Address Type"
+msgstr "نوع العنوان"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__lang
+msgid ""
+"All the emails and documents sent to this contact will be translated in this language."
+msgstr ""
+"سيتم ترجمة جميع رسائل البريد الإلكتروني والوثائق المرسلة إلى جهة الاتصال هذه بهذه اللغة."
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__bank_ids
+msgid "Banks"
+msgstr "البنوك"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__is_blacklisted
+msgid "Blacklist"
+msgstr "القائمة السوداء"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_bounce
+msgid "Bounce"
+msgstr "المرتد"
+
+#. module: base_branch
+#: model:ir.actions.act_window,name:base_branch.view_res_branch_action
+#: model:ir.model.fields,field_description:base_branch.field_res_users__branch_id
+#: model:ir.ui.menu,name:base_branch.menu_branch
+msgid "Branch"
+msgstr "فرع"
+
+#. module: base_branch
+#: model:ir.model,name:base_branch.model_res_branch
+#: model:ir.ui.menu,name:base_branch.res_branch_menu
+msgid "Branches"
+msgstr "فروع"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__channel_ids
+msgid "Channels"
+msgstr "القنوات"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__is_company
+msgid "Check if the contact is a company, otherwise it is a person"
+msgstr "فحص ما اذا كانت جهة الاتصال مؤسسة، وإلا كانت شخصًا"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__employee
+msgid "Check this box if this contact is an Employee."
+msgstr "قم بتحديد هذا المربع إذا كانت جهة الاتصال المختارة موظفًا."
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__country_enforce_cities
+msgid ""
+"Check this box to ensure every address created in that country has a 'City' chosen in "
+"the list of the country's cities."
+msgstr ""
+"حدد هذا المربع للتأكد من اختيار \"مدينة\" لكل عنوان تم إنشاؤه في هذا البلد في قائمة مدن "
+"البلد."
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__city
+#: model_terms:ir.ui.view,arch_db:base_branch.view_res_branch_form
+msgid "City"
+msgstr "مدينه"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__city_id
+msgid "City of Address"
+msgstr "مدينة العنوان"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__color
+msgid "Color Index"
+msgstr "مؤشر اللون"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__commercial_partner_id
+msgid "Commercial Entity"
+msgstr "الكيان التجاري"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__company_name
+msgid "Company Name"
+msgstr "اسم الشركه"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__commercial_company_name
+msgid "Company Name Entity"
+msgstr "اسم الكيان التجارى"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__company_type
+msgid "Company Type"
+msgstr "نوع الشركه"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__partner_gid
+msgid "Company database ID"
+msgstr "ممعرف قاعدة بيانات المؤسسة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__contact_address
+msgid "Complete Address"
+msgstr "العنوان الكامل"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__child_ids
+msgid "Contact"
+msgstr "جهة الأتصال"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__contact_address_complete
+msgid "Contact Address Complete"
+msgstr "عنوان جهة الاتصال الكامل"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__message_bounce
+msgid "Counter of the number of bounced emails for this contact"
+msgstr "عدد الرسائل المرتدة لجهة الاتصال هذه"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__country_id
+#: model_terms:ir.ui.view,arch_db:base_branch.view_res_branch_form
+msgid "Country"
+msgstr "الدولة"
+
+#. module: base_branch
+#: model_terms:ir.actions.act_window,help:base_branch.view_res_branch_action
+msgid "Create a new Branch"
+msgstr "انشاء فرع جديد"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__create_date
+msgid "Created on"
+msgstr "أنشئ فى"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__credit_limit
+msgid "Credit Limit"
+msgstr "حد الائتمان"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__partner_share
+msgid ""
+"Either customer (not a user), either shared user. Indicated the current partner is a "
+"customer without access or with a limited access created for sharing data."
+msgstr ""
+"إما عميل (وليس مستخدم) ، إما مستخدم مشترك. تشير إلى أن الشريك الحالي هو عميل بدون "
+"صلاحيات أو له صلاحية محدودة منشأة لمشاركة البيانات."
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__country_enforce_cities
+msgid "Enforce Cities"
+msgstr "مدن الزامية"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__email_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "تنسيق البريد الإلكتروني \"الاسم <email@domain>\""
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__email_formatted
+msgid "Formatted Email"
+msgstr "بريد الكتروني تم تنسيقة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__partner_latitude
+msgid "Geo Latitude"
+msgstr "خط العرض الجغرافي"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__partner_longitude
+msgid "Geo Longitude"
+msgstr "خط الطول الجغرافي"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__im_status
+msgid "IM Status"
+msgstr "حالة المحادثات الفورية"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة / رمز"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "رمز للإشارة إلى نشاط استثناء."
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__message_needaction
+#: model:ir.model.fields,help:base_branch.field_res_branch__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__team_id
+msgid ""
+"If set, this Sales Team will be used for sales and assignations related to this partner"
+msgstr ""
+"إذا تم تعيينه ، فسيتم استخدام فريق المبيعات هذا للمبيعات والمهام المتعلقة بجهة الاتصال "
+"هذه"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__is_blacklisted
+msgid ""
+"If the email address is on the blacklist, the contact won't receive mass mailing "
+"anymore, from any list"
+msgstr ""
+"إذا كان عنوان البريد الإلكتروني مدرجًا في القائمة السوداء ، فلن تتلقى جهة الاتصال بريدًا "
+"جماعيًا بعد الآن ، من أي قائمة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__image_1920
+msgid "Image"
+msgstr "صورة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__image_1024
+msgid "Image 1024"
+msgstr "صورة 1024"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__image_128
+msgid "Image 128"
+msgstr "صورة 128"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__image_256
+msgid "Image 256"
+msgstr "صورة 256"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__image_512
+msgid "Image 512"
+msgstr "صورة 512"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__industry_id
+msgid "Industry"
+msgstr "مجال العمل"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__type
+msgid ""
+"Invoice & Delivery addresses are used in sales orders. Private addresses are only "
+"visible by authorized users."
+msgstr ""
+"يتم استخدام عناوين الفاتورة والتسليم في أوامر المبيعات. العناوين الخاصة مرئية فقط "
+"للمستخدمين المصرح لهم."
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__is_company
+msgid "Is a Company"
+msgstr "شركة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__function
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__lang
+msgid "Language"
+msgstr "اللغة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__calendar_last_notif_ack
+msgid "Last notification marked as read from base Calendar"
+msgstr "تم وضع علامة على الإشعار الأخير كمقروء من التقويم الأساسي"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__manager_id
+msgid "Manager"
+msgstr "مدير"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__image_medium
+msgid "Medium-sized image"
+msgstr "صورة متوسطة الحجم"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__mobile
+msgid "Mobile"
+msgstr "الهاتف المحمول"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__name
+#: model_terms:ir.ui.view,arch_db:base_branch.view_res_branch_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط القادم"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__activity_summary
+msgid "Next Activity Summary"
+msgstr "وصف النشاط القادم"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط القادم"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__email_normalized
+msgid "Normalized Email"
+msgstr "البريد الإلكتروني العادى"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__comment
+msgid "Notes"
+msgstr "ملاحظات"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الغير مقروءة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__parent_name
+msgid "Parent name"
+msgstr "اسم الأساس"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__partner_id
+msgid "Partner"
+msgstr "شريك"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__same_vat_partner_id
+msgid "Partner with same Tax ID"
+msgstr "شريك بنفس الرقم الضريبى"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__phone
+msgid "Phone"
+msgstr "رقم الهاتف"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__property_product_pricelist
+msgid "Pricelist"
+msgstr "قائمة الأسعار"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__ref
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__parent_id
+msgid "Related Company"
+msgstr "الشركة المرتبطة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__team_id
+msgid "Sales Team"
+msgstr "فريق البيع"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__user_id
+msgid "Salesperson"
+msgstr "مسئول المبيعات"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__self
+msgid "Self"
+msgstr "نفس"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__partner_share
+msgid "Share Partner"
+msgstr "مشاركه جهة الاتصال"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__signup_expiration
+msgid "Signup Expiration"
+msgstr "انتهاء صلاحية التسجيل"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__signup_token
+msgid "Signup Token"
+msgstr "كلمة سر التسجيل"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__signup_type
+msgid "Signup Token Type"
+msgstr "نوع كلمة سر التسجيل"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__signup_valid
+msgid "Signup Token is Valid"
+msgstr "كلمة سر التسجيل صالحة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__signup_url
+msgid "Signup URL"
+msgstr "رابط التسجيل"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__state_id
+#: model_terms:ir.ui.view,arch_db:base_branch.view_res_branch_form
+msgid "State"
+msgstr "المنطقه"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناء على الأنشطة\n"
+"متأخر: تم تجاوز تاريخ الاستحقاق بالفعل\n"
+"اليوم: تاريخ النشاط اليوم\n"
+"مخطط لها: الأنشطة المستقبلية."
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__street
+msgid "Street"
+msgstr "الشارع"
+
+#. module: base_branch
+#: model_terms:ir.ui.view,arch_db:base_branch.view_res_branch_form
+msgid "Street 2..."
+msgstr "الشارع 2."
+
+#. module: base_branch
+#: model_terms:ir.ui.view,arch_db:base_branch.view_res_branch_form
+msgid "Street..."
+msgstr "الشارع ...."
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__street2
+msgid "Street2"
+msgstr "الشارع 2"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__category_id
+msgid "Tags"
+msgstr "الوسوم"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__vat
+msgid "Tax ID"
+msgstr "الرقم الضريبي"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__vat
+msgid ""
+"The Tax Identification Number. Complete it if the contact is subjected to government "
+"taxes. Used in some legal statements."
+msgstr ""
+"رقم التعريف الضريبي. قم بإكماله إذا كانت جهة الاتصال تخضع للضرائب الحكومية. يُستخدم في "
+"بعض المستندات القانونية."
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__user_id
+msgid "The internal user in charge of this contact."
+msgstr "المستخدم الداخلي مسئول عن هذا العقد."
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__email_normalized
+msgid ""
+"This field is used to search on email address as the primary email field can contain "
+"more than strictly an email address."
+msgstr ""
+"يُستخدم هذا الحقل للبحث عن عنوان البريد الإلكتروني حيث يمكن أن يحتوي حقل البريد "
+"الإلكتروني الأساسي على أكثر من مجرد عنوان بريد إلكتروني."
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__property_product_pricelist
+msgid ""
+"This pricelist will be used, instead of the default one, for sales to the current "
+"partner"
+msgstr ""
+"سيتم استخدام قائمة الأسعار هذه ، بدلاً من القائمة الافتراضية ، للمبيعات لجهة الاتصال "
+"الحالية"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__tz
+msgid "Timezone"
+msgstr "المنطقة الزمنية"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__tz_offset
+msgid "Timezone offset"
+msgstr "إزاحة المنطقة الزمنية"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__title
+msgid "Title"
+msgstr "المسمى الوظيفي"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع نشاط الاستثناء في السجل."
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الغير مقروءة"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عداد الرسائل الغير مقروءة"
+
+#. module: base_branch
+#: model:ir.model,name:base_branch.model_res_users
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__user_ids
+msgid "Users"
+msgstr "المستخدمون"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__website
+msgid "Website Link"
+msgstr "رابط الموقع"
+
+#. module: base_branch
+#: model:ir.model.fields,help:base_branch.field_res_branch__tz
+msgid ""
+"When printing documents and exporting/importing data, time values are computed "
+"according to this timezone.\n"
+"If the timezone is not set, UTC (Coordinated Universal Time) is used.\n"
+"Anywhere else, time values are computed according to the time offset of your web client."
+msgstr ""
+"عند طباعة المستندات وتصدير / استيراد البيانات ، يتم حساب قيم الوقت وفقًا لهذه المنطقة "
+"الزمنية.\n"
+"إذا لم يتم تعيين المنطقة الزمنية ، يتم استخدام التوقيت العالمي المنسق (UTC).\n"
+"في أي مكان آخر ، يتم حساب قيم الوقت وفقًا للإزاحة الزمنية لعميل الويب الخاص بك."
+
+#. module: base_branch
+#: model_terms:ir.ui.view,arch_db:base_branch.view_res_branch_form
+msgid "ZIP"
+msgstr "الرمز البريدي"
+
+#. module: base_branch
+#: model:ir.model.fields,field_description:base_branch.field_res_branch__zip
+msgid "Zip"
+msgstr "الرمز البريدي"

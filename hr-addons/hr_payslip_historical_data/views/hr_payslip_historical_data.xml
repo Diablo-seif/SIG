@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Historical Data Tree View-->
+    <record id="view_hr_payslip_historical_data_tree" model="ir.ui.view">
+        <field name="name">hr.payslip.historical.data.tree</field>
+        <field name="model">hr.payslip.historical.data</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="employee_id"/>
+                <field name="salary_rule_id"/>
+                <field name="salary_rule_category_id"/>
+                <field name="payslip_id"/>
+                <field name="month"/>
+                <field name="year"/>
+                <field name="value"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Historical Data Form View-->
+    <record id="view_hr_payslip_historical_data_form" model="ir.ui.view">
+        <field name="name">hr.payslip.historical.data.form</field>
+        <field name="model">hr.payslip.historical.data</field>
+        <field name="arch" type="xml">
+            <form string="Historical">
+                <sheet>
+                    <group>
+                        <field name="employee_id"/>
+                        <field name="salary_rule_id"/>
+                        <field name="salary_rule_category_id"/>
+                    </group>
+                    <group>
+                        <field name="payslip_id"/>
+                        <field name="month"/>
+                        <field name="year"/>
+                        <field name="value"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Historical Data Action-->
+    <record id="view_hr_payslip_historical_data_action"
+            model="ir.actions.act_window">
+        <field name="name">Payslip Historical Data</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.payslip.historical.data</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <record id="view_hr_payslip_historical_data_filter" model="ir.ui.view">
+        <field name="name">hr.payslip.historical.data.filter</field>
+        <field name="model">hr.payslip.historical.data</field>
+        <field name="arch" type="xml">
+            <search string="Historical Data">
+                <field name="employee_id"/>
+                <field name="salary_rule_id"/>
+                <field name="salary_rule_category_id"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter string="Employee" name="employee" domain="[]"
+                            context="{'group_by': 'employee_id'}"/>
+                    <filter string="Year" name="year" domain="[]"
+                            context="{'group_by': 'year'}"/>
+                    <filter string="Month" name="month" domain="[]"
+                            context="{'group_by': 'month'}"/>
+                    <separator/>
+                    <filter string="Salary Rule Category"
+                            name="salary_rule_category" domain="[]"
+                            context="{'group_by': 'salary_rule_category_id'}"/>
+                    <filter string="Salary Rule" name="salary_rule" domain="[]"
+                            context="{'group_by': 'salary_rule_id'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <!-- Historical Data Menu Under Payroll Base Menu-->
+    <menuitem id="menuitem_hr_payslip_historical_data"
+              name="Payslip Historical Data"
+              parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root"
+              groups="hr_payroll.group_hr_payroll_manager"
+              action="view_hr_payslip_historical_data_action"
+              sequence="70"/>
+
+    <menuitem id="menu_hr_payslip_historical_data"
+              name="Payslip Historical Data"
+              parent="menuitem_hr_payslip_historical_data"
+              groups="hr_payroll.group_hr_payroll_manager"
+              action="view_hr_payslip_historical_data_action"
+              sequence="1"/>
+
+    <!-- Change sequence of reporting menu to rearrange menus-->
+    <record id="hr_payroll.menu_hr_payroll_report" model="ir.ui.menu">
+        <field name="sequence">71</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manager_hr_dynamic_service_type,access.manager.hr.dynamic.service.type,hr_dynamic_service.model_hr_dynamic_service_type,hr.group_hr_manager,1,1,1,1
+access_manager_hr_dynamic_service_subtype,access.manager.hr.dynamic.service.subtype,hr_dynamic_service.model_hr_dynamic_service_subtype,hr.group_hr_manager,1,1,1,1
+access_manager_hr_dynamic_service_stage,access.manager.hr.dynamic.service.stage,hr_dynamic_service.model_hr_dynamic_service_stage,hr.group_hr_manager,1,1,1,1
+access_officer_hr_dynamic_service,access.officer.hr.dynamic.service,hr_dynamic_service.model_hr_dynamic_service,hr.group_hr_user,1,1,1,1
+access_officer_hr_dynamic_service_type,access.officer.hr.dynamic.service.type,hr_dynamic_service.model_hr_dynamic_service_type,hr.group_hr_user,1,0,0,0
+access_officer_hr_dynamic_service_subtype,access.officer.hr.dynamic.service.subtype,hr_dynamic_service.model_hr_dynamic_service_subtype,hr.group_hr_user,1,0,0,0
+access_officer_hr_dynamic_service_stage,access.officer.hr.dynamic.service.stage,hr_dynamic_service.model_hr_dynamic_service_stage,hr.group_hr_user,1,0,0,0
+access_employee_hr_dynamic_service,access.employee.hr.dynamic.service,hr_dynamic_service.model_hr_dynamic_service,base.group_user,1,1,1,1
+access_employee_hr_dynamic_service_type,access.employee.hr.dynamic.service.type,hr_dynamic_service.model_hr_dynamic_service_type,base.group_user,1,0,0,0
+access_employee_hr_dynamic_service_subtype,access.employee.hr.dynamic.service.subtype,hr_dynamic_service.model_hr_dynamic_service_subtype,base.group_user,1,0,0,0
+access_employee_hr_dynamic_service_stage,access.employee.hr.dynamic.service.stage,hr_dynamic_service.model_hr_dynamic_service_stage,base.group_user,1,0,0,0
+access_user_hr_dynamic_service_refuse,access.user.hr.dynamic.service.refuse,hr_dynamic_service.model_hr_dynamic_service_refuse,base.group_user,1,1,1,1
+access_user_ir_actions_server,access.user.ir.actions.server,base.model_ir_actions_server,base.group_user,1,0,0,0

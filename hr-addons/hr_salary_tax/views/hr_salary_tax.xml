@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_salary_tax_form" model="ir.ui.view">
+        <field name="name">hr.salary.tax.form</field>
+        <field name="model">hr.salary.tax</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <div class="oe_title">
+                        <h1><field name="name" placeholder="Name"/></h1>
+                    </div>
+                    <group>
+                        <group>
+                            <label for="date_from" string="Period"/>
+                            <div class="o_row">
+                                <span class="oe_form_field"> From </span>
+                                <field name="date_from"/>
+                                <span class="oe_form_field"> To </span>
+                                <field name="date_to"/>
+                            </div>
+                            <field name="exemption"/>
+                            <field name="rounding"/>
+                            <field name="rounding_method" widget="radio"
+                                   options="{'horizontal': True}"/>
+                            <field name="active" widget="boolean_toggle"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="tax_details" string="Tax Details">
+                            <field name="salary_tax_line_ids">
+                                <list editable="bottom">
+                                    <field name="level"/>
+                                    <field name="salary_from"/>
+                                    <field name="salary_to"/>
+                                    <field name="line_amount" groups="base.group_no_one"/>
+                                    <field name="tax_percentage"/>
+                                    <field name="refund_percentage"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page name="apply_level" string="Apply Level">
+                            <field name="salary_tax_apply_ids">
+                                <list editable="bottom">
+                                    <field name="level"/>
+                                    <field name="salary_from"/>
+                                    <field name="salary_to"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page name="tax_periods" string="Tax Periods" groups="base.group_no_one">
+                            <field name="period_month_ids" readonly="1">
+                                <list>
+                                    <field name="name"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page name="python_code_from_gross_to_net" string="From Gross to Net">
+                            <group >
+                                <field name="python_code_from_gross_to_net" string="Python Code" />
+                            </group>
+                        </page>
+                        <page name="python_code_from_net_to_gross" string="From Net to Gross">
+                            <group >
+                                <field name="python_code_from_net_to_gross" string="Python Code" />
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_salary_tax_tree" model="ir.ui.view">
+        <field name="name">hr.salary.tax.tree</field>
+        <field name="model">hr.salary.tax</field>
+        <field name="arch" type="xml">
+            <list decoration-muted="(not active)">
+                <field name="name"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <field name="exemption"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_salary_tax_search" model="ir.ui.view">
+        <field name="name">hr.salary.tax.search</field>
+        <field name="model">hr.salary.tax</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <filter string="Active" name="filter_active" domain="[('active','=',True)]"/>
+                <filter string="Archived" name="filter_inactive" domain="[('active','=',False)]"/>
+            </search>
+        </field>
+    </record>
+    
+    <record id="hr_salary_tax_action" model="ir.actions.act_window">
+        <field name="name">Salary Tax</field>
+        <field name="res_model">hr.salary.tax</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'active_test': False}</field>
+    </record>
+
+    <menuitem id="hr_salary_tax_menu"
+              name="Salary Tax"
+              action="hr_salary_tax_action"
+              parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"/>
+
+</odoo>

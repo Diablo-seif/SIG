@@ -1,0 +1,177 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_transfer_allocation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-17 13:17+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: hr_transfer_allocation
+#: model_terms:ir.ui.view,arch_db:hr_transfer_allocation.hr_transfer_allocation_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields.selection,name:hr_transfer_allocation.selection__hr_transfer_allocation__state__done
+msgid "Done"
+msgstr "المنتهية"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__employee_ids
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__leave_ids
+msgid "From Leave Types"
+msgstr "من أنواع الإجازات"
+
+#. module: hr_transfer_allocation
+#: model:ir.model,name:hr_transfer_allocation.model_hr_transfer_allocation
+msgid "HR Transfer Allocation"
+msgstr "مختص بنقل الإجازات"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__max_leaves
+msgid "Max"
+msgstr "أكبر"
+
+#. module: hr_transfer_allocation
+#: code:addons/hr_transfer_allocation/models/hr_transfer_allocation.py:0
+#: model:ir.model.constraint,message:hr_transfer_allocation.constraint_hr_transfer_allocation_negative_max
+#, python-format
+msgid "Max must be greater than Zero"
+msgstr "أكبر قيمة يجب أن تكون أكبر من صفر"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__method
+msgid "Method"
+msgstr "طريقة"
+
+#. module: hr_transfer_allocation
+#: code:addons/hr_transfer_allocation/models/hr_transfer_allocation.py:0
+#, python-format
+msgid "Reconciled Allocation"
+msgstr "تسوية الاجازات"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields.selection,name:hr_transfer_allocation.selection__hr_transfer_allocation__method__reset
+msgid "Reset"
+msgstr "إعادة تعيين"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__start_date
+msgid "Reset/Transfer Date"
+msgstr "تاريخ إعادة التعيين/نقل"
+
+#. module: hr_transfer_allocation
+#: model_terms:ir.ui.view,arch_db:hr_transfer_allocation.hr_transfer_allocation_wizard_form
+msgid "Schedule"
+msgstr "جدولة"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields.selection,name:hr_transfer_allocation.selection__hr_transfer_allocation__state__scheduled
+msgid "Scheduled"
+msgstr "تمت الجدولة"
+
+#. module: hr_transfer_allocation
+#: model:ir.actions.server,name:hr_transfer_allocation.hr_transfer_allocation_cron_reset_transfer_ir_actions_server
+#: model:ir.cron,cron_name:hr_transfer_allocation.hr_transfer_allocation_cron_reset_transfer
+#: model:ir.cron,name:hr_transfer_allocation.hr_transfer_allocation_cron_reset_transfer
+msgid "Scheduled Reset/Transfer"
+msgstr "تمت جدولة إعادة التعيين/النقل"
+
+#. module: hr_transfer_allocation
+#: model:ir.actions.act_window,name:hr_transfer_allocation.hr_transfer_allocation_action
+#: model:ir.ui.menu,name:hr_transfer_allocation.hr_transfer_allocation_menu
+msgid "Scheduled Time Off Transfer"
+msgstr "جدولة نقل الإجازات"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: hr_transfer_allocation
+#: code:addons/hr_transfer_allocation/models/hr_transfer_allocation.py:0
+#: model:ir.model.constraint,message:hr_transfer_allocation.constraint_hr_transfer_allocation_start_date_check
+#, python-format
+msgid "The start date must be greater than today"
+msgstr "تاريخ البداية يجب أن يكون أكبر من اليوم"
+
+#. module: hr_transfer_allocation
+#: model:ir.model,name:hr_transfer_allocation.model_hr_leave_allocation
+msgid "Time Off Allocation"
+msgstr "تخصيص الإجازات"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__name
+msgid "Title"
+msgstr "العنوان"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields,field_description:hr_transfer_allocation.field_hr_transfer_allocation__to_leave_type_id
+msgid "To Leave Type"
+msgstr "إلى نوع الإجازة"
+
+#. module: hr_transfer_allocation
+#: model:ir.model.fields.selection,name:hr_transfer_allocation.selection__hr_transfer_allocation__method__transfer
+msgid "Transfer"
+msgstr "نقل"
+
+#. module: hr_transfer_allocation
+#: model:ir.actions.act_window,name:hr_transfer_allocation.hr_transfer_allocation_wizard_action
+msgid "Transfer/Reset Leave Balance"
+msgstr "إعادة تعيين/نقل رصيد الإجازات"
+
+#. module: hr_transfer_allocation
+#: code:addons/hr_transfer_allocation/models/hr_transfer_allocation.py:0
+#, python-format
+msgid "Transferred Allocation"
+msgstr "إجازات منقولة"

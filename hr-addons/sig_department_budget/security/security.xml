@@ -1,0 +1,5 @@
+<odoo>
+    <record id="group_access_department_budget" model="res.groups" >
+        <field name="name">Access Department Budget</field>
+    </record>
+</odoo>

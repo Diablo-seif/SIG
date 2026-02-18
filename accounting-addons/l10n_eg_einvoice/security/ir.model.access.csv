@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_invoice_activity_type_account_manager,access.invoice.activity.type.account.manager,model_invoice_activity_type,account.group_account_manager,1,1,1,1
+access_invoice_activity_type_account_billing,access.invoice.activity.type.account.billing,model_invoice_activity_type,account.group_account_invoice,1,0,0,0
+access_taxpayer_token_user,access.taxpayer.token.user,model_taxpayer_token,base.group_user,1,0,1,0
+access_taxpayer_token_admin,access.taxpayer.token.admin,model_taxpayer_token,base.group_erp_manager,1,1,1,1
+access_einvoice_outgoing_user,access.einvoice.outgoing.user,model_account_einvoice_outgoing,base.group_user,1,0,0,0
+access_einvoice_outgoing_admin,access.einvoice.outgoing.admin,model_account_einvoice_outgoing,base.group_erp_manager,1,1,1,1

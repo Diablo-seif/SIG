@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="partner_employee" model="res.partner">
+        <field name="name">Test Employee 1</field>
+        <field name="email">employee1@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/employee1.png"/>
+    </record>
+
+    <record id="partner_employee2" model="res.partner">
+        <field name="name">Test Employee 2</field>
+        <field name="email">employee2@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/employee2.png"/>
+    </record>
+
+
+    <record id="partner_employee3" model="res.partner">
+        <field name="name">Test Employee 3</field>
+        <field name="email">employee3@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/employee3.png"/>
+    </record>
+
+    <record id="partner_employee4" model="res.partner">
+        <field name="name">Test Employee 4</field>
+        <field name="email">employee4@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/employee4.png"/>
+    </record>
+
+    <record id="partner_employee5" model="res.partner">
+        <field name="name">Test Employee 5</field>
+        <field name="email">employee5@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/employee5.png"/>
+    </record>
+
+    <record id="partner_employee6" model="res.partner">
+        <field name="name">Test Employee 6</field>
+        <field name="email">employee6@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/employee6.png"/>
+    </record>
+
+    <record id="partner_employee7" model="res.partner">
+        <field name="name">Test Employee 7</field>
+        <field name="email">employee7@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/employee7.png"/>
+    </record>
+
+    <record id="partner_manager" model="res.partner">
+        <field name="name">Test Manager 1</field>
+        <field name="email">manager1@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/manager1.png"/>
+    </record>
+
+    <record id="partner_manager2" model="res.partner">
+        <field name="name">Test Manager 2</field>
+        <field name="email">manager2@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/manager2.png"/>
+    </record>
+
+    <record id="partner_manager3" model="res.partner">
+        <field name="name">Test Manager 3</field>
+        <field name="email">manager3@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/manager3.png"/>
+    </record>
+
+    <record id="partner_department" model="res.partner">
+        <field name="name">Test Department 1</field>
+        <field name="email">department@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/department1.png"/>
+    </record>
+
+    <record id="partner_department2" model="res.partner">
+        <field name="name">Test Department 2</field>
+        <field name="email">department2@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/department2.png"/>
+    </record>
+
+    <record id="partner_department3" model="res.partner">
+        <field name="name">Test Department 3</field>
+        <field name="email">department3@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/department3.png"/>
+    </record>
+
+    <record id="partner_hr_officer" model="res.partner">
+        <field name="name">Test Hr Officer</field>
+        <field name="email">hr-officer@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/hr_officer.png"/>
+    </record>
+
+    <record id="partner_hr_manager" model="res.partner">
+        <field name="name">Test Hr Manager</field>
+        <field name="email">hr-manager@core-bpo.com</field>
+        <field name="company_name">CORE B.P.O</field>
+        <field name="street">17A 270 Rd.</field>
+        <field name="city">Al-Maadi</field>
+        <field name="zip">12111</field>
+        <field name="state_id" ref="base.state_eg_c"/>
+        <field name="country_id" ref="base.eg"/>
+        <field name="image_1920" type="base64"
+               file="hr_demo_users/static/img/hr_manager.png"/>
+    </record>
+
+</odoo>

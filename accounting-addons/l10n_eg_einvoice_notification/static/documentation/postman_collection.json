@@ -1,0 +1,155 @@
+{
+	"info": {
+		"_postman_id": "d9cc6e1b-cfdf-41b6-87ed-337837b20480",
+		"name": "E-Invoice Notification",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ping",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "8ab89990-8edf-11eb-88b2-9a2f6f3fb37f",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"rin\": \"331636093\"\n}"
+				},
+				"url": {
+					"raw": "{{odoo-url}}/api/einvoice/external/Ping",
+					"host": [
+						"{{odoo-url}}"
+					],
+					"path": [
+						"api",
+						"einvoice",
+						"external",
+						"Ping"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Send Notification",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {
+					"content-type": true
+				}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "value",
+							"value": "8ab89990-8edf-11eb-88b2-9a2f6f3fb37f",
+							"type": "string"
+						},
+						{
+							"key": "key",
+							"value": "Authorization",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept-Language",
+						"value": "en",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"deliveryId\": \"838847HS\",\n\"type\": \"document\",\n\"count\": 4,\n\"message\":\n[\n    {\n        \"type\": \"document-validated\",\n        \"uuid\": \"4P78CVEZRVF2Z3HHE0CEET0F10\",\n        \"submissionUUID\": \"YXR00QVDB4TJNZRVE0CEET0F10\",\n        \"longId\": \"LIJAF97HJJKH 8298KHADH0990 8570FDKK9S2LSIU HB377373\",\n        \"internalId\": \"INV/2021/0007\",\n        \"status\": \"Valid\"\n    },\n    {\n        \"type\": \"document-validated\",\n        \"uuid\": \"4P78CVEZRVF2Z3HHE0CEET0F10\",\n        \"submissionUUID\": \"YXR00QVDB4TJNZRVE0CEET0F10\",\n        \"longId\": \"LIJAF97HJJKH 8298KHADH0990 8570FDKK9S2LSIU HB377373\",\n        \"internalId\": \"INV/2021/0007\",\n        \"status\": \"Invalid\"\n    },\n    {\n        \"type\": \"document-received\",\n        \"uuid\": \"SMM6SWWTVF63FH537RHQVA1F10\",\n        \"submissionUUID\": \"NE7NR29SQ34CWNCQ7RHQVA1F10\",\n        \"longId\": \"LIJAF97HJJKH 8298KHADH0990 8570FDKK9S2LSIU HB377373\",\n        \"internalId\": \"234324532534\"\n    },\n    {\n        \"type\": \"document-rejected\",\n        \"uuid\": \"WFY665X1VBGKAG6Q262DFP0F10\",\n        \"submissionUUID\": \"EWE9VMGRZ15X86DN262DFP0F10\",\n        \"longId\": \"LIJAF97HJJKH 8298KHADH0990 8570FDKK9S2LSIU HB377373\",\n        \"internalId\": \"INV/2021/0006\",\n        \"status\": \"Rejected\"\n    },\n    {\n        \"type\": \"document-cancelled\",\n        \"uuid\": \"HCZD3EBXHXG8M89GBX1DFP0F10\",\n        \"submissionUUID\": \"QNGDKK3VA8JSCA6GAX1DFP0F10\",\n        \"longId\": \"LIJAF97HJJKH 8298KHADH0990 8570FDKK9S2LSIU HB377373\",\n        \"internalId\": \"INV/2021/0005\",\n        \"status\": \"Cancelled\"\n    }\n]\n}"
+				},
+				"url": {
+					"raw": "{{odoo-url}}/api/einvoice/external/notifications/documents",
+					"host": [
+						"{{odoo-url}}"
+					],
+					"path": [
+						"api",
+						"einvoice",
+						"external",
+						"notifications",
+						"documents"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "apikey",
+		"apikey": [
+			{
+				"key": "value",
+				"value": "8ab89990-8edf-11eb-88b2-9a2f6f3fb37f",
+				"type": "string"
+			},
+			{
+				"key": "key",
+				"value": "Authorization",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

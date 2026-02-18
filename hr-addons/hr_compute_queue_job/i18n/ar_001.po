@@ -1,0 +1,204 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_compute_queue_job
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-13 07:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_wizard_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_compute_queue_job
+#: model:ir.model,name:hr_compute_queue_job.model_hr_compute_attendance
+msgid "Compute Attendance"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model,name:hr_compute_queue_job.model_hr_compute_attendance_line
+msgid "Compute Attendance Lines"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_wizard__count_selected
+msgid "Count Selected"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields.selection,name:hr_compute_queue_job.selection__hr_compute_attendance__state__done
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_queue_job_search_inherit
+msgid "Done"
+msgstr "المنتهية"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance__done_count
+msgid "Done Count"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields.selection,name:hr_compute_queue_job.selection__hr_compute_attendance__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_queue_job_search_inherit
+msgid "Enqueued"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: code:addons/hr_compute_queue_job/wizard/hr_compute_wizard.py:0
+#, python-format
+msgid ""
+"Error!!\n"
+"Cannot Get Active Compute Lines."
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance_line__exc_info
+msgid "Exception Info"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_queue_job_search_inherit
+msgid "Failed"
+msgstr "فشل"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance__failed_count
+msgid "Failed Count"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_wizard__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields.selection,name:hr_compute_queue_job.selection__hr_compute_attendance__state__in_progress
+msgid "In Progress"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_queue_job_search_inherit
+msgid "Missing Contract"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_line_form_inherit
+msgid "Open"
+msgstr "فتح"
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_queue_job_search_inherit
+msgid "Pending"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance__progress
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_form_inherit
+msgid "Progress"
+msgstr "مستوي التقدم"
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance__progress_count
+msgid "Progress Count"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model,name:hr_compute_queue_job.model_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance_line__queue_job_id
+msgid "Queue Job"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance_line__queue_uuid
+msgid "Queue Uuid"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_line_form_inherit
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_line_tree_inherit
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_wizard_form
+msgid "Re-Schedule"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_form_inherit
+msgid "Re-Schedule All Actions To Progress"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.actions.act_window,name:hr_compute_queue_job.action_re_compute_attendance
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_wizard_form
+msgid "Re-Schedule Compute Lines"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_form_inherit
+msgid "Re-Schedule Failed Actions To Progress"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_hr_compute_attendance_form_inherit
+msgid "Schedule Actions To Progress"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model_terms:ir.ui.view,arch_db:hr_compute_queue_job.view_queue_job_search_inherit
+msgid "Started"
+msgstr ""
+
+#. module: hr_compute_queue_job
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance__state
+#: model:ir.model.fields,field_description:hr_compute_queue_job.field_hr_compute_attendance_line__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_compute_queue_job
+#: model:ir.model,name:hr_compute_queue_job.model_hr_compute_wizard
+msgid "hr.compute.wizard"
+msgstr ""

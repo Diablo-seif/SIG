@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="inherit_hr_applicant_form" model="ir.ui.view">
+        <field name="name">inherit.hr.applicant.form</field>
+        <field name="model">hr.applicant</field>
+        <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='partner_mobile']" position="after">
+                <field name="country_id"/>
+            </xpath>
+
+            <xpath expr="//field[@name='availability']" position="after">
+                <field name="resource_calendar_id"/>
+            </xpath>
+
+            <xpath expr="//field[@name='department_id']" position="after">
+                <field name="address_id" context="{'show_address': 1}"
+                       domain="[('is_company', '=', True )]"
+                       options="{'always_reload': True}"/>
+            </xpath>
+
+            <xpath expr="//field[@name='salary_proposed']/parent::div" position="attributes">
+                <attribute name="groups">hr_job_offer.group_set_job_offer</attribute>
+            </xpath>
+            <xpath expr="//label[@for='salary_proposed']" position="attributes">
+                <attribute name="groups">hr_job_offer.group_set_job_offer</attribute>
+            </xpath>
+
+            <xpath expr="//button[@name='create_employee_from_applicant']"
+                   position="after">
+                <button name="%(hr_job_offer.hr_job_offer_action)d"
+                        type="action" string="Generate Job Offer"
+                        class="oe_highlight"
+                        invisible="sign_signature = False"
+                        context="{'default_applicant_id': id}"
+                        groups="hr_job_offer.group_generate_job_offer"/>
+<!--                        attrs="{'invisible':[('sign_signature','=', False)]}"-->
+                <field name="sign_signature" invisible="1"/>
+                <button name="action_approve" type="object" string="Approve"
+                        invisible="sign_signature = False"
+                        class="oe_highlight"
+                        groups="hr_job_offer.group_approve_job_offer"/>
+            </xpath>
+<!--                        attrs="{'invisible':[('sign_signature','!=', False)]}"-->
+
+            <xpath expr="//div[@name='button_box']" position="inside">
+                <button name="action_view_job_offers" type="object"
+                        class="oe_stat_button" icon="fa-pencil-square-o"
+                        groups="hr_job_offer.group_generate_job_offer,hr_job_offer.group_approve_job_offer"
+                        invisible="not job_offer_ids">
+                    Job Offers
+                    <field name="job_offer_ids" invisible="1"
+                           widget="statinfo"/>
+                </button>
+<!--                        attrs="{'invisible':[('job_offer_ids','=',[])]}">-->
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

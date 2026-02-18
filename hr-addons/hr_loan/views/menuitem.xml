@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menu_hr_loan_root"
+              name="Loans"
+              sequence="45"
+              web_icon="hr_loan,static/description/icon.png"/>
+
+    <menuitem id="menu_hr_loans_and_advances"
+              name="Loans &amp; Advances"
+              parent="menu_hr_loan_root"
+              sequence="20"/>
+
+    <menuitem id="menu_hr_loan_request"
+              name="Loan Request"
+              parent="menu_hr_loans_and_advances"
+              action="hr_loan_action"/>
+
+    <menuitem id="settings_loan_menu"
+              name="Settings"
+              parent="menu_hr_loan_root"
+              groups="hr.group_hr_manager"
+              sequence="30"/>
+
+    <menuitem id="loan_config_settings_menu"
+              name="Loan Configurations"
+              action="loan_config_settings_action"
+              groups="hr.group_hr_manager"
+              parent="settings_loan_menu"
+              sequence="10"/>
+
+</odoo>

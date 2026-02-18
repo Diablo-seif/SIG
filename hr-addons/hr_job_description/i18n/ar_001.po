@@ -1,0 +1,82 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_job_description
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-13 07:15+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job__job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template__job_description
+#: model_terms:ir.ui.view,arch_db:hr_job_description.hr_job_description_template_form
+#: model_terms:ir.ui.view,arch_db:hr_job_description.hr_job_inherit_description_template_form
+msgid "Job Description"
+msgstr "الوصف الوظيفي"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job__job_description_template_id
+msgid "Job Description Template"
+msgstr "قالب الوصف الوظيفي"
+
+#. module: hr_job_description
+#: model:ir.actions.act_window,name:hr_job_description.hr_job_description_template_action
+#: model:ir.model,name:hr_job_description.model_hr_job_description_template
+#: model:ir.ui.menu,name:hr_job_description.hr_job_description_template_menu
+msgid "Job Description Templates"
+msgstr "قوالب الوصف الوظيفي"
+
+#. module: hr_job_description
+#: model:ir.model,name:hr_job_description.model_hr_job
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_job_description
+#: model:ir.model.fields,field_description:hr_job_description.field_hr_job_description_template__name
+#: model_terms:ir.ui.view,arch_db:hr_job_description.hr_job_description_template_form
+msgid "Name"
+msgstr "الاسم"

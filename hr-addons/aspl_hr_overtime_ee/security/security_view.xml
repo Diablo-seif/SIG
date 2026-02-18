@@ -1,0 +1,17 @@
+<odoo>
+
+    <record id="hr_employee_overtime_rule" model="ir.rule">
+        <field name="name">Employee can see only his own details</field>
+        <field ref="aspl_hr_overtime_ee.model_hr_employee_overtime" name="model_id"/>
+        <field name="domain_force">['|', ('employee_id.user_id', '=', user.id), ('employee_id.overtime_responsible_id.user_id', '=', user.id)]</field>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="hr_officer_overtime_rule" model="ir.rule">
+        <field name="name">HR Officer can see all the salary details</field>
+        <field name="model_id" ref="aspl_hr_overtime_ee.model_hr_employee_overtime"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="groups" eval="[(4, ref('hr.group_hr_user'))]"/>
+    </record>
+
+</odoo>

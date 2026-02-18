@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="course_1" model="hr.course">
+        <field name="name">Python</field>
+        <field name="job_ids"
+               eval="[(4, ref('hr.job_ceo')),(4, ref('hr.job_cto')),(4, ref('hr.job_consultant'))]"/>
+        <field name="course_type_id" ref='soft_skill_course_type'/>
+    </record>
+
+    <record id="course_2" model="hr.course">
+        <field name="name">Soft Skills</field>
+        <field name="job_ids"
+               eval="[(4, ref('hr.job_ceo')),(4, ref('hr.job_developer')),(4, ref('hr.job_hrm'))]"/>
+        <field name="course_type_id" ref='soft_skill_course_type'/>
+    </record>
+
+    <record id="course_3" model="hr.course">
+        <field name="name">Javascript</field>
+        <field name="job_ids"
+               eval="[(4, ref('hr.job_developer')),(4, ref('hr.job_cto')),(4, ref('hr.job_hrm'))]"/>
+        <field name="course_type_id" ref='technical_course_type'/>
+    </record>
+
+</odoo>

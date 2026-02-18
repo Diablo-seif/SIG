@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="account_analytic_account_form" model="ir.ui.view">
+        <field name="name">account.analytic.account.form</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_form"/>
+        <field name="arch" type="xml">
+            <field name="code" position="after">
+                <field name="project_code"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="account_analytic_account_view_tree" model="ir.ui.view">
+        <field name="name">account.analytic.account.view.tree</field>
+        <field name="model">account.analytic.account</field>
+        <field name="inherit_id" ref="analytic.view_account_analytic_account_list"/>
+        <field name="arch" type="xml">
+            <field name="name" position="before">
+                <field name="project_code" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+    <menuitem id="proposal_analytic_account_menu"
+            name="Analytic Accounts"
+            parent="proposal_config_menu"
+            groups="proposal.group_proposal_supervisor"
+            action="analytic.action_account_analytic_account_form"
+            sequence="100"/>
+</odoo>

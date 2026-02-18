@@ -1,0 +1,219 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_courses
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-08-30 18:44+0000\n"
+"Last-Translator: Abdalla Mohamed <abdalla.mohamed@core-bpo.com>\n"
+"Language-Team: Arabic <http://weblate.staging.core-bpo.net/projects/"
+"hr-product/hr_courses/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.0.4\n"
+
+#. module: hr_courses
+#: code:addons/hr_courses/models/hr_course_provider.py:0
+#, python-format
+msgid "%s/%s/%s%s"
+msgstr "%s/%s/%s%s"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_courses
+#: model_terms:ir.ui.view,arch_db:hr_courses.view_hr_course_filter
+msgid "Archived"
+msgstr "مؤرشف"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__cost_per_participant
+msgid "Cost Per Participant"
+msgstr "التكلفة للفرد"
+
+#. module: hr_courses
+#: code:addons/hr_courses/models/hr_course_provider.py:0
+#: model:ir.model.constraint,message:hr_courses.constraint_hr_course_provider_line_cost_per_participant
+#, python-format
+msgid "Cost per participant must be greater than 0"
+msgstr "تكلفة الفرد يجب أن تكون أكبر من صفر"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__course_id
+#: model:ir.model.fields,field_description:hr_courses.field_hr_job__course_ids
+#: model_terms:ir.ui.view,arch_db:hr_courses.view_hr_course_filter
+msgid "Course"
+msgstr "المادة التدريبية"
+
+#. module: hr_courses
+#: model:ir.model,name:hr_courses.model_hr_course_provider_line
+msgid "Course Provider"
+msgstr "مزود خدمة التدريب"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__course_type_id
+msgid "Course Type"
+msgstr "نوع المادة التدريبية"
+
+#. module: hr_courses
+#: model:ir.actions.act_window,name:hr_courses.hr_course_type_action
+#: model:ir.ui.menu,name:hr_courses.hr_course_type_menu
+msgid "Course Types"
+msgstr "أنواع المواد التدريبية"
+
+#. module: hr_courses
+#: model:ir.actions.act_window,name:hr_courses.hr_course_action
+#: model:ir.ui.menu,name:hr_courses.menu_hr_course
+msgid "Courses"
+msgstr "المواد التدريبية"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__create_uid
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__create_uid
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_type__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__create_date
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__create_date
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_type__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__description
+#: model_terms:ir.ui.view,arch_db:hr_courses.hr_course_form
+msgid "Description"
+msgstr "الوصف"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__display_name
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__display_name
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_type__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_courses
+#: model:ir.model.fields.selection,name:hr_courses.selection__hr_course_provider_line__provider_type__external
+msgid "External"
+msgstr "خارجي"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__id
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__id
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_type__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_courses
+#: model:ir.model.fields,help:hr_courses.field_hr_course__active
+msgid ""
+"If the active field is set to false, it willallow you to hide the Course "
+"without removing it."
+msgstr ""
+"إذا تم ضبط الحقل النشط على \"غير فعال\" ، فسيسمح لك بإخفاء الدورة "
+"التدريبية دون إزالتها."
+
+#. module: hr_courses
+#: model:ir.model.fields.selection,name:hr_courses.selection__hr_course_provider_line__provider_type__internal
+msgid "Internal"
+msgstr "داخلي"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__job_ids
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_courses
+#: model:ir.model,name:hr_courses.model_hr_job
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course____last_update
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line____last_update
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_type____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__write_uid
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__write_uid
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__write_date
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__write_date
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__minimum_no_of_participants
+msgid "Minimum No Of Participants"
+msgstr "أقل عدد منتسبين"
+
+#. module: hr_courses
+#: code:addons/hr_courses/models/hr_course_provider.py:0
+#: model:ir.model.constraint,message:hr_courses.constraint_hr_course_provider_line_minimum_no_of_participants
+#, python-format
+msgid "Minimum number of participants must be greater than 0"
+msgstr "يجب أن يكون أقل عدد منتسبين أكبر من 0"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__name
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course__provider_ids
+msgid "Provider"
+msgstr "المزود"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__provider_type
+msgid "Provider Type"
+msgstr "نوع مزود خدمة التدريب"
+
+#. module: hr_courses
+#: model_terms:ir.ui.view,arch_db:hr_courses.hr_course_form
+msgid "Providers"
+msgstr "مزودي خدمة التدريب"
+
+#. module: hr_courses
+#: model_terms:ir.ui.view,arch_db:hr_courses.view_hr_course_filter
+msgid "Search Course"
+msgstr "البحث عن مادة"
+
+#. module: hr_courses
+#: model:ir.model.fields,field_description:hr_courses.field_hr_course_provider_line__partner_id
+msgid "Service Provider"
+msgstr "مزود الخدمة"
+
+#. module: hr_courses
+#: model:ir.model,name:hr_courses.model_hr_course
+msgid "Training Course"
+msgstr "مادة تدريبية"
+
+#. module: hr_courses
+#: model:ir.model,name:hr_courses.model_hr_course_type
+msgid "hr.course.type"
+msgstr "hr.course.type"

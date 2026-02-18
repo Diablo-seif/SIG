@@ -1,0 +1,35 @@
+<odoo>
+        <menuitem id="employee_type_menu"
+                name="Employee Type"
+                action="view_employee_type_action"
+                parent="hr.menu_human_resources_configuration"
+                sequence="10"
+                groups="base.group_no_one"
+        />
+
+        <menuitem id="hr_office_menu"
+                name="HR Office"
+                action="view_hr_office_action"
+                parent="hr.menu_human_resources_configuration"
+                sequence="11"
+                groups="base.group_no_one"
+        />
+
+        <menuitem id="base.menu_management" name="Apps" sequence="310"
+                web_icon="base,static/description/modules.png"
+                groups="base.group_erp_manager" />
+
+        <menuitem id="menu_salary_input_lines" name="Salary Input Lines"
+                sequence="10"
+                action="view_salary_input_line_action"
+                parent="hr.menu_hr_employee_payroll"
+                groups="hr_contract.group_hr_contract_manager"
+        />
+        <record id="website.menu_website_configuration" model="ir.ui.menu">
+                <field name="groups_id" eval="[(6,0,[ref('base.group_erp_manager')])]" />
+        </record>
+
+        <record id="hr.menu_hr_root" model="ir.ui.menu">
+                <field name="groups_id" eval="[(6,0,[ref('hr.group_hr_user')])]" />
+        </record>
+</odoo>

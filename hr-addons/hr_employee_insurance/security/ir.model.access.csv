@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_insurance_manager_insurance_history,Access.Insurance.Manager.Insurance.History,model_employee_insurance_history,l10n_eg_social_insurance.group_social_insurance_manager,1,1,1,1

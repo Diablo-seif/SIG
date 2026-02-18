@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="request_card_report" model="ir.actions.report">
+            <field name="name">Request Card Report</field>
+            <field name="model">sig.request.cards</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">sig_request_card.request_card_report_template</field>
+            <field name="report_file">sig_request_card.request_card_report_template</field>
+            <field name="print_report_name">'Request Card Report'</field>
+            <field name="binding_model_id" ref="sig_request_card.model_sig_request_cards"/>
+            <field name="binding_type">report</field>
+        </record>
+    </data>
+</odoo>

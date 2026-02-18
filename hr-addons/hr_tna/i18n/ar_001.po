@@ -1,0 +1,775 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_tna
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-08-30 18:44+0000\n"
+"Last-Translator: Abdalla Mohamed <abdalla.mohamed@core-bpo.com>\n"
+"Language-Team: Arabic <http://weblate.staging.core-bpo.net/projects/"
+"hr-product/hr_tna/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.0.4\n"
+
+#. module: hr_tna
+#: code:addons/hr_tna/models/hr_tna_line.py:0
+#, python-format
+msgid "%s plan was approved"
+msgstr "%s تم اعتماد الخطة"
+
+#. module: hr_tna
+#: code:addons/hr_tna/models/hr_tna_line.py:0
+#, python-format
+msgid "%s plan was rejected"
+msgstr "%s تم رفض الخطة"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+msgid "<span class=\"oe_form_field\"> From </span>"
+msgstr "<span class=\"oe_form_field\"> من  </span>"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+msgid "<span class=\"oe_form_field\"> To </span>"
+msgstr "<span class=\"oe_form_field\"> حتى  </span>"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "<strong>Approved Budget :</strong>"
+msgstr "<strong>الميزانية المعتمدة:</strong>"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "<strong>Course Budget(External):</strong>"
+msgstr "<strong>ميزانية الدورات التدريبية الخارجية:</strong>"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "<strong>Course Budget(internal):</strong>"
+msgstr "<strong>ميزانية الدورات التدريبية الداخلية:</strong>"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "<strong>Planned Budget:</strong>"
+msgstr "<strong>ميزانية الخطة:</strong>"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_needaction
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء مطلوب"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__activity_ids
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "شكل استثناء النشاط"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__activity_state
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_tna
+#: model:ir.actions.server,name:hr_tna.approve_tna_line_server_action
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_tree
+msgid "Approve"
+msgstr "موافق"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna__state__approved
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna_line__state__approved
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__approved_budget
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__approved_budget
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_tree
+msgid "Approved Budget"
+msgstr "ميزانية المعتمدة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__approved_no_of_participants
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_tree
+msgid "Approved No Of Participants"
+msgstr "عدد الشواغر الموافق عليها"
+
+#. module: hr_tna
+#: code:addons/hr_tna/models/hr_tna_line.py:0
+#: model:ir.model.constraint,message:hr_tna.constraint_hr_tna_line_check_approved_no_of_participants
+#, python-format
+msgid "Approved No Of Participants must be positive"
+msgstr "عدد المنتسبين الموافق عليهم يجب أن يكون موجب."
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_attachment_count
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+#: model:res.groups,name:hr_tna.group_tna_budget
+msgid "Budget"
+msgstr "الميزانية"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna_line__state__budgeted
+msgid "Budgeted"
+msgstr "تمت الموازنة"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_set_provider_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__course_id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__course_id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__course_id
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_courses_search
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_search
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "Course"
+msgstr "الدورة التدريبية"
+
+#. module: hr_tna
+#: model:ir.model,name:hr_tna.model_course_provider_lines
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_set_provider__course_provider_lines_ids
+msgid "Course Provider Lines"
+msgstr "أسطر مزود الدورة التدريبية"
+
+#. module: hr_tna
+#: model:ir.actions.act_window,name:hr_tna.hr_tna_courses_action
+#: model:ir.model.fields,field_description:hr_tna.field_hr_employee__course_count
+msgid "Courses"
+msgstr "الدورات التدريبية"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__create_uid
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__create_uid
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__create_uid
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__create_uid
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_set_provider__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__create_date
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__create_date
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__create_date
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__create_date
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_set_provider__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__currency_id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__date_to
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__deadline
+msgid "Deadline"
+msgstr "الموعد النهائي"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__department_id
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_search
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_form
+msgid "Department Requirements"
+msgstr "احتياجات القسم"
+
+#. module: hr_tna
+#: model:ir.actions.act_window,name:hr_tna.hr_tna_line_action
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__tna_line_ids
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+msgid "Department TNA Plan"
+msgstr "قسم خطة الموارد البشرية"
+
+#. module: hr_tna
+#: model:ir.model,name:hr_tna.model_hr_tna_line
+msgid "Department Training Needs Assessment"
+msgstr "تقييم احتياجات القسم التدريبية"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__display_name
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__display_name
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__display_name
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__display_name
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_set_provider__display_name
+#: model:ir.model.fields,field_description:hr_tna.field_report_hr_tna_tna_report__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna__state__done
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna_courses__state__done
+msgid "Done"
+msgstr "المنتهية"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna__state__draft
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna_line__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_tna
+#: model:ir.model,name:hr_tna.model_hr_employee
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_search
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__start_date
+msgid "Estimated Start Date"
+msgstr "تاريخ البدأ المتوقع"
+
+#. module: hr_tna
+#: code:addons/hr_tna/models/hr_tna_courses.py:0
+#, python-format
+msgid "Estimated Starting Date must be between %s and %s"
+msgstr "وقت البداية المقترح يجب أن يكون بين %s و %s"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__external_budget
+msgid "External Budget"
+msgstr "ميزانية خارجية"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_follower_ids
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_channel_ids
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_partner_ids
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__hr_tna_line_ids
+msgid "Hr Tna Line"
+msgstr "سطر تقدير احتياجات التدريب"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_set_provider__id
+#: model:ir.model.fields,field_description:hr_tna.field_report_hr_tna_tna_report__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__activity_exception_icon
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__message_needaction
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__message_unread
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__message_needaction
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__message_has_error
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__message_has_sms_error
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__message_has_error
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__internal_budget
+msgid "Internal Budget"
+msgstr "ميزانية داخلية"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_is_follower
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__is_readonly
+msgid "Is Readonly"
+msgstr "للقراءة فقط"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__job_id
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines____last_update
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna____last_update
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses____last_update
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line____last_update
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_set_provider____last_update
+#: model:ir.model.fields,field_description:hr_tna.field_report_hr_tna_tna_report____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__write_uid
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__write_uid
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__write_uid
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__write_uid
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_set_provider__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__write_date
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__write_date
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__write_date
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__write_date
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_set_provider__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_tna
+#: model:res.groups,name:hr_tna.group_tna_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_has_error
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_ids
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__minimum_no_of_participants
+msgid "Minimum No Of Participants"
+msgstr "أقل عدد منتسبين"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__name
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__activity_summary
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__activity_type_id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__no_of_participants
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__no_of_participants
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_tree
+msgid "No Of Participants"
+msgstr "عدد المنتسبين"
+
+#. module: hr_tna
+#: code:addons/hr_tna/models/hr_tna_line.py:0
+#: model:ir.model.constraint,message:hr_tna.constraint_hr_tna_line_check_number_of_participants
+#, python-format
+msgid "No Of Participants must be positive"
+msgstr "عدد المنتسبين يجب أن يكون موجب"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__note
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_form
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "Number Of Participants"
+msgstr "عدد المنتسبين"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_tna
+#: code:addons/hr_tna/models/hr_tna_line.py:0
+#, python-format
+msgid "Number of employees can't exceed %s"
+msgstr "عدد الموظفين لا يمكن أن يتجاوز %s"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__message_needaction_counter
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__message_has_error_counter
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_tna
+#: code:addons/hr_tna/models/hr_tna_line.py:0
+#, python-format
+msgid "Number of participants can't exceed %s for %s job position"
+msgstr "عدد المنتسبين لا يمكن أن يتجاوز %s لوظيفة %s"
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__message_unread_counter
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna_courses__state__pending
+msgid "Pending"
+msgstr "مؤجل"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "Planned"
+msgstr "تم وضع الخطة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__planned_budget
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__planned_budget
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_tree
+msgid "Planned Budget"
+msgstr "ميزانية الخطة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_employee__planned_course_ids
+msgid "Planned Course"
+msgstr "دورة المخططة"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna__state__preparation
+msgid "Preparation"
+msgstr "التجهيز"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__provider_id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__provider_id
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_search
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "Provider"
+msgstr "المزود"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__provider_type
+msgid "Provider Type"
+msgstr "نوع مزود الدورة"
+
+#. module: hr_tna
+#: model:ir.actions.server,name:hr_tna.reject_tna_line_server_action
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_tree
+msgid "Reject"
+msgstr "رفض"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna__state__rejected
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna_line__state__rejected
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__user_id
+msgid "Responsible"
+msgstr "المسئول"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__activity_user_id
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna_courses__state__running
+msgid "Running"
+msgstr "جاري"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_tna
+#: model:ir.actions.act_window,name:hr_tna.hr_tna_set_provider_action
+#: model:ir.model.fields,field_description:hr_tna.field_course_provider_lines__set_provider_id
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_set_provider_form
+msgid "Set Provider"
+msgstr "تحديد مزود الدورة التدريبية"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+msgid "Share"
+msgstr "مشاركة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__department_ids
+msgid "Shared to"
+msgstr "المشاركة مع"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_courses_form
+msgid "Start Course"
+msgstr "إبدأ الدورة"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_courses_search
+msgid "Start Date"
+msgstr "تاريخ البداية"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__state
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__state
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__state
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_courses_search
+msgid "State"
+msgstr "المحافظة"
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__activity_state
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_tree
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_tree
+msgid "Submit Budget"
+msgstr "تقديم الميزانية"
+
+#. module: hr_tna
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna__state__submitted
+#: model:ir.model.fields.selection,name:hr_tna.selection__hr_tna_line__state__submitted
+msgid "Submitted"
+msgstr "تم تسليمه"
+
+#. module: hr_tna
+#: model:ir.actions.report,name:hr_tna.action_tna_report
+msgid "TNA"
+msgstr "خطة احتياجات التدريب"
+
+#. module: hr_tna
+#: model:ir.model,name:hr_tna.model_hr_tna_courses
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__tna_course_ids
+msgid "TNA Courses"
+msgstr "دورات خطة احتياجات التدريب"
+
+#. module: hr_tna
+#: model:ir.actions.server,name:hr_tna.hr_tna_cron_ir_actions_server
+#: model:ir.cron,cron_name:hr_tna.hr_tna_cron
+#: model:ir.cron,name:hr_tna.hr_tna_cron
+msgid "TNA Deadline"
+msgstr "تاريخ نهاية تقديم الخطة"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_form
+msgid "TNA Plans"
+msgstr "خطة احتياجات التدريب"
+
+#. module: hr_tna
+#: model:ir.model,name:hr_tna.model_hr_tna_set_provider
+msgid "TNA Set Provider"
+msgstr "تحديد مزود الدورات"
+
+#. module: hr_tna
+#: code:addons/hr_tna/models/hr_tna_line.py:0
+#: model:ir.model.constraint,message:hr_tna.constraint_hr_tna_line_unique_tna_line
+#, python-format
+msgid "TNA line can't be duplicated"
+msgstr "لا يمكن تكرار السطر في نفس الخطة"
+
+#. module: hr_tna
+#: model:ir.model.constraint,message:hr_tna.constraint_hr_tna_tna_date_check
+msgid "The start date must be anterior to the end date."
+msgstr "يجب أن يكون تاريخ البدء قبل تاريخ الانتهاء."
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__tna_id
+msgid "Tna"
+msgstr "خطة احتياجات التدريب"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_courses__tna_line_id
+msgid "Tna Line"
+msgstr "سطر تقدير احتياجات التدريب"
+
+#. module: hr_tna
+#: model:ir.actions.act_window,name:hr_tna.hr_tna_action
+#: model:ir.model,name:hr_tna.model_hr_tna
+#: model:ir.module.category,name:hr_tna.category_tna
+#: model:ir.ui.menu,name:hr_tna.tna_menu
+msgid "Training Needs Assessment"
+msgstr "تقييم احتياجات التدريب"
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.hr_tna_line_search
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "Type"
+msgstr "النوع"
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__activity_exception_decoration
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي."
+
+#. module: hr_tna
+#: model_terms:ir.ui.view,arch_db:hr_tna.tna_report
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__unit_budget
+msgid "Unit Budget"
+msgstr "ميزانية الفرد"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_unread
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__message_unread_counter
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_tna
+#: model:res.groups,name:hr_tna.group_tna_user
+msgid "User"
+msgstr "المستخدم"
+
+#. module: hr_tna
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna__website_message_ids
+#: model:ir.model.fields,field_description:hr_tna.field_hr_tna_line__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_tna
+#: model:ir.model.fields,help:hr_tna.field_hr_tna__website_message_ids
+#: model:ir.model.fields,help:hr_tna.field_hr_tna_line__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_tna
+#: model:ir.model,name:hr_tna.model_report_hr_tna_tna_report
+msgid "report.hr_tna.tna_report"
+msgstr "report.hr_tna.tna_report"

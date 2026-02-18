@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo >
+
+    <record id="vat_warning_monthly_cron" model="ir.cron">
+        <field name="name">VAT Warning Monthly</field>
+        <field name="model_id" ref="base.model_res_users"/>
+        <field name="type">ir.actions.server</field>
+        <field name="state">code</field>
+        <field name="interval_number">1</field>
+        <field name="interval_type">days</field>
+        <field name="active">True</field>
+        <field name="user_id" ref="base.user_root"/>
+        <field name="code">
+previous_two_month_date = datetime.datetime.now() + dateutil.relativedelta.relativedelta(months=-2)
+previous_one_month_date = datetime.datetime.now() + dateutil.relativedelta.relativedelta(months=-1)
+previous_two_month_date = datetime.datetime(previous_two_month_date.year, previous_two_month_date.month, 1)
+previous_one_month_date = datetime.datetime(previous_one_month_date.year, previous_one_month_date.month, 1)
+reported_invoices = env['account.move'].sudo().search([('tax_reported', '=', True), ('invoice_date', '&lt;', previous_one_month_date), ('invoice_date', '>=', previous_two_month_date) ])
+if not reported_invoices:
+  template = env.ref('l10n_eg_vat.mail_template_warning_check_vat_report')
+  group = env.ref('account.group_account_user')
+  for user_id in group.users:
+      if datetime.datetime.now().day >= user_id.company_id.vat_warning_day:
+          template.send_mail(user_id.id)
+
+        </field>
+    </record>
+
+</odoo>

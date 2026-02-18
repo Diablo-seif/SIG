@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_user_hr_social_raises,Access.HR.User.Hr.Social.Raises,model_hr_social_raises,group_social_raises_manager,1,1,1,1
+access_hr_user_apply_raise,Access.HR.User.apply.raise,model_apply_raise,group_social_raises_manager,1,1,1,1

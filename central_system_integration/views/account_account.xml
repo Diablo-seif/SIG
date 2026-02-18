@@ -1,0 +1,13 @@
+<odoo>
+    <record id="inherit_view_account_list" model="ir.ui.view">
+        <field name="name">account.account.list</field>
+        <field name="model">account.account</field>
+        <field name="inherit_id" ref="account.view_account_list" />
+        <field name="arch" type="xml">
+            <field name="account_type" position="after">
+                <field name="category" />
+                <field name="sub_category" />
+            </field>
+        </field>
+    </record>
+</odoo>

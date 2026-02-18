@@ -1,0 +1,20 @@
+{
+    'name': "Journal Entry - Invoice - Bill Cancel Reason",
+    'summary': """Allow to cancel invoice - Bill - Journal Entry with reason""",
+    'author': 'Core B.P.O',
+    'maintainer': 'Abdalla Mohamed',
+    'support': 'apps@core-bpo.com',
+    'website': 'http://www.core-bpo.com',
+    'category': 'Accounting/Accounting',
+    'license': 'OPL-1',
+    # # 'version': '16.0.1.0.0',
+    'depends': ['account'],
+    'data': ['security/ir.model.access.csv',
+             'wizard/account_move_cancel.xml',
+             'views/account_move_cancel_reason.xml',
+             'views/account_move.xml'
+             ],
+    'installable': True,
+    'application': True,
+    'auto_install': False,
+}

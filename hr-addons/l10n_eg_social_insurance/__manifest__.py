@@ -1,0 +1,31 @@
+# pylint: skip-file
+{
+    'name': 'Company Insurance',
+    'summary': 'Company Insurance',
+    'author': "Muhamed Abd El-Rhman, CORE B.P.O",
+    'website': "http://www.core-bpo.com",
+    # 'version': '1.0.0',
+    'category': 'Human Resources',
+    'license': 'AGPL-3',
+    'depends': [
+        'hr_period',
+        'hr_payroll',
+    ],
+    'data': [
+        'security/res_groups.xml',
+        'security/ir.model.access.csv',
+        'views/res_company.xml',
+        'views/res_country_state.xml',
+        'views/insurance_sector.xml',
+        'views/insurance_legal_firm.xml',
+        'views/insurance_office.xml',
+        'views/insurance_job.xml',
+        'views/social_insurance_config.xml',
+        'data/insurance_sector.xml',
+        'data/insurance.job.csv',
+        'data/res.country.state.area.csv',
+    ],
+    'installable': True,
+    'application': False,
+    'auto_install': False,
+}

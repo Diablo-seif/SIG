@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="rule_hr_dynamic_service_employee_manager" model="ir.rule">
+        <field name="name">Hr Dynamic Approval Employee, Direct Manager and Department Manager Views</field>
+        <field ref="model_hr_dynamic_service" name="model_id"/>
+        <field name="domain_force">['|','|',('employee_id.user_id', 'in', [user.id]),
+            ('employee_id.parent_id.user_id', 'in', [user.id]),
+            ('employee_id.department_id.manager_id.user_id', 'in', [user.id])]</field>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+    </record>
+
+    <record id="rule_hr_dynamic_service_hr_user" model="ir.rule">
+        <field name="name">Hr Dynamic Approval Hr Officer Rule</field>
+        <field ref="model_hr_dynamic_service" name="model_id"/>
+        <field name="domain_force">[(1, '=', 1)]</field>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+        <field name="groups" eval="[(4, ref('hr.group_hr_user'))]"/>
+    </record>
+
+    <record model="ir.rule" id="hr_dynamic_service_comp_rule">
+        <field name="name">Dynamic Approval multi-company</field>
+        <field name="model_id" ref="model_hr_dynamic_service"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record model="ir.rule" id="hr_dynamic_service_type_comp_rule">
+        <field name="name">Dynamic Approval type multi-company</field>
+        <field name="model_id" ref="model_hr_dynamic_service_type"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('company_id','=',False),('company_id', 'in', company_ids)]</field>
+    </record>
+
+    <record model="ir.rule" id="hr_dynamic_service_sub_type_comp_rule">
+        <field name="name">Dynamic Approval sub-type multi-company</field>
+        <field name="model_id" ref="model_hr_dynamic_service_subtype"/>
+        <field name="global" eval="True"/>
+        <field name="domain_force">['|',('service_type_id.company_id','=',False),('service_type_id.company_id', 'in', company_ids)]</field>
+    </record>
+
+</odoo>

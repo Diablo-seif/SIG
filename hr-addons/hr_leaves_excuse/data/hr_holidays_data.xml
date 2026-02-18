@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hr_holidays_status_excuse" model="hr.leave.type">
+        <field name="name">Excuse</field>
+        <field name="category">excuse</field>
+        <field name="color_name">lightgreen</field>
+        <field name="max_excuse_times">2</field>
+        <field name="request_unit">hour</field>
+        <field name="allocation_validation_type">no</field>
+        <field name="max_excuse_hours_per_month">2</field>
+    </record>
+
+</odoo>

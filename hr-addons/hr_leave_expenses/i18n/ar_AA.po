@@ -1,0 +1,156 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_leave_expenses
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190827\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-11 13:41+0000\n"
+"PO-Revision-Date: 2019-11-11 13:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__analytic_account_id
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__department_ids
+msgid "Departments"
+msgstr "الاقسام"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__employee_category_ids
+msgid "Employee Tags"
+msgstr "وسوم الموظف"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__employee_ids
+msgid "Employees"
+msgstr "الموظفون"
+
+#. module: hr_leave_expenses
+#: model:ir.model,name:hr_leave_expenses.model_hr_expense_sheet
+msgid "Expense Report"
+msgstr "تقرير المصاريف"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave__sheet_id
+msgid "Expense Sheet"
+msgstr "تقرير المصاريف"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_leave_expenses
+#: model_terms:ir.ui.view,arch_db:hr_leave_expenses.edit_holiday_status_form_inherit
+msgid "If no employee, department, tag or job position\n"
+"                                is selected, this expense will be applied to all\n"
+"                                employees."
+msgstr "اذا لم يتم اختيار موظف, قسم, وسوم او منصب وظيفي هذا المصروف سوف يطبق علي جميع الموظفين."
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__job_ids
+msgid "Job Positions"
+msgstr "مناصب وظيفية"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_leave_expenses
+#: model:ir.model,name:hr_leave_expenses.model_hr_leave
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_expense_sheet__leave_id
+msgid "Time Off"
+msgstr "إجازة"
+
+#. module: hr_leave_expenses
+#: model_terms:ir.ui.view,arch_db:hr_leave_expenses.edit_holiday_status_form_inherit
+msgid "Time Off Expense"
+msgstr "المغادرات / المصروفات"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_type__leave_expense_ids
+msgid "Time Off Expense Lines"
+msgstr "بنود المغادرات / المصروفات"
+
+#. module: hr_leave_expenses
+#: model:ir.model,name:hr_leave_expenses.model_hr_leave_type
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__leave_type_id
+msgid "Time Off Type"
+msgstr "نوع الإجازة"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_type__link_to_expenses
+msgid "Link To Expenses"
+msgstr "ربط مع المصروفات"
+
+#. module: hr_leave_expenses
+#: sql_constraint:hr.leave.expense:0
+msgid "Please add positive unit price."
+msgstr "الرجاء إضافة سعر الوحدة الإيجابي."
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__product_id
+msgid "Product"
+msgstr "المنتج"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__unit_amount
+msgid "Unit Price"
+msgstr "سعر الوحدة"
+
+#. module: hr_leave_expenses
+#: model:ir.model.fields,field_description:hr_leave_expenses.field_hr_leave_expense__product_uom_id
+msgid "Unit of Measure"
+msgstr "وحدة القياس"
+
+#. module: hr_leave_expenses
+#: model:ir.model,name:hr_leave_expenses.model_hr_leave_expense
+msgid "hr.leave.expense"
+msgstr "المصروفات"
+

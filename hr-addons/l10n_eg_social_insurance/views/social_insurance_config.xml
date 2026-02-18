@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="social_insurance_config_view_tree" model="ir.ui.view">
+        <field name="name">social.insurance.config.tree</field>
+        <field name="model">social.insurance.config</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="method"/>
+                <field name="value"/>
+                <field name="min_value"/>
+                <field name="max_value"/>
+                <field name="date_from"/>
+                <field name="date_to"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="social_insurance_config_view_form" model="ir.ui.view">
+        <field name="name">social.insurance.config.form</field>
+        <field name="model">social.insurance.config</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="method" widget="radio"/>
+                            <label for="date_from" string="Period"/>
+                            <div class="o_row">
+                                <span class="oe_form_field">From </span>
+                                <field name="date_from"/>
+                                <span class="oe_form_field"> To </span>
+                                <field name="date_to"/>
+                            </div>
+                        </group>
+                        <group>
+                            <field name="value"/>
+                            <field name="min_value"/>
+                            <field name="max_value"/>
+                        </group>
+                    </group>
+                    <notebook groups="base.group_no_one">
+                        <page string="Insurance Periods">
+                            <field name="period_month_ids" readonly="1">
+                                <list>
+                                    <field name="name"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="social_insurance_config_action" model="ir.actions.act_window">
+        <field name="name">Social Insurance Configuration</field>
+        <field name="res_model">social.insurance.config</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">main</field>
+    </record>
+
+    <menuitem id="social_insurance_config_menu"
+              name="Social Insurance Configuration"
+              parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"
+              groups="hr_payroll.group_hr_payroll_employee_manager"
+              sequence="90"
+              action="social_insurance_config_action"/>
+
+</odoo>

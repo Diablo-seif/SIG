@@ -1,0 +1,19 @@
+<odoo>
+
+    <record id="view_request_card_governorate_tree" model="ir.ui.view">
+        <field name="name">request.card.governorate.tree</field>
+        <field name="model">request.card.governorate</field>
+        <field name="arch" type="xml">
+            <list editable="top">
+                <field name="name"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="action_request_card_governorate_view" model="ir.actions.act_window">
+        <field name="name">Governorates</field>
+        <field name="res_model">request.card.governorate</field>
+        <field name="view_mode">list</field>
+    </record>
+
+</odoo>

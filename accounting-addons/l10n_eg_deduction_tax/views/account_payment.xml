@@ -1,0 +1,18 @@
+<odoo>
+
+    <record id="account_payment_search_view_inherit" model="ir.ui.view">
+        <field name="name">account.payment.search</field>
+        <field name="model">account.payment</field>
+        <field name="inherit_id" ref="account.view_account_payment_search"/>
+        <field name="arch" type="xml">
+            <filter name="reconciled" position="after">
+                <separator/>
+                <filter string="Deduction" name="filter_deduction"
+                        domain="[('tax_type','=','deduction')]"/>
+                <filter string="Withholding" name="filter_withholding"
+                        domain="[('tax_type','=','withholding')]"/>
+            </filter>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--employees Research &amp; Development-->
+
+    <record id="employee_department" model="hr.employee">
+        <field name="user_id" ref="user_department"/>
+        <field name="department_id" ref="hr.dep_rd"/>
+    </record>
+
+    <!--update department manager-->
+    <record id="hr.dep_rd" model="hr.department">
+        <field name="manager_id" ref="employee_department"/>
+    </record>
+
+    <record id="employee_manager" model="hr.employee">
+        <field name="user_id" ref="user_manager"/>
+        <field name="department_id" ref="hr.dep_rd"/>
+        <field name="address_id" ref="hr_demo_users.partner_manager"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_manager"/>
+    </record>
+
+    <record id="employee_employee" model="hr.employee">
+        <field name="parent_id" ref="employee_manager"/>
+        <field name="user_id" ref="user_employee"/>
+        <field name="department_id" ref="hr.dep_rd"/>
+        <field name="address_id" ref="hr_demo_users.partner_employee"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_employee"/>
+    </record>
+
+    <record id="employee_employee2" model="hr.employee">
+        <field name="parent_id" ref="employee_manager"/>
+        <field name="user_id" ref="user_employee2"/>
+        <field name="department_id" ref="hr.dep_rd"/>
+        <field name="address_id" ref="hr_demo_users.partner_employee2"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_employee2"/>
+    </record>
+
+    <record id="employee_employee3" model="hr.employee">
+        <field name="parent_id" ref="employee_manager"/>
+        <field name="user_id" ref="user_employee3"/>
+        <field name="department_id" ref="hr.dep_rd"/>
+        <field name="address_id" ref="hr_demo_users.partner_employee3"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_employee3"/>
+    </record>
+
+    <!--employees Professional Services-->
+
+    <record id="employee_department2" model="hr.employee">
+        <field name="user_id" ref="user_department2"/>
+        <field name="department_id" ref="hr.dep_ps"/>
+        <field name="address_id" ref="hr_demo_users.partner_department2"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_department2"/>
+    </record>
+
+    <!--update department manager-->
+    <record id="hr.dep_ps" model="hr.department">
+        <field name="manager_id" ref="employee_department2"/>
+    </record>
+
+    <record id="employee_manager2" model="hr.employee">
+        <field name="user_id" ref="user_manager2"/>
+        <field name="department_id" ref="hr.dep_ps"/>
+        <field name="address_id" ref="hr_demo_users.partner_manager2"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_manager2"/>
+    </record>
+
+    <record id="employee_employee4" model="hr.employee">
+        <field name="parent_id" ref="employee_manager2"/>
+        <field name="user_id" ref="user_employee4"/>
+        <field name="department_id" ref="hr.dep_ps"/>
+        <field name="address_id" ref="hr_demo_users.partner_employee4"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_employee4"/>
+    </record>
+
+    <record id="employee_employee5" model="hr.employee">
+        <field name="parent_id" ref="employee_manager2"/>
+        <field name="user_id" ref="user_employee5"/>
+        <field name="department_id" ref="hr.dep_ps"/>
+        <field name="address_id" ref="hr_demo_users.partner_employee5"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_employee5"/>
+    </record>
+
+    <record id="employee_employee6" model="hr.employee">
+        <field name="parent_id" ref="employee_manager2"/>
+        <field name="user_id" ref="user_employee6"/>
+        <field name="department_id" ref="hr.dep_ps"/>
+        <field name="address_id" ref="hr_demo_users.partner_employee6"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_employee6"/>
+    </record>
+
+    <!--employees Management-->
+
+    <record id="employee_department3" model="hr.employee">
+        <field name="user_id" ref="user_department3"/>
+        <field name="department_id" ref="hr.dep_management"/>
+        <field name="address_id" ref="hr_demo_users.partner_department3"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_department3"/>
+    </record>
+
+    <!--update department manager-->
+    <record id="hr.dep_management" model="hr.department">
+        <field name="manager_id" ref="employee_department3"/>
+    </record>
+
+    <record id="employee_manager3" model="hr.employee">
+        <field name="user_id" ref="user_manager3"/>
+        <field name="department_id" ref="hr.dep_management"/>
+        <field name="address_id" ref="hr_demo_users.partner_manager3"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_manager3"/>
+    </record>
+
+    <record id="employee_employee7" model="hr.employee">
+        <field name="parent_id" ref="employee_manager3"/>
+        <field name="user_id" ref="user_employee7"/>
+        <field name="department_id" ref="hr.dep_management"/>
+        <field name="address_id" ref="hr_demo_users.partner_employee7"/>
+        <field name="address_home_id" ref="hr_demo_users.partner_employee7"/>
+    </record>
+
+</odoo>

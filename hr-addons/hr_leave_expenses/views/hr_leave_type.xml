@@ -1,0 +1,79 @@
+<odoo>
+
+    <record id="hr_leave_type_form" model="ir.ui.view">
+        <field name="name">hr.leave.type.form.inherit</field>
+        <field name="model">hr.leave.type</field>
+        <field name="inherit_id" ref="hr_holidays.edit_holiday_status_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="after">
+                <group string="Time Off Expense">
+                    <field name="link_to_expenses"/>
+                    <field name="leave_expense_ids"
+                           invisible="link_to_expenses = False"
+                           nolable="1">
+                        <list>
+                            <field name="product_id"/>
+                            <field name="product_uom_id"
+                                   widget="selection"
+                                   groups="uom.group_uom"/>
+                            <field name="unit_amount"
+                                   widget="monetary"
+                                   options="{'currency_field': 'currency_id'}"/>
+                            <field name="currency_id"
+                                   groups="base.group_multi_currency"/>
+                            <field name="analytic_account_id"
+                                   groups="analytic.group_analytic_accounting"/>
+                            <field name="company_id"
+                                   groups="base.group_multi_company"/>
+                        </list>
+                        <form>
+                            <group>
+                                <group>
+                                    <field name="product_id"
+                                           options='{"no_open": True, "no_create": True}'
+                                           context="{'default_can_be_expensed': 1, 'tree_view_ref': 'hr_expense.product_product_expense_tree_view'}"/>
+                                    <field name="product_uom_id"
+                                           widget="selection"
+                                           class="oe_inline"
+                                           groups="uom.group_uom"/>
+                                </group>
+                                <group>
+                                    <field name="unit_amount" required="1"
+                                           widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"/>
+                                    <field name="currency_id"
+                                           groups="base.group_multi_currency"/>
+                                    <field name="analytic_account_id"
+                                           groups="analytic.group_analytic_accounting"/>
+                                    <field name="company_id"
+                                           groups="base.group_multi_company"/>
+                                </group>
+                            </group>
+                            <div class="alert alert-info text-center mb-3"
+                                 role="alert">
+                                If no employee, department, tag or job position
+                                is selected, this expense will be applied to all
+                                employees.
+                            </div>
+                            <group>
+                                <group>
+                                    <field name="employee_ids"
+                                           widget="many2many_tags"/>
+                                    <field name="department_ids"
+                                           widget="many2many_tags"/>
+                                </group>
+                                <group>
+                                    <field name="employee_category_ids"
+                                           widget="many2many_tags"/>
+                                    <field name="job_ids"
+                                           widget="many2many_tags"/>
+                                </group>
+                            </group>
+                        </form>
+                    </field>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

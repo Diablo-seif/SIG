@@ -1,0 +1,5 @@
+<odoo>
+        <record id="hr_timesheet.timesheet_menu_root" model="ir.ui.menu">
+                <field name="groups_id" eval="[(6,0,[ref('hide_timesheet_menu.group_show_timesheet_menu')])]" />
+        </record>
+</odoo>

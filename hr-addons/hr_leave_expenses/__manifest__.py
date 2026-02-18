@@ -1,0 +1,37 @@
+# pylint: disable=missing-docstring, manifest-required-author
+{
+    'name': 'Hr Time Off Expense',
+    'summary': 'Integration between Timeoff and Expenses',
+    'author': 'CORE B.P.O',
+    'maintainer': 'Hashem Aly',
+    'website': 'http://www.core-bpo.com',
+    'support': 'apps@core-bpo.com',
+    'category': 'Human Resources',
+    # 'version': '13.0.1.0.0',
+    'license': 'OPL-1',
+    'depends': [
+        'hr_holidays',
+        'hr_expense',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/hr_leave.xml',
+        'views/hr_leave_type.xml',
+        'views/hr_expense_sheet.xml',
+    ],
+    'images': [
+        'static/description/banner.gif',
+        'static/description/main_screenshot.gif',
+        'static/description/corebpo_logo.png',
+        'static/description/ex_product.png',
+        'static/description/expense_sheet.png',
+        'static/description/time_off_request.png',
+        'static/description/timeoff_type_define.png',
+        'static/description/timeoff_type_expense_allocation.png',
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+    'price': 30,
+    'currency': 'USD',
+}

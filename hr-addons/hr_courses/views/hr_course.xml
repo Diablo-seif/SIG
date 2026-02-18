@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_hr_course_filter" model="ir.ui.view">
+        <field name="name">hr.course.filter</field>
+        <field name="model">hr.course</field>
+        <field name="arch" type="xml">
+            <search string="Search Course">
+                <field name="name" string="Course"/>
+                <separator/>
+                <filter string="Archived" name="inactive" domain="[('active','=',False)]"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_course_tree" model="ir.ui.view">
+        <field name="name">hr.course.tree</field>
+        <field name="model">hr.course</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="course_type_id"/>
+                <field name="job_ids" widget="many2many_tags"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_course_form" model="ir.ui.view">
+        <field name="name">hr.course.form</field>
+        <field name="model">hr.course</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="active" invisible="1"/>
+                    <widget name="web_ribbon" text="Archived" bg_color="bg-danger"
+                            invisible="active = True"
+                    />
+<!--                            attrs="{'invisible': [('active', '=', True)]}"-->
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="course_type_id"/>
+                            <field name="job_ids" widget="many2many_tags"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Providers">
+                            <field name="provider_ids">
+                                <list editable="bottom">
+                                    <field name="provider_type"/>
+                                    <field name="partner_id"/>
+                                    <field name="minimum_no_of_participants"/>
+                                    <field name="cost_per_participant"/>
+                                    <field name="certification_id"/>
+                                    <field name="currency_id" invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Description">
+                            <field name="description"/>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_course_action" model="ir.actions.act_window">
+        <field name="name">Courses</field>
+        <field name="res_model">hr.course</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">main</field>
+    </record>
+    
+    <menuitem id="menu_hr_course"
+        name="Courses"
+        parent="hr.menu_human_resources_configuration"
+        groups="hr.group_hr_manager"
+        sequence="4"
+        action="hr_course_action"/>
+</odoo>

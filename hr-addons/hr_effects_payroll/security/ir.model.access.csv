@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_effects_payroll_type_manager,access manage hr effects payroll type,model_hr_effects_payroll_type,group_manage_hr_effects_payroll_type,1,1,1,1
+access_hr_effects_payroll_type_user,access read hr effects payroll type,model_hr_effects_payroll_type,group_read_hr_effects_payroll_type,1,0,0,0
+access_hr_effects_payroll_manager,access manage hr effects payroll,model_hr_effects_payroll,group_manage_hr_effects_payroll,1,1,1,1
+access_read_hr_effects_payroll_user,access read hr effects payroll,model_hr_effects_payroll,group_read_hr_effects_payroll,1,0,0,0

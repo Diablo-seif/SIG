@@ -1,0 +1,39 @@
+<odoo>
+
+    <record id="account_tax_group_sales_table_tax" model="account.tax.group">
+        <field name="name">Sales - Table Tax</field>
+        <field name="sequence">1</field>
+        <field name="tax_group_type">table</field>
+    </record>
+
+    <record id="account_tax_group_sales_vat" model="account.tax.group">
+        <field name="name">Sales - Value Added Tax</field>
+        <field name="sequence">2</field>
+        <field name="tax_group_type">vat</field>
+    </record>
+
+    <record id="account_tax_group_withholding_tax" model="account.tax.group">
+        <field name="name">Withholding Taxes</field>
+        <field name="sequence">3</field>
+        <field name="tax_group_type">withholding</field>
+    </record>
+
+    <record id="account_tax_group_purchase_table_tax" model="account.tax.group">
+        <field name="name">Purchase - Table Tax</field>
+        <field name="sequence">4</field>
+        <field name="tax_group_type">table</field>
+    </record>
+
+    <record id="account_tax_group_purchase_vat" model="account.tax.group">
+        <field name="name">Purchase - Value Added Tax</field>
+        <field name="sequence">5</field>
+        <field name="tax_group_type">vat</field>
+    </record>
+
+    <record id="account_tax_group_deduction_tax" model="account.tax.group">
+        <field name="name">Deduction Taxes</field>
+        <field name="sequence">6</field>
+        <field name="tax_group_type">deduction</field>
+    </record>
+
+</odoo>

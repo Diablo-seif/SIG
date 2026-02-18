@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field name="name">res.config.settings.compute.attendance</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id"
+               ref="hr_attendance.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div class="app_settings_block" data-string="Attendances"
+                 data-key="hr_attendance"
+                 position="inside">
+                <h2>Compute Attendance Records:</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-12 col-lg-6 o_setting_box">
+                        <div class="o_setting_right_pane">
+                            <label for="day_start_month"/>
+                            <field name="day_start_month"/>
+                            <div class="text-muted">
+                                Set Start Day of Month -
+                                Range [1 to 28].
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="start_month"/>
+                            <field name="start_month"/>
+                            <div class="text-muted">
+                                Select Start Day Of Month Started
+                                <br/>
+                                From ['Current' or 'Previous'] The
+                                Month.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="midday_time"/>
+                            <field name="midday_time"
+                                   widget="float_time"/>
+                            <div class="text-muted">
+                                Set Midday Time (the last hours in
+                                day) - range [00:00 to 23:57].
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Compute Missing Hours Based on:</h2>
+                <div class="row mt16 o_settings_container">
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="missing_without_delay_in"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="missing_without_delay_in"/>
+                            <div class="text-muted">
+                                Compute Missing Hours Without Delay
+                                In Minutes.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-md-6 o_setting_box">
+                        <div class="o_setting_left_pane">
+                            <field name="missing_without_early_out"/>
+                        </div>
+                        <div class="o_setting_right_pane">
+                            <label for="missing_without_early_out"/>
+                            <div class="text-muted">
+                                Compute Missing Hours Without Early
+                                Out Minutes.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+
+</odoo>

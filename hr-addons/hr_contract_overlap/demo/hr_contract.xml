@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_contract.hr_contract_admin" model="hr.contract">
+        <field name="date_start" eval="DateTime.today() + relativedelta(day=1,month=1,years=-1)"/>
+        <field name="date_end" eval="DateTime.today() + relativedelta(day=31,month=12,years=-1)"/>
+    </record>
+
+    <record id="hr_payroll.hr_contract_admin" model="hr.contract">
+        <field name="date_start" eval="DateTime.today() + relativedelta(day=1,month=1)"/>
+        <field name="date_end" eval="DateTime.today() + relativedelta(day=31,month=12)"/>
+    </record>
+
+    <record id="hr_contract.hr_contract_qdp" model="hr.contract">
+        <field name="date_start" eval="DateTime.today() + relativedelta(day=1,month=1,years=-1)"/>
+        <field name="date_end" eval="DateTime.today() + relativedelta(day=31,month=12,years=-1)"/>
+    </record>
+
+    <record id="hr_payroll.hr_contract_gilles_gravie" model="hr.contract">
+        <field name="date_start" eval="DateTime.today() + relativedelta(day=1,month=1)"/>
+        <field name="date_end" eval="DateTime.today() + relativedelta(day=31,month=12)"/>
+    </record>
+
+</odoo>

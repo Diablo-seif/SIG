@@ -1,0 +1,114 @@
+<odoo>
+    <record id="vat_sales_report_generate_grouped_action" model="ir.actions.server">
+        <field name="name">Mark Invoices</field>
+        <field name="model_id" ref="l10n_eg_vat.model_vat_sales_report_grouped"/>
+        <field name="binding_model_id" ref="l10n_eg_vat.model_vat_sales_report_grouped"/>
+        <field name="binding_type">action</field>
+        <field name="binding_view_types">list</field>
+        <field name="state">code</field>
+        <field name="code">
+            action = model.action_close_report()
+        </field>
+    </record>
+
+    <record id="vat_sales_report_grouped_action" model="ir.actions.act_window">
+        <field name="name">VAT Tax Report [Grouped]</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">vat.sales.report.grouped</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <record id="vat_sales_report_grouped_tree" model="ir.ui.view">
+        <field name="name">vat.sales.report.grouped.tree</field>
+        <field name="model">vat.sales.report.grouped</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="document_type"/>
+                <field name="tax_type" optional="show"/>
+                <field name="table_product_type" optional="show"/>
+                <field name="invoice_no" optional="show"/>
+                <field name="partner_name" optional="show"/>
+                <field name="registration_number" optional="show"/>
+                <field name="file_number" optional="show"/>
+                <field name="partner_address" optional="show"/>
+                <field name="national_no" optional="show"/>
+                <field name="partner_mobile" optional="show"/>
+                <field name="invoice_date" optional="show"/>
+                <field name="product_name" optional="show"/>
+                <field name="product_code" optional="show"/>
+                <field name="product_type" optional="show"/>
+                <field name="product_kind" optional="show"/>
+                <field name="product_uom" optional="show"/>
+                <field name="price_unit" optional="show"/>
+                <field name="tax_percentage" optional="show"/>
+                <field name="quantity" optional="show"/>
+                <field name="price_subtotal" optional="show"/>
+                <field name="tax_amount" optional="show"/>
+                <field name="price_total" optional="show"/>
+                <field name="total_tax_with_sign"  sum="VAT Amount"
+                       optional="show"/>
+
+            </list>
+        </field>
+    </record>
+
+    <record id="vat_sales_report_grouped_search_view" model="ir.ui.view">
+        <field name="name">vat.sales.report.grouped.search</field>
+        <field name="model">vat.sales.report.grouped</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="year_month" filter_domain="['|',('year_month','=',self),
+                '|',('tax_adjustment_year_month','=',self),
+                '&amp;', ('year_month','&lt;',self), ('invoice_tax_reported','!=', True),]"/>
+                <field name="year"/>
+                <field name="month" filter_domain="['|',('month','=',self), '&amp;', ('month','&lt;',self), ('invoice_tax_reported','!=', True)]"/>
+                <field name="tax_percentage"/>
+                <field name="tax_type"/>
+                <field name="partner_name"/>
+                <field name="invoice_no"/>
+                <separator orientation="vertical"/>
+                <filter string="Adjustment" name="adj_inv"
+                        domain="[('invoice_tax_adjustment','=', True)]"/>
+                <filter string="Not Adjustment" name="not_adj_inv"
+                        domain="[('invoice_tax_adjustment','!=', True)]"/>
+                <separator orientation="vertical"/>
+                <filter string="Tax Reported" name="invoice_tax_reported"
+                        domain="[('invoice_tax_reported','=', True)]"/>
+                <filter string="Tax Not Reported" name="invoice_tax_reported"
+                        domain="[('invoice_tax_reported','!=', True)]"/>
+                <separator orientation="vertical"/>
+                <filter string="Sales" name="filter_sales"
+                        domain="[('invoice_type','in', ['out_invoice', 'out_refund'])]"/>
+                <filter string="Purchase" name="filter_purhcase"
+                        domain="[('invoice_type','in', ['in_invoice', 'in_refund'])]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Tax Percentage" name="tax_percentage"
+                            context="{'group_by':'tax_percentage'}"/>
+                    <filter string="Tax Type" name="tax_type"
+                            context="{'group_by':'tax_type'}"/>
+                    <separator orientation="vertical"/>
+                    <filter string="Partner Name" name="partner_name"
+                            context="{'group_by':'partner_name'}"/>
+                    <filter string="Invoice No" name="move_id"
+                            context="{'group_by':'move_id'}"/>
+                    <filter string="Invoice Type" name="Sales/Bill"
+                        context="{'group_by':'invoice_type_desc'}"/>
+                    <separator orientation="vertical"/>
+                    <filter string="Tax Adjustment" name="Tax Adjustment"
+                        context="{'group_by':'invoice_tax_adjustment_name'}"/>
+                    <filter string="Product Type" name="product type"
+                        context="{'group_by':'product_type_name'}"/>
+
+
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <menuitem id="menuitem_vat_sales_report_grouped"
+              name="VAT Tax Report Grouped"
+              parent="account.account_reports_management_menu"
+              action="vat_sales_report_grouped_action" sequence="1"/>
+
+</odoo>

@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="symbiotic_contribution_computation_action" model="ir.actions.act_window">
+        <field name="name">Symbiotic Contribution Calculation</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">symbiotic.contribution.computation</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+    <record id="symbiotic_contribution_computation_view_form" model="ir.ui.view">
+        <field name="name">symbiotic.contribution.computation.form</field>
+        <field name="model">symbiotic.contribution.computation</field>
+        <field name="arch" type="xml">
+            <form string="Compute symbiotic contribution">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="year"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_compute" string="Calculate"
+                            type="object" />
+                    <button string="Cancel" class="btn btn-default"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <menuitem id="menuitem_symbiotic_contribution_computation"
+          name="Symbiotic Contribution Calculation"
+          parent="account.account_reports_management_menu"
+          action="symbiotic_contribution_computation_action" sequence="1"/>
+</odoo>

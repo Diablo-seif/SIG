@@ -1,0 +1,24 @@
+<odoo>
+
+    <record id="hr_performance_score_scale_tree" model="ir.ui.view">
+        <field name="name">hr_performance_score_scale_tree</field>
+        <field name="model">hr.performance.score.scale</field>
+        <field name="arch" type="xml">
+            <list editable="top">
+                <field name="name"/>
+                <field name="score_from" widget="percentage"/>
+                <field name="score_to" widget="percentage"/>
+                <field name="active" widget="boolean_toggle" optional="hide"/>
+                <field name="company_id" options="{'no_create': True}" groups="base.group_multi_company" optional="hide"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_performance_score_scale_action" model="ir.actions.act_window">
+        <field name="name">Performance Score Scale</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.performance.score.scale</field>
+        <field name="view_mode">list</field>
+    </record>
+
+</odoo>

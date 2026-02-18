@@ -1,0 +1,20 @@
+<odoo>
+    <record id="account_move_cancel_form" model="ir.ui.view">
+        <field name="name">account.move.cancel.form</field>
+        <field name="model">account.move.cancel</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="cancel_reason_id"/>
+                </group>
+                <footer>
+                    <button string='Cancel' name='action_cancel' type='object'
+                            class='btn-primary'/>
+                    <button string='Cancel' class='btn-default'
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

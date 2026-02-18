@@ -1,0 +1,315 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_employee_insurance
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200701\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-07 14:28+0000\n"
+"PO-Revision-Date: 2020-09-08 06:08+0000\n"
+"Last-Translator: Abdalla Mohamed <abdalla.mohamed@core-bpo.com>\n"
+"Language-Team: Arabic <http://weblate.staging.core-bpo.net/projects/"
+"hr-product/hr_employee_insurance/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.0.4\n"
+
+#. module: hr_employee_insurance
+#: model:ir.model,name:hr_employee_insurance.model_hr_employee_base
+msgid "Basic Employee"
+msgstr "الموظف الأساسي"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__basic_salary
+msgid "Basic Salary"
+msgstr "راتب اساسي"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__company
+msgid "Company"
+msgstr "الشركة"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__company_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__company_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__company_number
+msgid "Company Number"
+msgstr "رقم الشركة"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__currency_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__currency_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__currency_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__date_to
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__duration_days
+msgid "Days"
+msgstr "الأيام"
+
+#. module: hr_employee_insurance
+#: model:ir.model,name:hr_employee_insurance.model_hr_departure_wizard
+msgid "Departure Wizard"
+msgstr "معالج المغادرة"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_employee_insurance
+#: model:ir.model,name:hr_employee_insurance.model_employee_insurance_history
+msgid "Employee Insurance History"
+msgstr "التاريخ التاميني للموظف"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__gross_salary
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__gross_salary
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__gross_salary
+msgid "Gross Salary"
+msgstr "الراتب الشهري"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insurance_company_share
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insurance_company_share
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insurance_company_share
+msgid "Insurance Company Share"
+msgstr "حصة الشركة من التأمين"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insurance_date
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insurance_date
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insurance_date
+msgid "Insurance Date"
+msgstr "تاريخ التأمين"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__insurance_days
+msgid "Insurance Days"
+msgstr "أيام التأمين"
+
+#. module: hr_employee_insurance
+#: model_terms:ir.ui.view,arch_db:hr_employee_insurance.insurance_hr_employee_form
+msgid "Insurance Details"
+msgstr "بيانات التأمين"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insurance_employee_share
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insurance_employee_share
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insurance_employee_share
+msgid "Insurance Employee Share"
+msgstr "حصة الموظف من التأمين"
+
+#. module: hr_employee_insurance
+#: model_terms:ir.ui.view,arch_db:hr_employee_insurance.insurance_hr_employee_search
+msgid "Insurance Enroll"
+msgstr "التسجيل في التأمين"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insurance_history_ids
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insurance_history_ids
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insurance_history_ids
+msgid "Insurance History"
+msgstr "التاريخ التأميني"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insurance_job_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insurance_job_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insurance_job_id
+msgid "Insurance Job"
+msgstr "الوظيفة التأمينية"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__employee_insurance_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__employee_insurance_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__employee_insurance_number
+msgid "Insurance Number"
+msgstr "الرقم التأميني"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insurance_office_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insurance_office_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insurance_office_id
+msgid "Insurance Office"
+msgstr "مكتب التأمين"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__insurance_salary
+msgid "Insurance Salary"
+msgstr "الراتب التأميني"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insurance_sector_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insurance_sector_ids
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insurance_sector_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insurance_sector_ids
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insurance_sector_id
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insurance_sector_ids
+msgid "Insurance Sector"
+msgstr "قطاع التأمين"
+
+#. module: hr_employee_insurance
+#: code:addons/hr_employee_insurance/models/employee_insurance_history.py:0
+#, python-format
+msgid "Insurance period is overlapped"
+msgstr "فترة التأمين متداخلة"
+
+#. module: hr_employee_insurance
+#: code:addons/hr_employee_insurance/models/employee_insurance_history.py:0
+#, python-format
+msgid "Insurance salary must be between %s - %s"
+msgstr "الراتب التأميني يجب أن يكون بين %s و %s"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insured
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insured
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insured
+#: model_terms:ir.ui.view,arch_db:hr_employee_insurance.insurance_hr_employee_search
+msgid "Insured"
+msgstr "مؤمن عليه"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__insured_salary
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__insured_salary
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__insured_salary
+msgid "Insured Salary"
+msgstr "الراتب التأميني"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__duration_months
+msgid "Months"
+msgstr "شهور"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__name_in_arabic
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__name_in_arabic
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__name_in_arabic
+#: model_terms:ir.ui.view,arch_db:hr_employee_insurance.insurance_hr_employee_form
+msgid "Name In Arabic"
+msgstr "اﻹسم بالعربي"
+
+#. module: hr_employee_insurance
+#: model_terms:ir.ui.view,arch_db:hr_employee_insurance.insurance_hr_employee_search
+msgid "Not Insured"
+msgstr "غير مؤمن عليه"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__owner
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__owner
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__owner
+#: model_terms:ir.ui.view,arch_db:hr_employee_insurance.insurance_hr_employee_search
+msgid "Owner"
+msgstr "المالك"
+
+#. module: hr_employee_insurance
+#: code:addons/hr_employee_insurance/models/hr_employee.py:0
+#: code:addons/hr_employee_insurance/models/hr_employee.py:0
+#, python-format
+msgid "Owner must be unique"
+msgstr "لا يمكن أن يكون أكثر من مالك"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__received_date
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__received_date
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__received_date
+msgid "Received Date (1)"
+msgstr "تاريخ اﻹستلام (1)"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_departure_wizard__resignation_received_date
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__resignation_received_date
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__resignation_received_date
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__resignation_received_date
+msgid "Received Date (6)"
+msgstr "تاريخ اﻹستلام (6)"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__received_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__received_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__received_number
+msgid "Received Number (1)"
+msgstr "تاريخ اﻹستلام (1)"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_departure_wizard__resignation_received_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee__resignation_received_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_base__resignation_received_number
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_hr_employee_public__resignation_received_number
+msgid "Received Number (6)"
+msgstr "تاريخ اﻹستلام (6)"
+
+#. module: hr_employee_insurance
+#: code:addons/hr_employee_insurance/models/employee_insurance_history.py:0
+#: model:ir.model.constraint,message:hr_employee_insurance.constraint_employee_insurance_history_date_from_check
+#, python-format
+msgid "Start date cannot be after current date."
+msgstr "لا يمكن أن يكون تاريخ البدء بعد التاريخ الحالي."
+
+#. module: hr_employee_insurance
+#: code:addons/hr_employee_insurance/models/employee_insurance_history.py:0
+#: model:ir.model.constraint,message:hr_employee_insurance.constraint_employee_insurance_history_date_check
+#, python-format
+msgid "Start date must be anterior to the end date."
+msgstr "يجب أن يكون تاريخ البدء قبل تاريخ الانتهاء."
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__variable_salary
+msgid "Variable Salary"
+msgstr "الراتب المتغير"
+
+#. module: hr_employee_insurance
+#: model:ir.model.fields,field_description:hr_employee_insurance.field_employee_insurance_history__duration_years
+msgid "Years"
+msgstr "سنوات"

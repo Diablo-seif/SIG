@@ -1,0 +1,35 @@
+<odoo>
+
+    <record id="account_journal_form_view" model="ir.ui.view">
+        <field name="name">account.journal.form.inherit</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id" ref="account.view_account_journal_form"/>
+        <field name="arch" type="xml">
+            <field name="type" position="after">
+                <field name="taxation"
+                       invisible="type!=cash"/>
+                <field name="tax_type"
+                       invisible="taxation=True"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="account_journal_kanban_view" model="ir.ui.view">
+        <field name="name">account.journal.dashboard.kanban.inherit</field>
+        <field name="model">account.journal</field>
+        <field name="inherit_id"
+               ref="account.account_journal_dashboard_kanban_view"/>
+        <field name="arch" type="xml">
+            <field name="type" position="after">
+                <field name="taxation" invisible="1"/>
+            </field>
+            <xpath expr="//a[@name='create_cash_statement']"
+                   position="attributes">
+                <attribute name="attrs">
+                    {'invisible': [('taxation', '=',True)]}
+                </attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

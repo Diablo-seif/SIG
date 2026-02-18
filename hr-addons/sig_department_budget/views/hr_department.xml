@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="department_form_view_inherit" model="ir.ui.view">
+        <field name="name">department.form.inherit</field>
+        <field name="model">hr.department</field>
+        <field name="inherit_id" ref="hr.view_department_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="after">
+                <notebook groups="sig_department_budget.group_access_department_budget">
+                    <page string="Budget Lines">
+                        <field name="budget_lines_ids">
+                            <list editable="top" decoration-danger="difference &lt; 0"
+                                decoration-success="difference >= 0">
+                                <field name="date_from" />
+                                <field name="date_to" />
+                                <field name="po_number" />
+                                <field name="budget" sum="budget" />
+                                <field name="actual_cost" sum="actual_cost"/>
+                                <field name="difference" sum="difference"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+            </xpath>
+        </field>
+    </record>
+</odoo>

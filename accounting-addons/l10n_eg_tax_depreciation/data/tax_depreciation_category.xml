@@ -1,0 +1,31 @@
+<odoo noupdate="1">
+    <!-- Tax depreciation categories -->
+
+    <record id="tax_depreciation_category_buildings"
+            model="tax.depreciation.category">
+        <field name="name">Buildings</field>
+        <field name="percentage">5</field>
+    </record>
+
+    <record id="tax_depreciation_category_intangible_assets"
+            model="tax.depreciation.category">
+        <field name="name">Intangible assets</field>
+        <field name="percentage">10</field>
+    </record>
+
+    <record id="tax_depreciation_category_furniture_equipment"
+            model="tax.depreciation.category">
+        <field name="name">Furniture, equipment and electrical appliances
+        </field>
+        <field name="percentage">25</field>
+    </record>
+
+    <record id="tax_depreciation_category_computers_information_systems"
+            model="tax.depreciation.category">
+        <field name="name">Computers, information systems, programs, and data
+            storage devices
+        </field>
+        <field name="percentage">50</field>
+    </record>
+
+</odoo>

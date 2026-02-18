@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Tags  -->
+    <record id="21_days" model="hr.allocation.tag">
+        <field name="name">21-days</field>
+    </record>
+
+    <record id="30_days" model="hr.allocation.tag">
+        <field name="name">30-days</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,81 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_organization_chart
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-17 12:37+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: hr_organization_chart
+#: model:ir.model,name:hr_organization_chart.model_ir_actions_act_window_view
+msgid "Action Window View"
+msgstr "عرض نافذة الإجراء"
+
+#. module: hr_organization_chart
+#. openerp-web
+#: code:addons/hr_organization_chart/static/src/js/org_chart_view.js:0
+#, python-format
+msgid "Chart"
+msgstr "المخطط"
+
+#. module: hr_organization_chart
+#: model:ir.model,name:hr_organization_chart.model_hr_employee
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_organization_chart
+#: model:ir.model.fields,field_description:hr_organization_chart.field_hr_employee__job_level_id
+msgid "Job Level"
+msgstr "مستوى الوظيفة"
+
+#. module: hr_organization_chart
+#. openerp-web
+#: code:addons/hr_organization_chart/static/src/xml/chart.xml:0
+#: model_terms:ir.ui.view,arch_db:hr_organization_chart.hr_employee_level_search
+#, python-format
+msgid "Levels"
+msgstr "المستويات"
+
+#. module: hr_organization_chart
+#. openerp-web
+#: code:addons/hr_organization_chart/static/src/xml/chart.xml:0
+#, python-format
+msgid "Managers"
+msgstr "المدراء"
+
+#. module: hr_organization_chart
+#: model:ir.model.fields.selection,name:hr_organization_chart.selection__ir_actions_act_window_view__view_mode__org_chart
+#: model:ir.model.fields.selection,name:hr_organization_chart.selection__ir_ui_view__type__org_chart
+msgid "Organization Chart"
+msgstr "مخطط المؤسسة"
+
+#. module: hr_organization_chart
+#. openerp-web
+#: code:addons/hr_organization_chart/static/src/xml/chart.xml:0
+#: model:ir.model.fields,field_description:hr_organization_chart.field_hr_employee__job_schema
+#, python-format
+msgid "Schema"
+msgstr "مخطط"
+
+#. module: hr_organization_chart
+#: model:ir.model,name:hr_organization_chart.model_ir_ui_view
+msgid "View"
+msgstr "أداة العرض"
+
+#. module: hr_organization_chart
+#: model:ir.model.fields,field_description:hr_organization_chart.field_ir_actions_act_window_view__view_mode
+#: model:ir.model.fields,field_description:hr_organization_chart.field_ir_ui_view__type
+#: model:ir.model.fields,field_description:hr_organization_chart.field_website_page__type
+msgid "View Type"
+msgstr "نوع واجهة العرض"

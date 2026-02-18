@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="deduction_register_payment_view_form" model="ir.ui.view">
+        <field name="name">deduction.register.payment.wizard.form</field>
+        <field name="model">deduction.register.payment.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Register Payment">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="hide_payment_method" invisible="1"/>
+                            <field name="available_payment_method_ids" invisible="1"/>
+                            <field name="edit_payment" invisible="1"/>
+                            <field name="company_id"
+                                   groups="base.group_multi_company"/>
+                            <field name="tax_type" readonly="1"/>
+                            <field name="journal_id" widget="selection"/>
+                            <field name="deduction_type" required="1"/>
+                            <field name="deduction_payment_type"
+                                   invisible="tax_type!=deduction"
+                                   readonly="edit_payment=False"/>
+<!--                                   attrs="{'invisible':[('tax_type','!=','deduction')],-->
+                            <field name="taxation_percent"
+                                   invisible="{deduction_payment_type!=percentage"/>
+                        </group>
+                        <!--                                   attrs="{'invisible':[('deduction_payment_type','!=','percentage')]}"/>-->
+                        <group>
+                            <field name="total_taxation_amount" readonly="1"
+                                   force_save="1" widget="monetary"/>
+                            <field name="residual_taxation_amount"
+                                   force_save="1" readonly="1"
+                                   widget="monetary"/>
+                            <field name="taxation_amount" force_save="1"
+                                   readonly="deduction_payment_type!=amount"/>
+                            <field name="payment_method_id" widget="radio"
+                                   invisible="hide_payment_method=True"/>
+                            <field name="currency_id"
+                                   options="{'no_create': True, 'no_open': True}"
+                                   groups="base.group_multi_currency"/>
+                            <field name="payment_date"/>
+                            <field name="ref"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button string='Create Payment' name="create_payment"
+                            type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="deduction_register_payment_action"
+            model="ir.actions.act_window">
+        <field name="name">Register Payment</field>
+        <field name="res_model">deduction.register.payment.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id"
+               ref="deduction_register_payment_view_form"/>
+        <field name="target">new</field>
+        <field name="context">{'default_payment_type': 'outbound'}</field>
+    </record>
+
+</odoo>

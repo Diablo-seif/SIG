@@ -1,0 +1,37 @@
+# pylint: skip-file
+{
+    'name': 'Egypt E-Invoice Integration',
+    'summary': 'L10N EG E-Invoice',
+    'author': 'CORE B.P.O',
+    'maintainer': 'Muhamed Abd El-Rhman',
+    'website': 'http://www.core-bpo.com',
+    'support': 'apps@core-bpo.com',
+    'category': 'Localization',
+    # # 'version': '16.0.1.0.0',
+    'license': 'OPL-1',
+    'depends': [
+        'account_debit_note',
+        'account_move_cancel_reason',
+    ],
+    'data': [
+        'security/ir.model.access.csv',
+        'views/account_einvoice_outgoing.xml',
+        'views/invoice_activity_type.xml',
+        'views/account_move.xml',
+        'views/res_company.xml',
+        'views/res_partner.xml',
+        'views/res_partner_bank.xml',
+        'views/product_template.xml',
+        'views/uom.xml',
+        'views/account_tax_group.xml',
+        'views/account_tax.xml',
+        'views/account_journal.xml',
+        'views/taxpayer_token.xml',
+        'data/ir_cron.xml',
+        'data/invoice_activity_type.xml',
+    ],
+
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+}

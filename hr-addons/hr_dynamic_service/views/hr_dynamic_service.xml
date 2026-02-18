@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_dynamic_service_filter" model="ir.ui.view">
+        <field name="name">hr.dynamic.service.filter</field>
+        <field name="model">hr.dynamic.service</field>
+        <field name="arch" type="xml">
+            <search string="Dynamic Approval">
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="service_type_id"/>
+                <field name="service_subtype_id"/>
+                <field name="name"/>
+                <field name="stage_id"/>
+                <separator/>
+                <filter name="request_draft" string="Draft"
+                        domain="[('is_first_stage','=', True)]"/>
+                <filter name="request_progress" string="In-Progress"
+                        domain="[('is_first_stage','=', False),('next_stage_id','!=', False)]"/>
+                <filter name="request_done" string="Done"
+                        domain="[('next_stage_id','=', False)]"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="groupby_name" string="Dynamic Approval Type"
+                            domain="[]"
+                            context="{'group_by':'service_type_id'}" help=" "/>
+                    <filter name="groupby_name" string="Dynamic Approval Subype"
+                            domain="[]"
+                            context="{'group_by':'service_subtype_id'}"
+                            help=" "/>
+                    <filter name="groupby_name" string="Employee" domain="[]"
+                            context="{'group_by':'employee_id'}" help=" "/>
+                    <filter name="groupby_name" string="Department" domain="[]"
+                            context="{'group_by':'department_id'}" help=" "/>
+                    <filter name="groupby_name" string="Stage" domain="[]"
+                            context="{'group_by':'stage_id'}" help=" "/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_hr_dynamic_service_form" model="ir.ui.view">
+        <field name="name">hr.dynamic.service.form</field>
+        <field name="model">hr.dynamic.service</field>
+        <field name="arch" type="xml">
+            <form string="Dynamic Approval Request">
+                <header>
+                    <field id="stage_id" name="stage_id" widget="statusbar"
+                           options="{'fold_field': 'fold'}"
+                           domain="[('service_type_id','=',service_type_id)]"
+                           invisible="service_type_id = False"/>
+                </header>
+                <sheet>
+
+                    <div class="oe_left btn btn-block btn-lg" name="button_box">
+                        <button icon="fa-play"
+                                invisible="next_stage_id = False or is_refused = True"
+                                name="run_next_action" type="object"
+                                string=" " class="border" style="margin: 5px;">
+<!--                                attrs="{'invisible': ['|',('next_stage_id', '=', False),('is_refused','=',True)]}"-->
+                            <field name="next_action" nolable="1" readonly="1"
+                                   widget="statinfo"/>
+                        </button>
+
+                        <button icon="fa-refresh"
+                                invisible="is_refused = False"
+                                string=" " class="border" style="margin: 5px;"
+                                name="action_first_stage" type="object">
+<!--                                attrs="{'invisible': [('is_refused','=',False)]}"-->
+                            <field name="first_stage_action" nolable="1"
+                                   readonly="1"
+                                   widget="statinfo"/>
+                        </button>
+
+                        <button icon="fa-times-circle"
+                                invisible="can_refuse = False or is_refused = True"
+                                string="Refuse" class="border"
+                                style="margin: 5px;"
+                                name="%(hr_dynamic_service.view_hr_dynamic_service_refuse_action)d"
+                                type="action"/>
+                    </div>
+<!--                                attrs="{'invisible': ['|',('can_refuse', '=', False),('is_refused','=',True)]}"-->
+                    <group>
+                        <group>
+                            <field name="name"
+                                   attrs="{'readonly': [('can_edit', '=', False),('stage_id','!=',False)]}"/>
+                            <field name="employee_id"
+                                   options="{'no_create':True}"
+                                   attrs="{'readonly': [('can_edit', '=', False),('stage_id','!=',False)]}"/>
+                            <field name="department_id" readonly="1"/>
+                            <field name="notes"
+                                   attrs="{'readonly': [('can_edit', '=', False),('stage_id','!=',False)]}"/>
+                            <field name="company_id"
+                                   options="{'no_create': True}"
+                                   groups="base.group_multi_company"/>
+                        </group>
+                        <group>
+                            <field name="request_date"
+                                   attrs="{'readonly': [('can_edit', '=', False),('stage_id','!=',False)]}"/>
+                            <field name="service_type_id"
+                                   options="{'no_create':True}"
+                                   attrs="{'readonly': [('can_edit', '=', False),('stage_id','!=',False)]}"/>
+                            <field name="service_subtype_id"
+                                   options="{'no_open':True,'no_create':True}"
+                                   attrs="{'readonly': [('can_edit', '=', False),('stage_id','!=',False)]}"
+                                   domain="[('service_type_id', '=', service_type_id)]"
+                                   required="1"/>
+                        </group>
+                    </group>
+                    <group>
+                        <field name="refuse_reason"
+                               attrs="{'readonly': [('can_edit', '=', False),('stage_id','!=',False)],'invisible': [('refuse_reason', '=', False)]}"/>
+                        <field name="refused_by_id" readonly="1"
+                               invisible="refused_by_id = False"/>
+<!--                               attrs="{'invisible': [('refused_by_id', '=', False)]}"/>-->
+                    </group>
+                    <group string="More Details">
+                        <field name="user_ids" widget="many2many_tags"
+                               groups="base.group_no_one"/>
+                        <field name="next_stage_user_ids"
+                               widget="many2many_tags"
+                               invisible="next_stage_id = False"/>
+<!--                               attrs="{'invisible':[('next_stage_id','=', False)]}"/>-->
+                        <field name="first_stage_id" invisible="0"
+                               groups="base.group_no_one"/>
+                        <field name="stage" string="Stage" invisible="0"
+                               readonly="1" groups="base.group_no_one"/>
+                        <field name="next_stage_id" options="{'no_create':True}" invisible="1"
+                               readonly="1"/>
+                        <field name="is_first_stage" invisible="1"/>
+                        <field name="can_edit" invisible="1"/>
+                        <field name="can_refuse" invisible="1"/>
+                        <field name="is_refused" invisible="1"/>
+                        <field name="id" groups="base.group_no_one"
+                               readonly="1"/>
+
+                    </group>
+
+                </sheet>
+                <chatter/>
+<!--<div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_dynamic_service_tree" model="ir.ui.view">
+        <field name="name">hr.dynamic.service.tree</field>
+        <field name="model">hr.dynamic.service</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="department_id"/>
+                <field name="service_type_id"/>
+                <field name="service_subtype_id"/>
+                <field name="request_date"/>
+                <field name="stage_id"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="view_hr_dynamic_service_action" model="ir.actions.act_window">
+        <field name="name">Dynamic Approval Request</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.dynamic.service</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+
+</odoo>

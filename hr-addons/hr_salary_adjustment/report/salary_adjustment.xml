@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="salary_adjustment_template">
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <div class="page">
+                    <t t-set="seq" t-value="1"/>
+                    <t t-set="rounding" t-value="request.env['decimal.precision'].precision_get('Payroll')"/>
+                    <table class="table table-condensed"
+                           width="100%">
+                        <thead>
+                            <tr>
+                                <th>S</th>
+                                <th>Employee</th>
+                                <th>Months</th>
+                                <t t-foreach="codes" t-as="code">
+                                    <th>
+                                        <t t-esc="code[1]"/>
+                                    </th>
+                                </t>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="docs" t-as="o">
+                                <td>
+                                    <t t-esc="seq"/>
+                                </td>
+                                <td>
+                                    <t t-esc="o['employee_id'].display_name"/>
+                                </td>
+                                <td>
+                                    <t t-esc="len(o['payslips'])"/>
+                                </td>
+                                <t t-foreach="codes" t-as="code">
+                                    <td t-att-style="'background:' + (code[3] and '#e9ecef' or 'white')">
+                                        <t t-esc="round(o['payslips']._get_salary_line_total(code[0]),rounding or 4)"/>
+                                    </td>
+                                </t>
+                                <t t-set="seq" t-value="seq+1"/>
+                            </tr>
+                            <tr>
+                                <td colspan="3"
+                                    style='border-top:1px solid black; background:#d2ecfa !important'>
+                                    Totals
+                                </td>
+                                <t t-foreach="codes" t-as="code">
+                                    <td style='border-top:1px solid black; background:#d2ecfa !important'>
+                                        <t t-esc="round(total_payslips._get_salary_line_total(code[0]),rounding or 4)"/>
+                                    </td>
+                                </t>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

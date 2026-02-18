@@ -1,0 +1,173 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_salary_input
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190827\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-11 13:41+0000\n"
+"PO-Revision-Date: 2019-11-11 16:27+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: aa\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input__code
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: hr_salary_input
+#: sql_constraint:salary.input:0
+msgid "Code must be unique"
+msgstr "يجب أن يكون الرمز فريدًا"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__contract_id
+msgid "Contract"
+msgstr "العقد"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input__create_uid
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input__create_date
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: hr_salary_input
+#: code:addons/hr_salary_input/models/salary_input.py:65
+#: code:addons/hr_salary_input/models/salary_input.py:68
+#, python-format
+msgid "Date Overlapping"
+msgstr "التاريخ متداخل"
+
+#. module: hr_salary_input
+#: code:addons/hr_salary_input/models/salary_input.py:52
+#, python-format
+msgid "Date Should Be After Contract Date"
+msgstr "يجب أن يكون التاريخ بعد تاريخ العقد"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__date_to
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: hr_salary_input
+#: code:addons/hr_salary_input/models/salary_input.py:46
+#, python-format
+msgid "Date To required"
+msgstr "تاريخ إلى مطلوب"
+
+#. module: hr_salary_input
+#: code:addons/hr_salary_input/models/salary_input.py:49
+#, python-format
+msgid "Date from Must be after Date to"
+msgstr "يجب أن يكون التاريخ من بعد تاريخ إلى"
+
+#. module: hr_salary_input
+#: code:addons/hr_salary_input/models/salary_input.py:39
+#, python-format
+msgid "Date from required"
+msgstr "تاريخ من مطلوب"
+
+#. module: hr_salary_input
+#: code:addons/hr_salary_input/models/salary_input.py:42
+#, python-format
+msgid "Date to Must Be Before Contract Date"
+msgstr "يجب أن يكون التاريخ قبل تاريخ العقد"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input__display_name
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_salary_input
+#: model:ir.model,name:hr_salary_input.model_hr_contract
+msgid "Employee Contract"
+msgstr "عقد الموظف"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input__id
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_hr_contract__lines_ids
+msgid "Input Lines"
+msgstr "بنود المدخلات"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input____last_update
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input__write_uid
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input__write_date
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,help:hr_salary_input.field_salary_input__name
+msgid "Name of Salary Input"
+msgstr "إسم بند مرتب المدخل"
+
+#. module: hr_salary_input
+#: model:hr.salary.rule,name:hr_salary_input.salary_input_rule
+#: model:ir.actions.act_window,name:hr_salary_input.salary_input_action
+#: model:ir.model,name:hr_salary_input.model_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__name
+#: model_terms:ir.ui.view,arch_db:hr_salary_input.hr_contract_view_form_inherit_salary_input
+msgid "Salary Input"
+msgstr "مدخل المرتب"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,help:hr_salary_input.field_salary_input__code
+#: model:ir.model.fields,help:hr_salary_input.field_salary_input_line__code
+msgid "Salary Input Code must be unique"
+msgstr "يجب أن يكون رمز إدخال الراتب فريدًا"
+
+#. module: hr_salary_input
+#: model:ir.model,name:hr_salary_input.model_salary_input_line
+msgid "Salary Input Line"
+msgstr "بنود ادخال المرتب"
+
+#. module: hr_salary_input
+#: model:ir.ui.menu,name:hr_salary_input.salary_input_conf_menu
+msgid "Salary Inputs"
+msgstr "مدخلات المرتب"
+
+#. module: hr_salary_input
+#: model:ir.model.fields,field_description:hr_salary_input.field_salary_input_line__value
+msgid "Value"
+msgstr "القيمة"

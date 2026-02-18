@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<odoo>
+
+    <record id="action_report_manpower_planned" model="ir.actions.report">
+        <field name="name">Manpower Plan</field>
+        <field name="model">hr.manpower.plan</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">hr_manpower_plan.report_manpower_planned</field>
+        <field name="report_file">hr_manpower_plan.report_manpower_planned</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="model_hr_manpower_plan"/>
+    </record>
+
+</odoo>

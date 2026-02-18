@@ -1,0 +1,8 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_manager_hr_job_offer,access.hr.manager.job.offer,model_hr_job_offer,hr.group_hr_manager,1,1,1,0
+access_hr_user_hr_job_offer,access.hr.user.job.offer,model_hr_job_offer,hr.group_hr_user,1,1,1,0
+access_user_set_job_offer,access.user.set.job.offer,model_hr_job_offer,group_set_job_offer,1,1,1,0
+access_user_generate_job_offer,access.user.generate.job.offer,model_hr_job_offer,group_generate_job_offer,1,1,1,0
+access_user_approve_job_offer,access.user.approve.job.offer,model_hr_job_offer,group_approve_job_offer,1,1,1,0
+access_hr_manager_action_reason,access.hr.manager.action.reason,action_reason.model_action_reason,hr.group_hr_manager,1,1,1,1
+access_hr_manager_job_offer_reject,access.hr.manager.job.offer.reject,model_job_offer_reject,hr.group_hr_manager,1,1,1,1

@@ -1,0 +1,69 @@
+<odoo>
+
+    <record id="account_vat_tax_types_action" model="ir.actions.act_window">
+        <field name="name">VAT Tax Types</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.vat.tax.types</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <record id="account_vat_tax_types_tree" model="ir.ui.view">
+        <field name="name">account.vat.tax.types.tree</field>
+        <field name="model">account.vat.tax.types</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="invoice_type"/>
+                <field name="tax_type"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="account_vat_tax_types_search" model="ir.ui.view">
+        <field name="name">account.vat.tax.types.search</field>
+        <field name="model">account.vat.tax.types</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="invoice_type"/>
+                <field name="tax_type"/>
+                <group expand="1" string="Group By">
+                    <filter string="Invoice Type" name="Invoice Type"
+                            context="{'group_by':'invoice_type'}"/>
+                    <filter string="Tax Type" name="tax_type"
+                            context="{'group_by':'tax_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="account_vat_tax_types_form" model="ir.ui.view">
+        <field name="name">Account Vat Tax Types Form</field>
+        <field name="model">account.vat.tax.types</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name" default_focus="1"
+                                   placeholder="Name"/>
+                            <field name="description"/>
+                            <field name="code"/>
+                        </group>
+                        <group>
+                            <field name="invoice_type"/>
+                            <field name="tax_type"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem id="menuitem_account_vat_tax_types"
+              name="VAT Tax Types"
+              parent="account.account_invoicing_menu"
+              action="account_vat_tax_types_action" sequence="1"/>
+
+</odoo>

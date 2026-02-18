@@ -1,0 +1,86 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* action_reason
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-13 09:18+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: action_reason
+#: model:ir.model,name:action_reason.model_action_reason
+msgid "Action Reason"
+msgstr "سبب الإجراء"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__color
+msgid "Color"
+msgstr "اللون"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__model_id
+#: model_terms:ir.ui.view,arch_db:action_reason.action_reason_search
+msgid "Model"
+msgstr "الكائن"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__name
+msgid "Reason"
+msgstr "السبب"
+
+#. module: action_reason
+#: code:addons/action_reason/models/action_reason.py:0
+#: model:ir.model.constraint,message:action_reason.constraint_action_reason_unique_name
+#, python-format
+msgid "Reason must be unique"
+msgstr "السبب يجب أن لا يكون مكرر"
+
+#. module: action_reason
+#: model:ir.model.fields,field_description:action_reason.field_action_reason__res_model
+msgid "Res Model"
+msgstr "التطبيق"

@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_manager_hr_course,Access.HR.Manager.course,model_hr_course,hr.group_hr_manager,1,1,1,1
+access_hr_manager_hr_course_type,Access.HR.Manager.course.type,model_hr_course_type,hr.group_hr_manager,1,1,1,1
+access_hr_manager_hr_course_provider_line,Access.HR.Manager.course.provider.line,model_hr_course_provider_line,hr.group_hr_manager,1,1,1,1
+access_hr_user_hr_course,Access.HR.User.course,model_hr_course,hr.group_hr_user,1,1,1,0
+access_hr_user_hr_course_type,Access.HR.User.course.type,model_hr_course_type,hr.group_hr_user,1,1,1,0
+access_hr_user_hr_course_provider_line,Access.HR.User.course.provider.line,model_hr_course_provider_line,hr.group_hr_user,1,1,1,0

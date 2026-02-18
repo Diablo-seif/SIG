@@ -1,0 +1,27 @@
+<odoo>
+
+    <record id="view_reason_new_tree" model="ir.ui.view">
+        <field name="name">account.move.cancel.reason.tree</field>
+        <field name="model">account.move.cancel.reason</field>
+        <field name="arch" type="xml">
+            <list editable="top">
+                <field name="name"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+
+    <record id="open_view_reason_new_tree" model="ir.actions.act_window">
+        <field name="name">Cancel Reason</field>
+        <field name="res_model">account.move.cancel.reason</field>
+        <field name="view_mode">list</field>
+    </record>
+
+    <record id="menu_account_cancel_reasons" model="ir.ui.menu">
+        <field name="name">Cancel Reason</field>
+        <field name="parent_id" ref="account.account_management_menu"/>
+        <field name="action" ref="open_view_reason_new_tree"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+        <record id="social_insurance_employee_share_salary_rule" model="hr.salary.rule">
+            <field name="name">Social Insurance Employee Share</field>
+            <field name="sequence">90</field>
+            <field name="code">SIES</field>
+            <field name="category_id" ref="social_insurance_salary_category"/>
+            <field name="struct_id" ref="full_time_salary_structure"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = employee.insurance_employee_share > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+try:
+    result= employee.insurance_employee_share
+except:
+    result=0
+            </field>
+        </record>
+
+        <record id="social_insurance_company_share_salary_rule" model="hr.salary.rule">
+            <field name="name">Social Insurance Company Share</field>
+            <field name="sequence">105</field>
+            <field name="code">SICS</field>
+            <field name="category_id" ref="social_insurance_salary_category"/>
+            <field name="struct_id" ref="full_time_salary_structure"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = employee.insurance_company_share > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+try:
+    result= employee.insurance_company_share
+except:
+    result=0
+            </field>
+        </record>
+
+        <record id="owner_social_insurance_company_share_salary_rule" model="hr.salary.rule">
+            <field name="name">Social Insurance Owner Company Share</field>
+            <field name="sequence">105</field>
+            <field name="code">SIOCS</field>
+            <field name="category_id" ref="hr_payroll.COMP"/>
+            <field name="struct_id" ref="owner_salary_structure"/>
+            <field name="condition_select">python</field>
+            <field name="condition_python">
+result = employee.insurance_company_share > 0
+            </field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">
+try:
+    result= employee.insurance_company_share
+except:
+    result=0
+            </field>
+        </record>
+
+</odoo>

@@ -1,0 +1,48 @@
+# pylint: skip-file
+{
+    'name': 'Effects Payroll',
+    'summary': 'Effects Payroll Module',
+    'author': 'CORE B.P.O',
+    'maintainer': 'Hashem Aly',
+    'website': 'http://www.core-bpo.com',
+    'support': 'apps@core-bpo.com',
+    'category': 'Human Resources/Payroll',
+    # 'version': '1.0.0',
+    'license': 'OPL-1',
+    'depends': [
+        'hr_payroll',
+    ],
+    'data': [
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'views/hr_effects_payroll.xml',
+        'views/hr_effects_payroll_type.xml',
+    ],
+    'demo': [
+        'demo/hr_effects_payroll_types.xml',
+    ],
+    'images': [
+        'static/description/banner.gif',
+        'static/description/main_screenshot.gif',
+        'static/description/corebpo_logo.png',
+        'static/description/core_white_logo.jpg',
+        'static/description/corebpo_logo_screenshot.png',
+        'static/description/access_user.png',
+        'static/description/addition_approved.png',
+        'static/description/addition_draft.png',
+        'static/description/addition_salary_rule.png',
+        'static/description/addition_type.png',
+        'static/description/deduction_approved.png',
+        'static/description/deduction_salary_rule.png',
+        'static/description/deduction_salary_rule.png',
+        'static/description/deduction_type.png',
+        'static/description/payslip.png',
+        'static/description/salary_structure.png',
+
+    ],
+    'installable': True,
+    'auto_install': False,
+    'application': False,
+    'price': 30,
+    'currency': 'USD',
+}

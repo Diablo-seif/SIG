@@ -1,0 +1,21 @@
+<odoo noupdate="1">
+
+    <record id="hr_payslip_payment_method_multi_company_rule" model="ir.rule">
+        <field name="name">Payslip Payment Method Multi Company</field>
+        <field name="model_id" ref="model_hr_payslip_payment_method"/>
+        <field name="domain_force">['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>
+    </record>
+
+    <record id="hr_payslip_payment_order_multi_company_rule" model="ir.rule">
+        <field name="name">Payslip Payment Order Multi Company</field>
+        <field name="model_id" ref="model_hr_payslip_payment_order"/>
+        <field name="domain_force">['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>
+    </record>
+
+    <record id="hr_payslip_payment_order_line_multi_company_rule" model="ir.rule">
+        <field name="name">Payslip Payment Order Line Multi Company</field>
+        <field name="model_id" ref="model_hr_payslip_payment_order_line"/>
+        <field name="domain_force">['|', ('payment_id.company_id', 'in', company_ids), ('payment_id.company_id', '=', False)]</field>
+    </record>
+
+</odoo>

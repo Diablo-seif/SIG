@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_loan_form" model="ir.ui.view">
+        <field name="name">hr.loan.form</field>
+        <field name="model">hr.loan</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="generate_installment" type="object"
+                            string="Generate Installment" class="oe_highlight"
+                            groups="hr.group_hr_manager,hr.group_hr_user"
+                            invisible="state in  ('approve', 'refuse')"/>
+                    <button name="action_submit" type="object" string="Submit"
+                            states="draft" class="oe_highlight"/>
+                    <button name="action_cancel" type="object" string="Cancel"
+                            states="draft"/>
+                    <button name="action_approve" type="object" string="Approve"
+                            states="waiting_approval_1" class="oe_highlight"
+                            groups="hr.group_hr_manager,hr.group_hr_user"/>
+                    <button name="action_refuse" type="object" string="Refuse"
+                            states="waiting_approval_1"
+                            class="oe_highlight"
+                            groups="hr.group_hr_manager,hr.group_hr_user"/>
+                    <button name="%(hr_loan.hr_loan_register_payment_wizard_action)d"
+                            type="action" string="Register Payment"
+                            class="oe_highlight"
+                            invisible="state != approve or payments_paid = True"
+                            context="{'default_amount': total_amount}"
+                            groups="account.group_account_manager"/>
+                    <button name="action_double_approve"
+                            type="object" string="Second Approve"
+                            class="oe_highlight"
+                            states="waiting_approval_2"
+                            context="{'default_amount': total_amount}"
+                            groups="account.group_account_manager"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,waiting_approval_1,approve"/>
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group col="4">
+                        <field name="employee_id"
+                               readonly="state !=draft"/>
+                        <!--                                    attrs="{'readonly':[('state','!=','draft')]}"-->
+                        <field name="date"/>
+                        <field name="department_id" readonly="1" force_save="1"/>
+                        <field name="job_position" readonly="1" force_save="1"/>
+                        <field name="loan_amount"
+                               invisible="state == 'draft'"
+                               readonly="state != 'draft'"/>
+                        <!--                                    attrs="{'readonly':[('state','!=','draft')]}"-->
+                        <field name="loan_account_id"
+                               invisible="state == 'draft'"
+                               readonly="state != 'draft'"/>
+                        <!--                               attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('state', '=','draft')]}"/>-->
+                        <field name="account_payable_id"
+                               invisible="state == 'draft'"
+                               readonly="state != 'draft'"/>
+                        <!--                               attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('state', '=','draft')]}"/>-->
+                        <field name="journal_id"
+                               invisible="state == 'draft'"
+                               readonly="state != 'draft'"/>
+                        <!--                               attrs="{'readonly': [('state', '!=', 'draft')],'invisible':[('state', '=','draft')]}"/>-->
+                        <field name="account_move_id"/>
+                        <field name="payments_paid"/>
+                        <field name="installment"
+                               readonly="state !='draft'"/>
+                        <!--                                    attrs="{'readonly':[('state','!=','draft')]}"-->
+                        <field name="payment_date"
+                               readonly="state !='draft'"/>
+                        <field name="company_id" options="{'no_create': True}"/>
+                        <field name="currency_id" options="{'no_create': True}"
+                               groups="base.group_multi_company"/>
+                    </group>
+                    <notebook>
+                        <page string="Installments">
+                            <field name="loan_line_ids"
+                                   readonly="state !='draft'">
+                                <list editable="bottom">
+                                    <field name="date"/>
+                                    <field name="amount"/>
+                                    <field name="paid" readonly="1"
+                                           invisible="1"/>
+                                </list>
+                            </field>
+                            <group class="oe_subtotal_footer oe_right"
+                                   colspan="2">
+                                <field name="total_amount" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="total_paid_amount"
+                                       widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                                <field name="balance_amount"
+                                       class="oe_subtotal_footer_separator"
+                                       widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"/>
+                            </group>
+                            <div class="oe_clear"/>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+
+    <record id="hr_loan_tree" model="ir.ui.view">
+        <field name="name">hr.loan.tree</field>
+        <field name="model">hr.loan</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="employee_id"/>
+                <field name="loan_amount"/>
+                <field name="date"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_loan_search" model="ir.ui.view">
+        <field name="name">hr.loan.search.form</field>
+        <field name="model">hr.loan</field>
+        <field name="arch" type="xml">
+            <search>
+                <filter string="My Requests" name="myrequest"
+                        domain="[('employee_id.user_id.id', '=', uid)]"/>
+                <field name="employee_id" string="Employee"/>
+                <field name="department_id" string="Department"/>
+                <separator/>
+                <filter string="Waiting Submit" name="draft"
+                        domain="[('state', '=', 'draft')]"/>
+                <filter string="Waiting HR Approval" name="hr_approval"
+                        domain="[('state', '=', 'waiting_approval_1')]"/>
+                <filter string="Waiting Accountant Approval"
+                        name="account_approval"
+                        groups="account.group_account_user"
+                        domain="[('state', '=', 'waiting_approval_2')]"/>
+                <filter string="Waiting Accountant Payment" name="account_pay"
+                        domain="[('state', '=', 'approve'),('payments_paid','=',False)]"/>
+                <filter string="Refused" name="refuse"
+                        domain="[('state','=','refuse')]"/>
+                <filter string="Cancelled" name="cancel"
+                        domain="[('state','=','cancel')]"/>
+                <separator/>
+                <filter string="Paid" name="paid"
+                        domain="[('payments_paid', '=', True)]"/>
+                <field name="employee_id" string="Employee"/>
+                <field name="department_id" string="Department"/>
+                <field string="Journal" name="journal_id"/>
+                <filter string="Employee" name="employee_group"
+                        context="{'group_by':'employee_id'}"/>
+                <filter string="Department" name="department_group"
+                        context="{'group_by':'department_id'}"/>
+                <filter string="Status" name="status"
+                        context="{'group_by':'state'}"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_loan_action" model="ir.actions.act_window">
+        <field name="name">Loan Request</field>
+        <field name="res_model">hr.loan</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'search_default_myrequest': 1}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                Click to create a new Loan request.
+            </p>
+            <p>
+                Use this menu to create loan requests.
+            </p>
+        </field>
+    </record>
+
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_user_hr_insurance_enroll_form,Access.User.Hr.Insurance.Enroll.Form,model_hr_insurance_enroll_form,l10n_eg_social_insurance.group_social_insurance_manager,1,1,1,1
+access_user_hr_insurance_enroll_form_line,Access.User.Hr.Insurance.Enroll.Form,model_hr_insurance_enroll_form_line,l10n_eg_social_insurance.group_social_insurance_manager,1,1,1,1
+access_user_create_enroll_form,access.user.hr.create.enroll.form,model_create_enroll_form,l10n_eg_social_insurance.group_social_insurance_manager,1,1,1,1

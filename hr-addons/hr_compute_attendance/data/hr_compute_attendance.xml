@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="hr_compute_attendance_sequence" model="ir.sequence">
+        <field name="name">hr.compute.attendance</field>
+        <field name="code">hr.compute.attendance</field>
+        <field name="prefix">HCA/</field>
+        <field name="padding">6</field>
+        <field name="number_next">1</field>
+        <field name="number_increment">1</field>
+    </record>
+
+</odoo>

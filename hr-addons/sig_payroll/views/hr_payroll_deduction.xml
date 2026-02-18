@@ -1,0 +1,64 @@
+<odoo>
+    <record id="view_hr_payroll_deduction_tree" model="ir.ui.view">
+        <field name="name">hr.payroll.deduction.tree</field>
+        <field name="model">hr.payroll.deduction</field>
+        <field name="arch" type="xml">
+            <list edit="1" editable="top">
+                <field name="employee_id" />
+                <field name="start_date" />
+                <field name="end_date" />
+                <field name="deduction_leave_days" optional="show" />
+                <field name="management_penalty_days" optional="show" />
+                <field name="tardiness_days" optional="show" />
+                <field name="unattended_days" optional="show" />
+                <field name="absence_penalty_days" optional="show" />
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_payroll_deduction_view_search" model="ir.ui.view">
+        <field name="name">hr.payroll.deduction.view.search</field>
+        <field name="model">hr.payroll.deduction</field>
+        <field name="arch" type="xml">         
+            <search string="Hr Payroll Deduction Search">
+                <field name="employee_id" />
+                <field name="department_id" operator="child_of" />
+                <filter string="External" name="filter_external"
+                    domain="[('employee_type','=','external')]" />
+                <filter string="Internal" name="filter_internal"
+                    domain="[('employee_type','=','internal')]" />
+                <separator />
+                <filter string="Date" name="end_date_filter" date="end_date"
+                    default_period="last_month" />
+                <group expand="0" string="Group By">
+                    <filter string="Year" name="group_by_year" context="{'group_by': 'end_date:year'}" />
+                    <filter string="Month" name="group_by_month"
+                        context="{'group_by': 'end_date:month'}" />
+                    <filter string="Type" name="group_by_type" context="{'group_by': 'employee_type'}" />
+                    <filter string="Department" name="group_by_department_id"
+                        context="{'group_by': 'department_id'}" />
+                    <filter string="Governorate" name="group_by_governorate"
+                    context="{'group_by': 'state_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="view_hr_payroll_deduction_action" model="ir.actions.act_window">
+        <field name="name">HR Payroll Deductions</field>
+        <field name="res_model">hr.payroll.deduction</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{
+            'search_default_group_by_year': 1,
+            'search_default_group_by_month':1,
+            'search_default_group_by_type':1,
+            'search_default_group_by_department_id':1,
+            'search_default_group_by_governorate':1,
+            }</field>
+    </record>
+
+    <menuitem id="menu_hr_payroll_deduction" name="Payroll Deductions"
+        action="view_hr_payroll_deduction_action"
+        parent="hr_attendance.menu_hr_attendance_view_attendances"
+        sequence="100" />
+</odoo>

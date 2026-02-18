@@ -1,0 +1,20 @@
+<odoo>
+
+        <record id="view_job_position_tree" model="ir.ui.view">
+            <field name="name">sig.job.position.tree</field>
+            <field name="model">sig.job.position</field>
+            <field name="arch" type="xml">
+                <list editable="top">
+                    <field name="name"/>
+                    <field name="for_organization"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_sig_job_position_view" model="ir.actions.act_window">
+            <field name="name">Job Positions</field>
+            <field name="res_model">sig.job.position</field>
+            <field name="view_mode">list</field>
+        </record>
+
+</odoo>

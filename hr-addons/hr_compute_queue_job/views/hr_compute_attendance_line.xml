@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_queue_job_search_inherit" model="ir.ui.view">
+        <field name="name">hr.compute.attendance.line.filter.inherit</field>
+        <field name="model">hr.compute.attendance.line</field>
+        <field name="inherit_id"
+               ref="hr_compute_attendance.view_queue_job_search"/>
+        <field name="arch" type="xml">
+            <field name="end_date" position="after">
+                <field name="queue_job_id"/>
+                <field name="exc_info"/>
+                <field name="state"/>
+                <filter name="pending" string="Pending"
+                        domain="[('queue_job_id.state', '=', 'pending')]"/>
+                <filter name="enqueued" string="Enqueued"
+                        domain="[('queue_job_id.state', '=', 'enqueued')]"/>
+                <filter name="started" string="Started"
+                        domain="[('queue_job_id.state', '=', 'started')]"/>
+                <filter name="done" string="Done"
+                        domain="[('queue_job_id.state', '=', 'done')]"/>
+                <filter name="failed" string="Failed"
+                        domain="[('queue_job_id.state', '=', 'failed')]"/>
+
+                <filter name="failed_contract" string="Missing Contract"
+                        domain="[('exc_info','like', 'Without Contract Duration')]"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_hr_compute_attendance_line_tree_inherit"
+            model="ir.ui.view">
+        <field name="name">hr.compute.attendance.line.tree.inherit</field>
+        <field name="model">hr.compute.attendance.line</field>
+        <field name="inherit_id"
+               ref="hr_compute_attendance.view_hr_compute_attendance_line_tree"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//list" position="attributes">
+                <attribute name="decoration-danger">state == 'failed'</attribute>
+                <attribute name="decoration-warning">state == 'pending'
+                </attribute>
+                <attribute name="decoration-info">state == 'enqueued'</attribute>
+                <attribute name="decoration-bf">state == 'started'</attribute>
+                <attribute name="decoration-success">state == 'done'</attribute>
+            </xpath>
+
+            <field name="last_computed" position="before">
+                <field name="queue_job_id"/>
+            </field>
+            <field name="last_computed" position="after">
+                <field name="state"/>
+                <button name="re_progress" string="Re-Schedule"
+                        type="object"/>
+            </field>
+        </field>
+    </record>
+
+    <record id="view_hr_compute_attendance_line_form_inherit"
+            model="ir.ui.view">
+        <field name="name">hr.compute.attendance.line.form.inherit</field>
+        <field name="model">hr.compute.attendance.line</field>
+        <field name="inherit_id"
+               ref="hr_compute_attendance.view_hr_compute_attendance_line_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//button[@name='compute_line']" position="after">
+                <button name="re_progress" string="Re-Schedule"
+                        type="object"
+                        invisible="state in ('draft','done')"/>
+                <field name="state" widget="statusbar"
+                       statusbar_visible="pending,enqueued,started,done"/>
+            </xpath>
+
+            <xpath expr="//button[@name='compute_line']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+
+            <xpath expr="//field[@name='last_computed']" position="after">
+                <field name="queue_job_id"/>
+                <field name="state"/>
+                <field name="exc_info"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

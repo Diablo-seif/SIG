@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="journal_entries_layout" inherit_id="web.external_layout_standard">
+        <div name="company_address" position="after">
+            <div class="col-6 text-right">
+                Printed in:
+                <t t-esc="context_timestamp(datetime.datetime.now()).strftime('%Y-%m-%d %I:%M %p')"/>
+            </div>
+        </div>
+    </template>
+
+    <template id="journal_entry_template">
+        <t t-foreach="docs" t-as="o">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-if="not o and doc">
+                        <t t-set="o" t-value="doc"/>
+                    </t>
+                    <t t-if="o and 'company_id' in o">
+                        <t t-set="company" t-value="o.company_id.sudo()"/>
+                    </t>
+                    <t t-if="not o or not 'company_id' in o">
+                        <t t-set="company" t-value="res_company"/>
+                    </t>
+                    <div class="page">
+                        <div>
+                            <h3>
+                                <span t-field="o.name"/>
+                            </h3>
+                        </div>
+                        <br/>
+                        <div class="row mb-4">
+                            <table width="100%" class="table" name="journal_header">
+                                <tr>
+                                    <td width="25">
+                                        Journal
+                                    </td>
+                                    <td>
+                                        <span t-field="o.journal_id.name"/>
+                                    </td>
+                                    <td width="25">
+                                        Date
+                                    </td>
+                                    <td>
+                                        <span t-field="o.date"/>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        Reference
+                                    </td>
+                                    <td>
+                                        <span t-field="o.ref"/>
+                                    </td>
+                                    <td>
+                                        Status
+                                    </td>
+                                    <td>
+                                        <span t-field="o.state"/>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <div class="row">
+                            <br/>
+                            <table width="100%" class="table table-bordered" name="journal_lines">
+                                <thead>
+                                    <tr>
+                                        <th style="vertical-align: middle">Account</th>
+                                        <th style="vertical-align: middle">Partner</th>
+                                        <th style="vertical-align: middle">Label</th>
+                                        <th style="vertical-align: middle">Analytic Account</th>
+                                        <th style="vertical-align: middle">Debit</th>
+                                        <th style="vertical-align: middle">Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="o.line_ids" t-as="line">
+                                        <tr>
+                                            <td>
+                                                <span t-field="line.account_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.partner_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.analytic_account_id.name"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.debit"/>
+                                            </td>
+                                            <td>
+                                                <span t-field="line.credit"/>
+                                            </td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                                <tfooter>
+                                    <tr>
+                                        <td colspan="4"/>
+                                        <td>
+                                            <span t-esc="o.amount_total_signed"/>
+                                        </td>
+                                        <td>
+                                            <span t-esc="o.amount_total_signed"/>
+                                        </td>
+                                    </tr>
+                                </tfooter>
+                            </table>
+                        </div>
+                        <div class="container mt-5" t-if="company.journal_entry_signature">
+                            <div class="row">
+                                <div class="col-3 text-center">
+                                    Signature
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-3 text-center">
+                                    ..........................................
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </t>
+    </template>
+
+</odoo>

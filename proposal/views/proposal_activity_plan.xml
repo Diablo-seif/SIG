@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="proposal_activity_plan_tree" model="ir.ui.view">
+        <field name="name">proposal.activity.plan.tree</field>
+        <field name="model">proposal.activity.plan</field>
+        <field name="arch" type="xml">
+            <list editable="top" decoration-muted="active == False">
+                <field name="activity_type_id"/>
+                <field name="user_ids" widget="many2many_tags"/>
+                <field name="description"/>
+                <field name="planned_after" string="Planned After (Days)"/>
+                <field name="proposal_state"/>
+                <field name="active" widget="boolean_toggle"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="proposal_activity_plan_action" model="ir.actions.act_window">
+        <field name="name">Proposal Activity Plan</field>
+        <field name="res_model">proposal.activity.plan</field>
+        <field name="view_mode">list</field>
+        <field name="context">{'active_test': False}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new document
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="proposal_activity_plan_menu"
+            name="Proposal Activity Plan"
+            action="proposal_activity_plan_action"
+            parent="proposal_config_menu"
+            groups="proposal.group_proposal_admin"
+            sequence="10"/>
+</odoo>

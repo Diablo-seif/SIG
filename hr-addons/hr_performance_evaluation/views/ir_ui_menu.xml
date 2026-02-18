@@ -1,0 +1,94 @@
+<odoo>
+
+    <menuitem
+            id="performance_evaluation_root_menu"
+            name="PMS"
+            sequence="26"
+            web_icon="hr_performance_evaluation,static/description/icon.png"/>
+    />
+
+    <menuitem
+            id="performance_evaluation_categ_menu"
+            name="Performance Evaluation"
+            parent="performance_evaluation_root_menu"
+            sequence="1"
+    />
+
+    <menuitem id="hr_evaluation_my_menu" name="My Evaluation"
+            parent="performance_evaluation_categ_menu"
+            action="hr_evaluation_my_action"
+            sequence="10"
+    />
+
+    <menuitem id="hr_evaluation_my_team_menu" name="My Team Evaluation"
+            parent="performance_evaluation_categ_menu"
+            action="hr_evaluation_my_team_action"
+            groups="employee_performance_all_group"
+            sequence="20"
+    />
+
+    <menuitem id="hr_evaluation_all_menu" name="All Evaluation"
+            parent="performance_evaluation_categ_menu"
+            action="hr_evaluation_all_action"
+            sequence="30"
+            groups="employee_performance_admin_group"
+    />
+
+    <menuitem id="hr_evaluation_batch_create_menu"
+            name="Generate Performance Evaluation"
+            parent="performance_evaluation_root_menu"
+            action="hr_evaluation_batch_create_action"
+            sequence="50"
+            groups="employee_performance_admin_group"
+    />
+
+    <menuitem id="performance_evaluation_report_menu"
+            name="Reporting"
+            parent="performance_evaluation_root_menu"
+            sequence="500"
+            groups="employee_performance_user_group"
+    />
+
+    <menuitem id="employee_performance_menu"
+            name="Employee Performance"
+            parent="performance_evaluation_report_menu"
+            action="employee_performance_action"
+            sequence="9"
+    />
+    <menuitem id="hr_evaluation_performance_line_menu"
+            name="Employee Objective"
+            parent="performance_evaluation_report_menu"
+            action="hr_evaluation_performance_line_action"
+            sequence="10"
+    />
+
+    <menuitem
+            id="performance_evaluation_configuration_menu"
+            name="Configuration"
+            parent="performance_evaluation_root_menu"
+            sequence="999"
+            groups="hr_performance_evaluation.employee_performance_admin_group"
+    />
+
+    <menuitem id="hr_hr_performance_template_menu"
+            name="Performance Template"
+            parent="performance_evaluation_configuration_menu"
+            action="hr_performance_template_action"
+            sequence="10"
+    />
+
+    <menuitem
+            id="hr_evaluation_period_menu"
+            parent="performance_evaluation_configuration_menu"
+            action="hr_evaluation_period_action"
+            sequence="30"
+    />
+
+    <menuitem
+            id="hr_performance_score_scale_menu"
+            parent="performance_evaluation_configuration_menu"
+            action="hr_performance_score_scale_action"
+            sequence="40"
+    />
+
+</odoo>

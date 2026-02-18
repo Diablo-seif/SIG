@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_contract_view_form_inherit_salary_input" model="ir.ui.view">
+        <field name="name">hr.contract.form.inherit.salary_input</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='other']" position="after">
+                <page string="Salary Input" name="input">
+                    <field name="lines_ids"/>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="salary_input_line_tree_view" model="ir.ui.view">
+        <field name="name">Salary Input Line</field>
+        <field name="model">salary.input.line</field>
+        <field name="arch" type="xml">
+            <list editable="bottom">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="value"/>
+                <field name="date_from"
+                                   required="date_to not in [False, None, '']"/>
+<!--                       attrs="{'required':[('date_to','not in',)]}"/>-->
+                <field name="date_to"
+                                   required="date_from not in [False, None, '']"/>
+<!--                       attrs="{'required':[('date_from','not in',[False, None, ''])]}"/>-->
+            </list>
+        </field>
+    </record>
+
+    <record id="salary_input_tree_view" model="ir.ui.view">
+        <field name="name">Salary Inputs</field>
+        <field name="model">salary.input</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="salary_input_form_view" model="ir.ui.view">
+        <field name="name">Salary Input</field>
+        <field name="model">salary.input</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="salary_input_action" model="ir.actions.act_window">
+        <field name="name">Salary Input</field>
+        <field name="res_model">salary.input</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem
+            id="salary_input_conf_menu"
+            name="Salary Inputs"
+            parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"
+            action="salary_input_action"
+            groups="hr_contract.group_hr_contract_manager"/>
+
+</odoo>

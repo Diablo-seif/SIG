@@ -1,0 +1,17 @@
+<odoo>
+        <record id="inherit_account_invoice_form" model="ir.ui.view">
+                <field name="name">account.move.form</field>
+                <field name="model">account.move</field>
+                <field name="inherit_id" ref="account.view_move_form" />
+                <field name="arch" type="xml">
+                        <xpath expr="//button[@name='action_post'][1]" position="attributes">
+                                <attribute name="groups">
+                                        hide_post_button_account_move.group_show_post_button_account_move</attribute>
+                        </xpath>
+                        <xpath expr="//button[@name='action_post'][2]" position="attributes">
+                                <attribute name="groups">
+                                        hide_post_button_account_move.group_show_post_button_account_move</attribute>
+                        </xpath>
+                </field>
+        </record>
+</odoo>

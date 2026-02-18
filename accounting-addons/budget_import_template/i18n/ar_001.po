@@ -1,0 +1,27 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* budget_import_template
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200701\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-08-31 11:00+0000\n"
+"PO-Revision-Date: 2020-08-31 11:00+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: budget_import_template
+#: model:ir.model,name:budget_import_template.model_crossovered_budget
+msgid "Budget"
+msgstr "الموازنة"
+
+#. module: budget_import_template
+#: code:addons/budget_import_template/models/crossovered_budget.py:0
+#, python-format
+msgid "Import template for budgets"
+msgstr "قالب لاستيراد الموازنات"

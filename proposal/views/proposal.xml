@@ -1,0 +1,713 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="proposal_form" model="ir.ui.view">
+        <field name="name">proposal.form</field>
+        <field name="model">proposal.proposal</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_send_to_purchase" string="Send To Purchase" type="object"
+                            class="oe_highlight" invisible="state != 'draft'"
+                            groups="proposal.group_proposal_send_to_purchase"/>
+                    <button name="action_send_to_sales" string="Send To Sales" type="object"
+                            invisible="state != 'sent_to_purchase'" class="oe_highlight"
+                            groups="proposal.group_proposal_send_to_sales"/>
+                    <button name="%(proposal.create_rfq_action)d" string="Create RFQ" type="action"
+                            invisible="state != 'sent_to_purchase'" class="oe_highlight"
+                            groups="proposal.group_proposal_create_rfq"/>
+                    <button name="action_create_so" string="Create SO" type="object"
+                            class="oe_highlight"
+                            invisible="sale_ids or state not in ['sent_to_sales','done']"
+                            groups="proposal.group_proposal_create_so"/>
+                    <button name="action_won" string="Won" type="object" invisible="state != 'sent_to_sales'"
+                            class="bg-success border-success text-white"
+                            groups="proposal.group_proposal_won"/>
+                    <button name="action_lost_reason" string="Lost" type="object"
+                            invisible="state != 'sent_to_sales'"
+                            class="bg-danger border-danger text-white"
+                            groups="proposal.group_proposal_lost"/>
+                    <button name="action_update_qty" string="Update QTY" type="object"
+                            invisible="state != 'sent_to_sales'" groups="proposal.group_proposal_update_qty"/>
+                    <button name="%(proposal.create_rfq_action)d" string="Create RFQ" type="action"
+                            invisible="state not in ['sent_to_sales','done']"
+                            groups="proposal.group_proposal_create_rfq"/>
+                    <button name="action_proposal_amendment" string="Proposal Amendment"
+                            type="object" invisible="state != 'done'" groups="proposal.group_proposal_amendment"/>
+                    <button name="action_print_proposal" string="Print Proposal" type="object"
+                            invisible="state != 'sent_to_sales'" groups="proposal.group_proposal_print_proposal"/>
+                    <button name="action_draft" string="Set To Draft" type="object"
+                            invisible="state not in ['sent_to_purchase','lost']" groups="proposal.group_set_to_draft"/>
+
+                    <button name="action_cancel" string="Cancel" type="object"
+                            invisible="state != 'done'" groups="proposal.group_proposal_cancel"/>
+
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,sent_to_purchase,sent_to_sales,done"/>
+                </header>
+                <sheet>
+                    <div name="button_box" class="oe_button_box">
+                        <button name="action_view_purchases" type="object" class="oe_stat_button"
+                                icon="fa-credit-card" invisible="not purchase_ids"
+                                groups="proposal.group_proposal_create_rfq">
+                            <field name="purchase_ids" string="Purchase" widget="statinfo"/>
+                        </button>
+                        <button name="action_view_sales" type="object" class="oe_stat_button"
+                                icon="fa-usd" invisible="not sale_ids"
+                                groups="proposal.group_proposal_create_so">
+                            <field name="sale_ids" string="Sale" widget="statinfo"/>
+                        </button>
+                        <button name="action_view_invoices" string="Invoices" type="object"
+                                class="oe_stat_button" icon="fa-pencil-square-o"
+                                groups="proposal.group_proposal_view_invoices"/>
+                        <button name="action_view_bills" string="Bills" type="object"
+                                class="oe_stat_button" icon="fa-pencil-square-o"
+                                groups="proposal.group_proposal_view_bills"/>
+                        <button name="action_view_entries" string="Entries" type="object"
+                                class="oe_stat_button" icon="fa-pencil-square-o"
+                                groups="proposal.group_proposal_view_bills"/>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group class="o_label_nowrap">
+                        <group>
+                            <field name="partner_id" readonly="state != 'draft'"/>
+                            <field name="analytic_account_id"
+                                   readonly="state != 'draft'"/>
+                            <field name="project_id"
+                                   invisible="project_id == False"/>
+                            <field name="purchase_responsible_id"
+                                   readonly="state != 'draft'" required="1"/>
+                            <field name="currency_id" groups="base.group_multi_currency"
+                                   readonly="state != 'draft'"/>
+                        </group>
+                        <group>
+                            <field name="company_id"/>
+                            <field name="date_order" readonly="state != 'draft'"/>
+                            <field name="stage_id"/>
+                            <!-- <field name="tag_ids" widget="many2many_tags"
+                                options="{'color_field': 'color'}" /> -->
+                            <field name="tag_id" required="1"/>
+                            <field name="contract_date"
+                                   readonly="state != 'done'"/>
+
+                            <field name="margin_type" widget="radio" options="{'horizontal': True}"
+                                   invisible="state != 'sent_to_sales'"/>
+                            <field name="margin_percentage" widget="percentage"
+                                   readonly="margin_type != 'percentage'"
+                                   invisible="state != 'sent_to_sales'"/>
+                            <field name="margin_amount"
+                                   readonly="margin_type != 'amount'"
+                                   invisible="state != 'sent_to_sales'"/>
+                        </group>
+                    </group>
+                    <hr groups="proposal.group_proposal_admin"/>
+                    <group class="o_label_nowrap" groups="proposal.group_proposal_admin" col="3">
+                        <group>
+                            <field name="expected_revenue"
+                                   groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"/>
+                            <field name="expected_cost"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                            <field name="expected_margin"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                            <field name="expected_margin_percentage" widget="percentage"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                        </group>
+                        <group>
+                            <field name="contracted_revenue"
+                                   groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"/>
+                            <field name="contracted_cost"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                            <field name="contracted_margin"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                            <field name="contracted_margin_percentage" widget="percentage"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                        </group>
+                        <group>
+                            <field name="actual_revenue"
+                                   groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"/>
+                            <field name="actual_cost"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                            <field name="actual_margin"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                            <field name="actual_margin_percentage" widget="percentage"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                        </group>
+                    </group>
+                    <hr groups="proposal.group_proposal_admin"/>
+                    <group groups="proposal.group_proposal_admin" col="3">
+                        <group>
+                            <field name="amendment_revenue"
+                                   groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                        </group>
+                        <group>
+                            <field name="financial_progress" widget="percentage"/>
+                        </group>
+                        <group>
+                            <field name="project_progress" widget="percentage"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page name="lines" string="Lines">
+                            <field name="line_ids"
+                                   widget="section_and_note_one2many"
+                                   context="{'default_margin_percentage': margin_percentage}"
+                                   readonly="state == 'done'">
+                                <list editable="bottom" decoration-bf="amendment">
+                                    <control>
+                                        <create name="add_product_control" string="Add a product"/>
+                                        <create name="add_section_control" string="Add a section"
+                                                context="{'default_display_type': 'line_section'}"/>
+                                        <create name="add_note_control" string="Add a note"
+                                                context="{'default_display_type': 'line_note'}"/>
+                                    </control>
+                                    <field
+                                            name="sequence" widget="handle"/>
+
+                                    <field name="amendment"
+                                           invisible="1"/>
+                                    <field name="display_type" invisible="1"/>
+                                    <field
+                                            name="product_id"
+                                            readonly="parent.state != 'draft'"
+                                            required="display_type == False"/>
+                                    <field
+                                            name="name"
+                                            readonly="parent.state != 'draft'"/>
+                                    <field
+                                            name="uom_id"
+                                            readonly="parent.state != 'draft'"
+                                            required="display_type == False"/>
+                                    <field
+                                            name="product_uom_qty"
+                                            readonly="parent.state != 'draft'"
+                                            sum="Total QTY" optional="show"/>
+                                    <field name="unit_cost"
+                                           widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"
+                                           readonly="parent.state != 'draft'"
+                                           sum="Total Unit Cost"
+                                           groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="cost" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}" sum="Total Cost"
+                                           groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="purchase_tax_ids"
+                                           widget="many2many_tags"
+                                           readonly="parent.state != 'sent_to_purchase'"
+                                           groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="purchase_taxes"
+                                           sum="Purchase Taxes"
+                                           groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="cost_after_taxes"
+                                           sum="Cost After Taxes"
+                                           groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="margin_percentage"
+                                           widget="percentage"
+                                           readonly="parent.state != 'sent_to_sales' or parent.margin_type != 'percentage'"
+                                           force_save="1"
+                                           groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="margin_amount"
+                                           widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"
+                                           readonly="parent.state != 'sent_to_sales' or parent.margin_type != 'amount'"
+                                           force_save="1" sum="Total Margin Amount"
+                                           groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="unit_price" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"
+                                           sum="Total Unit Price"
+                                           groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="price" widget="monetary"
+                                           options="{'currency_field': 'currency_id'}"
+                                           sum="Total Price"
+                                           groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="sales_tax_ids"
+                                           widget="many2many_tags"
+                                           readonly="parent.state != 'sent_to_sales'"
+                                           groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="sales_taxes"
+                                           sum="Sales Taxes"
+                                           groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="price_after_taxes"
+                                           sum="Price After Taxes"
+                                           groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                           optional="show"/>
+                                    <field name="proposal_state"
+                                           optional="show"/>
+                                    <field name="amendment" optional="show"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page name="lost_reason" string="Lost Reason"
+                              readonly="state != 'lost'">
+                            <field name="lost_reason_id" readonly="1"/>
+                        </page>
+                        <page name="yearly_report" string="Yearly Report">
+                            <field name="proposal_yearly_financial_ids">
+                                <list>
+                                    <field name="year"/>
+                                    <field name="remaining_revenue"/>
+                                    <field name="cumulative_remaining_revenue" optional="show"/>
+                                    <field name="remaining_cost"/>
+                                    <field name="cumulative_remaining_cost" optional="show"/>
+                                    <field name="remaining_margin"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="proposal_lost_reason_form" model="ir.ui.view">
+        <field name="name">proposal.lost.reason.form</field>
+        <field name="model">proposal.proposal</field>
+        <field name="priority">9999</field>
+        <field name="arch" type="xml">
+            <form>
+                <notebook>
+                    <page name="lost_reason" string="Lost Reason">
+                        <field name="lost_reason_id"/>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="action_lost" string="Lost" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="proposal_update_qty_form" model="ir.ui.view">
+        <field name="name">proposal.update.qty.form</field>
+        <field name="model">proposal.proposal</field>
+        <field name="priority">9999</field>
+        <field name="arch" type="xml">
+            <form>
+                <notebook>
+                    <page name="lines" string="Lines">
+                        <field name="line_ids" widget="section_and_note_one2many">
+                            <list editable="bottom" create="0" delete="0">
+                                <field name="display_type" invisible="1"/>
+                                <field name="product_id" readonly="1"/>
+                                <field name="name" readonly="1"/>
+                                <field name="uom_id" readonly="1"/>
+                                <field name="product_uom_qty" sum="Total QTY"/>
+                                <field name="purchase_tax_ids" widget="many2many_tags" readonly="1"
+                                       groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                       optional="hide"/>
+                                <field name="unit_cost" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}" readonly="1"
+                                       sum="Total Unit Cost"
+                                       groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                       optional="hide"/>
+                                <field name="cost" widget="monetary" readonly="1"
+                                       options="{'currency_field': 'currency_id'}" sum="Total Cost"
+                                       groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"/>
+                                <field name="sales_tax_ids" widget="many2many_tags" readonly="1"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="hide"/>
+                                <field name="margin_percentage" widget="percentage" readonly="1"
+                                       force_save="1"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="hide"/>
+                                <field name="margin_amount" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}" readonly="1"
+                                       force_save="1" sum="Total Margin Amount"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="hide"/>
+                                <field name="unit_price" widget="monetary" readonly="1"
+                                       options="{'currency_field': 'currency_id'}"
+                                       sum="Total Unit Price"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="hide"/>
+                                <field name="price" widget="monetary" readonly="1"
+                                       options="{'currency_field': 'currency_id'}" sum="Total Price"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="hide"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="update_qty" string="Update Qty" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="proposal_amendment_form" model="ir.ui.view">
+        <field name="name">proposal.amendment.form</field>
+        <field name="model">proposal.proposal</field>
+        <field name="priority">9999</field>
+        <field name="arch" type="xml">
+            <form>
+                <field name="margin_type" invisible="1"/>
+                <notebook>
+                    <page name="lines" string="Lines">
+                        <field name="line_ids"
+                               widget="section_and_note_one2many"
+                               context="{'default_amendment': True}">
+                            <list editable="bottom" decoration-bf="amendment" delete="0">
+                                <control>
+                                    <create name="add_product_control" string="Add a product"/>
+                                    <create name="add_section_control" string="Add a section"
+                                            context="{'default_display_type': 'line_section'}"/>
+                                    <create name="add_note_control" string="Add a note"
+                                            context="{'default_display_type': 'line_note'}"/>
+                                </control>
+                                <field
+                                        name="sequence" widget="handle"/>
+
+                                <field name="amendment"
+                                       invisible="1"/>
+                                <field name="display_type" invisible="1"/>
+                                <field
+                                        name="sale_order_line_ids" invisible="1"/>
+                                <field
+                                        name="product_id"
+                                        readonly="sale_order_line_ids"
+                                        required="display_type == False"/>
+                                <field
+                                        name="name"
+                                        readonly="sale_order_line_ids"/>
+                                <field
+                                        name="uom_id"
+                                        readonly="sale_order_line_ids"
+                                        required="display_type == False"/>
+
+                                <field
+                                        name="product_uom_qty"
+                                        sum="Total QTY" optional="show"
+                                        readonly="sale_order_line_ids"/>
+                                <field
+                                        name="unit_cost" widget="monetary"
+                                        options="{'currency_field': 'currency_id'}"
+                                        readonly="sale_order_line_ids"
+                                        sum="Total Unit Cost"
+                                        groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                        optional="show"/>
+                                <field name="cost" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}" sum="Total Cost"
+                                       groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="purchase_tax_ids"
+                                       widget="many2many_tags"
+                                       readonly="sale_order_line_ids"
+                                       required="display_type == False"
+                                       groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="purchase_taxes"
+                                       sum="Purchase Taxes"
+                                       groups="proposal.group_proposal_create_rfq,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="cost_after_taxes"
+                                       sum="Cost After Taxes"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="margin_percentage"
+                                       widget="percentage"
+                                       readonly="sale_order_line_ids or parent.margin_type != 'percentage'"
+                                       force_save="1"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="margin_amount" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"
+                                       readonly="sale_order_line_ids or parent.margin_type != 'amount'"
+
+                                       force_save="1" sum="Total Margin Amount"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="unit_price" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"
+                                       sum="Total Unit Price"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="price" widget="monetary"
+                                       options="{'currency_field': 'currency_id'}"
+                                       sum="Total Price"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="sales_tax_ids"
+                                       widget="many2many_tags"
+                                       readonly="sale_order_line_ids"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="sales_taxes" sum="Sales Taxes"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="show"/>
+                                <field name="price_after_taxes"
+                                       sum="Price After Taxes"
+                                       groups="proposal.group_proposal_create_so,proposal.group_proposal_admin"
+                                       optional="show"/>
+                            </list>
+                        </field>
+                    </page>
+                </notebook>
+                <footer>
+                    <button name="action_apply_amendment" string="Apply Amendment" type="object"
+                            class="oe_highlight"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+
+    <record id="proposal_tree" model="ir.ui.view">
+        <field name="name">proposal.tree</field>
+        <field name="model">proposal.proposal</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="partner_id"/>
+                <field name="analytic_account_id"/>
+                <field name="project_id" optional="hide"/>
+                <field name="activity_ids" widget="list_activity"/>
+                <field name="activity_user_id" optional="hide" string="Activity by"
+                       widget="many2one_avatar_user"/>
+                <field name="date_order"/>
+                <field name="financial_progress" widget="percentage" options="{'percentage': True,}"
+                       optional="show"/>
+                <field name="project_progress" widget="percentage" options="{'percentage': True,}"
+                       optional="show"/>
+                <field name="tag_ids" widget="many2many_tags" options="{'color_field': 'color'}"
+                       optional="show"/>
+                <field name="tag_id" optional="show"/>
+                <field name="state"/>
+                <field name="stage_id" optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="proposal_activity" model="ir.ui.view">
+        <field name="name">proposal.activity</field>
+        <field name="model">proposal.proposal</field>
+        <field name="arch" type="xml">
+            <activity string="Proposal">
+                <field name="activity_user_id"/>
+                <templates>
+                    <div t-name="activity-box">
+                        <field name="activity_user_id" widget="many2one_avatar_user"/>
+                        <div>
+                            <field name="name" display="full"/>
+                            <field name="state" display="full" muted="1"/>
+                        </div>
+                    </div>
+                </templates>
+            </activity>
+        </field>
+    </record>
+
+    <record id="proposal_view_pivot" model="ir.ui.view">
+        <field name="name">proposal.pivot</field>
+        <field name="model">proposal.proposal</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="partner_id" type="col"/>
+                <field name="name" type="col"/>
+                <!--  <field name="activity_user_id" type="col"/>
+                <field name="date_order" type="col"/> -->
+                <field name="state" type="row"/>
+                <field name="financial_progress" widget="percentage" type="measure"/>
+                <field name="project_progress" widget="percentage" type="measure"/>
+            </pivot>
+        </field>
+    </record>
+    <record id="proposal_view_graph" model="ir.ui.view">
+        <field name="name">proposal.view.graph</field>
+        <field name="model">proposal.proposal</field>
+        <field name="arch" type="xml">
+            <graph>
+                <field name="name" type="row"/>
+                <field name="financial_progress" widget="percentage" type="measure"/>
+                <field name="project_progress" widget="percentage" type="measure"/>
+            </graph>
+        </field>
+    </record>
+    <!-- proposal search view -->
+    <record id="proposal_view_search" model="ir.ui.view">
+        <field name="name">proposal.view.search</field>
+        <field name="model">proposal.proposal</field>
+        <field name="arch" type="xml">
+
+            <search string="Dynamic Approval">
+                <field name="name"/>
+                <field name="partner_id"/>
+                <filter name="filter_draft" string="Draft" domain="[('state', '=', 'draft')]"/>
+                <filter name="filter_sent_to_purchase" string="Sent To Purchase"
+                        domain="[('state', '=', 'sent_to_purchase')]"/>
+                <filter name="filter_sent_to_sales" string="Sent To Sales"
+                        domain="[('state', '=', 'sent_to_sales')]"/>
+                <filter name="filter_done" string="Done" domain="[('state', '=', 'done')]"/>
+                <group expand="1" string="Group By">
+                    <filter name="filter_state" string="Status" context="{'group_by': 'state'}"/>
+                    <filter name="filter_partner" string="Partner"
+                            context="{'group_by': 'partner_id'}"/>
+                    <filter name="filter_analytic_account_id" string="Analytic Account"
+                            context="{'group_by': 'analytic_account_id'}"/>
+                    <filter name="filter_project_id" string="Project"
+                            context="{'group_by': 'project_id'}"/>
+                    <filter name="filter_tag_id" string="Tag" context="{'group_by': 'tag_id'}"/>
+                    <filter name="group_by_date" string="Date" context="{'group_by': 'date_order:year'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="proposal_view_kanban" model="ir.ui.view">
+        <field name="name">proposal.proposal.kanban</field>
+        <field name="model">proposal.proposal</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="stage_id">
+                <progressbar field="stage_id"
+                             colors="{&quot;done&quot;: &quot;success&quot;, &quot;blocked&quot;: &quot;danger&quot;, &quot;normal&quot;: &quot;200&quot;}"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="oe_kanban_global_click o_hr_kanban_record">
+                            <div class="oe_kanban_details">
+                                <div class="o_kanban_record_top">
+                                    <div class="o_kanban_record_headings">
+                                        <strong class="o_kanban_record_title">
+                                            <h2>
+                                                <field name="name"/>
+                                            </h2>
+                                        </strong>
+                                    </div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <h5>
+                                            <field name="partner_id"/>
+                                        </h5>
+                                    </li>
+                                    <li>
+                                        <h6>
+                                            <field name="analytic_account_id"/>
+                                        </h6>
+                                    </li>
+                                    <li>
+                                        <h6>
+                                            <field name="date_order"/>
+                                        </h6>
+                                    </li>
+                                </ul>
+                                <span>
+                                    <strong>Contracted Revenue:</strong>
+                                    <field name="contracted_revenue"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <strong>Actual Revenue:</strong>
+                                    <field name="actual_revenue"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <strong>Contracted Cost:</strong>
+                                    <field name="contracted_cost"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <strong>Actual Cost:</strong>
+                                    <field name="actual_cost"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <strong>Financial Progress:</strong>
+                                    <field name="financial_progress" widget="percentage"/>
+                                </span>
+                                <br/>
+                                <span>
+                                    <strong>Project Progress:</strong>
+                                    <field name="project_progress" widget="percentage"/>
+                                </span>
+
+
+                                <field name="tag_ids" widget="many2many_tags"
+                                       options="{'color_field': 'color'}"/>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+    <record id="proposal_action" model="ir.actions.act_window">
+        <field name="name">Proposals</field>
+        <field name="res_model">proposal.proposal</field>
+        <field name="view_mode">list,activity,form,pivot,graph,kanban</field>
+        <field name="context">{
+            'search_default_filter_tag_id': '1',
+            'search_default_group_by_date': '1'
+            }
+        </field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new document
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="proposal_root_menu"
+              name="Proposals"
+              groups="proposal.group_proposal_user"
+              web_icon="proposal,static/description/icon.png"
+              sequence="10"/>
+
+    <menuitem id="proposal_main_menu"
+              name="Proposals"
+              parent="proposal_root_menu"
+              sequence="1"/>
+
+    <menuitem id="proposal_menu"
+              name="Proposals"
+              action="proposal_action"
+              parent="proposal_main_menu"
+              sequence="1"/>
+
+    <menuitem id="proposal_report_menu"
+              name="Reports"
+              parent="proposal_root_menu"
+              sequence="30"/>
+
+    <menuitem id="proposal_config_menu"
+              name="Configuration"
+              parent="proposal_root_menu"
+              groups="proposal.group_proposal_supervisor"
+              sequence="100"/>
+
+    <menuitem id="product_product_action_menu"
+              name="Products"
+              action="account.product_product_action_sellable"
+              parent="proposal_config_menu"
+              sequence="1"/>
+
+    <menuitem id="product_category_action_menu"
+              name="Product Categories"
+              action="product.product_category_action_form"
+              parent="proposal_config_menu"
+              sequence="1"/>
+
+
+</odoo>

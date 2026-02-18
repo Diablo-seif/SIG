@@ -1,0 +1,38 @@
+<odoo>
+
+    <record id="employee_performance_group_category" model="ir.module.category">
+        <field name="name">Employee Performance Evaluation</field>
+    </record>
+
+    <record id="employee_performance_user_group" model="res.groups">
+        <field name="name">Own Document</field>
+        <field name="category_id" ref="employee_performance_group_category"/>
+        <field name="implied_ids" eval="[(5,0,0)]"/>
+    </record>
+
+    <record id="employee_performance_all_group" model="res.groups">
+        <field name="name">All Document</field>
+        <field name="implied_ids" eval="[(4, ref('employee_performance_user_group'))]"/>
+        <field name="category_id" ref="employee_performance_group_category"/>
+    </record>
+
+    <record id="employee_performance_admin_group" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="implied_ids" eval="[(4, ref('employee_performance_all_group'))]"/>
+        <field name="category_id" ref="employee_performance_group_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="employee_performance_delete_group" model="res.groups">
+        <field name="name">Delete Evaluation</field>
+        <field name="category_id" ref="employee_performance_group_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="employee_performance_cancel_group" model="res.groups">
+        <field name="name">Cancel Evaluation</field>
+        <field name="category_id" ref="employee_performance_group_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+</odoo>

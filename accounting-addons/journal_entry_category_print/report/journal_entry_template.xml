@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="journal_entry_template" inherit_id="journal_entry_print.journal_entry_template">
+        <table name="journal_header" position="inside">
+            <tr>
+                <td>
+                    Insertion Method
+                </td>
+                <td>
+                    <span t-field="o.insertion_method"/>
+                </td>
+                <td/>
+                <td/>
+            </tr>
+        </table>
+    </template>
+
+</odoo>

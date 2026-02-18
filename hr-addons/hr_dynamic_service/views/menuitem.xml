@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <menuitem id="menuitem_hr_dynamic_service_root" name="Dynamic Approval"
+              web_icon="hr_dynamic_service,static/description/menuroot.png"
+              sequence="1"/>
+
+    <menuitem id="menuitem_hr_dynamic_service_dashboard"
+              name="Dynamic Approval Dashboard"
+              parent="menuitem_hr_dynamic_service_root"
+              action="view_hr_dynamic_dashboard_action"
+              sequence="20"/>
+
+    <menuitem id="menuitem_hr_dynamic_service_request"
+              name="Dynamic Approvals"
+              parent="menuitem_hr_dynamic_service_root"
+              action="view_hr_dynamic_service_action"
+              sequence="20"/>
+
+    <menuitem id="menuitem_hr_dynamic_service_type" name="Dynamic Approval Types"
+              parent="menuitem_hr_dynamic_service_root"
+              action="view_hr_dynamic_service_type_action"
+              groups="hr.group_hr_user" sequence="50"/>
+
+</odoo>

@@ -1,0 +1,561 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* payment_request
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200701\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-10 12:34+0000\n"
+"PO-Revision-Date: 2020-09-11 11:56+0000\n"
+"Last-Translator: Abdalla Mohamed <abdalla.mohamed@core-bpo.com>\n"
+"Language-Team: Arabic <http://weblate.staging.core-bpo.net/projects/"
+"accounting/payment_request/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.0.4\n"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_needaction
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__activity_ids
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__activity_ids
+msgid "Activities"
+msgstr "النشاطات"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__activity_exception_decoration
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "تنسيق النشاط الاستثنائي"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__activity_state
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: payment_request
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request__pay_type__amount
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request_line__pay_type__amount
+#: model_terms:ir.ui.view,arch_db:payment_request.approve_payment_request_line_form
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.approve_payment_request_line_form
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_form
+msgid "Approve"
+msgstr "تأكيد"
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_form
+msgid "Approve All"
+msgstr "تأكيد الكل"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__approve_date
+msgid "Approve Date"
+msgstr "تاريخ التأكيد"
+
+#. module: payment_request
+#: code:addons/payment_request/models/payment_request_line.py:0
+#, python-format
+msgid "Approve Payment Line"
+msgstr "الموافقة علي بند السداد"
+
+#. module: payment_request
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request_line__state__approved
+msgid "Approved"
+msgstr "مؤكد"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__approved_payment_amount
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_line_form
+msgid "Approved Payment Amount"
+msgstr "مبلغ الدفعة المؤكدة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_attachment_count
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_form
+msgid "Available Amount"
+msgstr "المبلغ المتاح"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__available_amount
+msgid "Available Amount Cash/Bank"
+msgstr "المبلغ المتاح بنك\\خزنة"
+
+#. module: payment_request
+#: code:addons/payment_request/models/payment_request_line.py:0
+#, python-format
+msgid "Bills"
+msgstr "الفواتير"
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.approve_payment_request_line_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: payment_request
+#: model:ir.model,name:payment_request.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: payment_request
+#: model:ir.model,name:payment_request.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: payment_request
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request__state__confirm
+msgid "Confirm"
+msgstr "تأكيد"
+
+#. module: payment_request
+#: model:ir.model,name:payment_request.model_res_partner
+msgid "Contact"
+msgstr "جهة الاتصال"
+
+#. module: payment_request
+#: model_terms:ir.actions.act_window,help:payment_request.payment_request_action
+#: model_terms:ir.actions.act_window,help:payment_request.payment_request_line_action
+msgid "Create a new document"
+msgstr "إنشاء بند دفعة سداد جديدة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__create_uid
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__create_date
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__currency_id
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__display_name
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: payment_request
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request__state__draft
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request_line__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_follower_ids
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_follower_ids
+msgid "Followers"
+msgstr "المتابعين"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_channel_ids
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعين (القنوات)"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_partner_ids
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعين (الشركاء)"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__id
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__activity_exception_icon
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__activity_exception_icon
+msgid "Icon"
+msgstr "أيقونة"
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__activity_exception_icon
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "رمز للإشارة إلى استثناء نشاط."
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__message_needaction
+#: model:ir.model.fields,help:payment_request.field_payment_request__message_unread
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__message_needaction
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا تم تحديده ، فهناك رسائل جديدة تتطلب انتباهك."
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__message_has_error
+#: model:ir.model.fields,help:payment_request.field_payment_request__message_has_sms_error
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__message_has_error
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده، يوجد خطأ في توصيل بعض الرسائل."
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_is_follower
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_is_follower
+msgid "Is Follower"
+msgstr "هل متابع"
+
+#. module: payment_request
+#: model:ir.model,name:payment_request.model_account_move
+msgid "Journal Entries"
+msgstr "القيود اليومية"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request____last_update
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__last_payment_amount
+msgid "Last Payment Amount"
+msgstr "مبلغ الدفعة الأخيرة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__last_payment_date
+msgid "Last Payment Date"
+msgstr "تاريخ الدفعة الأخيرة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__last_request_amount
+msgid "Last Request Amount"
+msgstr "مبلغ الطلب الأخير"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__last_request_date
+msgid "Last Request Date"
+msgstr "تاريخ سداد آخر دفعة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__write_uid
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__write_date
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__line_ids
+msgid "Line"
+msgstr "بند"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_main_attachment_id
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_has_error
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسالة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_ids
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__move_ids
+msgid "Move"
+msgstr "قيد اليومية"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: payment_request
+#: code:addons/payment_request/models/payment_request.py:0
+#, python-format
+msgid "New"
+msgstr "جديد"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__activity_date_deadline
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "آخر موعد للنشاط التالي"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__activity_summary
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__activity_type_id
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: payment_request
+#: code:addons/payment_request/models/payment_request.py:0
+#, python-format
+msgid ""
+"No payment request responsible, Please contact your system administrator."
+msgstr "لا يوجد مسئول للموافقة علي طلب السداد, برجاء التواصل مع مسئول النظام."
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_needaction_counter
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_has_error_counter
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الأخطاء"
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__message_needaction_counter
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__message_has_error_counter
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل التي يوجد بها خطأ بالتسليم"
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__message_unread_counter
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الغير مقروءة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__partner_id
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__pay_amount
+msgid "Pay Amount"
+msgstr "مبلغ المسدد"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__pay_type
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__pay_type
+msgid "Pay Type"
+msgstr "نوع السداد"
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_form
+msgid "Payment Lines"
+msgstr "بنود المطلوب سدادها"
+
+#. module: payment_request
+#: model:ir.actions.server,name:payment_request.payment_request_server_action
+#: model:ir.model,name:payment_request.model_payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__payment_request_id
+msgid "Payment Request"
+msgstr "طلب السداد"
+
+#. module: payment_request
+#: model:ir.actions.act_window,name:payment_request.payment_request_line_action
+#: model:ir.model,name:payment_request.model_payment_request_line
+#: model:ir.model.fields,field_description:payment_request.field_res_partner__payment_request_line_ids
+#: model:ir.model.fields,field_description:payment_request.field_res_users__payment_request_line_ids
+msgid "Payment Request Line"
+msgstr "بنود طلب السداد"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_res_company__payment_request_responsible_id
+#: model:ir.model.fields,field_description:payment_request.field_res_config_settings__payment_request_responsible_id
+#: model_terms:ir.ui.view,arch_db:payment_request.inherit_res_config_settings_form
+msgid "Payment Request Responsible"
+msgstr "مسئول طلب السداد"
+
+#. module: payment_request
+#: code:addons/payment_request/models/account_move.py:0
+#: model:ir.actions.act_window,name:payment_request.payment_request_action
+#: model:ir.ui.menu,name:payment_request.payment_request_menu
+#, python-format
+msgid "Payment Requests"
+msgstr "طلبات السداد"
+
+#. module: payment_request
+#: code:addons/payment_request/models/payment_request.py:0
+#, python-format
+msgid "Payment lines waiting for approval"
+msgstr "بنود السداد منتظر الموافقة عليها"
+
+#. module: payment_request
+#: code:addons/payment_request/models/payment_request_line.py:0
+#, python-format
+msgid "Payment request approved"
+msgstr "طلب السداد الموافق عليه"
+
+#. module: payment_request
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request__pay_type__percentage
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request_line__pay_type__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_form
+msgid "Reject"
+msgstr "رفض"
+
+#. module: payment_request
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request_line__state__rejected
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__user_id
+msgid "Responsible"
+msgstr "المسئول"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__activity_user_id
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسئول"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_has_sms_error
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__state
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__activity_state
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة بناء على الإجراء\n"
+"متأخر: تم تجاوز تاريخ الاستحقاق بالفعل\n"
+"اليوم: تاريخ النشاط اليوم\n"
+"مخطط لها: الأنشطة المستقبلية."
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_form
+msgid "Submit"
+msgstr "إرسال للموافقة"
+
+#. module: payment_request
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request__state__submitted
+msgid "Submitted"
+msgstr "تم إرساله"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__total_amount
+msgid "Total Amount"
+msgstr "المبلغ الإجمالي"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__total_approved
+msgid "Total Approved"
+msgstr "إجمالي المبلغ المؤكد"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__total_due
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__total_due
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_line_form
+msgid "Total Due"
+msgstr "اﻹجمالي المستحق"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__total_payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_line_form
+msgid "Total Payment Request"
+msgstr "إجمالي المطلوب سداده"
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__activity_exception_decoration
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثائي في السجل."
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_unread
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الغير مقروءة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__message_unread_counter
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الغير مقروءة"
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.inherit_res_config_settings_form
+msgid "User that will receive activity with submitted payment request."
+msgstr "سوف يتم إرسال نشاط لتأكيد طلب السداد."
+
+#. module: payment_request
+#: model_terms:ir.ui.view,arch_db:payment_request.payment_request_form
+msgid "View Invoices"
+msgstr "عرض الفاتورة"
+
+#. module: payment_request
+#: model:ir.model.fields.selection,name:payment_request.selection__payment_request_line__state__waiting
+msgid "Waiting Approval"
+msgstr "منتظر الموافقة"
+
+#. module: payment_request
+#: model:ir.model.fields,field_description:payment_request.field_payment_request__website_message_ids
+#: model:ir.model.fields,field_description:payment_request.field_payment_request_line__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع الالكتروني"
+
+#. module: payment_request
+#: model:ir.model.fields,help:payment_request.field_payment_request__website_message_ids
+#: model:ir.model.fields,help:payment_request.field_payment_request_line__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع الالكتروني"

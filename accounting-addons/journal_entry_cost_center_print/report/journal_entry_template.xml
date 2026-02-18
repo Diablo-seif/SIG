@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="journal_entry_template" inherit_id="journal_entry_print.journal_entry_template">
+        <xpath expr="//table[@name='journal_lines']/thead/tr/th[4]" position="after">
+                <th style="vertical-align: middle">Cost Center</th>
+        </xpath>
+        <xpath expr="//table[@name='journal_lines']/tbody/t/tr/td[4]" position="after">
+            <td>
+                <span t-field="line.cost_center_id.name"/>
+            </td>
+        </xpath>
+        <xpath expr="//td[@colspan='4']" position="attributes">
+            <attribute name="colspan">5</attribute>
+        </xpath>
+    </template>
+
+</odoo>

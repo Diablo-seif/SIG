@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!--Email template -->
+    <record id="email_template_edi_payslip" model="mail.template">
+        <field name="name">Payslip - Send by Email</field>
+        <field name="email_from">${(user.email or '')|safe}</field>
+        <field name="subject">${object.name or 'n/a' }</field>
+        <field name="email_to">${object.employee_id.work_email}</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="report_template"
+               ref="hr_payroll.action_report_payslip"/>
+        <field name="report_name">${object.name or ''}
+        </field>
+        <field name="lang">${user.partner_id.lang}
+        </field>
+        <field name="body_html"><![CDATA[
+            <div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: #FFF; ">
+
+                <p>Hello ${object.employee_id.name},</p>
+
+                <p>Please find attached, your ${object.state} ${object.name} from ${object.company_id.name}: </p>
+
+                <p style="border-left: 1px solid #8e0000; margin-left: 30px;">
+                    &nbsp;&nbsp;Your HR contact: <a href="mailto:${object.write_uid.email or ''}?subject=${object.name}">${object.write_uid.name or ''}</a>
+                </p>
+
+
+                <br/>
+                <p>If you have any question, do not hesitate to contact HR.</p>
+                <p>Thank you</p>
+                <br/>
+                <br/>
+                <div style="width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;">
+                    <h3 style="margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;">
+                        <strong style="text-transform:uppercase;">${object.company_id.name}</strong></h3>
+                </div>
+                <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
+                    <span style="color: #222; margin-bottom: 5px; display: block; ">
+                        % if object.company_id.street:
+                        ${object.company_id.street}<br/>
+                        % endif
+                        % if object.company_id.street2:
+                        ${object.company_id.street2}<br/>
+                        % endif
+                        % if object.company_id.city or object.company_id.zip:
+                        ${object.company_id.zip} ${object.company_id.city}<br/>
+                        % endif
+                        % if object.company_id.country_id:
+                        ${object.company_id.state_id and ('%s, ' % object.company_id.state_id.name) or ''} ${object.company_id.country_id.name or ''}<br/>
+                        % endif
+                    </span>
+                    % if object.company_id.phone:
+                    <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">
+                        Phone:&nbsp; ${object.company_id.phone}
+                    </div>
+                    % endif
+                    % if object.company_id.website:
+                    <div>
+                        Web :&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a>
+                    </div>
+                    %endif
+                    <p></p>
+                </div>
+            </div>
+            ]]></field>
+    </record>
+
+
+    <!--Default Notification Email template for invoices-->
+    <record id="mail_template_data_notification_email_payslip"
+            model="mail.template">
+        <field name="name">Payslip Notification Email</field>
+        <field name="subject">${object.name}</field>
+        <field name="model_id" ref="mail.model_mail_message"/>
+        <field name="auto_delete" eval="True"/>
+        <field name="body_html"><![CDATA[
+            <html>
+                <head></head>
+                <body style="margin: 0; padding: 0;">
+                    % set record = ctx.get('record')
+                    % set company = record and record.company_id or user.company_id
+                    <table border="0" width="100%" cellpadding="0" bgcolor="#ededed" style="padding: 20px; background-color: #ededed; border-collapse:separate;" summary="o_mail_notification">
+                        <tbody>
+
+                            <!-- HEADER -->
+                            <tr>
+                                <td align="center" style="min-width: 590px;">
+                                    <table width="590" border="0" cellpadding="0" bgcolor="#875A7B" style="min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;">
+                                        <tr>
+                                            <td valign="middle">
+                                                <span style="font-size:20px; color:white; font-weight: bold;">
+                                                    ${object.record_name}
+                                                </span>
+                                            </td>
+                                            <td valign="middle" align="right">
+                                                <img src="/logo.png?company=${company.id}" style="padding: 0px; margin: 0px; height: auto; width: 80px;" alt="${company.name}">
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- CONTENT -->
+                            <tr>
+                                <td align="center" style="min-width: 590px;">
+                                    <table width="590" border="0" cellpadding="0" bgcolor="#ffffff" style="min-width: 590px; background-color: rgb(255, 255, 255); padding: 20px; border-collapse:separate;">
+                                        <tbody>
+                                            <td valign="top" style="font-family:Arial,Helvetica,sans-serif; color: #555; font-size: 14px;">
+                                                ${object.body | safe}
+                                            </td>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <!-- FOOTER -->
+                            <tr>
+                                <td align="center" style="min-width: 590px;">
+                                    <table width="590" border="0" cellpadding="0" bgcolor="#875A7B" style="min-width: 590px; background-color: rgb(135,90,123); padding: 20px; border-collapse:separate;">
+                                        <tr>
+                                            <td valign="middle" align="left" style="color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;">
+                                                ${company.name}<br/>
+                                                ${company.phone or ''}
+                                            </td>
+                                            <td valign="middle" align="right" style="color: #fff; padding-top: 10px; padding-bottom: 10px; font-size: 12px;">
+                                                % if company.email:
+                                                <a href="mailto:${company.email}" style="text-decoration:none; color: white;">${company.email}</a><br/>
+                                                % endif
+                                                % if company.website:
+                                                <a href="${company.website}" style="text-decoration:none; color: white;">
+                                                    ${company.website}
+                                                </a>
+                                                % endif
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center">
+                                    Powered by <a target="_blank" href="https://www.core-bpo.com">Core Payroll</a>.
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </body>
+            </html>
+            ]]></field>
+    </record>
+
+</odoo>

@@ -1,0 +1,46 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_payslip_dates
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190827\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-11 13:41+0000\n"
+"PO-Revision-Date: 2019-11-11 16:19+0200\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: aa\n"
+"X-Generator: Poedit 2.2.4\n"
+
+#. module: hr_payslip_dates
+#: model:ir.model.fields,field_description:hr_payslip_dates.field_hr_payslip__date_from
+#: model:ir.model.fields,field_description:hr_payslip_dates.field_hr_payslip_run__date_start
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: hr_payslip_dates
+#: model:ir.model.fields,field_description:hr_payslip_dates.field_hr_payslip__date_to
+#: model:ir.model.fields,field_description:hr_payslip_dates.field_hr_payslip_run__date_end
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: hr_payslip_dates
+#: model:ir.model,name:hr_payslip_dates.model_hr_payslip
+msgid "Pay Slip"
+msgstr "قسيمة المرتب"
+
+#. module: hr_payslip_dates
+#: model:ir.model,name:hr_payslip_dates.model_hr_payslip_run
+msgid "Payslip Batches"
+msgstr "مجموعات قسيمة الراتب"
+
+#. module: hr_payslip_dates
+#: code:addons/hr_payslip_dates/models/hr_payslip.py:58
+#, python-format
+msgid "Salary Slip of %s for %s"
+msgstr "قسيمة مرتب %s لـ%s"

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="proposal_multi_company_rule" model="ir.rule">
+        <field name="name">Proposal multi-company</field>
+        <field name="model_id" ref="model_proposal_proposal"/>
+        <field name="domain_force">['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>
+    </record>
+    
+    <record id="proposal_yearly_financial_multi_company_rule" model="ir.rule">
+        <field name="name">Proposal yearly financial multi-company</field>
+        <field name="model_id" ref="model_proposal_yearly_financial"/>
+        <field name="domain_force">['|', ('company_id', 'in', company_ids), ('company_id', '=', False)]</field>
+    </record>
+
+    <record id="proposal_line_multi_company_rule" model="ir.rule">
+        <field name="name">Proposal Line multi-company</field>
+        <field name="model_id" ref="model_proposal_line"/>
+        <field name="domain_force">['|', ('proposal_id.company_id', 'in', company_ids), ('proposal_id.company_id', '=', False)]</field>
+    </record>
+
+    <record id="proposal_category" model="ir.module.category">
+        <field name="name">Proposal</field>
+    </record>
+
+    <record id="proposal_functions_category" model="ir.module.category">
+        <field name="name">Proposal Functions</field>
+    </record>
+
+    <record id="group_proposal_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="proposal.proposal_category"/>
+    </record>
+
+    <record id="group_proposal_supervisor" model="res.groups">
+        <field name="name">Supervisor</field>
+        <field name="implied_ids" eval="[(6, 0, [ref('group_proposal_user')])]"/>
+        <field name="category_id" ref="proposal.proposal_category"/>
+    </record>
+
+    <record id="group_proposal_admin" model="res.groups">
+        <field name="name">Administrator</field>
+        <field name="category_id" ref="proposal.proposal_category"/>
+        <field name="implied_ids" eval="[(6, 0, [ref('group_proposal_supervisor')])]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_send_to_purchase" model="res.groups">
+        <field name="name">Proposal Send To Purchase</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_send_to_sales" model="res.groups">
+        <field name="name">Proposal Send To Sales</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+
+    <record id="group_proposal_won" model="res.groups">
+        <field name="name">Proposal Won</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_cancel" model="res.groups">
+        <field name="name">Proposal Cancel</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+    <record id="group_proposal_update_qty" model="res.groups">
+        <field name="name">Update QTY</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_amendment" model="res.groups">
+        <field name="name">Proposal Amendment</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_print_proposal" model="res.groups">
+        <field name="name">Print Proposal</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_set_to_draft" model="res.groups">
+        <field name="name">Set To Draft</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+
+    <record id="group_proposal_lost" model="res.groups">
+        <field name="name">Proposal Lost</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_create_rfq" model="res.groups">
+        <field name="name">Proposal Create RFQ</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="implied_ids" eval="[(6, 0, [ref('purchase.group_purchase_user')])]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_create_so" model="res.groups">
+        <field name="name">Proposal Create So</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="implied_ids" eval="[(6, 0, [ref('sales_team.group_sale_salesman')])]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_view_invoices" model="res.groups">
+        <field name="name">Proposal View Invoices</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="implied_ids" eval="[(6, 0, [ref('sales_team.group_sale_salesman')])]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_view_bills" model="res.groups">
+        <field name="name">Proposal View Bills</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="implied_ids" eval="[(6, 0, [ref('sales_team.group_sale_salesman')])]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_proposal_create_project" model="res.groups">
+        <field name="name">Proposal Create project</field>
+        <field name="category_id" ref="proposal.proposal_functions_category"/>
+        <field name="implied_ids" eval="[(6, 0, [ref('sales_team.group_sale_salesman')])]"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+    <record id="group_analytic_account_admin" model="res.groups">
+        <field name="name">Analytic Account Admin</field>
+        <field name="category_id" ref="proposal.proposal_category"/>
+    </record>
+
+    <record id="group_product_admin" model="res.groups">
+        <field name="name">Products Admin</field>
+        <field name="category_id" ref="proposal.proposal_category"/>
+    </record>
+
+</odoo>

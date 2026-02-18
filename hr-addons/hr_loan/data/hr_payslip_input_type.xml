@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_rule_loan_input_type" model="hr.payslip.input.type">
+        <field name="name">Loan</field>
+        <field name="code">LO</field>
+    </record>
+
+</odoo>

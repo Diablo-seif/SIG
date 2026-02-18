@@ -1,0 +1,2179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="invoice_activity_type_001" model="invoice.activity.type">
+        <field name="code">111</field>
+        <field name="name"> Cultivation of grains and crops (except for rice), legumes and oilseeds</field>
+    </record>
+
+    <record id="invoice_activity_type_002" model="invoice.activity.type">
+        <field name="code">112</field>
+        <field name="name"> Cultivation of rice</field>
+    </record>
+
+    <record id="invoice_activity_type_003" model="invoice.activity.type">
+        <field name="code">113</field>
+        <field name="name"> Growing vegetables, melons, roots and tubers</field>
+    </record>
+
+    <record id="invoice_activity_type_004" model="invoice.activity.type">
+        <field name="code">114</field>
+        <field name="name"> Cultivation of sugar cane</field>
+    </record>
+
+    <record id="invoice_activity_type_005" model="invoice.activity.type">
+        <field name="code">115</field>
+        <field name="name"> Tobacco cultivation</field>
+    </record>
+
+    <record id="invoice_activity_type_006" model="invoice.activity.type">
+        <field name="code">116</field>
+        <field name="name"> Growing fiber crops</field>
+    </record>
+
+    <record id="invoice_activity_type_007" model="invoice.activity.type">
+        <field name="code">119</field>
+        <field name="name"> Cultivation of other non-perennial crops</field>
+    </record>
+
+    <record id="invoice_activity_type_008" model="invoice.activity.type">
+        <field name="code">121</field>
+        <field name="name"> the cultivation of grapevines.</field>
+    </record>
+
+    <record id="invoice_activity_type_009" model="invoice.activity.type">
+        <field name="code">122</field>
+        <field name="name"> Growing tropical and subtropical fruits</field>
+    </record>
+
+    <record id="invoice_activity_type_010" model="invoice.activity.type">
+        <field name="code">123</field>
+        <field name="name"> Cultivation of citrus fruits</field>
+    </record>
+
+    <record id="invoice_activity_type_011" model="invoice.activity.type">
+        <field name="code">124</field>
+        <field name="name"> Cultivation of fruit with Date kernel and from palm trees</field>
+    </record>
+
+    <record id="invoice_activity_type_012" model="invoice.activity.type">
+        <field name="code">125</field>
+        <field name="name"> Plant fruit trees and shrubs and other nuts</field>
+    </record>
+
+    <record id="invoice_activity_type_013" model="invoice.activity.type">
+        <field name="code">126</field>
+        <field name="name"> Growing oil fruits</field>
+    </record>
+
+    <record id="invoice_activity_type_014" model="invoice.activity.type">
+        <field name="code">127</field>
+        <field name="name"> Cultivation of the crops from which drinks are extracted</field>
+    </record>
+
+    <record id="invoice_activity_type_015" model="invoice.activity.type">
+        <field name="code">128</field>
+        <field name="name"> Cultivation of spice crops, aromatics, medicine and pharmaceutical drugs</field>
+    </record>
+
+    <record id="invoice_activity_type_016" model="invoice.activity.type">
+        <field name="code">129</field>
+        <field name="name"> Cultivation of other perennial crops</field>
+    </record>
+
+    <record id="invoice_activity_type_017" model="invoice.activity.type">
+        <field name="code">130</field>
+        <field name="name"> Crop breeding</field>
+    </record>
+
+    <record id="invoice_activity_type_018" model="invoice.activity.type">
+        <field name="code">141</field>
+        <field name="name"> Breeding of cattle and buffalo</field>
+    </record>
+
+    <record id="invoice_activity_type_019" model="invoice.activity.type">
+        <field name="code">142</field>
+        <field name="name"> Breeding of horses and mare</field>
+    </record>
+
+    <record id="invoice_activity_type_020" model="invoice.activity.type">
+        <field name="code">143</field>
+        <field name="name"> Breeding of camels</field>
+    </record>
+
+    <record id="invoice_activity_type_021" model="invoice.activity.type">
+        <field name="code">144</field>
+        <field name="name"> Breeding sheep and goats</field>
+    </record>
+
+    <record id="invoice_activity_type_022" model="invoice.activity.type">
+        <field name="code">145</field>
+        <field name="name"> Breeding of Pig</field>
+    </record>
+
+    <record id="invoice_activity_type_023" model="invoice.activity.type">
+        <field name="code">146</field>
+        <field name="name"> Poultry farming</field>
+    </record>
+
+    <record id="invoice_activity_type_024" model="invoice.activity.type">
+        <field name="code">149</field>
+        <field name="name"> Breeding other animals</field>
+    </record>
+
+    <record id="invoice_activity_type_025" model="invoice.activity.type">
+        <field name="code">150</field>
+        <field name="name"> Mixed education</field>
+    </record>
+
+    <record id="invoice_activity_type_026" model="invoice.activity.type">
+        <field name="code">161</field>
+        <field name="name"> Support activities for crop production</field>
+    </record>
+
+    <record id="invoice_activity_type_027" model="invoice.activity.type">
+        <field name="code">162</field>
+        <field name="name"> Activities in support of animal production</field>
+    </record>
+
+    <record id="invoice_activity_type_028" model="invoice.activity.type">
+        <field name="code">163</field>
+        <field name="name"> Post-harvest activities</field>
+    </record>
+
+    <record id="invoice_activity_type_029" model="invoice.activity.type">
+        <field name="code">164</field>
+        <field name="name"> Preparing grains for reproduction</field>
+    </record>
+
+    <record id="invoice_activity_type_030" model="invoice.activity.type">
+        <field name="code">170</field>
+        <field name="name"> Hunting, erection, and related service activities</field>
+    </record>
+
+    <record id="invoice_activity_type_031" model="invoice.activity.type">
+        <field name="code">210</field>
+        <field name="name"> Forest care and forest-related activities</field>
+    </record>
+
+    <record id="invoice_activity_type_032" model="invoice.activity.type">
+        <field name="code">220</field>
+        <field name="name"> Wood cutting</field>
+    </record>
+
+    <record id="invoice_activity_type_033" model="invoice.activity.type">
+        <field name="code">230</field>
+        <field name="name"> Assembling non-wood forest products</field>
+    </record>
+
+    <record id="invoice_activity_type_034" model="invoice.activity.type">
+        <field name="code">240</field>
+        <field name="name"> Forest support services</field>
+    </record>
+
+    <record id="invoice_activity_type_035" model="invoice.activity.type">
+        <field name="code">311</field>
+        <field name="name"> Fishing</field>
+    </record>
+
+    <record id="invoice_activity_type_036" model="invoice.activity.type">
+        <field name="code">312</field>
+        <field name="name"> River fishing</field>
+    </record>
+
+    <record id="invoice_activity_type_037" model="invoice.activity.type">
+        <field name="code">321</field>
+        <field name="name"> Marine farms</field>
+    </record>
+
+    <record id="invoice_activity_type_038" model="invoice.activity.type">
+        <field name="code">322</field>
+        <field name="name"> River farms</field>
+    </record>
+
+    <record id="invoice_activity_type_039" model="invoice.activity.type">
+        <field name="code">411</field>
+        <field name="name"> Earn a job</field>
+    </record>
+
+    <record id="invoice_activity_type_040" model="invoice.activity.type">
+        <field name="code">412</field>
+        <field name="name"> Income from government agencies salaries</field>
+    </record>
+
+    <record id="invoice_activity_type_041" model="invoice.activity.type">
+        <field name="code">413</field>
+        <field name="name"> Income and salaries from the public business sector</field>
+    </record>
+
+    <record id="invoice_activity_type_042" model="invoice.activity.type">
+        <field name="code">414</field>
+        <field name="name"> Income and salaries from the private sector</field>
+    </record>
+
+    <record id="invoice_activity_type_043" model="invoice.activity.type">
+        <field name="code">415</field>
+        <field name="name"> Income and salary from non-subject entities</field>
+    </record>
+
+    <record id="invoice_activity_type_044" model="invoice.activity.type">
+        <field name="code">416</field>
+        <field name="name"> Inspection and sting</field>
+    </record>
+
+    <record id="invoice_activity_type_045" model="invoice.activity.type">
+        <field name="code">441</field>
+        <field name="name"> Income of agricultural lands</field>
+    </record>
+
+    <record id="invoice_activity_type_046" model="invoice.activity.type">
+        <field name="code">442</field>
+        <field name="name"> Revenue from constructed real estate</field>
+    </record>
+
+    <record id="invoice_activity_type_047" model="invoice.activity.type">
+        <field name="code">444</field>
+        <field name="name"> Income of real estate activities</field>
+    </record>
+
+    <record id="invoice_activity_type_048" model="invoice.activity.type">
+        <field name="code">451</field>
+        <field name="name"> Errand stamp</field>
+    </record>
+
+    <record id="invoice_activity_type_049" model="invoice.activity.type">
+        <field name="code">461</field>
+        <field name="name"> Revenue from non-funders</field>
+    </record>
+
+    <record id="invoice_activity_type_050" model="invoice.activity.type">
+        <field name="code">462</field>
+        <field name="name"> Revenue of transferred capital</field>
+    </record>
+
+    <record id="invoice_activity_type_051" model="invoice.activity.type">
+        <field name="code">463</field>
+        <field name="name"> Income earned from abroad</field>
+    </record>
+
+    <record id="invoice_activity_type_052" model="invoice.activity.type">
+        <field name="code">464</field>
+        <field name="name"> Other categories / miscellaneous other income</field>
+    </record>
+
+    <record id="invoice_activity_type_053" model="invoice.activity.type">
+        <field name="code">471</field>
+        <field name="name"> Free market revenue</field>
+    </record>
+
+    <record id="invoice_activity_type_054" model="invoice.activity.type">
+        <field name="code">472</field>
+        <field name="name"> Free Zones revenue</field>
+    </record>
+
+    <record id="invoice_activity_type_055" model="invoice.activity.type">
+        <field name="code">510</field>
+        <field name="name"> Hard coal mining</field>
+    </record>
+
+    <record id="invoice_activity_type_056" model="invoice.activity.type">
+        <field name="code">520</field>
+        <field name="name"> Lignite mining</field>
+    </record>
+
+    <record id="invoice_activity_type_057" model="invoice.activity.type">
+        <field name="code">610</field>
+        <field name="name"> Extract the crude oil</field>
+    </record>
+
+    <record id="invoice_activity_type_058" model="invoice.activity.type">
+        <field name="code">620</field>
+        <field name="name"> Extract natural gas</field>
+    </record>
+
+    <record id="invoice_activity_type_059" model="invoice.activity.type">
+        <field name="code">710</field>
+        <field name="name"> Iron ore mining</field>
+    </record>
+
+    <record id="invoice_activity_type_060" model="invoice.activity.type">
+        <field name="code">721</field>
+        <field name="name"> Uranium and raw thorium mining</field>
+    </record>
+
+    <record id="invoice_activity_type_061" model="invoice.activity.type">
+        <field name="code">729</field>
+        <field name="name"> Mining other non-ferrous metals</field>
+    </record>
+
+    <record id="invoice_activity_type_062" model="invoice.activity.type">
+        <field name="code">810</field>
+        <field name="name"> Quarrying to extract stones, sand and shale</field>
+    </record>
+
+    <record id="invoice_activity_type_063" model="invoice.activity.type">
+        <field name="code">891</field>
+        <field name="name"> Chemical minerals and fertilizer extraction</field>
+    </record>
+
+    <record id="invoice_activity_type_064" model="invoice.activity.type">
+        <field name="code">892</field>
+        <field name="name"> Peat extraction</field>
+    </record>
+
+    <record id="invoice_activity_type_065" model="invoice.activity.type">
+        <field name="code">893</field>
+        <field name="name"> Salt extraction</field>
+    </record>
+
+    <record id="invoice_activity_type_066" model="invoice.activity.type">
+        <field name="code">899</field>
+        <field name="name"> Other mining and quarrying activities are not elsewhere classified</field>
+    </record>
+
+    <record id="invoice_activity_type_067" model="invoice.activity.type">
+        <field name="code">910</field>
+        <field name="name"> Service activities in support of oil and natural gas extraction</field>
+    </record>
+
+    <record id="invoice_activity_type_068" model="invoice.activity.type">
+        <field name="code">990</field>
+        <field name="name"> Service activities in support of other mining and quarrying activities</field>
+    </record>
+
+    <record id="invoice_activity_type_069" model="invoice.activity.type">
+        <field name="code">1010</field>
+        <field name="name"> Meat processing and preservation</field>
+    </record>
+
+    <record id="invoice_activity_type_070" model="invoice.activity.type">
+        <field name="code">1020</field>
+        <field name="name"> Manufacture and preservation of fish, crustaceans and mollusks</field>
+    </record>
+
+    <record id="invoice_activity_type_071" model="invoice.activity.type">
+        <field name="code">1030</field>
+        <field name="name"> Manufacturing and preserving fruits and vegetables</field>
+    </record>
+
+    <record id="invoice_activity_type_072" model="invoice.activity.type">
+        <field name="code">1040</field>
+        <field name="name"> Manufacture of vegetable and animal oils and fats</field>
+    </record>
+
+    <record id="invoice_activity_type_073" model="invoice.activity.type">
+        <field name="code">1050</field>
+        <field name="name"> Dairy products manufacturing</field>
+    </record>
+
+    <record id="invoice_activity_type_074" model="invoice.activity.type">
+        <field name="code">1061</field>
+        <field name="name"> Manufacture of grain mill products</field>
+    </record>
+
+    <record id="invoice_activity_type_075" model="invoice.activity.type">
+        <field name="code">1062</field>
+        <field name="name"> Manufacture of starch and starch products</field>
+    </record>
+
+    <record id="invoice_activity_type_076" model="invoice.activity.type">
+        <field name="code">1071</field>
+        <field name="name"> Manufacturing bakery products</field>
+    </record>
+
+    <record id="invoice_activity_type_077" model="invoice.activity.type">
+        <field name="code">1072</field>
+        <field name="name"> Sugar industry</field>
+    </record>
+
+    <record id="invoice_activity_type_078" model="invoice.activity.type">
+        <field name="code">1073</field>
+        <field name="name"> Manufacture of cocoa, chocolate and sugar confectionery</field>
+    </record>
+
+    <record id="invoice_activity_type_079" model="invoice.activity.type">
+        <field name="code">1074</field>
+        <field name="name"> Manufacturing pasta, strips, couscous and similar starchy products</field>
+    </record>
+
+    <record id="invoice_activity_type_080" model="invoice.activity.type">
+        <field name="code">1075</field>
+        <field name="name"> Meals and ready-made food industry</field>
+    </record>
+
+    <record id="invoice_activity_type_081" model="invoice.activity.type">
+        <field name="code">1079</field>
+        <field name="name"> Manufacture of other products not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_082" model="invoice.activity.type">
+        <field name="code">1080</field>
+        <field name="name"> Prepared animal food industry</field>
+    </record>
+
+    <record id="invoice_activity_type_083" model="invoice.activity.type">
+        <field name="code">1101</field>
+        <field name="name"> Spirits distilled, refined and mixed</field>
+    </record>
+
+    <record id="invoice_activity_type_084" model="invoice.activity.type">
+        <field name="code">1102</field>
+        <field name="name"> Winemaking</field>
+    </record>
+
+    <record id="invoice_activity_type_085" model="invoice.activity.type">
+        <field name="code">1103</field>
+        <field name="name"> The manufacture of alcoholic drinks derived from the molten and the manufacture of molten</field>
+    </record>
+
+    <record id="invoice_activity_type_086" model="invoice.activity.type">
+        <field name="code">1104</field>
+        <field name="name"> Manufacturing soft drinks and producing mineral water</field>
+    </record>
+
+    <record id="invoice_activity_type_087" model="invoice.activity.type">
+        <field name="code">1200</field>
+        <field name="name"> Manufacture of tobacco products</field>
+    </record>
+
+    <record id="invoice_activity_type_088" model="invoice.activity.type">
+        <field name="code">1311</field>
+        <field name="name"> Processing and spinning of textile fibers</field>
+    </record>
+
+    <record id="invoice_activity_type_089" model="invoice.activity.type">
+        <field name="code">1312</field>
+        <field name="name"> Textile weave</field>
+    </record>
+
+    <record id="invoice_activity_type_090" model="invoice.activity.type">
+        <field name="code">1313</field>
+        <field name="name"> The textile industry</field>
+    </record>
+
+    <record id="invoice_activity_type_091" model="invoice.activity.type">
+        <field name="code">1391</field>
+        <field name="name"> Manufacture of knitted and crocheted fabrics</field>
+    </record>
+
+    <record id="invoice_activity_type_092" model="invoice.activity.type">
+        <field name="code">1392</field>
+        <field name="name"> Manufacture of ready-made textile accessories, except garment wear</field>
+    </record>
+
+    <record id="invoice_activity_type_093" model="invoice.activity.type">
+        <field name="code">1393</field>
+        <field name="name"> Carpet and blanket industry</field>
+    </record>
+
+    <record id="invoice_activity_type_094" model="invoice.activity.type">
+        <field name="code">1394</field>
+        <field name="name"> Manufacture of ropes, thick and double ropes and nets</field>
+    </record>
+
+    <record id="invoice_activity_type_095" model="invoice.activity.type">
+        <field name="code">1399</field>
+        <field name="name"> Other textile industry not elsewhere classified</field>
+    </record>
+
+    <record id="invoice_activity_type_096" model="invoice.activity.type">
+        <field name="code">1410</field>
+        <field name="name"> Manufacture of garment with the exception of fur</field>
+    </record>
+
+    <record id="invoice_activity_type_097" model="invoice.activity.type">
+        <field name="code">1420</field>
+        <field name="name"> Fur accessories industry</field>
+    </record>
+
+    <record id="invoice_activity_type_098" model="invoice.activity.type">
+        <field name="code">1430</field>
+        <field name="name"> The manufacture of clothing, knitted and crocheted</field>
+    </record>
+
+    <record id="invoice_activity_type_099" model="invoice.activity.type">
+        <field name="code">1511</field>
+        <field name="name"> Tanning and processing of leather, fillings and dyeing of fur</field>
+    </record>
+
+    <record id="invoice_activity_type_100" model="invoice.activity.type">
+        <field name="code">1512</field>
+        <field name="name"> Luggage, handbags and similar industries, along with saddles and horse sets</field>
+    </record>
+
+    <record id="invoice_activity_type_101" model="invoice.activity.type">
+        <field name="code">1520</field>
+        <field name="name"> Shoe manufacturing</field>
+    </record>
+
+    <record id="invoice_activity_type_102" model="invoice.activity.type">
+        <field name="code">1610</field>
+        <field name="name"> Sawing wood and abrasion</field>
+    </record>
+
+    <record id="invoice_activity_type_103" model="invoice.activity.type">
+        <field name="code">1621</field>
+        <field name="name"> Sheets made of wood veneer and wood-based panels</field>
+    </record>
+
+    <record id="invoice_activity_type_104" model="invoice.activity.type">
+        <field name="code">1622</field>
+        <field name="name"> Manufacture of carpentry accessories intended for buildings and installations</field>
+    </record>
+
+    <record id="invoice_activity_type_105" model="invoice.activity.type">
+        <field name="code">1623</field>
+        <field name="name"> Wooden boxes industry</field>
+    </record>
+
+    <record id="invoice_activity_type_106" model="invoice.activity.type">
+        <field name="code">1629</field>
+        <field name="name"> Manufacture of wood, wood products and cork, except furniture, and manufacture of articles produced from straw and sheets</field>
+    </record>
+
+    <record id="invoice_activity_type_107" model="invoice.activity.type">
+        <field name="code">1701</field>
+        <field name="name"> Paper and carvatard pulp industry</field>
+    </record>
+
+    <record id="invoice_activity_type_108" model="invoice.activity.type">
+        <field name="code">1702</field>
+        <field name="name"> Manufacture of corrugated paper and paperboard and boxes made of paper and paperboard</field>
+    </record>
+
+    <record id="invoice_activity_type_109" model="invoice.activity.type">
+        <field name="code">1709</field>
+        <field name="name"> Manufacture of other articles of paper and paperboard</field>
+    </record>
+
+    <record id="invoice_activity_type_110" model="invoice.activity.type">
+        <field name="code">1811</field>
+        <field name="name"> printing</field>
+    </record>
+
+    <record id="invoice_activity_type_111" model="invoice.activity.type">
+        <field name="code">1812</field>
+        <field name="name"> Printing service activities</field>
+    </record>
+
+    <record id="invoice_activity_type_112" model="invoice.activity.type">
+        <field name="code">1820</field>
+        <field name="name"> Clone recorded media</field>
+    </record>
+
+    <record id="invoice_activity_type_113" model="invoice.activity.type">
+        <field name="code">1910</field>
+        <field name="name"> Coke oven products industry</field>
+    </record>
+
+    <record id="invoice_activity_type_114" model="invoice.activity.type">
+        <field name="code">1920</field>
+        <field name="name"> Refined petroleum products</field>
+    </record>
+
+    <record id="invoice_activity_type_115" model="invoice.activity.type">
+        <field name="code">2011</field>
+        <field name="name"> Basic chemicals</field>
+    </record>
+
+    <record id="invoice_activity_type_116" model="invoice.activity.type">
+        <field name="code">2012</field>
+        <field name="name"> Manufacture of fertilizers and nitrogen compounds</field>
+    </record>
+
+    <record id="invoice_activity_type_117" model="invoice.activity.type">
+        <field name="code">2013</field>
+        <field name="name"> Plastics industry in its primary forms and synthetic rubber</field>
+    </record>
+
+    <record id="invoice_activity_type_118" model="invoice.activity.type">
+        <field name="code">2021</field>
+        <field name="name"> Pesticide industry and other agricultural chemical products</field>
+    </record>
+
+    <record id="invoice_activity_type_119" model="invoice.activity.type">
+        <field name="code">2022</field>
+        <field name="name"> Manufacture of paints, varnishes, and similar coatings, printing inks and molds</field>
+    </record>
+
+    <record id="invoice_activity_type_120" model="invoice.activity.type">
+        <field name="code">2023</field>
+        <field name="name"> Manufacture of soap, disinfectants, cleaning and polishing preparations, perfumes and cosmetics</field>
+    </record>
+
+    <record id="invoice_activity_type_121" model="invoice.activity.type">
+        <field name="code">2029</field>
+        <field name="name"> Manufacture of other chemical products not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_122" model="invoice.activity.type">
+        <field name="code">2030</field>
+        <field name="name"> Industrial fiber industry</field>
+    </record>
+
+    <record id="invoice_activity_type_123" model="invoice.activity.type">
+        <field name="code">2100</field>
+        <field name="name"> Manufacture of pharmaceutical, chemical, and plant products</field>
+    </record>
+
+    <record id="invoice_activity_type_124" model="invoice.activity.type">
+        <field name="code">2211</field>
+        <field name="name"> Manufacture of rubber tires and tubes, renewing and rebuilding the outer surfaces of rubber tires</field>
+    </record>
+
+    <record id="invoice_activity_type_125" model="invoice.activity.type">
+        <field name="code">2219</field>
+        <field name="name"> Manufacture of other rubber products</field>
+    </record>
+
+    <record id="invoice_activity_type_126" model="invoice.activity.type">
+        <field name="code">2220</field>
+        <field name="name"> Plastics industry</field>
+    </record>
+
+    <record id="invoice_activity_type_127" model="invoice.activity.type">
+        <field name="code">2310</field>
+        <field name="name"> Glass and its products industry</field>
+    </record>
+
+    <record id="invoice_activity_type_128" model="invoice.activity.type">
+        <field name="code">2391</field>
+        <field name="name"> Manufacture of fusion products</field>
+    </record>
+
+    <record id="invoice_activity_type_129" model="invoice.activity.type">
+        <field name="code">2392</field>
+        <field name="name"> Manufacture of Shale products for Building</field>
+    </record>
+
+    <record id="invoice_activity_type_130" model="invoice.activity.type">
+        <field name="code">2393</field>
+        <field name="name"> Manufacture of other Porcelain and ceramic products</field>
+    </record>
+
+    <record id="invoice_activity_type_131" model="invoice.activity.type">
+        <field name="code">2394</field>
+        <field name="name"> Cement, lime and plaster industry</field>
+    </record>
+
+    <record id="invoice_activity_type_132" model="invoice.activity.type">
+        <field name="code">2395</field>
+        <field name="name"> Manufacture of concrete products, cement and plaster</field>
+    </record>
+
+    <record id="invoice_activity_type_133" model="invoice.activity.type">
+        <field name="code">2396</field>
+        <field name="name"> Cutting, forming and completing the stone processing</field>
+    </record>
+
+    <record id="invoice_activity_type_134" model="invoice.activity.type">
+        <field name="code">2399</field>
+        <field name="name"> Manufacture of non-metallic minerals products not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_135" model="invoice.activity.type">
+        <field name="code">2410</field>
+        <field name="name"> The industry of basic iron and steel</field>
+    </record>
+
+    <record id="invoice_activity_type_136" model="invoice.activity.type">
+        <field name="code">2420</field>
+        <field name="name"> Manufacture of precious and non-ferrous basic metals</field>
+    </record>
+
+    <record id="invoice_activity_type_137" model="invoice.activity.type">
+        <field name="code">2431</field>
+        <field name="name"> Iron and steel casting</field>
+    </record>
+
+    <record id="invoice_activity_type_138" model="invoice.activity.type">
+        <field name="code">2432</field>
+        <field name="name"> Non-ferrous metal casting</field>
+    </record>
+
+    <record id="invoice_activity_type_139" model="invoice.activity.type">
+        <field name="code">2511</field>
+        <field name="name"> Structural metal products industry</field>
+    </record>
+
+    <record id="invoice_activity_type_140" model="invoice.activity.type">
+        <field name="code">2512</field>
+        <field name="name"> Industry of tanks and metal containers</field>
+    </record>
+
+    <record id="invoice_activity_type_141" model="invoice.activity.type">
+        <field name="code">2513</field>
+        <field name="name"> Water vapor generators except for central heating boilers in hot water</field>
+    </record>
+
+    <record id="invoice_activity_type_142" model="invoice.activity.type">
+        <field name="code">2520</field>
+        <field name="name"> Arms and ammunition industry</field>
+    </record>
+
+    <record id="invoice_activity_type_143" model="invoice.activity.type">
+        <field name="code">2591</field>
+        <field name="name"> Forming metals by hammering, pressing, casting, rolling, and treatment of metal powders</field>
+    </record>
+
+    <record id="invoice_activity_type_144" model="invoice.activity.type">
+        <field name="code">2592</field>
+        <field name="name"> Metal processing and coating</field>
+    </record>
+
+    <record id="invoice_activity_type_145" model="invoice.activity.type">
+        <field name="code">2593</field>
+        <field name="name"> Manufacture of cutting tools, hand tools and general metal tools</field>
+    </record>
+
+    <record id="invoice_activity_type_146" model="invoice.activity.type">
+        <field name="code">2599</field>
+        <field name="name"> Manufacture of other fabricated metal products not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_147" model="invoice.activity.type">
+        <field name="code">2610</field>
+        <field name="name"> Electronic components and panels industry</field>
+    </record>
+
+    <record id="invoice_activity_type_148" model="invoice.activity.type">
+        <field name="code">2620</field>
+        <field name="name"> The manufacture of electronic computers and related devices</field>
+    </record>
+
+    <record id="invoice_activity_type_149" model="invoice.activity.type">
+        <field name="code">2630</field>
+        <field name="name"> Communications equipment industry</field>
+    </record>
+
+    <record id="invoice_activity_type_150" model="invoice.activity.type">
+        <field name="code">2640</field>
+        <field name="name"> Electronic devices industry</field>
+    </record>
+
+    <record id="invoice_activity_type_151" model="invoice.activity.type">
+        <field name="code">2651</field>
+        <field name="name"> Manufacturing measuring, testing, navigation and control devices</field>
+    </record>
+
+    <record id="invoice_activity_type_152" model="invoice.activity.type">
+        <field name="code">2652</field>
+        <field name="name"> Watch and alarm clock industry</field>
+    </record>
+
+    <record id="invoice_activity_type_153" model="invoice.activity.type">
+        <field name="code">2660</field>
+        <field name="name"> Radiation, medical and therapeutic electronic devices industry</field>
+    </record>
+
+    <record id="invoice_activity_type_154" model="invoice.activity.type">
+        <field name="code">2670</field>
+        <field name="name"> Optical equipment and imaging equipment industry</field>
+    </record>
+
+    <record id="invoice_activity_type_155" model="invoice.activity.type">
+        <field name="code">2680</field>
+        <field name="name"> Optical and magnetic conveyor industry</field>
+    </record>
+
+    <record id="invoice_activity_type_156" model="invoice.activity.type">
+        <field name="code">2710</field>
+        <field name="name"> Manufacture of motors, generators, electrical transformers, devices and control panels for electricity distribution</field>
+    </record>
+
+    <record id="invoice_activity_type_157" model="invoice.activity.type">
+        <field name="code">2720</field>
+        <field name="name"> Manufacture of dry and stored batteries</field>
+    </record>
+
+    <record id="invoice_activity_type_158" model="invoice.activity.type">
+        <field name="code">2731</field>
+        <field name="name"> Industrial fiber cable industry</field>
+    </record>
+
+    <record id="invoice_activity_type_159" model="invoice.activity.type">
+        <field name="code">2732</field>
+        <field name="name"> Other electrical and electronic wires and cables</field>
+    </record>
+
+    <record id="invoice_activity_type_160" model="invoice.activity.type">
+        <field name="code">2733</field>
+        <field name="name"> Wire devices industry</field>
+    </record>
+
+    <record id="invoice_activity_type_161" model="invoice.activity.type">
+        <field name="code">2740</field>
+        <field name="name"> Electrical lighting devices industry</field>
+    </record>
+
+    <record id="invoice_activity_type_162" model="invoice.activity.type">
+        <field name="code">2750</field>
+        <field name="name"> Home appliances industry</field>
+    </record>
+
+    <record id="invoice_activity_type_163" model="invoice.activity.type">
+        <field name="code">2790</field>
+        <field name="name"> Other electrical appliances industry</field>
+    </record>
+
+    <record id="invoice_activity_type_164" model="invoice.activity.type">
+        <field name="code">2811</field>
+        <field name="name"> Manufacture of generators and engines, with the exception of aircraft, vehicles and motorcycles</field>
+    </record>
+
+    <record id="invoice_activity_type_165" model="invoice.activity.type">
+        <field name="code">2812</field>
+        <field name="name"> Liquid power devices industry</field>
+    </record>
+
+    <record id="invoice_activity_type_166" model="invoice.activity.type">
+        <field name="code">2813</field>
+        <field name="name"> Manufacture of pumps, compressors, tapes and other valves</field>
+    </record>
+
+    <record id="invoice_activity_type_167" model="invoice.activity.type">
+        <field name="code">2814</field>
+        <field name="name"> Gears, carriers and driving devices industry</field>
+    </record>
+
+    <record id="invoice_activity_type_168" model="invoice.activity.type">
+        <field name="code">2815</field>
+        <field name="name"> Manufacture of furnaces, furnaces and their incinerators</field>
+    </record>
+
+    <record id="invoice_activity_type_169" model="invoice.activity.type">
+        <field name="code">2816</field>
+        <field name="name"> The elevators and equipment needed for it</field>
+    </record>
+
+    <record id="invoice_activity_type_170" model="invoice.activity.type">
+        <field name="code">2817</field>
+        <field name="name"> Manufacture of office equipment and equipment (excluding electronic computers and their accessories)</field>
+    </record>
+
+    <record id="invoice_activity_type_171" model="invoice.activity.type">
+        <field name="code">2818</field>
+        <field name="name"> Manufacture of manual power steering equipment</field>
+    </record>
+
+    <record id="invoice_activity_type_172" model="invoice.activity.type">
+        <field name="code">2819</field>
+        <field name="name"> Other equipment industry of various purposes</field>
+    </record>
+
+    <record id="invoice_activity_type_173" model="invoice.activity.type">
+        <field name="code">2821</field>
+        <field name="name"> Agricultural and forestry equipment industry</field>
+    </record>
+
+    <record id="invoice_activity_type_174" model="invoice.activity.type">
+        <field name="code">2822</field>
+        <field name="name"> Manufacture of equipment and machinery for forming metals</field>
+    </record>
+
+    <record id="invoice_activity_type_175" model="invoice.activity.type">
+        <field name="code">2823</field>
+        <field name="name"> Metal equipment industry</field>
+    </record>
+
+    <record id="invoice_activity_type_176" model="invoice.activity.type">
+        <field name="code">2824</field>
+        <field name="name"> Mining and quarrying and building equipment industry</field>
+    </record>
+
+    <record id="invoice_activity_type_177" model="invoice.activity.type">
+        <field name="code">2825</field>
+        <field name="name"> Manufacture of food, beverage and tobacco industries equipment</field>
+    </record>
+
+    <record id="invoice_activity_type_178" model="invoice.activity.type">
+        <field name="code">2826</field>
+        <field name="name"> Manufacture of ready-made clothes, accessories, and leather production</field>
+    </record>
+
+    <record id="invoice_activity_type_179" model="invoice.activity.type">
+        <field name="code">2829</field>
+        <field name="name"> Manufacture of other special-purpose equipment</field>
+    </record>
+
+    <record id="invoice_activity_type_180" model="invoice.activity.type">
+        <field name="code">2910</field>
+        <field name="name"> Manufacture of motor vehicles</field>
+    </record>
+
+    <record id="invoice_activity_type_181" model="invoice.activity.type">
+        <field name="code">2920</field>
+        <field name="name"> Manufacture of motor vehicle bodies and the manufacture of trailers and semi-trailers</field>
+    </record>
+
+    <record id="invoice_activity_type_182" model="invoice.activity.type">
+        <field name="code">2930</field>
+        <field name="name"> Manufacture of accessories and spare parts for motor vehicles</field>
+    </record>
+
+    <record id="invoice_activity_type_183" model="invoice.activity.type">
+        <field name="code">3011</field>
+        <field name="name"> Building ship hulls and rafts</field>
+    </record>
+
+    <record id="invoice_activity_type_184" model="invoice.activity.type">
+        <field name="code">3012</field>
+        <field name="name"> Manufacture of pleasure boats and sport boats</field>
+    </record>
+
+    <record id="invoice_activity_type_185" model="invoice.activity.type">
+        <field name="code">3020</field>
+        <field name="name"> Railroad locomotives and rolling stock industry</field>
+    </record>
+
+    <record id="invoice_activity_type_186" model="invoice.activity.type">
+        <field name="code">3030</field>
+        <field name="name"> Air and spacecraft industry</field>
+    </record>
+
+    <record id="invoice_activity_type_187" model="invoice.activity.type">
+        <field name="code">3040</field>
+        <field name="name"> Manufacture of military military vehicles</field>
+    </record>
+
+    <record id="invoice_activity_type_188" model="invoice.activity.type">
+        <field name="code">3091</field>
+        <field name="name"> Industry</field>
+    </record>
+
+    <record id="invoice_activity_type_189" model="invoice.activity.type">
+        <field name="code">3092</field>
+        <field name="name"> Manufacture of ordinary bicycles and infirm vehicles</field>
+    </record>
+
+    <record id="invoice_activity_type_190" model="invoice.activity.type">
+        <field name="code">3099</field>
+        <field name="name"> Other transportation equipment industry not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_191" model="invoice.activity.type">
+        <field name="code">3100</field>
+        <field name="name"> Furniture Industry</field>
+    </record>
+
+    <record id="invoice_activity_type_192" model="invoice.activity.type">
+        <field name="code">3211</field>
+        <field name="name"> Manufacture of jewelry and related items</field>
+    </record>
+
+    <record id="invoice_activity_type_193" model="invoice.activity.type">
+        <field name="code">3212</field>
+        <field name="name"> Manufacture of imitation jewelry and related items</field>
+    </record>
+
+    <record id="invoice_activity_type_194" model="invoice.activity.type">
+        <field name="code">3220</field>
+        <field name="name"> Musical instrument industry</field>
+    </record>
+
+    <record id="invoice_activity_type_195" model="invoice.activity.type">
+        <field name="code">3230</field>
+        <field name="name"> Sports products industry</field>
+    </record>
+
+    <record id="invoice_activity_type_196" model="invoice.activity.type">
+        <field name="code">3240</field>
+        <field name="name"> Make games and play</field>
+    </record>
+
+    <record id="invoice_activity_type_197" model="invoice.activity.type">
+        <field name="code">3250</field>
+        <field name="name"> Manufacturing of dental and medical equipment and tools</field>
+    </record>
+
+    <record id="invoice_activity_type_198" model="invoice.activity.type">
+        <field name="code">3290</field>
+        <field name="name"> Other industries not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_199" model="invoice.activity.type">
+        <field name="code">3311</field>
+        <field name="name"> Repair of manufactured metal products</field>
+    </record>
+
+    <record id="invoice_activity_type_200" model="invoice.activity.type">
+        <field name="code">3312</field>
+        <field name="name"> Machinery repair</field>
+    </record>
+
+    <record id="invoice_activity_type_201" model="invoice.activity.type">
+        <field name="code">3313</field>
+        <field name="name"> Repair of electronic and optical devices</field>
+    </record>
+
+    <record id="invoice_activity_type_202" model="invoice.activity.type">
+        <field name="code">3314</field>
+        <field name="name"> Electronic devices repair</field>
+    </record>
+
+    <record id="invoice_activity_type_203" model="invoice.activity.type">
+        <field name="code">3315</field>
+        <field name="name"> Repair of transport devices, except for motor vehicles</field>
+    </record>
+
+    <record id="invoice_activity_type_204" model="invoice.activity.type">
+        <field name="code">3319</field>
+        <field name="name"> Repair other devices</field>
+    </record>
+
+    <record id="invoice_activity_type_205" model="invoice.activity.type">
+        <field name="code">3320</field>
+        <field name="name"> Installation of industrial equipment and devices</field>
+    </record>
+
+    <record id="invoice_activity_type_206" model="invoice.activity.type">
+        <field name="code">3510</field>
+        <field name="name"> Electric generators, transformers and power distributors</field>
+    </record>
+
+    <record id="invoice_activity_type_207" model="invoice.activity.type">
+        <field name="code">3520</field>
+        <field name="name"> Manufacture of sulfur gas and distribution of gaseous fuels by means of main pipes</field>
+    </record>
+
+    <record id="invoice_activity_type_208" model="invoice.activity.type">
+        <field name="code">3530</field>
+        <field name="name"> Steam supply and air conditioning</field>
+    </record>
+
+    <record id="invoice_activity_type_209" model="invoice.activity.type">
+        <field name="code">3600</field>
+        <field name="name"> Water collection, treatment and supply</field>
+    </record>
+
+    <record id="invoice_activity_type_210" model="invoice.activity.type">
+        <field name="code">3700</field>
+        <field name="name"> Sewer</field>
+    </record>
+
+    <record id="invoice_activity_type_211" model="invoice.activity.type">
+        <field name="code">3811</field>
+        <field name="name"> Collection of non-hazardous waste</field>
+    </record>
+
+    <record id="invoice_activity_type_212" model="invoice.activity.type">
+        <field name="code">3812</field>
+        <field name="name"> Collection of hazardous waste</field>
+    </record>
+
+    <record id="invoice_activity_type_213" model="invoice.activity.type">
+        <field name="code">3821</field>
+        <field name="name"> Treatment and disposal of non-hazardous waste</field>
+    </record>
+
+    <record id="invoice_activity_type_214" model="invoice.activity.type">
+        <field name="code">3822</field>
+        <field name="name"> Treatment and disposal of hazardous waste</field>
+    </record>
+
+    <record id="invoice_activity_type_215" model="invoice.activity.type">
+        <field name="code">3830</field>
+        <field name="name"> Material handling</field>
+    </record>
+
+    <record id="invoice_activity_type_216" model="invoice.activity.type">
+        <field name="code">3900</field>
+        <field name="name"> Recycling activities and services and the disposal of other waste</field>
+    </record>
+
+    <record id="invoice_activity_type_217" model="invoice.activity.type">
+        <field name="code">4100</field>
+        <field name="name"> Building constructions</field>
+    </record>
+
+    <record id="invoice_activity_type_218" model="invoice.activity.type">
+        <field name="code">4210</field>
+        <field name="name"> Road and railway constructions</field>
+    </record>
+
+    <record id="invoice_activity_type_219" model="invoice.activity.type">
+        <field name="code">4220</field>
+        <field name="name"> Construction for projects of public benefit</field>
+    </record>
+
+    <record id="invoice_activity_type_220" model="invoice.activity.type">
+        <field name="code">4290</field>
+        <field name="name"> Construction for other civil engineering projects</field>
+    </record>
+
+    <record id="invoice_activity_type_221" model="invoice.activity.type">
+        <field name="code">4311</field>
+        <field name="name"> Remove the installations</field>
+    </record>
+
+    <record id="invoice_activity_type_222" model="invoice.activity.type">
+        <field name="code">4312</field>
+        <field name="name"> Preparing sites</field>
+    </record>
+
+    <record id="invoice_activity_type_223" model="invoice.activity.type">
+        <field name="code">4321</field>
+        <field name="name"> Electrical installations</field>
+    </record>
+
+    <record id="invoice_activity_type_224" model="invoice.activity.type">
+        <field name="code">4322</field>
+        <field name="name"> Plumbing, heating and air-conditioning installations</field>
+    </record>
+
+    <record id="invoice_activity_type_225" model="invoice.activity.type">
+        <field name="code">4329</field>
+        <field name="name"> Other structural installations</field>
+    </record>
+
+    <record id="invoice_activity_type_226" model="invoice.activity.type">
+        <field name="code">4330</field>
+        <field name="name"> Completion and finishing of buildings</field>
+    </record>
+
+    <record id="invoice_activity_type_227" model="invoice.activity.type">
+        <field name="code">4390</field>
+        <field name="name"> Other specialized construction activities</field>
+    </record>
+
+    <record id="invoice_activity_type_228" model="invoice.activity.type">
+        <field name="code">4510</field>
+        <field name="name"> Sale of motor vehicles</field>
+    </record>
+
+    <record id="invoice_activity_type_229" model="invoice.activity.type">
+        <field name="code">4520</field>
+        <field name="name"> Maintenance and repair of motor vehicles</field>
+    </record>
+
+    <record id="invoice_activity_type_230" model="invoice.activity.type">
+        <field name="code">4530</field>
+        <field name="name"> Sale of motor vehicle parts and accessories</field>
+    </record>
+
+    <record id="invoice_activity_type_231" model="invoice.activity.type">
+        <field name="code">4540</field>
+        <field name="name"> Sale, maintenance and repair of motorcycles, parts and accessories thereof</field>
+    </record>
+
+    <record id="invoice_activity_type_232" model="invoice.activity.type">
+        <field name="code">4610</field>
+        <field name="name"> Wholesale trade on the basis of a contract or a fee</field>
+    </record>
+
+    <record id="invoice_activity_type_233" model="invoice.activity.type">
+        <field name="code">4620</field>
+        <field name="name"> Wholesale trade in agricultural raw materials and live animals</field>
+    </record>
+
+    <record id="invoice_activity_type_234" model="invoice.activity.type">
+        <field name="code">4630</field>
+        <field name="name"> Wholesale trade of food, beverages and tobacco</field>
+    </record>
+
+    <record id="invoice_activity_type_235" model="invoice.activity.type">
+        <field name="code">4641</field>
+        <field name="name"> Wholesale trade of clothes, fabrics and shoes</field>
+    </record>
+
+    <record id="invoice_activity_type_236" model="invoice.activity.type">
+        <field name="code">4649</field>
+        <field name="name"> Wholesale trade for other household appliances</field>
+    </record>
+
+    <record id="invoice_activity_type_237" model="invoice.activity.type">
+        <field name="code">4651</field>
+        <field name="name"> Wholesale trade of computer hardware, accessories and computer software</field>
+    </record>
+
+    <record id="invoice_activity_type_238" model="invoice.activity.type">
+        <field name="code">4652</field>
+        <field name="name"> Wholesale trade of electronic devices, communications devices and accessories</field>
+    </record>
+
+    <record id="invoice_activity_type_239" model="invoice.activity.type">
+        <field name="code">4653</field>
+        <field name="name"> Wholesale trade for agricultural equipment, machinery and supplies</field>
+    </record>
+
+    <record id="invoice_activity_type_240" model="invoice.activity.type">
+        <field name="code">4659</field>
+        <field name="name"> Wholesale trade of equipment and other devices</field>
+    </record>
+
+    <record id="invoice_activity_type_241" model="invoice.activity.type">
+        <field name="code">4661</field>
+        <field name="name"> Wholesale trade of dry, liquid and gaseous fuels and related products</field>
+    </record>
+
+    <record id="invoice_activity_type_242" model="invoice.activity.type">
+        <field name="code">4662</field>
+        <field name="name"> Wholesale trade in precious metals and minerals</field>
+    </record>
+
+    <record id="invoice_activity_type_243" model="invoice.activity.type">
+        <field name="code">4663</field>
+        <field name="name"> Wholesale trade, supplies and equipment for building materials, hardware, plumbing and heating appliances</field>
+    </record>
+
+    <record id="invoice_activity_type_244" model="invoice.activity.type">
+        <field name="code">4669</field>
+        <field name="name"> Wholesale trade for waste, waste and other products not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_245" model="invoice.activity.type">
+        <field name="code">4690</field>
+        <field name="name"> Non-specialized wholesale trade</field>
+    </record>
+
+    <record id="invoice_activity_type_246" model="invoice.activity.type">
+        <field name="code">4711</field>
+        <field name="name"> Retail sale in non-specialized stores of food, beverages or tobacco</field>
+    </record>
+
+    <record id="invoice_activity_type_247" model="invoice.activity.type">
+        <field name="code">4719</field>
+        <field name="name"> Other retail types in non-specialized stores</field>
+    </record>
+
+    <record id="invoice_activity_type_248" model="invoice.activity.type">
+        <field name="code">4721</field>
+        <field name="name"> Retail sale in specialized food stores</field>
+    </record>
+
+    <record id="invoice_activity_type_249" model="invoice.activity.type">
+        <field name="code">4722</field>
+        <field name="name"> Retail sale in specialized stores for drinks</field>
+    </record>
+
+    <record id="invoice_activity_type_250" model="invoice.activity.type">
+        <field name="code">4723</field>
+        <field name="name"> Retail sale in specialized stores of tobacco products</field>
+    </record>
+
+    <record id="invoice_activity_type_251" model="invoice.activity.type">
+        <field name="code">4730</field>
+        <field name="name"> Retail sale of specialized vehicles for fuel</field>
+    </record>
+
+    <record id="invoice_activity_type_252" model="invoice.activity.type">
+        <field name="code">4741</field>
+        <field name="name"> Retail sale in stores specialized in computer hardware, accessories, computer software, and communications equipment</field>
+    </record>
+
+    <record id="invoice_activity_type_253" model="invoice.activity.type">
+        <field name="code">4751</field>
+        <field name="name"> Retail sale in clothing stores</field>
+    </record>
+
+    <record id="invoice_activity_type_254" model="invoice.activity.type">
+        <field name="code">4752</field>
+        <field name="name"> Retail sale in specialized stores of hardware, paint and glass</field>
+    </record>
+
+    <record id="invoice_activity_type_255" model="invoice.activity.type">
+        <field name="code">4753</field>
+        <field name="name"> Retail sale in specialized stores of carpets, blankets, wall and floor coverings</field>
+    </record>
+
+    <record id="invoice_activity_type_256" model="invoice.activity.type">
+        <field name="code">4759</field>
+        <field name="name"> Retail sale in specialized stores of household electrical appliances, furniture, lighting equipment and other household appliances</field>
+    </record>
+
+    <record id="invoice_activity_type_257" model="invoice.activity.type">
+        <field name="code">4761</field>
+        <field name="name"> Retail sale in specialized stores of books, newspapers, and stationery</field>
+    </record>
+
+    <record id="invoice_activity_type_258" model="invoice.activity.type">
+        <field name="code">4762</field>
+        <field name="name"> Retail sale in specialized stores of music and video recordings</field>
+    </record>
+
+    <record id="invoice_activity_type_259" model="invoice.activity.type">
+        <field name="code">4763</field>
+        <field name="name"> Retail sale in specialized stores of sports equipment</field>
+    </record>
+
+    <record id="invoice_activity_type_260" model="invoice.activity.type">
+        <field name="code">4764</field>
+        <field name="name"> Retail sale in specialized games and toys stores</field>
+    </record>
+
+    <record id="invoice_activity_type_261" model="invoice.activity.type">
+        <field name="code">4771</field>
+        <field name="name"> Retail sale in specialized stores of shoes, clothing and leather products</field>
+    </record>
+
+    <record id="invoice_activity_type_262" model="invoice.activity.type">
+        <field name="code">4772</field>
+        <field name="name"> Retail sale in specialized stores of pharmaceutical, medical and pharmaceutical products, ornamental and cosmetic products</field>
+    </record>
+
+    <record id="invoice_activity_type_263" model="invoice.activity.type">
+        <field name="code">4773</field>
+        <field name="name"> Retail sale in specialized stores of other new products</field>
+    </record>
+
+    <record id="invoice_activity_type_264" model="invoice.activity.type">
+        <field name="code">4774</field>
+        <field name="name"> Retail sale of used products</field>
+    </record>
+
+    <record id="invoice_activity_type_265" model="invoice.activity.type">
+        <field name="code">4781</field>
+        <field name="name"> Retail sale through kiosks and markets of food, soft drinks and tobacco products</field>
+    </record>
+
+    <record id="invoice_activity_type_266" model="invoice.activity.type">
+        <field name="code">4782</field>
+        <field name="name"> Retail sale through kiosks and markets of clothes, fabrics and shoes</field>
+    </record>
+
+    <record id="invoice_activity_type_267" model="invoice.activity.type">
+        <field name="code">4789</field>
+        <field name="name"> Retail sale via stalls of other products</field>
+    </record>
+
+    <record id="invoice_activity_type_268" model="invoice.activity.type">
+        <field name="code">4742</field>
+        <field name="name"> Retail sale in stores specialized in audio-visual equipment</field>
+    </record>
+
+    <record id="invoice_activity_type_269" model="invoice.activity.type">
+        <field name="code">4791</field>
+        <field name="name"> Retail sale via mail requests or through the Internet</field>
+    </record>
+
+    <record id="invoice_activity_type_270" model="invoice.activity.type">
+        <field name="code">4799</field>
+        <field name="name"> Other types of retail sales that do not take place in stores, kiosks or markets</field>
+    </record>
+
+    <record id="invoice_activity_type_271" model="invoice.activity.type">
+        <field name="code">4911</field>
+        <field name="name"> Inland passenger transportation</field>
+    </record>
+
+    <record id="invoice_activity_type_272" model="invoice.activity.type">
+        <field name="code">4912</field>
+        <field name="name"> Shipping by rail</field>
+    </record>
+
+    <record id="invoice_activity_type_273" model="invoice.activity.type">
+        <field name="code">4921</field>
+        <field name="name"> Transporting land passengers outside and inside cities</field>
+    </record>
+
+    <record id="invoice_activity_type_274" model="invoice.activity.type">
+        <field name="code">4922</field>
+        <field name="name"> Other types of passenger transport by land</field>
+    </record>
+
+    <record id="invoice_activity_type_275" model="invoice.activity.type">
+        <field name="code">4923</field>
+        <field name="name"> Land transportation of goods by bus</field>
+    </record>
+
+    <record id="invoice_activity_type_276" model="invoice.activity.type">
+        <field name="code">4930</field>
+        <field name="name"> Pipeline transportation</field>
+    </record>
+
+    <record id="invoice_activity_type_277" model="invoice.activity.type">
+        <field name="code">5011</field>
+        <field name="name"> Transportation of marine and coastal passengers</field>
+    </record>
+
+    <record id="invoice_activity_type_278" model="invoice.activity.type">
+        <field name="code">5012</field>
+        <field name="name"> Marine and coastal cargo transportation</field>
+    </record>
+
+    <record id="invoice_activity_type_279" model="invoice.activity.type">
+        <field name="code">5021</field>
+        <field name="name"> Inland passenger water transport</field>
+    </record>
+
+    <record id="invoice_activity_type_280" model="invoice.activity.type">
+        <field name="code">5022</field>
+        <field name="name"> Inland water transport of goods</field>
+    </record>
+
+    <record id="invoice_activity_type_281" model="invoice.activity.type">
+        <field name="code">5110</field>
+        <field name="name"> Air transport of passengers</field>
+    </record>
+
+    <record id="invoice_activity_type_282" model="invoice.activity.type">
+        <field name="code">5120</field>
+        <field name="name"> Air freight transport</field>
+    </record>
+
+    <record id="invoice_activity_type_283" model="invoice.activity.type">
+        <field name="code">5210</field>
+        <field name="name"> Keep and store</field>
+    </record>
+
+    <record id="invoice_activity_type_284" model="invoice.activity.type">
+        <field name="code">5221</field>
+        <field name="name"> Service activities related to road transport</field>
+    </record>
+
+    <record id="invoice_activity_type_285" model="invoice.activity.type">
+        <field name="code">5222</field>
+        <field name="name"> Emergency service activities related to maritime transport</field>
+    </record>
+
+    <record id="invoice_activity_type_286" model="invoice.activity.type">
+        <field name="code">5223</field>
+        <field name="name"> Emergency service activities related to air transport</field>
+    </record>
+
+    <record id="invoice_activity_type_287" model="invoice.activity.type">
+        <field name="code">5224</field>
+        <field name="name"> Cargo handling</field>
+    </record>
+
+    <record id="invoice_activity_type_288" model="invoice.activity.type">
+        <field name="code">5229</field>
+        <field name="name"> Other activities in support of the transfer</field>
+    </record>
+
+    <record id="invoice_activity_type_289" model="invoice.activity.type">
+        <field name="code">5310</field>
+        <field name="name"> Mail activities</field>
+    </record>
+
+    <record id="invoice_activity_type_290" model="invoice.activity.type">
+        <field name="code">5320</field>
+        <field name="name"> Parcel delivery activities</field>
+    </record>
+
+    <record id="invoice_activity_type_291" model="invoice.activity.type">
+        <field name="code">5510</field>
+        <field name="name"> Short-term placement activities (rental - housing</field>
+    </record>
+
+    <record id="invoice_activity_type_292" model="invoice.activity.type">
+        <field name="code">5520</field>
+        <field name="name"> Campgrounds, parking lots, and locomotives</field>
+    </record>
+
+    <record id="invoice_activity_type_293" model="invoice.activity.type">
+        <field name="code">5590</field>
+        <field name="name"> Other types of placement</field>
+    </record>
+
+    <record id="invoice_activity_type_294" model="invoice.activity.type">
+        <field name="code">5610</field>
+        <field name="name"> Restaurant service and food delivery activities by mobile means</field>
+    </record>
+
+    <record id="invoice_activity_type_295" model="invoice.activity.type">
+        <field name="code">5621</field>
+        <field name="name"> Event catering</field>
+    </record>
+
+    <record id="invoice_activity_type_296" model="invoice.activity.type">
+        <field name="code">5629</field>
+        <field name="name"> Other catering services activities</field>
+    </record>
+
+    <record id="invoice_activity_type_297" model="invoice.activity.type">
+        <field name="code">5630</field>
+        <field name="name"> Light beverage service activities</field>
+    </record>
+
+    <record id="invoice_activity_type_298" model="invoice.activity.type">
+        <field name="code">5811</field>
+        <field name="name"> Publishing books</field>
+    </record>
+
+    <record id="invoice_activity_type_299" model="invoice.activity.type">
+        <field name="code">5812</field>
+        <field name="name"> Publish the directory and address lists</field>
+    </record>
+
+    <record id="invoice_activity_type_300" model="invoice.activity.type">
+        <field name="code">5813</field>
+        <field name="name"> Publishing newspapers, magazines and periodicals</field>
+    </record>
+
+    <record id="invoice_activity_type_301" model="invoice.activity.type">
+        <field name="code">5819</field>
+        <field name="name"> Other publishing activities</field>
+    </record>
+
+    <record id="invoice_activity_type_302" model="invoice.activity.type">
+        <field name="code">5820</field>
+        <field name="name"> Computer Software Publishing</field>
+    </record>
+
+    <record id="invoice_activity_type_303" model="invoice.activity.type">
+        <field name="code">5911</field>
+        <field name="name"> Film, video and television program production activities</field>
+    </record>
+
+    <record id="invoice_activity_type_304" model="invoice.activity.type">
+        <field name="code">5912</field>
+        <field name="name"> Subsequent activities for the production of movies, videos and television programs</field>
+    </record>
+
+    <record id="invoice_activity_type_305" model="invoice.activity.type">
+        <field name="code">5913</field>
+        <field name="name"> Motion picture, video and television program distribution activities</field>
+    </record>
+
+    <record id="invoice_activity_type_306" model="invoice.activity.type">
+        <field name="code">5914</field>
+        <field name="name"> Film screening activities</field>
+    </record>
+
+    <record id="invoice_activity_type_307" model="invoice.activity.type">
+        <field name="code">5920</field>
+        <field name="name"> Production and publishing of sound and music recordings</field>
+    </record>
+
+    <record id="invoice_activity_type_308" model="invoice.activity.type">
+        <field name="code">6010</field>
+        <field name="name"> Broadcasting over radio stations</field>
+    </record>
+
+    <record id="invoice_activity_type_309" model="invoice.activity.type">
+        <field name="code">6020</field>
+        <field name="name"> Television program preparation and broadcast activities</field>
+    </record>
+
+    <record id="invoice_activity_type_310" model="invoice.activity.type">
+        <field name="code">6110</field>
+        <field name="name"> Wired telecommunications activities</field>
+    </record>
+
+    <record id="invoice_activity_type_311" model="invoice.activity.type">
+        <field name="code">6120</field>
+        <field name="name"> Wireless communication activities</field>
+    </record>
+
+    <record id="invoice_activity_type_312" model="invoice.activity.type">
+        <field name="code">6130</field>
+        <field name="name"> Satellite communication activities</field>
+    </record>
+
+    <record id="invoice_activity_type_313" model="invoice.activity.type">
+        <field name="code">6190</field>
+        <field name="name"> Other telecommunications activities</field>
+    </record>
+
+    <record id="invoice_activity_type_314" model="invoice.activity.type">
+        <field name="code">6201</field>
+        <field name="name"> Computer program preparation activities</field>
+    </record>
+
+    <record id="invoice_activity_type_315" model="invoice.activity.type">
+        <field name="code">6202</field>
+        <field name="name"> Computer consultancy experience and facilities management activities related to computer fields</field>
+    </record>
+
+    <record id="invoice_activity_type_316" model="invoice.activity.type">
+        <field name="code">6209</field>
+        <field name="name"> Other activities related to information technology and computer services</field>
+    </record>
+
+    <record id="invoice_activity_type_317" model="invoice.activity.type">
+        <field name="code">6311</field>
+        <field name="name"> Data processing, hosting and related activities</field>
+    </record>
+
+    <record id="invoice_activity_type_318" model="invoice.activity.type">
+        <field name="code">6312</field>
+        <field name="name"> Electronic portals</field>
+    </record>
+
+    <record id="invoice_activity_type_319" model="invoice.activity.type">
+        <field name="code">6391</field>
+        <field name="name"> Activities of press agencies</field>
+    </record>
+
+    <record id="invoice_activity_type_320" model="invoice.activity.type">
+        <field name="code">6399</field>
+        <field name="name"> Other activities for information services that are not classified in other locations</field>
+    </record>
+
+    <record id="invoice_activity_type_321" model="invoice.activity.type">
+        <field name="code">6411</field>
+        <field name="name"> Central banks</field>
+    </record>
+
+    <record id="invoice_activity_type_322" model="invoice.activity.type">
+        <field name="code">6419</field>
+        <field name="name"> Other financial intermediaries</field>
+    </record>
+
+    <record id="invoice_activity_type_323" model="invoice.activity.type">
+        <field name="code">6420</field>
+        <field name="name"> Activities of holding companies</field>
+    </record>
+
+    <record id="invoice_activity_type_324" model="invoice.activity.type">
+        <field name="code">6430</field>
+        <field name="name"> Credit activities, provision of credits, and similar financial entities</field>
+    </record>
+
+    <record id="invoice_activity_type_325" model="invoice.activity.type">
+        <field name="code">6491</field>
+        <field name="name"> Financial leasing</field>
+    </record>
+
+    <record id="invoice_activity_type_326" model="invoice.activity.type">
+        <field name="code">6492</field>
+        <field name="name"> Other forms of loans granted</field>
+    </record>
+
+    <record id="invoice_activity_type_327" model="invoice.activity.type">
+        <field name="code">6499</field>
+        <field name="name"> Other financial services activities, with the exception of insurance and credit provision activities for pensions not classified in other locations</field>
+    </record>
+
+    <record id="invoice_activity_type_328" model="invoice.activity.type">
+        <field name="code">6511</field>
+        <field name="name"> life insurance</field>
+    </record>
+
+    <record id="invoice_activity_type_329" model="invoice.activity.type">
+        <field name="code">6512</field>
+        <field name="name"> Non-life insurance</field>
+    </record>
+
+    <record id="invoice_activity_type_330" model="invoice.activity.type">
+        <field name="code">6520</field>
+        <field name="name"> re Insurance</field>
+    </record>
+
+    <record id="invoice_activity_type_331" model="invoice.activity.type">
+        <field name="code">6530</field>
+        <field name="name"> Providing credits for pensions</field>
+    </record>
+
+    <record id="invoice_activity_type_332" model="invoice.activity.type">
+        <field name="code">6611</field>
+        <field name="name"> Financial markets management</field>
+    </record>
+
+    <record id="invoice_activity_type_333" model="invoice.activity.type">
+        <field name="code">6612</field>
+        <field name="name"> Security and commodity contracts brokerage</field>
+    </record>
+
+    <record id="invoice_activity_type_334" model="invoice.activity.type">
+        <field name="code">6619</field>
+        <field name="name"> Auxiliary activities for financial services</field>
+    </record>
+
+    <record id="invoice_activity_type_335" model="invoice.activity.type">
+        <field name="code">6621</field>
+        <field name="name"> Risk and damage assessment</field>
+    </record>
+
+    <record id="invoice_activity_type_336" model="invoice.activity.type">
+        <field name="code">6622</field>
+        <field name="name"> Activities of insurance and brokerage agents</field>
+    </record>
+
+    <record id="invoice_activity_type_337" model="invoice.activity.type">
+        <field name="code">6629</field>
+        <field name="name"> Other activities auxiliary to insurance and provision for pensions</field>
+    </record>
+
+    <record id="invoice_activity_type_338" model="invoice.activity.type">
+        <field name="code">6630</field>
+        <field name="name"> Financial credit management activities</field>
+    </record>
+
+    <record id="invoice_activity_type_339" model="invoice.activity.type">
+        <field name="code">6810</field>
+        <field name="name"> Real estate activities with own or leased property</field>
+    </record>
+
+    <record id="invoice_activity_type_340" model="invoice.activity.type">
+        <field name="code">6820</field>
+        <field name="name"> Real estate activities on the basis of a contract or a fee</field>
+    </record>
+
+    <record id="invoice_activity_type_341" model="invoice.activity.type">
+        <field name="code">6910</field>
+        <field name="name"> Legal activities</field>
+    </record>
+
+    <record id="invoice_activity_type_342" model="invoice.activity.type">
+        <field name="code">6920</field>
+        <field name="name"> Accounting, auditing, bookkeeping and tax advice activities</field>
+    </record>
+
+    <record id="invoice_activity_type_343" model="invoice.activity.type">
+        <field name="code">7010</field>
+        <field name="name"> The main office activities</field>
+    </record>
+
+    <record id="invoice_activity_type_344" model="invoice.activity.type">
+        <field name="code">7020</field>
+        <field name="name"> Management consultancy activities</field>
+    </record>
+
+    <record id="invoice_activity_type_345" model="invoice.activity.type">
+        <field name="code">7110</field>
+        <field name="name"> Architectural and engineering activities and related technical consulting</field>
+    </record>
+
+    <record id="invoice_activity_type_346" model="invoice.activity.type">
+        <field name="code">7120</field>
+        <field name="name"> Technical tests and analyzes</field>
+    </record>
+
+    <record id="invoice_activity_type_347" model="invoice.activity.type">
+        <field name="code">7210</field>
+        <field name="name"> Research and experimental development in the field of natural and engineering sciences</field>
+    </record>
+
+    <record id="invoice_activity_type_348" model="invoice.activity.type">
+        <field name="code">7220</field>
+        <field name="name"> Experimental research and development in the field of social and human sciences</field>
+    </record>
+
+    <record id="invoice_activity_type_349" model="invoice.activity.type">
+        <field name="code">7310</field>
+        <field name="name"> Advertising</field>
+    </record>
+
+    <record id="invoice_activity_type_350" model="invoice.activity.type">
+        <field name="code">7320</field>
+        <field name="name"> Market studies and public opinion polls</field>
+    </record>
+
+    <record id="invoice_activity_type_351" model="invoice.activity.type">
+        <field name="code">7410</field>
+        <field name="name"> Specialized design activities</field>
+    </record>
+
+    <record id="invoice_activity_type_352" model="invoice.activity.type">
+        <field name="code">7420</field>
+        <field name="name"> Photographic activities</field>
+    </record>
+
+    <record id="invoice_activity_type_353" model="invoice.activity.type">
+        <field name="code">7490</field>
+        <field name="name"> Other specialized, scientific and artistic activities not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_354" model="invoice.activity.type">
+        <field name="code">7500</field>
+        <field name="name"> Veterinary activities</field>
+    </record>
+
+    <record id="invoice_activity_type_355" model="invoice.activity.type">
+        <field name="code">7710</field>
+        <field name="name"> Renting motor vehicles</field>
+    </record>
+
+    <record id="invoice_activity_type_356" model="invoice.activity.type">
+        <field name="code">7721</field>
+        <field name="name"> Renting and renting sports and leisure products and tools</field>
+    </record>
+
+    <record id="invoice_activity_type_357" model="invoice.activity.type">
+        <field name="code">7722</field>
+        <field name="name"> Rental of video tapes and CDs</field>
+    </record>
+
+    <record id="invoice_activity_type_358" model="invoice.activity.type">
+        <field name="code">7729</field>
+        <field name="name"> Renting and renting other personal and household products</field>
+    </record>
+
+    <record id="invoice_activity_type_359" model="invoice.activity.type">
+        <field name="code">7730</field>
+        <field name="name"> Renting and leasing of other physical devices and equipment</field>
+    </record>
+
+    <record id="invoice_activity_type_360" model="invoice.activity.type">
+        <field name="code">7740</field>
+        <field name="name"> Rent forms of intellectual property and similar products, except for copyright works</field>
+    </record>
+
+    <record id="invoice_activity_type_361" model="invoice.activity.type">
+        <field name="code">7810</field>
+        <field name="name"> Activities of recruitment and appointment agencies</field>
+    </record>
+
+    <record id="invoice_activity_type_362" model="invoice.activity.type">
+        <field name="code">7820</field>
+        <field name="name"> Activities of temporary employment agencies</field>
+    </record>
+
+    <record id="invoice_activity_type_363" model="invoice.activity.type">
+        <field name="code">7830</field>
+        <field name="name"> Providing other human resources</field>
+    </record>
+
+    <record id="invoice_activity_type_364" model="invoice.activity.type">
+        <field name="code">7911</field>
+        <field name="name"> Tourism agency services</field>
+    </record>
+
+    <record id="invoice_activity_type_365" model="invoice.activity.type">
+        <field name="code">7912</field>
+        <field name="name"> Activities of tour guides</field>
+    </record>
+
+    <record id="invoice_activity_type_366" model="invoice.activity.type">
+        <field name="code">7990</field>
+        <field name="name"> Other types of reservations and related activities</field>
+    </record>
+
+    <record id="invoice_activity_type_367" model="invoice.activity.type">
+        <field name="code">8010</field>
+        <field name="name"> Private security activities</field>
+    </record>
+
+    <record id="invoice_activity_type_368" model="invoice.activity.type">
+        <field name="code">8020</field>
+        <field name="name"> Security systems services activities</field>
+    </record>
+
+    <record id="invoice_activity_type_369" model="invoice.activity.type">
+        <field name="code">8030</field>
+        <field name="name"> Investigation activities</field>
+    </record>
+
+    <record id="invoice_activity_type_370" model="invoice.activity.type">
+        <field name="code">8110</field>
+        <field name="name"> Support activities for joint facilities</field>
+    </record>
+
+    <record id="invoice_activity_type_371" model="invoice.activity.type">
+        <field name="code">8121</field>
+        <field name="name"> General cleaning of buildings</field>
+    </record>
+
+    <record id="invoice_activity_type_372" model="invoice.activity.type">
+        <field name="code">8129</field>
+        <field name="name"> Building cleaning activities and other industrial facilities</field>
+    </record>
+
+    <record id="invoice_activity_type_373" model="invoice.activity.type">
+        <field name="code">8130</field>
+        <field name="name"> Gardening services and maintenance activities</field>
+    </record>
+
+    <record id="invoice_activity_type_374" model="invoice.activity.type">
+        <field name="code">8211</field>
+        <field name="name"> Joint office support services activities</field>
+    </record>
+
+    <record id="invoice_activity_type_375" model="invoice.activity.type">
+        <field name="code">8219</field>
+        <field name="name"> Photocopying, document processing and other specialized office support services activities</field>
+    </record>
+
+    <record id="invoice_activity_type_376" model="invoice.activity.type">
+        <field name="code">8220</field>
+        <field name="name"> Information center services</field>
+    </record>
+
+    <record id="invoice_activity_type_377" model="invoice.activity.type">
+        <field name="code">8230</field>
+        <field name="name"> Organizing trade conferences and exhibitions</field>
+    </record>
+
+    <record id="invoice_activity_type_378" model="invoice.activity.type">
+        <field name="code">8291</field>
+        <field name="name"> Activities of collection agencies and lending offices</field>
+    </record>
+
+    <record id="invoice_activity_type_379" model="invoice.activity.type">
+        <field name="code">8292</field>
+        <field name="name"> Packaging activities</field>
+    </record>
+
+    <record id="invoice_activity_type_380" model="invoice.activity.type">
+        <field name="code">8299</field>
+        <field name="name"> Other support services activities that are not classified in other locations</field>
+    </record>
+
+    <record id="invoice_activity_type_381" model="invoice.activity.type">
+        <field name="code">8411</field>
+        <field name="name"> Public administration activities</field>
+    </record>
+
+    <record id="invoice_activity_type_382" model="invoice.activity.type">
+        <field name="code">8412</field>
+        <field name="name"> Organizing activities to provide health care, education, educational services and other social services, with the exception of social security</field>
+    </record>
+
+    <record id="invoice_activity_type_383" model="invoice.activity.type">
+        <field name="code">8413</field>
+        <field name="name"> Organize and contribute to effective business operations</field>
+    </record>
+
+    <record id="invoice_activity_type_384" model="invoice.activity.type">
+        <field name="code">8421</field>
+        <field name="name"> Foreign affairs</field>
+    </record>
+
+    <record id="invoice_activity_type_385" model="invoice.activity.type">
+        <field name="code">8422</field>
+        <field name="name"> Defense activities</field>
+    </record>
+
+    <record id="invoice_activity_type_386" model="invoice.activity.type">
+        <field name="code">8423</field>
+        <field name="name"> Security and public order activities</field>
+    </record>
+
+    <record id="invoice_activity_type_387" model="invoice.activity.type">
+        <field name="code">8430</field>
+        <field name="name"> Compulsory social insurance activities</field>
+    </record>
+
+    <record id="invoice_activity_type_388" model="invoice.activity.type">
+        <field name="code">8510</field>
+        <field name="name"> Primary and pre-primary education</field>
+    </record>
+
+    <record id="invoice_activity_type_389" model="invoice.activity.type">
+        <field name="code">8521</field>
+        <field name="name"> General secondary education</field>
+    </record>
+
+    <record id="invoice_activity_type_390" model="invoice.activity.type">
+        <field name="code">8522</field>
+        <field name="name"> Technical and vocational secondary education</field>
+    </record>
+
+    <record id="invoice_activity_type_391" model="invoice.activity.type">
+        <field name="code">8530</field>
+        <field name="name"> Higher Education</field>
+    </record>
+
+    <record id="invoice_activity_type_392" model="invoice.activity.type">
+        <field name="code">8541</field>
+        <field name="name"> Sports and rehabilitation education</field>
+    </record>
+
+    <record id="invoice_activity_type_393" model="invoice.activity.type">
+        <field name="code">8542</field>
+        <field name="name"> Cultural education</field>
+    </record>
+
+    <record id="invoice_activity_type_394" model="invoice.activity.type">
+        <field name="code">8549</field>
+        <field name="name"> Other types of education not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_395" model="invoice.activity.type">
+        <field name="code">8550</field>
+        <field name="name"> Activities in support of education</field>
+    </record>
+
+    <record id="invoice_activity_type_396" model="invoice.activity.type">
+        <field name="code">8610</field>
+        <field name="name"> Hospital activities</field>
+    </record>
+
+    <record id="invoice_activity_type_397" model="invoice.activity.type">
+        <field name="code">8620</field>
+        <field name="name"> Activities related to medicine and dentistry</field>
+    </record>
+
+    <record id="invoice_activity_type_398" model="invoice.activity.type">
+        <field name="code">8690</field>
+        <field name="name"> Other activities related to human health</field>
+    </record>
+
+    <record id="invoice_activity_type_399" model="invoice.activity.type">
+        <field name="code">8710</field>
+        <field name="name"> Nursing facilities for sanatoriums</field>
+    </record>
+
+    <record id="invoice_activity_type_400" model="invoice.activity.type">
+        <field name="code">8720</field>
+        <field name="name"> Nursing care facilities for special needs clinics, mental illnesses and physical abuse</field>
+    </record>
+
+    <record id="invoice_activity_type_401" model="invoice.activity.type">
+        <field name="code">8730</field>
+        <field name="name"> Spa facilities for the elderly and disabled</field>
+    </record>
+
+    <record id="invoice_activity_type_402" model="invoice.activity.type">
+        <field name="code">8790</field>
+        <field name="name"> Other spa care facilities</field>
+    </record>
+
+    <record id="invoice_activity_type_403" model="invoice.activity.type">
+        <field name="code">8810</field>
+        <field name="name"> Social work activities for the infirm and disabled that take place without accommodation</field>
+    </record>
+
+    <record id="invoice_activity_type_404" model="invoice.activity.type">
+        <field name="code">8890</field>
+        <field name="name"> Other social business activities that take place without residence</field>
+    </record>
+
+    <record id="invoice_activity_type_405" model="invoice.activity.type">
+        <field name="code">9000</field>
+        <field name="name"> Creative and recreational art activities</field>
+    </record>
+
+    <record id="invoice_activity_type_406" model="invoice.activity.type">
+        <field name="code">9101</field>
+        <field name="name"> Library and archive activities</field>
+    </record>
+
+    <record id="invoice_activity_type_407" model="invoice.activity.type">
+        <field name="code">9102</field>
+        <field name="name"> Museum activities and restoration of historic sites and buildings</field>
+    </record>
+
+    <record id="invoice_activity_type_408" model="invoice.activity.type">
+        <field name="code">9103</field>
+        <field name="name"> Botanical and zoological gardens and natural wildlife activities</field>
+    </record>
+
+    <record id="invoice_activity_type_409" model="invoice.activity.type">
+        <field name="code">9200</field>
+        <field name="name"> Betting activities and gambling</field>
+    </record>
+
+    <record id="invoice_activity_type_410" model="invoice.activity.type">
+        <field name="code">9311</field>
+        <field name="name"> Providing sports facilities</field>
+    </record>
+
+    <record id="invoice_activity_type_411" model="invoice.activity.type">
+        <field name="code">9312</field>
+        <field name="name"> Sports club activities</field>
+    </record>
+
+    <record id="invoice_activity_type_412" model="invoice.activity.type">
+        <field name="code">9319</field>
+        <field name="name"> Other sports activities</field>
+    </record>
+
+    <record id="invoice_activity_type_413" model="invoice.activity.type">
+        <field name="code">9321</field>
+        <field name="name"> Recreational activities and performances in parks</field>
+    </record>
+
+    <record id="invoice_activity_type_414" model="invoice.activity.type">
+        <field name="code">9329</field>
+        <field name="name"> Other leisure and entertainment activities not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_415" model="invoice.activity.type">
+        <field name="code">9411</field>
+        <field name="name"> The activities of commercial enterprises, employers and professional membership organizations</field>
+    </record>
+
+    <record id="invoice_activity_type_416" model="invoice.activity.type">
+        <field name="code">9412</field>
+        <field name="name"> Activities of professional membership organizations</field>
+    </record>
+
+    <record id="invoice_activity_type_417" model="invoice.activity.type">
+        <field name="code">9420</field>
+        <field name="name"> Trade union activities</field>
+    </record>
+
+    <record id="invoice_activity_type_418" model="invoice.activity.type">
+        <field name="code">9491</field>
+        <field name="name"> Activities of religious organizations</field>
+    </record>
+
+    <record id="invoice_activity_type_419" model="invoice.activity.type">
+        <field name="code">9492</field>
+        <field name="name"> Activities of political organizations</field>
+    </record>
+
+    <record id="invoice_activity_type_420" model="invoice.activity.type">
+        <field name="code">9499</field>
+        <field name="name"> Activities of other membership organizations not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_421" model="invoice.activity.type">
+        <field name="code">9511</field>
+        <field name="name"> Computer repair and accessories</field>
+    </record>
+
+    <record id="invoice_activity_type_422" model="invoice.activity.type">
+        <field name="code">9512</field>
+        <field name="name"> Communication equipment repair</field>
+    </record>
+
+    <record id="invoice_activity_type_423" model="invoice.activity.type">
+        <field name="code">9521</field>
+        <field name="name"> Electronic devices repair</field>
+    </record>
+
+    <record id="invoice_activity_type_424" model="invoice.activity.type">
+        <field name="code">9522</field>
+        <field name="name"> Repair of tools, household appliances, and garden care equipment</field>
+    </record>
+
+    <record id="invoice_activity_type_425" model="invoice.activity.type">
+        <field name="code">9523</field>
+        <field name="name"> Shoe and leather products repair</field>
+    </record>
+
+    <record id="invoice_activity_type_426" model="invoice.activity.type">
+        <field name="code">9524</field>
+        <field name="name"> Repair of furniture and household items</field>
+    </record>
+
+    <record id="invoice_activity_type_427" model="invoice.activity.type">
+        <field name="code">9529</field>
+        <field name="name"> Repair of other household and personal products</field>
+    </record>
+
+    <record id="invoice_activity_type_428" model="invoice.activity.type">
+        <field name="code">9601</field>
+        <field name="name"> Wash and clean textile and fur products</field>
+    </record>
+
+    <record id="invoice_activity_type_429" model="invoice.activity.type">
+        <field name="code">9602</field>
+        <field name="name"> Hair styling and other cosmetics</field>
+    </record>
+
+    <record id="invoice_activity_type_430" model="invoice.activity.type">
+        <field name="code">9603</field>
+        <field name="name"> Funeral and related activities</field>
+    </record>
+
+    <record id="invoice_activity_type_431" model="invoice.activity.type">
+        <field name="code">9609</field>
+        <field name="name"> Other personal services activities not classified elsewhere</field>
+    </record>
+
+    <record id="invoice_activity_type_432" model="invoice.activity.type">
+        <field name="code">9700</field>
+        <field name="name"> Home employment activities</field>
+    </record>
+
+    <record id="invoice_activity_type_433" model="invoice.activity.type">
+        <field name="code">9810</field>
+        <field name="name"> Activities of producing unearthed products and services for home appliances for personal use</field>
+    </record>
+
+    <record id="invoice_activity_type_434" model="invoice.activity.type">
+        <field name="code">9820</field>
+        <field name="name"> Activities of producing unearthed products and services for home appliances for personal use</field>
+    </record>
+
+    <record id="invoice_activity_type_435" model="invoice.activity.type">
+        <field name="code">9900</field>
+        <field name="name"> Activities of non-regional organizations and bodies</field>
+    </record>
+
+</odoo>

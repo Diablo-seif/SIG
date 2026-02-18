@@ -1,0 +1,25 @@
+<odoo>
+
+    <record id="view_move_form" model="ir.ui.view">
+        <field name="name">account.move.form</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='ref']" position="after">
+
+                <field name="cancel_reason_id"
+                       options='{"no_open":true}'
+                       invisible=" state != 'cancel'"
+                       readonly="1"/>
+            </xpath>
+            <xpath expr="//button[@name='button_cancel'][1]" position="attributes">
+                <attribute name="context">{'appear_wizard': True}</attribute>
+            </xpath>
+            <xpath expr="//button[@name='button_cancel'][2]" position="attributes">
+                <attribute name="context">{'appear_wizard': True}</attribute>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+

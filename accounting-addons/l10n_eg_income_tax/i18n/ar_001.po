@@ -1,0 +1,316 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg_income_tax
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20200701\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-03 12:37+0000\n"
+"PO-Revision-Date: 2020-09-03 12:46+0000\n"
+"Last-Translator: Abdalla Mohamed <abdalla.mohamed@core-bpo.com>\n"
+"Language-Team: Arabic <http://weblate.staging.core-bpo.net/projects/"
+"accounting/l10n_eg_income_tax/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.0.4\n"
+
+#. module: l10n_eg_income_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.res_config_settings_view_form_income_tax
+msgid "<span class=\"o_form_label\">Income Tax Settings</span>"
+msgstr "<span class=\"o_form_label\">أعدادات ضريبة الدخل</span>"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__accounting_depreciation
+msgid "Accounting Depreciation"
+msgstr "الاهلاك المحاسبى"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__base
+msgid "Base"
+msgstr "الوعاء"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__base_after_losses
+msgid "Base After Losses"
+msgstr "الوعاء بعد الخسائر"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_company__base_after_losses_rounding
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_config_settings__base_after_losses_rounding
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.res_config_settings_view_form_income_tax
+msgid "Base After Losses Rounding"
+msgstr "تقريب الوعاء بعد الخسائر"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_company__base_after_losses_rounding_base
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_config_settings__base_after_losses_rounding_base
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.res_config_settings_view_form_income_tax
+msgid "Base After Losses Rounding Base"
+msgstr "تقريب الوعاء بعد الخسائر لاقرب"
+
+#. module: l10n_eg_income_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.income_tax_wizard_form_view
+msgid "Calculate Income Tax"
+msgstr "حساب ضريبة الدخل"
+
+#. module: l10n_eg_income_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.income_tax_wizard_form_view
+msgid "Calculate Net Profit"
+msgstr "حساب صافي الربح"
+
+#. module: l10n_eg_income_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.income_tax_wizard_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields.selection,name:l10n_eg_income_tax.selection__res_company__base_after_losses_rounding__ceil
+#: model:ir.model.fields.selection,name:l10n_eg_income_tax.selection__res_company__income_tax_rounding__ceil
+msgid "Ceiling"
+msgstr "تقريب لاكبر"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__cogs_accounts
+msgid "Cogs Accounts"
+msgstr "حسابات تكلفة البضاعة المباعة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__cogs_balance
+msgid "Cogs Balance"
+msgstr "رصيد تكلفة البضاعة المباعة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model,name:l10n_eg_income_tax.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__company_id
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__company_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model,name:l10n_eg_income_tax.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__create_date
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__currency_id
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__deferred_losses
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__deferred_losses
+msgid "Deferred Losses"
+msgstr "الخسائر المرحلة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__depreciation_accounts
+msgid "Depreciation Accounts"
+msgstr "حسابات الإهلاك"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__dep_balance
+msgid "Depreciation Balance"
+msgstr "رصيد الإهلاك"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__display_name
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__expenses_accounts
+msgid "Expenses Accounts"
+msgstr "حسابات المصروفات"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__expenses_balance
+msgid "Expenses Balance"
+msgstr "رصيد المصروفات"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields.selection,name:l10n_eg_income_tax.selection__res_company__base_after_losses_rounding__floor
+#: model:ir.model.fields.selection,name:l10n_eg_income_tax.selection__res_company__income_tax_rounding__floor
+msgid "Floor"
+msgstr "تقريب لاصغر"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__id
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: l10n_eg_income_tax
+#: model:ir.actions.act_window,name:l10n_eg_income_tax.income_tax_wizard_action
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__income_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.income_tax_wizard_form_view
+msgid "Income Tax"
+msgstr "ضريبة الدخل"
+
+#. module: l10n_eg_income_tax
+#: model:ir.ui.menu,name:l10n_eg_income_tax.menuitem_income_tax_wizard
+msgid "Income Tax Calculation"
+msgstr "حساب ضريبة الدخل"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_company__income_tax_entry_from_account_id
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_config_settings__income_tax_entry_from_account_id
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.res_config_settings_view_form_income_tax
+msgid "Income Tax Entry From Account"
+msgstr "قيد ضريبة الدخل من حساب"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_company__income_tax_entry_to_account_id
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_config_settings__income_tax_entry_to_account_id
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.res_config_settings_view_form_income_tax
+msgid "Income Tax Entry To Account"
+msgstr "قيد ضريبة الدخل الى حساب"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model,name:l10n_eg_income_tax.model_income_tax_line
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_account_move__income_tax_line_id
+msgid "Income Tax Line"
+msgstr "بند ضريبة الدخل"
+
+#. module: l10n_eg_income_tax
+#: model:ir.actions.act_window,name:l10n_eg_income_tax.view_income_tax_line_action
+#: model:ir.ui.menu,name:l10n_eg_income_tax.menuitem_income_tax_line
+msgid "Income Tax Report"
+msgstr "تقرير ضريبة الدخل"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_company__income_tax_rounding
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_config_settings__income_tax_rounding
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.res_config_settings_view_form_income_tax
+msgid "Income Tax Rounding"
+msgstr "تقريب ضريبة الدخل"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_company__income_tax_rounding_base
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_res_config_settings__income_tax_rounding_base
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.res_config_settings_view_form_income_tax
+msgid "Income Tax Rounding Base"
+msgstr "تقريب ضريبة الدخل لاقرب"
+
+#. module: l10n_eg_income_tax
+#: code:addons/l10n_eg_income_tax/wizards/income_tax_wizard.py:0
+#, python-format
+msgid "Income tax of %d in %s"
+msgstr "ضريبة الدخل عن السنة %d تم إنشاءوها في %s"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model,name:l10n_eg_income_tax.model_account_move
+msgid "Journal Entries"
+msgstr "القيود اليومية"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line____last_update
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__write_date
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__net_profit
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__net_profit
+msgid "Net Profit"
+msgstr "صافي الربح"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields.selection,name:l10n_eg_income_tax.selection__res_company__base_after_losses_rounding__none
+#: model:ir.model.fields.selection,name:l10n_eg_income_tax.selection__res_company__income_tax_rounding__none
+msgid "None"
+msgstr "لا شيء"
+
+#. module: l10n_eg_income_tax
+#: code:addons/l10n_eg_income_tax/wizards/income_tax_wizard.py:0
+#, python-format
+msgid "Please add income tax accounts in settings"
+msgstr "من فضلك اضف حسابات ضريبة الدخل"
+
+#. module: l10n_eg_income_tax
+#: code:addons/l10n_eg_income_tax/wizards/income_tax_wizard.py:0
+#, python-format
+msgid "Please enter a correct year"
+msgstr "برجاء إدخال السنة الصحيحة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__revenue_accounts
+msgid "Revenue Accounts"
+msgstr "حسابات الايرادات"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__revenue_balance
+msgid "Revenue Balance"
+msgstr "رصيد الإيرادات"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__symbiotic_balance
+msgid "Symbiotic Contribution"
+msgstr "المساهمة التكافلية"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__tax_base
+msgid "Tax Base"
+msgstr "الوعاء الضريبي"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__tax_depreciation
+msgid "Tax Depreciation"
+msgstr "الاهلاك الضريبى"
+
+#. module: l10n_eg_income_tax
+#: model_terms:ir.ui.view,arch_db:l10n_eg_income_tax.res_config_settings_view_form_income_tax
+msgid "Used to Generate Income Tax Reports and Entries"
+msgstr "يستخدم لحساب تقارير و قيود ضريبة الدخل"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__year
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__year
+msgid "Year"
+msgstr "السنة"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_line__above_seven
+#: model:ir.model.fields,field_description:l10n_eg_income_tax.field_income_tax_wizard__above_seven
+msgid "above 7%"
+msgstr "زيادة عن ال 7 %"
+
+#. module: l10n_eg_income_tax
+#: model:ir.model,name:l10n_eg_income_tax.model_income_tax_wizard
+msgid "income tax calculation wizard"
+msgstr "حساب ضريبة الدخل"

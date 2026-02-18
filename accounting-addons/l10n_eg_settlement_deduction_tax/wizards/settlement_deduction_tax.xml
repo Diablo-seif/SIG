@@ -1,0 +1,26 @@
+<odoo>
+
+    <record id="settlement_deduction_tax_form_view" model="ir.ui.view">
+        <field name="name">Settlement Deduction Tax Wizard</field>
+        <field name="model">settlement.deduction.tax.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Income Tax">
+                <group>
+                    <group>
+                        <field name="partner_id" options="{'no_create':True}"/>
+                        <field name="product_id" options="{'no_create':True}"/>
+                        <field name="bill_date"/>
+                        <field name="journal_id" options="{'no_create':True}"/>
+                    </group>
+                </group>
+                <footer>
+                    <button string="Create Bill"
+                            name="create_bill" type="object"
+                            class="btn-primary"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+</odoo>

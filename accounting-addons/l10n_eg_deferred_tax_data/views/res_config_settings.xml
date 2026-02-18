@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="res_config_settings_view_form_deferred" model="ir.ui.view">
+        <field name="name">res.config.settings.view.form.inherit.deferred
+        </field>
+        <field name="model">res.config.settings</field>
+        <field name="priority" eval="25"/>
+        <field name="inherit_id" ref="account.res_config_settings_view_form"/>
+        <field name="arch" type="xml">
+            <div id="taxcloud_settings" position="after">
+                <div class="col-12 col-lg-6 o_setting_box"
+                     id="tax_deferred_percentage_settings">
+                    <div class="o_setting_right_pane"
+                         name="account_tax_deferred_right_pane">
+                        <span class="o_form_label">Deferred Tax Settings</span>
+                        <div class="text-muted">
+                            Used to Generate Deferred Tax Reports and Entries
+                        </div>
+                        <label for="deferred_tax_percentage_id"
+                               string="Deferred Tax Percentage"/>
+                        <field name="deferred_tax_percentage_id"/>
+                    </div>
+                </div>
+            </div>
+        </field>
+    </record>
+</odoo>

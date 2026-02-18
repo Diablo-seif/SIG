@@ -1,0 +1,24 @@
+<odoo>
+
+    <record id="view_proposal_activity_types_action" model="ir.actions.act_window">
+        <field name="name">Activity Types</field>
+        <field name="res_model">mail.activity.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="domain">[('res_model', '=', 'proposal.proposal')]</field>
+        <field name="context">{'default_res_model': 'proposal.proposal'}</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create a new activity type
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="proposal_activity_type_menu"
+            name="Activity Types"
+            parent="proposal_config_menu"
+            groups="proposal.group_proposal_admin"
+            action="view_proposal_activity_types_action"
+            sequence="100"/>
+</odoo>
+
+    

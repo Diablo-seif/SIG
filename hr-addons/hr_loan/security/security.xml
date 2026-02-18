@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+        <record id="multi_company_hr_loan_rule" model="ir.rule">
+            <field name="name">Loan Request Multi Company</field>
+            <field name="model_id" ref="model_hr_loan"/>
+            <field eval="True" name="global"/>
+            <field name="domain_force">['|',('company_id','=',False),('company_id','child_of',[user.company_id.id])]</field>
+         </record>
+
+        <record id="own_hr_loan_rule" model="ir.rule">
+            <field name="name">User: Modify own loan only</field>
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="domain_force">[('employee_id.user_id','=',user.id)]</field>
+            <field name="perm_read" eval="1"/>
+            <field name="perm_write" eval="1"/>
+            <field name="perm_create" eval="1"/>
+            <field name="perm_unlink" eval="1"/>
+            <field name="groups" eval="[(4,ref('base.group_user'))]"/>
+        </record>
+
+        <record id="all_hr_loan_rule" model="ir.rule">
+            <field name="name">HR User: Modify All loans</field>
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="domain_force">[(1, '=', 1)]</field>
+            <field name="groups" eval="[(4, ref('hr.group_hr_user')),(4, ref('account.group_account_manager'))]"/>
+        </record>
+
+</odoo>

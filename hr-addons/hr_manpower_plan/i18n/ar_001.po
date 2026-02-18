@@ -1,0 +1,779 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_manpower_plan
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-08-30 18:44+0000\n"
+"Last-Translator: Abdalla Mohamed <abdalla.mohamed@core-bpo.com>\n"
+"Language-Team: Arabic <http://weblate.staging.core-bpo.net/projects/"
+"hr-product/hr_manpower_plan/ar/>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 4.0.4\n"
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_job.py:0
+#, python-format
+msgid "%s %s %s"
+msgstr "%s %s %s"
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_manpower_plan_line.py:0
+#, python-format
+msgid "%s plan was Approved"
+msgstr "%s تم اعتماد الخطة"
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_manpower_plan_line.py:0
+#, python-format
+msgid "%s plan was rejected"
+msgstr "%s تم رفض الخطة"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+msgid "<span class=\"oe_form_field\"> From </span>"
+msgstr "<span class=\"oe_form_field\"> من  </span>"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.salary_hr_job_form
+msgid "<span class=\"oe_form_field\"> Max </span>"
+msgstr "<span class=\"oe_form_field\"> أكبر </span>"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.salary_hr_job_form
+msgid "<span class=\"oe_form_field\"> Min </span>"
+msgstr "<span class=\"oe_form_field\"> أقل </span>"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+msgid "<span class=\"oe_form_field\"> To </span>"
+msgstr "<span class=\"oe_form_field\"> حتى  </span>"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "<strong>Actual Budget:</strong>"
+msgstr "<strong>الميزانية الكلية:</strong>"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "<strong>Approved Budget:</strong>"
+msgstr "<strong>الميزانية المعتمدة:</strong>"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "<strong>Current Budget:</strong>"
+msgstr "<strong>الميزانية الحالية:</strong>"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "<strong>Planned Budget:</strong>"
+msgstr "<strong>ميزانية الخطة:</strong>"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_needaction
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء مطلوب"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__activity_ids
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__activity_ids
+msgid "Activities"
+msgstr "الأنشطة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__activity_exception_decoration
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__activity_exception_decoration
+msgid "Activity Exception Decoration"
+msgstr "شكل استثناء النشاط"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__activity_state
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__activity_state
+msgid "Activity State"
+msgstr "حالة النشاط"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "Actual"
+msgstr "الكلية"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__actual_budget
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__actual_budget
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+msgid "Actual Budget"
+msgstr "الميزانية الكلية"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__manpower_recruitment__recruitment_method__add
+msgid "Add to (no.of vacancies + planned no.of vacancies)"
+msgstr "إضافة إلى (عدد الوظائف الشاغرة + عدد الوظائف المخطط لها)"
+
+#. module: hr_manpower_plan
+#: model:ir.actions.server,name:hr_manpower_plan.approve_manpower_plan_line_server_action
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_tree
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan__state__approved
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan_line__state__approved
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "Approved"
+msgstr "معتمد"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__approved_budget
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__approved_budget
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_tree
+msgid "Approved Budget"
+msgstr "ميزانية المعتمدة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__approved_no_of_position
+msgid "Approved No Of Position"
+msgstr "عدد الشواغر الموافق عليها"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+msgid "Are you sure you want to submit this plan?"
+msgstr "هل أنت متأكد لتسليم الخطة؟"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_attachment_count
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+#: model:res.groups,name:hr_manpower_plan.group_manpower_plan_budget
+msgid "Budget"
+msgstr "الميزانية"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan_line__state__budgeted
+msgid "Budgeted"
+msgstr "تمت الموازنة"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.manpower_recruitment_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.manpower_recruitment_form
+msgid "Choose how no. of vacancies will be set in job positions"
+msgstr "اختر عدد الشواغر التي سترسل للوظيفة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__create_uid
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__create_uid
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__create_date
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__create_date
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_job__currency_id
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__currency_id
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "Current"
+msgstr "الجاري"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__current_budget
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__current_budget
+msgid "Current Budget"
+msgstr "الميزانية الحالية"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__no_of_employee
+msgid "Current No. Of Employees"
+msgstr "عدد الموظفين الحاليين"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__date_from
+msgid "Date From"
+msgstr "التاريخ من"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__date_to
+msgid "Date To"
+msgstr "التاريخ إلى"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__deadline
+msgid "Deadline"
+msgstr "الموعد النهائي"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__department_id
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_search
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_manpower_plan
+#: model:ir.actions.act_window,name:hr_manpower_plan.hr_manpower_plan_line_action
+#: model:ir.model,name:hr_manpower_plan.model_hr_manpower_plan_line
+msgid "Department Manpower Plan"
+msgstr "قسم خطة القوى البشرية"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+msgid "Department Plans"
+msgstr "احتياجات القسم"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+msgid "Departments Requisitions"
+msgstr "طلبات الأقسام"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__display_name
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__display_name
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment__display_name
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_report_hr_manpower_plan_report_manpower_planned__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan__state__done
+msgid "Done"
+msgstr "المنتهية"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan__state__draft
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan_line__state__draft
+msgid "Draft"
+msgstr "مسودة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__start_date
+msgid "Estimated Starting Date"
+msgstr "تاريخ البدأ المتوقع"
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_manpower_plan_line.py:0
+#, python-format
+msgid "Estimated Starting Date must be between %s and %s"
+msgstr "وقت البداية المقترح يجب أن يكون بين %s و %s"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_job__salary_type__fixed
+msgid "Fixed"
+msgstr "ثابت"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_follower_ids
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_channel_ids
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_partner_ids
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__id
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__id
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment__id
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_report_hr_manpower_plan_report_manpower_planned__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__activity_exception_icon
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__activity_exception_icon
+msgid "Icon"
+msgstr "الأيقونة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__activity_exception_icon
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__activity_exception_icon
+msgid "Icon to indicate an exception activity."
+msgstr "أيقونة للإشارة إلى نشاط استثنائي."
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__message_needaction
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__message_unread
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__message_needaction
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__message_unread
+msgid "If checked, new messages require your attention."
+msgstr "إذا كان محددًا، فهناك رسائل جديدة تحتاج لرؤيتها."
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__message_has_error
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__message_has_sms_error
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__message_has_error
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__message_has_sms_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا كان محددًا، فقد حدث خطأ في تسليم بعض الرسائل."
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_manpower_plan_line.py:0
+#, python-format
+msgid ""
+"In case of replacement the planned number of positions can't be more than "
+"current number of positions"
+msgstr ""
+"في حالة الاستبدال ، لا يمكن أن يكون العدد المخطط للوظائف أكبر من العدد "
+"الحالي للوظائف"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_is_follower
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__is_readonly
+msgid "Is Readonly"
+msgstr "للقراءة فقط"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_search
+msgid "Job"
+msgstr "الوظيفة"
+
+#. module: hr_manpower_plan
+#: model:ir.model,name:hr_manpower_plan.model_hr_job
+msgid "Job Position"
+msgstr "المنصب الوظيفي"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan____last_update
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line____last_update
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment____last_update
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_report_hr_manpower_plan_report_manpower_planned____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__write_uid
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__write_uid
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__write_date
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__write_date
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_main_attachment_id
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: hr_manpower_plan
+#: model:res.groups,name:hr_manpower_plan.group_manpower_plan_manager
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_job__manpower_line_ids
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__manpower_line_ids
+msgid "Manpower Line"
+msgstr "بند خطة القوي البشرية"
+
+#. module: hr_manpower_plan
+#: model:ir.actions.act_window,name:hr_manpower_plan.hr_manpower_plan_action
+#: model:ir.actions.report,name:hr_manpower_plan.action_report_manpower_planned
+#: model:ir.model,name:hr_manpower_plan.model_hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__manpower_plan_id
+#: model:ir.module.category,name:hr_manpower_plan.category_manpower_plan
+#: model:ir.ui.menu,name:hr_manpower_plan.manpower_plan_menu
+msgid "Manpower Plan"
+msgstr "خطة القوى البشرية"
+
+#. module: hr_manpower_plan
+#: model:ir.actions.server,name:hr_manpower_plan.hr_manpower_plan_cron_ir_actions_server
+#: model:ir.cron,cron_name:hr_manpower_plan.hr_manpower_plan_cron
+#: model:ir.cron,name:hr_manpower_plan.hr_manpower_plan_cron
+msgid "Manpower Plan Deadline"
+msgstr "تاريخ انتهاء خطة القوى البشرية"
+
+#. module: hr_manpower_plan
+#: model:ir.actions.act_window,name:hr_manpower_plan.manpower_recruitment_action
+#: model:ir.model,name:hr_manpower_plan.model_manpower_recruitment
+msgid "Manpower Recruitment"
+msgstr "توظيف القوى العاملة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_job__max_salary
+msgid "Max Salary"
+msgstr "أكبر راتب"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_has_error
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_ids
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_job__min_salary
+msgid "Min Salary"
+msgstr "أقل راتب"
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_job.py:0
+#, python-format
+msgid "Min salary can't be more than the max salary"
+msgstr "أقل راتب لا يمكن أن يكون أكبر من أكبر راتب"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan_line__reason__new_hire
+msgid "New Hire"
+msgstr "توظيف جديد"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__activity_date_deadline
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__activity_date_deadline
+msgid "Next Activity Deadline"
+msgstr "الموعد النهائي للنشاط التالي"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__activity_summary
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__activity_summary
+msgid "Next Activity Summary"
+msgstr "ملخص النشاط التالي"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__activity_type_id
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__activity_type_id
+msgid "Next Activity Type"
+msgstr "نوع النشاط التالي"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__note
+msgid "Note"
+msgstr "الملاحظات"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_form
+msgid "Notes"
+msgstr "الملاحظات"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "Number Of Position"
+msgstr "عدد الشواغر"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_needaction_counter
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_has_error_counter
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_has_error_counter
+msgid "Number of errors"
+msgstr "عدد الاخطاء"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__message_needaction_counter
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب إجراء"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__message_has_error_counter
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل الحادث بها خطأ في التسليم"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__message_unread_counter
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment__plan_id
+msgid "Plan"
+msgstr "خطة"
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_manpower_plan_line.py:0
+#: model:ir.model.constraint,message:hr_manpower_plan.constraint_hr_manpower_plan_line_unique_job
+#, python-format
+msgid "Plan line can't be duplicated"
+msgstr "لا يمكن تكرار السطر في نفس الخطة"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "Planned"
+msgstr "تم إرسال الخطة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__planned_budget
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_tree
+msgid "Planned Budget"
+msgstr "ميزانية الخطة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__planned_no_of_position
+msgid "Planned No Of Position"
+msgstr "عدد الشواغر في الخطة"
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_manpower_plan.py:0
+#, python-format
+msgid "Please use recruitment method"
+msgstr "يرجى استخدام طريقة التوظيف"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__job_id
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "Position"
+msgstr "المنصب"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan__state__preparation
+msgid "Preparation"
+msgstr "التجهيز"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_job__salary_type__range
+msgid "Range"
+msgstr "المدى"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__reason
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_search
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "Reason"
+msgstr "السبب"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_manpower_recruitment__recruitment_method
+msgid "Recruitment Method"
+msgstr "آلية التوظيف"
+
+#. module: hr_manpower_plan
+#: model:ir.actions.server,name:hr_manpower_plan.reject_manpower_plan_line_server_action
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_tree
+msgid "Reject"
+msgstr "رفض"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan__state__rejected
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan_line__state__rejected
+msgid "Rejected"
+msgstr "مرفوض"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__manpower_recruitment__recruitment_method__replace
+msgid "Replace (no.of vacancies = planned no.of vacancies)"
+msgstr "استبدال (عدد الوظائف الشاغرة = عدد الوظائف المخطط لها)"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan_line__reason__replacement
+msgid "Replacement"
+msgstr "إستبدال"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__user_id
+msgid "Responsible"
+msgstr "المسئول"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__activity_user_id
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__activity_user_id
+msgid "Responsible User"
+msgstr "المستخدم المسؤول"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_has_sms_error
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_has_sms_error
+msgid "SMS Delivery error"
+msgstr "خطأ في تسليم الرسائل القصيرة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_job__salary
+msgid "Salary"
+msgstr "راتب"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.salary_hr_job_form
+msgid "Salary Range"
+msgstr "نطاق الراتب"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_job__salary_type
+msgid "Salary Type"
+msgstr "نوع الراتب"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+msgid "Share"
+msgstr "مشاركة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__department_ids
+msgid "Shared to"
+msgstr "المشاركة مع"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.manpower_recruitment_form
+msgid "Start Recruitment"
+msgstr "ابدأ التوظيف"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__state
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__activity_state
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__activity_state
+msgid ""
+"Status based on activities\n"
+"Overdue: Due date is already passed\n"
+"Today: Activity date is today\n"
+"Planned: Future activities."
+msgstr ""
+"الحالة على أساس الأنشطة\n"
+"المتأخرة: تاريخ الاستحقاق مر\n"
+"اليوم: تاريخ النشاط هو اليوم\n"
+"المخطط: الأنشطة المستقبلية."
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_tree
+msgid "Submit"
+msgstr "إرسال"
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_form
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.hr_manpower_plan_line_tree
+msgid "Submit Budget"
+msgstr "تقديم الميزانية"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan__state__submitted
+#: model:ir.model.fields.selection,name:hr_manpower_plan.selection__hr_manpower_plan_line__state__submitted
+msgid "Submitted"
+msgstr "تم تسليمه"
+
+#. module: hr_manpower_plan
+#: code:addons/hr_manpower_plan/models/hr_manpower_plan.py:0
+#: model:ir.model.constraint,message:hr_manpower_plan.constraint_hr_manpower_plan_date_check
+#, python-format
+msgid "The start date must be anterior to the end date."
+msgstr "يجب أن يكون تاريخ البدء قبل تاريخ الانتهاء."
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__total_budget
+msgid "Total Budget"
+msgstr "الميزانية الإجمالية"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__activity_exception_decoration
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__activity_exception_decoration
+msgid "Type of the exception activity on record."
+msgstr "نوع النشاط الاستثنائي."
+
+#. module: hr_manpower_plan
+#: model_terms:ir.ui.view,arch_db:hr_manpower_plan.report_manpower_planned
+msgid "Unit"
+msgstr "الوحدة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__unit_budget
+msgid "Unit Budget"
+msgstr "ميزانية الفرد"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_unread
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__message_unread_counter
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: hr_manpower_plan
+#: model:res.groups,name:hr_manpower_plan.group_manpower_plan_user
+msgid "User"
+msgstr "المستخدم"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan__website_message_ids
+#: model:ir.model.fields,field_description:hr_manpower_plan.field_hr_manpower_plan_line__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: hr_manpower_plan
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan__website_message_ids
+#: model:ir.model.fields,help:hr_manpower_plan.field_hr_manpower_plan_line__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: hr_manpower_plan
+#: model:ir.model,name:hr_manpower_plan.model_report_hr_manpower_plan_report_manpower_planned
+msgid "report.hr_manpower_plan.report_manpower_planned"
+msgstr "report.hr_manpower_plan.report_manpower_planned"

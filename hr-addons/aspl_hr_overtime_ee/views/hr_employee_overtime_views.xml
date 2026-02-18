@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="hr_employee_overtime_search_view" model="ir.ui.view">
+            <field name="name">Employee Overtime Search View</field>
+            <field name="model">hr.employee.overtime</field>
+            <field name="arch" type="xml">
+                <search string="Employee Entry Search">
+                    <!-- search by field direct -->
+                    <field name="employee_id"/>
+                    <filter string="My Department Overtime" name="my_department_overtime"
+                            domain="['|', ('department_id.member_ids.user_id', '=', uid), ('employee_id.user_id', '=', uid)]"/>
+                    <filter string="People I Manage" name="managed_people"
+                            domain="[('employee_id.overtime_responsible_id', '=', uid)]"/>
+                    <filter string="My Overtimes" name="my_overtime" domain="[('employee_id.user_id', '=', uid)]"/>
+                    <!-- group by -->
+                    <group expand="1" string="Group By">
+                        <filter string="Employee" name="employee_id"
+                                context="{'group_by':'employee_id'}"/>
+                        <filter string="State" name="state"
+                                context="{'group_by':'state'}"/>
+                        <filter string="Date" name="date"
+                                context="{'group_by':'date'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <record id="aspl_hr_employee_overtime_from_view"
+                model="ir.ui.view">
+            <field name="name">Employee Overtime</field>
+            <field name="model">hr.employee.overtime</field>
+            <field name="arch" type="xml">
+                <form create="1" edit="1">
+                    <header>
+                        <button name="emp_overtime_approve" string="Approve" class="oe_highlight"
+                                type="object" states="draft,first_approved"
+                                invisible="state not in ['draft', 'first_approved'] or allow_approve = False "/>
+                        <!--                                attrs="{'invisible': ['|',('state','not in',['draft', 'first_approved']), ('allow_approve', '=', False)]}"/>-->
+                        <button name="emp_overtime_cancel" string="Cancel"
+                                type="object" states="draft,first_approved"
+                                invisible="state not in ['draft', 'first_approved'] or allow_approve = False "/>
+                        <!--                                attrs="{'invisible': ['|',('state','not in',['draft', 'first_approved']), ('allow_approve', '=', False)]}"/>-->
+                        <field name="state" widget="statusbar" nolabel="1"
+                               statusbar_visible="draft,approved" clickable="0"/>
+                    </header>
+                    <sheet>
+                        <field name="allow_approve" invisible="1"/>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" readonly="1"/>
+                            </h1>
+                        </div>
+                        <group col="4">
+                            <field name="employee_id" required="1" attrs="{'readonly': [('state','!=','draft')]}"
+                                   groups="hr.group_hr_user"/>
+                            <field name="date" attrs="{'readonly': [('state','!=','draft')]}"/>
+                            <field name="based_on" readonly="0" required="1" groups="hr.group_hr_user"/>
+                            <field name="based_on" readonly="1" required="1" groups="!hr.group_hr_user"/>
+                            <field name="ot_rate" readonly="1"/>
+                            <field name="overtime" attrs="{'readonly': [('state','!=','draft')]}" default_focus="1"/>
+                        </group>
+                    </sheet>
+                    <chatter/>
+<!--                    <div class="oe_chatter">-->
+<!--                        <field name="message_follower_ids"/>-->
+<!--                        <field name="message_ids"/>-->
+<!--                    </div>-->
+                </form>
+            </field>
+        </record>
+
+        <record id="aspl_hr_employee_overtime_tree_view"
+                model="ir.ui.view">
+            <field name="name">Employee Overtime</field>
+            <field name="model">hr.employee.overtime</field>
+            <field name="arch" type="xml">
+                <list string="Employee Overtime" create="1" delete="0">
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="based_on"/>
+                    <field name="ot_rate"/>
+                    <field name="overtime"/>
+                    <field name="state"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_aspl_hr_employee_overtime"
+                model="ir.actions.act_window">
+            <field name="name">My Overtime</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.overtime</field>
+            <field name="view_mode">list,form</field>
+            <field name="context">{"search_default_state": True}</field>
+        </record>
+
+        <record id="action_aspl_hr_employee_my_overtime"
+                model="ir.actions.act_window">
+            <field name="name">Overtime</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">hr.employee.overtime</field>
+            <field name="view_mode">list,form</field>
+            <field name="domain">[('employee_id.user_id', '=', uid)]</field>
+            <field name="context">{"search_default_state": True}</field>
+        </record>
+
+        <menuitem id="menu_root_employee_overtime" name="Overtime"
+                  parent="hr.menu_hr_root" sequence="3"/>
+
+        <menuitem id="menu_my_overtime" name="My Overtime"
+                  action="aspl_hr_overtime_ee.action_aspl_hr_employee_my_overtime"
+                  parent="menu_root_employee_overtime" sequence="2"/>
+
+        <menuitem id="menu_employee_overtime" name="Overtime"
+                  action="aspl_hr_overtime_ee.action_aspl_hr_employee_overtime"
+                  parent="menu_root_employee_overtime" sequence="3"/>
+    </data>
+</odoo>

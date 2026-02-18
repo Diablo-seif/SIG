@@ -1,0 +1,43 @@
+<odoo>
+    <record id="hr_payslip_payment_allocate_form" model="ir.ui.view">
+        <field name="name">hr.payslip.payment.allocate.form</field>
+        <field name="model">hr.payslip.payment.allocate</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <group>
+                        <label for="mode" string="Add to"/>
+                        <field name="mode" widget="radio" nolabel="1"/>
+                        <field name="payment_order_id"
+                               options="{'no_create_edit': True, 'no_open': True}"
+                               invisible="mode = 'new'"
+                               required="mode = 'existing'"/>
+                        <field name="payment_method_id"
+                               options="{'no_create_edit': True, 'no_open': True}"
+                               invisible="mode != 'new'"
+                               required="mode !='existing'"/>
+                        <field name="change_payment_method" widget="boolean_toggle"/>
+
+                    </group>
+                </group>
+
+                <footer>
+                    <button name="allocate_payments" type="object"
+                            string="Confirm" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_payslip_payment_allocate_action" model="ir.actions.act_window">
+        <field name="name">Add to Payment Order</field>
+        <field name="res_model">hr.payslip.payment.allocate</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_model_id" ref="model_hr_payslip"/>
+        <field name="binding_view_types">list</field>
+    </record>
+
+</odoo>

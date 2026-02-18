@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_insurance_enroll_form_form" model="ir.ui.view">
+        <field name="name">hr.insurance.enroll.form.form</field>
+        <field name="model">hr.insurance.enroll.form</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_confirm" string="Confirm" type="object" states="draft" class="oe_highlight"/>
+                    <button name="action_cancel" string="Cancel" type="object" states="draft"/>
+                    <button name="action_draft" string="Set to Draft" type="object" states="canceled"/>
+                    <field name="state" widget="statusbar" statusbar_visible="draft,confirmed"/>
+                </header>
+                <sheet>
+                    <div class="o_row pull-right">
+                        <group class="o_label_nowrap">
+                            <field name="form_number"/>
+                            <field name="ministerial_decree_number"/>
+                            <field name="ministerial_decree_year"/>
+                        </group>
+                    </div>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="name"/>
+                        </h1>
+                        <h2>
+                            <group>
+                                <field name="form_date"/>
+                            </group>
+                        </h2>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="company_id"/>
+                            <field name="insurance_name" readonly="1"
+                                   force_save="1"/>
+                            <field name="insurance_owner" readonly="1"
+                                   force_save="1"/>
+                            <field name="insurance_owner_position" readonly="1"
+                                   force_save="1"/>
+                            <field name="legal_firm_id" readonly="1"
+                                   force_save="1"/>
+                        </group>
+                        <group>
+                            <field name="company_insurance_number" readonly="1"
+                                   force_save="1"/>
+                            <field name="start_date" readonly="1"
+                                   force_save="1"/>
+                            <field name="insurance_type" readonly="1"
+                                   force_save="1"/>
+                            <field name="insurance_office_id" readonly="1"
+                                   force_save="1"/>
+                            <field name="insurance_sector_ids"
+                                   widget="many2many_tags" readonly="1"
+                                   force_save="1"/>
+                            <field name="received_date"/>
+                            <field name="received_number"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Employee Details">
+                            <field name="form_line_ids">
+                                <list editable="bottom">
+                                    <field name="employee_id"/>
+                                    <field name="employee_insurance_number" readonly="1"
+                                           force_save="1"/>
+                                    <field name="identification_id" readonly="1"
+                                           force_save="1"/>
+                                    <field name="insurance_date" readonly="1"
+                                           force_save="1"/>
+                                    <field name="insured_salary"/>
+                                    <field name="gross_salary"/>
+                                    <field name="basic_salary" optional="hide"/>
+                                    <field name="variable_salary" optional="hide"/>
+                                    <field name="currency_id" readonly="1"
+                                           force_save="1" invisible="1"/>
+                                </list>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+<!--<div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_insurance_enroll_form_tree" model="ir.ui.view">
+        <field name="name">hr.insurance.enroll.form.tree</field>
+        <field name="model">hr.insurance.enroll.form</field>
+        <field name="arch" type="xml">
+            <list default_order="">
+                <field name="name"/>
+                <field name="company_id"/>
+                <field name="insurance_name"/>
+                <field name="insurance_owner"/>
+                <field name="insurance_owner_position"/>
+                <field name="form_date"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_insurance_enroll_form_action" model="ir.actions.act_window">
+        <field name="name">Insurance Enroll Form</field>
+        <field name="res_model">hr.insurance.enroll.form</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="hr_insurance_enroll_form_menu"
+              name="Insurance Enroll Form"
+              action="hr_insurance_enroll_form_action"
+              parent="hr.hr_menu_hr_reports"/>
+
+</odoo>

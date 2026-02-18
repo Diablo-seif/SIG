@@ -1,0 +1,29 @@
+<odoo>
+    <record id="account_document_receive_tree" model="ir.ui.view">
+        <field name="name">account.document.receive.tree</field>
+        <field name="model">account.document.receive</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="invoice_number"/>
+                <field name="invoice_uuid"/>
+                <field name="invoice_submit_uuid"/>
+                <field name="state"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="account_document_receive_action" model="ir.actions.act_window">
+        <field name="name">ETA Documents Received</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">account.document.receive</field>
+        <field name="view_mode">list</field>
+        <field name="context">{'create': False, 'edit': False}</field>
+    </record>
+
+     <record id="account_document_receive_menu" model="ir.ui.menu">
+        <field name="name">ETA Documents Received</field>
+        <field name="action" ref="account_document_receive_action"/>
+        <field name="parent_id" ref="account.menu_finance_payables"/>
+         <field name="sequence" eval="10"/>
+    </record>
+</odoo>

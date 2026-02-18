@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="raises_hr_employee_form" model="ir.ui.view">
+        <field name="name">raises.hr.employee.form</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='hr_settings']" position="after">
+                <page name="raise_details" string="Raises Details" groups="hr_social_raises.group_social_raises_manager">
+                    <field name="raises_ids">
+                        <list editable="bottom">
+                            <field name="name"/>
+                            <field name="insured_salary"/>
+                            <field name="percentage"/>
+                            <field name="min_salary" optional="hide"/>
+                            <field name="max_salary" optional="hide"/>
+                            <field name="raise_amount"/>
+                            <field name="currency_id" invisible="1"/>
+                        </list>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

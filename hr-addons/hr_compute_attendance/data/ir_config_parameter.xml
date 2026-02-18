@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="config_parameter_day_start_month" model="ir.config_parameter">
+        <field name="key">day_start_month</field>
+        <field name="value">1</field>
+    </record>
+
+    <record id="config_parameter_midday_time" model="ir.config_parameter">
+        <field name="key">midday_time</field>
+        <field name="value">2.0</field>
+    </record>
+
+    <record id="config_parameter_maximum_deduction_per_day"
+            model="ir.config_parameter">
+        <field name="key">maximum_deduction_per_day</field>
+        <field name="value">1</field>
+    </record>
+
+    <record id="config_parameter_start_month" model="ir.config_parameter">
+        <field name="key">start_month</field>
+        <field name="value">current</field>
+    </record>
+
+    <record id="config_parameter_missing_without_delay_in"
+            forcecreate="0" model="ir.config_parameter">
+        <field name="key">missing_without_delay_in</field>
+        <field name="value">true</field>
+    </record>
+
+    <record id="config_parameter_missing_without_early_out"
+            forcecreate="0" model="ir.config_parameter">
+        <field name="key">missing_without_early_out</field>
+        <field name="value">true</field>
+    </record>
+
+</odoo>

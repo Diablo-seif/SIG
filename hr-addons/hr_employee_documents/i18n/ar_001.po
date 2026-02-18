@@ -1,0 +1,261 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* hr_employee_documents
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 13.0+e-20191106\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-02-13 07:15+0000\n"
+"PO-Revision-Date: 2020-02-17 10:31+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: ar\n"
+"X-Generator: Poedit 2.3\n"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__attachment
+msgid "Attachment"
+msgstr "مرفق"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.birth_certificate_employee_document
+msgid "Birth Certificate"
+msgstr "شهادة الميلاد"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.military_status_employee_document
+msgid "Certificate of Military Status"
+msgstr "أصل شهادة الخدمة العسكرية"
+
+#. module: hr_employee_documents
+#: model:ir.model,name:hr_employee_documents.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: hr_employee_documents
+#: model:ir.model,name:hr_employee_documents.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__create_uid
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__create_date
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.criminal_status_employee_document
+msgid "Criminal Status Record"
+msgstr "الفيش والتشبيه"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__default_document
+msgid "Default Document"
+msgstr "مستند أساسي"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__display_name
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__document_id
+msgid "Document"
+msgstr "المستند"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee__document_line_ids
+msgid "Document Line"
+msgstr "البند"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,help:hr_employee_documents.field_hr_employee_documents__has_expiration
+#: model:ir.model.fields,help:hr_employee_documents.field_hr_employee_documents_lines__has_expiration
+msgid "Document must be defined with expiry date"
+msgstr "يجب ان يكون للمستند تاريخ انتهاء"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,help:hr_employee_documents.field_hr_employee_documents__require_original
+#: model:ir.model.fields,help:hr_employee_documents.field_hr_employee_documents_lines__require_original
+msgid "Document must be original"
+msgstr "يجب ان تكون الوثيقة أصليه"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.educational_certificate_employee_document
+msgid "Educational Certificate"
+msgstr "أصل المؤهل الدراسي"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.electricity_invoice_employee_document
+msgid "Electricity/Gas/Telephone Invoice"
+msgstr "كهرباء/غاز/تليفون"
+
+#. module: hr_employee_documents
+#: model:ir.model,name:hr_employee_documents.model_hr_employee
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__employee_id
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.hr_employee_documents_lines_search
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_res_company__employee_document_expiry
+#: model:ir.model.fields,field_description:hr_employee_documents.field_res_config_settings__employee_document_expiry
+msgid "Employee Document Expiry"
+msgstr "وثائق الموظف منتهية الصلاحية"
+
+#. module: hr_employee_documents
+#: model:ir.actions.act_window,name:hr_employee_documents.hr_employee_documents_lines_action
+#: model:ir.ui.menu,name:hr_employee_documents.hr_config_employee_documents_menu
+#: model:ir.ui.menu,name:hr_employee_documents.hr_missing_employee_documents_menu
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.hr_employee_documents_form
+msgid "Employee Documents"
+msgstr "مسوغات التعيين"
+
+#. module: hr_employee_documents
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.res_config_settings_employee_document_expiry_form
+msgid "Employee Documents Expiration"
+msgstr "وثائق الموظفين منتهية الصلاحية"
+
+#. module: hr_employee_documents
+#: model:ir.actions.server,name:hr_employee_documents.hr_employee_documents_expiration_cron_ir_actions_server
+#: model:ir.cron,cron_name:hr_employee_documents.hr_employee_documents_expiration_cron
+#: model:ir.cron,name:hr_employee_documents.hr_employee_documents_expiration_cron
+msgid "Employee Documents Expiry"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_employee_documents
+#: model:ir.model,name:hr_employee_documents.model_hr_employee_documents_lines
+msgid "Employee Documents Lines"
+msgstr "البند"
+
+#. module: hr_employee_documents
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.hr_employee_documents_search
+msgid "Expired Documents"
+msgstr "المستندات المنتهية"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__expiry_date
+msgid "Expiry Date"
+msgstr "تاريخ الانتهاء"
+
+#. module: hr_employee_documents
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.hr_employee_documents_lines_search
+msgid "Group By"
+msgstr "تجميع حسب"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__has_expiration
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__has_expiration
+msgid "Has Expiration"
+msgstr "له تاريخ انتهاء"
+
+#. module: hr_employee_documents
+#: model:ir.actions.act_window,name:hr_employee_documents.hr_employee_documents_action
+#: model:ir.model,name:hr_employee_documents.model_hr_employee_documents
+msgid "Hr Employee Documents"
+msgstr "مستندات موظف الموارد البشرية"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__id
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__is_original
+msgid "Is Original"
+msgstr "هل المستند أصلي"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.labor_office_employee_document
+msgid "Labor Office Notice"
+msgstr "إشعار مكتب العمل"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents____last_update
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__write_uid
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__write_date
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.medical_form_employee_document
+msgid "Medical Check-Up Form"
+msgstr "نموذج الفحص الطبي"
+
+#. module: hr_employee_documents
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.hr_employee_documents_lines_search
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.hr_employee_documents_search
+msgid "Missing Documents"
+msgstr "المستندات المفقودة"
+
+#. module: hr_employee_documents
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.hr_employee_documents_lines_search
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.hr_employee_documents_search
+msgid "Missing Original Documents"
+msgstr "المستندات الأصلية الغير مرفقة"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.national_id_employee_document
+msgid "National Identity Card or Passport"
+msgstr "الرقم القومي أو جواز السفر"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents__require_original
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__require_original
+msgid "Require Original"
+msgstr "مطلوب الأصل"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.social_insurance_employee_document
+msgid "Social Insurance Stamp"
+msgstr "ختم التأمين الاجتماعي"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,field_description:hr_employee_documents.field_hr_employee_documents_lines__title
+msgid "Title"
+msgstr "العنوان"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,help:hr_employee_documents.field_res_config_settings__employee_document_expiry
+#: model_terms:ir.ui.view,arch_db:hr_employee_documents.res_config_settings_employee_document_expiry_form
+msgid "When to schedule activity before employee documents be expired"
+msgstr "متى يتم جدولة النشاط قبل انتهاء صلاحية وثائق الموظف"
+
+#. module: hr_employee_documents
+#: model:ir.model.fields,help:hr_employee_documents.field_hr_employee_documents__default_document
+msgid "Will be listed as default documents when creating new employee"
+msgstr "سيتم إدراجها كمستندات افتراضية عند إنشاء موظف جديد"
+
+#. module: hr_employee_documents
+#: model:hr.employee.documents,name:hr_employee_documents.work_license_employee_document
+msgid "Work License"
+msgstr "كعب العمل"

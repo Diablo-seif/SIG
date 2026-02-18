@@ -1,0 +1,361 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* l10n_eg_tax_depreciation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0+e-20201101\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-02 10:57+0000\n"
+"PO-Revision-Date: 2020-11-02 10:57+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model,name:l10n_eg_tax_depreciation.model_account_account
+msgid "Account"
+msgstr "الحساب"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__account_move_id
+msgid "Account Move"
+msgstr "قيد الضريبة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__accounting_depreciation
+msgid "Accounting Depreciation"
+msgstr "الاهلاك المحاسبى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: l10n_eg_tax_depreciation
+#: model:tax.depreciation.category,name:l10n_eg_tax_depreciation.tax_depreciation_category_buildings
+msgid "Buildings"
+msgstr "مباني"
+
+#. module: l10n_eg_tax_depreciation
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.compute_tax_depreciation_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__tax_depreciation_category_id
+msgid "Category"
+msgstr "فئة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model,name:l10n_eg_tax_depreciation.model_res_company
+msgid "Companies"
+msgstr "الشركات"
+
+#. module: l10n_eg_tax_depreciation
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.compute_tax_depreciation_view_form
+msgid "Compute"
+msgstr "حساب"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation__compute_all
+msgid "Compute All"
+msgstr "حساب الكل"
+
+#. module: l10n_eg_tax_depreciation
+#: code:addons/l10n_eg_tax_depreciation/models/tax_depreciation_category.py:0
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.tax_depreciation_category_form
+#, python-format
+msgid "Compute Tax Deprecation"
+msgstr "حساب الاهلاك الضريبى"
+
+#. module: l10n_eg_tax_depreciation
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.compute_tax_depreciation_view_form
+msgid "Compute tax deprecation for tax category"
+msgstr "حساب الهلاك الضريبى لنوع"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model,name:l10n_eg_tax_depreciation.model_compute_tax_depreciation
+msgid "Compute tax depreciation wizard"
+msgstr "حساب الاهلاك الضريبى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:tax.depreciation.category,name:l10n_eg_tax_depreciation.tax_depreciation_category_computers_information_systems
+msgid "Computers, information systems, programs, and data storage devices"
+msgstr "الحاسبات الآلية ونظم المعلومات والبرامج وأجهزة تخزين البيانات"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model,name:l10n_eg_tax_depreciation.model_res_config_settings
+msgid "Config Settings"
+msgstr "ضبط الإعدادات"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.actions.server,name:l10n_eg_tax_depreciation.tax_depreciation_entry_action
+msgid "Create Journal Entries"
+msgstr "إنشاء قيود للضريبة المؤجلة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__create_uid
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation__create_date
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__create_date
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__default_entry_line
+msgid "Default Entry Line"
+msgstr "بند القيد الإفتراضي"
+
+#. module: l10n_eg_tax_depreciation
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.res_config_settings_view_form_deferred
+msgid "Deferred Tax Account"
+msgstr "حساب الضريبة المؤجلة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__deferred_tax_amount
+msgid "Deferred Tax Amount"
+msgstr "قيمة الضريبة المؤجلة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_company__deferred_tax_assets_account_id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_config_settings__deferred_tax_assets_account_id
+msgid "Deferred Tax Assets Account"
+msgstr "حساب الاصول الضريبية المؤجلة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_company__deferred_tax_liabilities_account_id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_config_settings__deferred_tax_liabilities_account_id
+msgid "Deferred Tax Liabilities Account"
+msgstr "حساب الالتزامات الضريبية المؤجلة"
+
+#. module: l10n_eg_tax_depreciation
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.res_config_settings_view_form_deferred
+msgid "Deferred Tax assets Account"
+msgstr "حساب الاصول الضريبية المؤجلة"
+
+#. module: l10n_eg_tax_depreciation
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.res_config_settings_view_form_deferred
+msgid "Deferred Tax liabilities Account"
+msgstr "حساب الالتزامات الضريبية المؤجلة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_company__deferred_taxes_account_id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_config_settings__deferred_taxes_account_id
+msgid "Deferred Taxes Account"
+msgstr "حساب الضريبة المؤجلة"
+
+#. module: l10n_eg_tax_depreciation
+#: code:addons/l10n_eg_tax_depreciation/models/tax_depreciation_category_asset_computation.py:0
+#, python-format
+msgid "Deferred tax equal 0, can not add entry"
+msgstr "قيمة الضريبة المؤجلة تساوى 0, لايمكن اضافة قيد"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__account_depreciation_ids
+msgid "Depreciation Accounts"
+msgstr "حسابات الإهلاك"
+
+#. module: l10n_eg_tax_depreciation
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.tax_depreciation_category_form
+msgid "Depreciation Details"
+msgstr "تفاصيل الاهلاك"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__depreciation_difference
+msgid "Depreciation Difference"
+msgstr "فرق الاهلاك"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_account__display_name
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_move__display_name
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation__display_name
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_company__display_name
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_config_settings__display_name
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__display_name
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__disposed_sold
+msgid "Disposed Sold"
+msgstr "مستبعد-مباع"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__account_asset_ids
+msgid "Fixed Asset Accounts"
+msgstr "حسابات الاصول الثابتة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:tax.depreciation.category,name:l10n_eg_tax_depreciation.tax_depreciation_category_furniture_equipment
+msgid "Furniture, equipment and electrical appliances"
+msgstr "أثاث و تجهيزات و أجهزة كهربائية"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_account__id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_move__id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation__id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_company__id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_config_settings__id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__id
+msgid "ID"
+msgstr "المُعرف"
+
+#. module: l10n_eg_tax_depreciation
+#: model:tax.depreciation.category,name:l10n_eg_tax_depreciation.tax_depreciation_category_intangible_assets
+msgid "Intangible assets"
+msgstr "أصول معنوية"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model,name:l10n_eg_tax_depreciation.model_account_move
+msgid "Journal Entry"
+msgstr "قيد اليومية"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_account____last_update
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_move____last_update
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation____last_update
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_company____last_update
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_res_config_settings____last_update
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category____last_update
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__write_uid
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation__write_date
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__write_date
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__name
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.tax_depreciation_category_form
+msgid "Name"
+msgstr "الاسم"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__tax_depreciation_opening_balance
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__opening_balance
+msgid "Opening Balance"
+msgstr "الرصيد الافتتاحى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__tax_depreciation_opening_balance_date
+msgid "Opening Balance Date"
+msgstr "تاريخ الرصيد الافتتاحى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__percentage
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__percentage
+msgid "Percentage"
+msgstr "النسبة"
+
+#. module: l10n_eg_tax_depreciation
+#: code:addons/l10n_eg_tax_depreciation/models/tax_depreciation_category.py:0
+#, python-format
+msgid "Percentage should be greater than 0"
+msgstr "النسبة يجب الا تقل عن 0"
+
+#. module: l10n_eg_tax_depreciation
+#: code:addons/l10n_eg_tax_depreciation/models/tax_depreciation_category_asset_computation.py:0
+#, python-format
+msgid "Please select deferred accounts, in settings"
+msgstr "من فضلك اختر حسابات الضريبة المؤجلة فى الاعدادات"
+
+#. module: l10n_eg_tax_depreciation
+#: code:addons/l10n_eg_tax_depreciation/models/tax_depreciation_category_asset_computation.py:0
+#, python-format
+msgid "Please select one year only"
+msgstr "من فضلك اختر سنة واحدة فقط"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__purchased
+msgid "Purchased"
+msgstr "مشتريات"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_compute_tax_depreciation__recalculate
+msgid "Recalculate"
+msgstr "اعادة حساب"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__remaining_amount
+msgid "Remaining Amount"
+msgstr "القيمة المتبقية"
+
+#. module: l10n_eg_tax_depreciation
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.tax_depreciation_computation_search_view
+msgid "Tax Category"
+msgstr "نوع الاهلاك الضريبى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__tax_depreciated_amount
+msgid "Tax Depreciated Amount"
+msgstr "قيمة الاهلاك"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.actions.act_window,name:l10n_eg_tax_depreciation.tax_depreciation_computation_action
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_bank_statement_line__tax_depreciation_id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_move__tax_depreciation_id
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_payment__tax_depreciation_id
+#: model:ir.ui.menu,name:l10n_eg_tax_depreciation.menuitem_tax_depreciation_computation
+msgid "Tax Depreciation"
+msgstr "الاهلاك الضريبى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.actions.act_window,name:l10n_eg_tax_depreciation.tax_depreciation_category_action
+#: model:ir.ui.menu,name:l10n_eg_tax_depreciation.menuitem_tax_depreciation_category
+msgid "Tax Depreciation Categories"
+msgstr "انواع الاهلاك الضريبى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model,name:l10n_eg_tax_depreciation.model_tax_depreciation_category_asset_computation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category__tax_depreciation_category_asset_computation_ids
+msgid "Tax Depreciation Category Asset Computation"
+msgstr "تفاصيل الاهلاك الضريبى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_account__tax_depreciation_category_depreciation_id
+msgid "Tax Depreciation Category Depreciation"
+msgstr "نوع الاهلاك الضريبى لحساب الاهلاك"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_account_account__tax_depreciation_category_fixed_id
+msgid "Tax Depreciation Category Fixed"
+msgstr "نوع الاهلاك الضريبى لحساب الاصول"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model,name:l10n_eg_tax_depreciation.model_tax_depreciation_category
+msgid "Tax Depreciation Type"
+msgstr "انواع الاهلاك الضريبى"
+
+#. module: l10n_eg_tax_depreciation
+#: model:ir.model.fields,field_description:l10n_eg_tax_depreciation.field_tax_depreciation_category_asset_computation__year
+#: model_terms:ir.ui.view,arch_db:l10n_eg_tax_depreciation.tax_depreciation_computation_search_view
+msgid "Year"
+msgstr "السنة"

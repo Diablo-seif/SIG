@@ -1,0 +1,102 @@
+{
+	"info": {
+		"_postman_id": "79f5307f-aaa4-4bf8-9a3e-c871d462f0cf",
+		"name": "E-Invoice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Get invoice JSON",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"disableCookies": false,
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "api-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "{{API_KEY}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{odoo-url}}/api/einvoices",
+					"host": [
+						"{{odoo-url}}"
+					],
+					"path": [
+						"api",
+						"einvoices"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "2. Update Invoice Signature",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"auth": {
+					"type": "apikey",
+					"apikey": [
+						{
+							"key": "key",
+							"value": "api-key",
+							"type": "string"
+						},
+						{
+							"key": "value",
+							"value": "{{API_KEY}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"signature\": \"MIIIYQYJKoZIhvcNAQcCoIIIUjCCCE4CAQMxDTALBglghkgBZQMEAgEwCwYJKoZIhvcNAQcFoIIF6TCCBeUwggPNoAMCAQICAlBiMA0GCSqGSIb3DQEBCwUAMF0xCzAJBgNVBAYTAkVHMTowOAYDVQQKEzFNaXNyIGZvciBjZW50cmFsIGNsZWFyaW5nLGRlcG9zaXRvcnkgYW5kIHJlZ2lzdHJ5MRIwEAYDVQQDEwlNQ0RSIDIwMTkwHhcNMjEwMTEyMDkzOTQ0WhcNMjQwMTEyMDkzOTQ0WjCBozEYMBYGA1UEYQwPVkFURUctMzMxNjM2MDkzMQswCQYDVQQGEwJFRzE8MDoGA1UECgwz2LTYsdmD2Kkg2YPZiNixINio2Yog2KjZiiDYp9mIINmE2YTYp9iz2KrYtNin2LHYp9iqMTwwOgYDVQQDDDPYtNix2YPYqSDZg9mI2LEg2KjZiiDYqNmKINin2Ygg2YTZhNin2LPYqti02KfYsdin2KowggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCvH3mepqHP3\",\n}"
+				},
+				"url": {
+					"raw": "{{odoo-url}}/api/einvoice?invoice_id=<INVOICE_NUMBER>",
+					"host": [
+						"{{odoo-url}}"
+					],
+					"path": [
+						"api",
+						"einvoice"
+					],
+					"query": [
+						{
+							"key": "invoice_id",
+							"value": "<INVOICE_NUMBER>"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

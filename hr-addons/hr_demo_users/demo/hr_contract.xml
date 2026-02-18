@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="contract_employee" model="hr.contract">
+        <field name="name">Contract For Test Employee 1</field>
+        <field name="notes">This is Test Employee 1's contract</field>
+        <field name="employee_id" ref="employee_employee"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_employee').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="5000.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_employee2" model="hr.contract">
+        <field name="name">Contract For Test Employee 2</field>
+        <field name="notes">This is Test Employee 2's contract</field>
+        <field name="employee_id" ref="employee_employee2"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_employee2').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="4500.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_employee3" model="hr.contract">
+        <field name="name">Contract For Test Employee 3</field>
+        <field name="notes">This is Test Employee 3's contract</field>
+        <field name="employee_id" ref="employee_employee3"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_employee3').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="4000.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_employee4" model="hr.contract">
+        <field name="name">Contract For Test Employee 4</field>
+        <field name="notes">This is Test Employee 4's contract</field>
+        <field name="employee_id" ref="employee_employee4"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_employee4').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="3500.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_employee5" model="hr.contract">
+        <field name="name">Contract For Test Employee 5</field>
+        <field name="notes">This is Test Employee 5's contract</field>
+        <field name="employee_id" ref="employee_employee5"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_employee5').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="3000.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_employee6" model="hr.contract">
+        <field name="name">Contract For Test Employee 6</field>
+        <field name="notes">This is Test Employee 6's contract</field>
+        <field name="employee_id" ref="employee_employee6"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_employee6').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="2500.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_employee7" model="hr.contract">
+        <field name="name">Contract For Test Employee 7</field>
+        <field name="notes">This is Test Employee 7's contract</field>
+        <field name="employee_id" ref="employee_employee7"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_employee7').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="2000.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_manager" model="hr.contract">
+        <field name="name">Contract For Employee Manager</field>
+        <field name="notes">This is Employee Manager's contract</field>
+        <field name="employee_id" ref="employee_manager"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_manager').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="6000.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_manager2" model="hr.contract">
+        <field name="name">Contract For Employee Manager2</field>
+        <field name="notes">This is Employee Manager2's contract</field>
+        <field name="employee_id" ref="employee_manager2"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_manager2').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="6500.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_manager3" model="hr.contract">
+        <field name="name">Contract For Employee Manager3</field>
+        <field name="notes">This is Employee Manager3's contract</field>
+        <field name="employee_id" ref="employee_manager3"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_manager3').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="6500.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_department" model="hr.contract">
+        <field name="name">Contract For Employee Department</field>
+        <field name="notes">This is Employee Department's contract</field>
+        <field name="employee_id" ref="employee_department"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_department').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="12000.0" name="wage"/>
+        <field name="state">open</field>
+    </record>
+
+    <record id="contract_department2" model="hr.contract">
+        <field name="name">Contract For Employee Department2</field>
+        <field name="notes">This is Employee Department2's contract</field>
+        <field name="employee_id" ref="employee_department2"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_department2').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="15000.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+
+    <record id="contract_department3" model="hr.contract">
+        <field name="name">Contract For Employee Department3</field>
+        <field name="notes">This is Employee Department3's contract</field>
+        <field name="employee_id" ref="employee_department3"/>
+        <field name="department_id" model="hr.department"
+               eval="obj().env.ref('hr_demo_users.employee_department3').department_id.id"/>
+        <field name="date_start" eval="(datetime.now()).strftime('%Y-01-01')"/>
+        <field eval="20000.0" name="wage"/>
+        <field name="state">open</field>
+        <field name="kanban_state">normal</field>
+    </record>
+</odoo>

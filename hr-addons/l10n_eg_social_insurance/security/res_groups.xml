@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="category_social_insurance" model="ir.module.category">
+        <field name="name">Social Insurance</field>
+    </record>
+
+    <record id="group_social_insurance_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="comment">To manage insurance configuration must grant payroll manager</field>
+        <field name="category_id" ref="category_social_insurance"/>
+        <field name="users" eval="[(4, ref('base.user_root')), (4, ref('base.user_admin'))]"/>
+    </record>
+
+</odoo>

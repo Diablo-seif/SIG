@@ -1,0 +1,113 @@
+<odoo>
+
+    <!-- HR Effects Payroll Additions type Form View-->
+    <record id="view_hr_effects_payroll_additions_type_form"
+            model="ir.ui.view">
+        <field name="name">hr.effects.payroll.additions.type.form</field>
+        <field name="model">hr.effects.payroll.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="effects_category" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- HR Effects Payroll Deductions type Form View-->
+    <record id="view_hr_effects_payroll_deductions_type_form"
+            model="ir.ui.view">
+        <field name="name">hr.effects.payroll.deductions.type.form</field>
+        <field name="model">hr.effects.payroll.type</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="code"/>
+                        <field name="effects_category" invisible="1"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- HR Effects Payroll Additions type Tree View-->
+    <record id="view_hr_effects_payroll_additions_type_tree"
+            model="ir.ui.view">
+        <field name="name">hr.effects.payroll.additions.type.tree</field>
+        <field name="model">hr.effects.payroll.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="active"/>
+                <field name="effects_category" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- HR Effects Payroll Deductions type Tree View-->
+    <record id="view_hr_effects_payroll_deductions_type_tree"
+            model="ir.ui.view">
+        <field name="name">hr.effects.payroll.deductions.type.tree</field>
+        <field name="model">hr.effects.payroll.type</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="name"/>
+                <field name="code"/>
+                <field name="active"/>
+                <field name="effects_category" invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- HR Effects Payroll type  Action-->
+    <record id="view_hr_effects_payroll_additions_action"
+            model="ir.actions.act_window">
+        <field name="name">Additions Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.effects.payroll.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'default_effects_category': 'additions'}</field>
+        <field name="domain">[('effects_category','=', 'additions')]</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'list', 'view_id': ref('view_hr_effects_payroll_additions_type_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_hr_effects_payroll_additions_type_form')})]"/>
+    </record>
+
+    <!-- HR Effects Payroll Deductions type  Action-->
+    <record id="view_hr_effects_payroll_deductions_action"
+            model="ir.actions.act_window">
+        <field name="name">Deductions Type</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.effects.payroll.type</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'default_effects_category': 'deductions'}</field>
+        <field name="domain">[('effects_category','=', 'deductions')]</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+                (0, 0, {'view_mode': 'list', 'view_id': ref('view_hr_effects_payroll_deductions_type_tree')}),
+                (0, 0, {'view_mode': 'form', 'view_id': ref('view_hr_effects_payroll_deductions_type_form')})]"/>
+    </record>
+
+    <!-- Additions Menu -->
+    <menuitem id="menuitem_hr_additions"
+              name="Additions Type"
+              parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"
+              action="view_hr_effects_payroll_additions_action"
+              groups="hr_effects_payroll.group_manage_hr_effects_payroll_type"
+              sequence="9"/>
+
+    <!-- Deductions Menu -->
+    <menuitem id="menuitem_hr_deductions"
+              name="Deductions Type"
+              parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"
+              action="view_hr_effects_payroll_deductions_action"
+              groups="hr_effects_payroll.group_manage_hr_effects_payroll_type"
+              sequence="10"/>
+
+</odoo>

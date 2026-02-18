@@ -1,0 +1,273 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_effects_payroll
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0-20190827\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-11-11 13:41+0000\n"
+"PO-Revision-Date: 2019-11-11 13:41+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__active
+msgid "Active"
+msgstr "نشط"
+
+#. module: hr_effects_payroll
+#: code:addons/hr_effects_payroll/tests/test_hr_effects_payroll.py:116
+#: selection:hr.effects.payroll,effects_category:0
+#: selection:hr.effects.payroll.type,effects_category:0
+#, python-format
+msgid "Additions"
+msgstr "اضافات"
+
+#. module: hr_effects_payroll
+#: model:ir.ui.menu,name:hr_effects_payroll.menuitem_hr_additions
+#: model_terms:ir.ui.view,arch_db:hr_effects_payroll.view_hr_payroll_manage_additions_form
+msgid "Additions Type"
+msgstr "انواع الاضافات"
+
+#. module: hr_effects_payroll
+#: model:ir.actions.act_window,name:hr_effects_payroll.view_hr_effects_payroll_additions_action
+#: model_terms:ir.ui.view,arch_db:hr_effects_payroll.view_hr_effects_payroll_additions_type_form
+msgid "Additions type"
+msgstr "انواع الاضافات"
+
+#. module: hr_effects_payroll
+#: model_terms:ir.ui.view,arch_db:hr_effects_payroll.view_hr_payroll_manage_additions_form
+#: model_terms:ir.ui.view,arch_db:hr_effects_payroll.view_hr_payroll_manage_deductions_form
+msgid "Approve"
+msgstr "اعتماد"
+
+#. module: hr_effects_payroll
+#: selection:hr.effects.payroll,state:0
+msgid "Approved"
+msgstr "مؤكد"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__code
+msgid "Code"
+msgstr "الكود"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__create_uid
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__create_date
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_effects_payroll
+#: code:addons/hr_effects_payroll/tests/test_hr_effects_payroll.py:185
+#: selection:hr.effects.payroll,effects_category:0
+#: selection:hr.effects.payroll.type,effects_category:0
+#, python-format
+msgid "Deductions"
+msgstr "خصومات"
+
+#. module: hr_effects_payroll
+#: model_terms:ir.ui.view,arch_db:hr_effects_payroll.view_hr_payroll_manage_deductions_form
+msgid "Deductions Category"
+msgstr "فئة الخصومات"
+
+#. module: hr_effects_payroll
+#: model:ir.ui.menu,name:hr_effects_payroll.menuitem_hr_deductions
+msgid "Deductions Type"
+msgstr "انواع الخصومات"
+
+#. module: hr_effects_payroll
+#: model:ir.actions.act_window,name:hr_effects_payroll.view_hr_effects_payroll_deductions_action
+#: model_terms:ir.ui.view,arch_db:hr_effects_payroll.view_hr_effects_payroll_deductions_type_form
+msgid "Deductions type"
+msgstr "انواع الخصومات"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__display_name
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: hr_effects_payroll
+#: selection:hr.effects.payroll,state:0
+msgid "Draft"
+msgstr "مسوده"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__effective_date
+msgid "Effective Date"
+msgstr "تاريخ السريان"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__effects_category
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__effects_category
+msgid "Effects Category"
+msgstr "تأثيرات الفئة"
+
+#. module: hr_effects_payroll
+#: model:ir.ui.menu,name:hr_effects_payroll.menuitem_hr_effects_payroll
+msgid "Effects Payroll"
+msgstr "مؤثرات المرتب"
+
+#. module: hr_effects_payroll
+#: model:hr.salary.rule,name:hr_effects_payroll.hr_rule_effects_payroll_additions
+msgid "Effects Payroll Additions"
+msgstr "اضافات مؤثرات المرتب"
+
+#. module: hr_effects_payroll
+#: model:hr.salary.rule,name:hr_effects_payroll.hr_rule_effects_payroll_deductions
+msgid "Effects Payroll Deductions"
+msgstr "خصومات مؤثرات المرتب"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__effects_type_id
+msgid "Effects Payroll Type"
+msgstr "انواع مؤثرات المرتب"
+
+#. module: hr_effects_payroll
+#: model:ir.model,name:hr_effects_payroll.model_hr_employee
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__employee_id
+msgid "Employee"
+msgstr "الموظف"
+
+#. module: hr_effects_payroll
+#: model:hr.effects.payroll.type,name:hr_effects_payroll.demo_additions_expenses
+msgid "Expenses"
+msgstr "المصروفات"
+
+#. module: hr_effects_payroll
+#: model:ir.model,name:hr_effects_payroll.model_hr_effects_payroll
+msgid "Hr Payroll Effects"
+msgstr "مؤثرات المرتب"
+
+#. module: hr_effects_payroll
+#: model:ir.model,name:hr_effects_payroll.model_hr_effects_payroll_type
+msgid "Hr Payroll Effects Type"
+msgstr "انواع مؤثرات المرتب"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__id
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll____last_update
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__write_uid
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__write_date
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_effects_payroll
+#: model:hr.effects.payroll.type,name:hr_effects_payroll.demo_deductions_late_attend
+msgid "Late Attend"
+msgstr "تأخير الحضور"
+
+#. module: hr_effects_payroll
+#: model:ir.actions.act_window,name:hr_effects_payroll.view_hr_payroll_manage_additions_action
+#: model:ir.ui.menu,name:hr_effects_payroll.menu_hr_manage_additions
+#: model_terms:ir.ui.view,arch_db:hr_effects_payroll.view_hr_payroll_manage_additions_form
+msgid "Manage Additions"
+msgstr "ادارة الاضافات"
+
+#. module: hr_effects_payroll
+#: model:ir.actions.act_window,name:hr_effects_payroll.view_hr_payroll_manage_deductions_action
+#: model:ir.ui.menu,name:hr_effects_payroll.menu_hr_manage_deductions
+#: model_terms:ir.ui.view,arch_db:hr_effects_payroll.view_hr_payroll_manage_deductions_form
+msgid "Manage Deductions"
+msgstr "إدارة الخصومات"
+
+#. module: hr_effects_payroll
+#: model:res.groups,name:hr_effects_payroll.group_manage_hr_effects_payroll
+msgid "Manage Effects Payroll"
+msgstr "إدارة مؤثرات المرتب"
+
+#. module: hr_effects_payroll
+#: model:res.groups,name:hr_effects_payroll.group_manage_hr_effects_payroll_type
+msgid "Manage Effects Payroll Type"
+msgstr "انواع إدارة مؤثرات المرتب"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll_type__name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__note
+msgid "Note"
+msgstr "ملاحظة"
+
+#. module: hr_effects_payroll
+#: model:hr.effects.payroll.type,name:hr_effects_payroll.demo_additions_overtime
+msgid "Overtime"
+msgstr "عمل الاضافي"
+
+#. module: hr_effects_payroll
+#: model:hr.effects.payroll.type,name:hr_effects_payroll.demo_deductions_punishment
+msgid "Punishment"
+msgstr "عقوبة"
+
+#. module: hr_effects_payroll
+#: model:res.groups,name:hr_effects_payroll.group_read_hr_effects_payroll
+msgid "Read Effects Payroll"
+msgstr "قراءة تأثيرات الرواتب"
+
+#. module: hr_effects_payroll
+#: model:res.groups,name:hr_effects_payroll.group_read_hr_effects_payroll_type
+msgid "Read Effects Payroll Type"
+msgstr "قراءة انواع تأثيرات الرواتب"
+
+#. module: hr_effects_payroll
+#: model:hr.effects.payroll.type,name:hr_effects_payroll.demo_additions_reward
+msgid "Reward"
+msgstr "مكافأة"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__state
+msgid "Status"
+msgstr "الحالة"
+
+#. module: hr_effects_payroll
+#: sql_constraint:hr.effects.payroll.type:0
+msgid "The code must be unique !"
+msgstr "يجب أن يكون الرمز فريدًا!"
+
+#. module: hr_effects_payroll
+#: model:ir.model.fields,field_description:hr_effects_payroll.field_hr_effects_payroll__value
+msgid "Value"
+msgstr "القيمة"
+
+#. module: hr_effects_payroll
+#: sql_constraint:hr.effects.payroll:0
+msgid "Value must be positive"
+msgstr "يجب أن تكون القيمة إيجابية"
+
+#. module: hr_effects_payroll
+#: code:addons/hr_effects_payroll/models/hr_effects_payroll.py:40
+#: code:addons/hr_effects_payroll/tests/test_hr_effects_payroll.py:117
+#: code:addons/hr_effects_payroll/tests/test_hr_effects_payroll.py:186
+#, python-format
+msgid "You Cannot Delete %(effects_category_str)s in State Approved."
+msgstr "لا يمكنك الحذف %(effects_category_str)s في حالة مؤكد."
+

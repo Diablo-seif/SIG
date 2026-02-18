@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!--Late In penalty rule -->
+    <record id="penalty_rule_late_in_1_to_30" model="hr.penalty.rule">
+        <field name="name">Penalty Late In 1 M - 30 M</field>
+        <field name="delay_from">1</field>
+        <field name="delay_to">30</field>
+        <field name="penalty_type">late_in</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_late_in_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.1</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_1_to_30"/>
+    </record>
+
+    <record id="penalty_redundant_2_late_in_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.2</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_1_to_30"/>
+    </record>
+
+    <record id="penalty_redundant_3_late_in_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">0.3</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_1_to_30"/>
+    </record>
+
+    <record id="penalty_redundant_4_late_in_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">0.4</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_1_to_30"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_late_in_31_to_60" model="hr.penalty.rule">
+        <field name="name">Penalty Late In 31 M to 1 H</field>
+        <field name="delay_from">31</field>
+        <field name="delay_to">60</field>
+        <field name="penalty_type">late_in</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_late_in_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.25</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_31_to_60"/>
+    </record>
+
+    <record id="penalty_redundant_2_late_in_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.5</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_31_to_60"/>
+    </record>
+
+    <record id="penalty_redundant_3_late_in_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">0.75</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_31_to_60"/>
+    </record>
+
+    <record id="penalty_redundant_4_late_in_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">1</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_31_to_60"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_late_in_61_to_120" model="hr.penalty.rule">
+        <field name="name">Penalty Late In >1 H to 2 H</field>
+        <field name="delay_from">61</field>
+        <field name="delay_to">120</field>
+        <field name="penalty_type">late_in</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_late_in_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.5</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_61_to_120"/>
+    </record>
+
+    <record id="penalty_redundant_2_late_in_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.75</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_61_to_120"/>
+    </record>
+
+    <record id="penalty_redundant_3_late_in_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">1</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_61_to_120"/>
+    </record>
+
+    <record id="penalty_redundant_4_late_in_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">1.25</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_61_to_120"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_late_in_120_to_240" model="hr.penalty.rule">
+        <field name="name">Penalty Late In >2 H to 4 H</field>
+        <field name="delay_from">121</field>
+        <field name="delay_to">240</field>
+        <field name="penalty_type">late_in</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_late_in_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.5</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_120_to_240"/>
+    </record>
+
+    <record id="penalty_redundant_2_late_in_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">1</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_120_to_240"/>
+    </record>
+
+    <record id="penalty_redundant_3_late_in_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">1.5</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_120_to_240"/>
+    </record>
+
+    <record id="penalty_redundant_4_late_in_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">1.75</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_120_to_240"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_late_in_241_to_480" model="hr.penalty.rule">
+        <field name="name">Penalty Late In >4 H to 8 H</field>
+        <field name="delay_from">241</field>
+        <field name="delay_to">480</field>
+        <field name="penalty_type">late_in</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_late_in_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.75</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_241_to_480"/>
+    </record>
+
+    <record id="penalty_redundant_2_late_in_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">1.5</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_241_to_480"/>
+    </record>
+
+    <record id="penalty_redundant_3_late_in_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">1.75</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_241_to_480"/>
+    </record>
+
+    <record id="penalty_redundant_4_late_in_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">2</field>
+        <field name="penalty_id" ref="penalty_rule_late_in_241_to_480"/>
+    </record>
+
+    <!--Early Out penalty rule  -->
+
+    <record id="penalty_rule_early_out_1_to_30" model="hr.penalty.rule">
+        <field name="name">Penalty Early Out 1 M - 30 M</field>
+        <field name="delay_from">1</field>
+        <field name="delay_to">30</field>
+        <field name="penalty_type">early_out</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_early_out_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.1</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_1_to_30"/>
+    </record>
+
+    <record id="penalty_redundant_2_early_out_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.2</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_1_to_30"/>
+    </record>
+
+    <record id="penalty_redundant_3_early_out_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">0.3</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_1_to_30"/>
+    </record>
+
+    <record id="penalty_redundant_4_early_out_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">0.4</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_1_to_30"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_early_out_31_to_60" model="hr.penalty.rule">
+        <field name="name">Penalty Early Out 31 M to 1 H</field>
+        <field name="delay_from">31</field>
+        <field name="delay_to">60</field>
+        <field name="penalty_type">early_out</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+
+    <record id="penalty_redundant_1_early_out_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.25</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_31_to_60"/>
+    </record>
+
+    <record id="penalty_redundant_2_early_out_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.5</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_31_to_60"/>
+    </record>
+
+    <record id="penalty_redundant_3_early_out_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">0.75</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_31_to_60"/>
+    </record>
+
+    <record id="penalty_redundant_4_early_out_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">1</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_31_to_60"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_early_out_61_to_120" model="hr.penalty.rule">
+        <field name="name">Penalty Early Out >1 H to 2 H</field>
+        <field name="delay_from">61</field>
+        <field name="delay_to">120</field>
+        <field name="penalty_type">early_out</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_early_out_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.5</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_61_to_120"/>
+    </record>
+
+    <record id="penalty_redundant_2_early_out_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.75</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_61_to_120"/>
+    </record>
+
+    <record id="penalty_redundant_3_early_out_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">1</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_61_to_120"/>
+    </record>
+
+    <record id="penalty_redundant_4_early_out_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">1.25</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_61_to_120"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_early_out_120_to_240" model="hr.penalty.rule">
+        <field name="name">Penalty Early Out >2 H to 4 H</field>
+        <field name="delay_from">121</field>
+        <field name="delay_to">240</field>
+        <field name="penalty_type">early_out</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_early_out_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.5</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_120_to_240"/>
+    </record>
+
+    <record id="penalty_redundant_2_early_out_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">1</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_120_to_240"/>
+    </record>
+
+    <record id="penalty_redundant_3_early_out_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">1.5</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_120_to_240"/>
+    </record>
+
+    <record id="penalty_redundant_4_early_out_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">1.75</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_120_to_240"/>
+    </record>
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_early_out_241_to_480" model="hr.penalty.rule">
+        <field name="name">Penalty Early Out >4 H to 8 H</field>
+        <field name="delay_from">241</field>
+        <field name="delay_to">480</field>
+        <field name="penalty_type">early_out</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+
+    <record id="penalty_redundant_1_early_out_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.75</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_241_to_480"/>
+    </record>
+
+    <record id="penalty_redundant_2_early_out_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">1.5</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_241_to_480"/>
+    </record>
+
+    <record id="penalty_redundant_3_early_out_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">3</field>
+        <field name="penalty_value">1.75</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_241_to_480"/>
+    </record>
+
+    <record id="penalty_redundant_4_early_out_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">4</field>
+        <field name="penalty_value">2</field>
+        <field name="penalty_id" ref="penalty_rule_early_out_241_to_480"/>
+    </record>
+
+    <!--Missing Hours penalty rule -->
+
+    <record id="penalty_rule_missing_hours_1_to_30" model="hr.penalty.rule">
+        <field name="name">Penalty Missing Hours 1 M - 30 M</field>
+        <field name="delay_from">1</field>
+        <field name="delay_to">30</field>
+        <field name="penalty_type">missing_hours</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_missing_hours_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.1</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_1_to_30"/>
+    </record>
+
+    <record id="penalty_redundant_2_missing_hours_1_to_30"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.2</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_1_to_30"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_missing_hours_31_to_60" model="hr.penalty.rule">
+        <field name="name">Penalty Missing Hours 31 M to 1 H</field>
+        <field name="delay_from">31</field>
+        <field name="delay_to">60</field>
+        <field name="penalty_type">missing_hours</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_missing_hours_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.2</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_31_to_60"/>
+    </record>
+
+    <record id="penalty_redundant_2_missing_hours_31_to_60"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.3</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_31_to_60"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_missing_hours_61_to_120" model="hr.penalty.rule">
+        <field name="name">Penalty Missing Hours >1 H to 2 H</field>
+        <field name="delay_from">61</field>
+        <field name="delay_to">120</field>
+        <field name="penalty_type">missing_hours</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_missing_hours_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.3</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_61_to_120"/>
+    </record>
+
+    <record id="penalty_redundant_2_missing_hours_61_to_120"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.4</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_61_to_120"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_missing_hours_120_to_240" model="hr.penalty.rule">
+        <field name="name">Penalty Missing Hours >2 H to 4 H</field>
+        <field name="delay_from">121</field>
+        <field name="delay_to">240</field>
+        <field name="penalty_type">missing_hours</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_missing_hours_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.4</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_120_to_240"/>
+    </record>
+
+    <record id="penalty_redundant_2_missing_hours_120_to_240"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">0.5</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_120_to_240"/>
+    </record>
+
+    <!--  - - - - - - - - - - - - - - - - - -->
+
+    <record id="penalty_rule_missing_hours_241_to_480" model="hr.penalty.rule">
+        <field name="name">Penalty Missing Hours >4 H to 8 H</field>
+        <field name="delay_from">241</field>
+        <field name="delay_to">480</field>
+        <field name="penalty_type">missing_hours</field>
+        <field name="calendar_id" ref="resource.resource_calendar_std"/>
+    </record>
+
+    <record id="penalty_redundant_1_missing_hours_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">1</field>
+        <field name="penalty_value">0.5</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_241_to_480"/>
+    </record>
+
+    <record id="penalty_redundant_2_missing_hours_241_to_480"
+            model="hr.penalty.redundant">
+        <field name="redundant">2</field>
+        <field name="penalty_value">1</field>
+        <field name="penalty_id" ref="penalty_rule_missing_hours_241_to_480"/>
+    </record>
+
+</odoo>

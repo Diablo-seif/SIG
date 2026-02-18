@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="sale_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <button name="action_confirm" position="after">
+                <button name="action_create_project" string="Create Project" type="object"
+                        invisible ="state != 'sale' or project_created == True"
+                        class="oe_highlight" groups="proposal.group_proposal_create_project"/>
+                <field name="project_created" invisible="1"/>
+            </button>
+        </field>
+    </record>
+
+</odoo>

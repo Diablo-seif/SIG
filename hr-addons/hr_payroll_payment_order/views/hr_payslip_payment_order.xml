@@ -1,0 +1,150 @@
+<odoo>
+    <record id="hr_payslip_payment_order_form" model="ir.ui.view">
+        <field name="name">hr.payslip.payment.order.form</field>
+        <field name="model">hr.payslip.payment.order</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button string="Validate" name="action_validate"
+                            states="draft" type="object"
+                            class="oe_highlight"/>
+                    <button string="Cancel" name="action_cancel"
+                            states="draft,validated" type="object"/>
+                    <button string="Reset to Draft" name="action_draft"
+                            states="cancel" type="object"/>
+                    <button string="Print Excel" name="action_export_payment_order"
+                            type="object"/>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,validated"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1>
+                            <field name="name" readonly="1"/>
+                        </h1>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="payment_method_id"
+                                   attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                            <field name="company_id" options="{'no_create': True}"/>
+                        </group>
+                        <group>
+                            <field name="payment_date"
+                                   attrs="{'readonly': [('state', '!=', 'draft')]}"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Payslips">
+                            <field name="line_ids"
+                                   attrs="{'readonly': [('state', '!=', 'draft')]}">
+                                <list editable="bottom">
+                                    <field name="payment_id" invisible="1"/>
+                                    <field name="payment_method_id"
+                                           invisible="1"/>
+                                    <field name="payslip_id"/>
+                                    <field name="payslip_run_id"
+                                           invisible="1"/>
+                                    <field name="currency_id" invisible="1"/>
+                                    <field name="net_wage"/>
+                                    <field name="paid_amount" optional="hide"
+                                           invisible="0"/>
+                                </list>
+                            </field>
+                            <group name="note_group" col="6"
+                                   class="mt-2 mt-md-0">
+                                <group class="oe_subtotal_footer oe_right"
+                                       colspan="2">
+                                    <div class="oe_subtotal_footer_separator oe_inline o_td_label">
+                                        <label for="paid_amount"/>
+                                    </div>
+                                    <field name="paid_amount" nolabel="1"
+                                           class="oe_subtotal_footer_separator"/>
+                                </group>
+                                <div class="oe_clear"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+                <chatter/>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_payslip_payment_order_tree" model="ir.ui.view">
+        <field name="name">hr.payslip.payment.order.tree</field>
+        <field name="model">hr.payslip.payment.order</field>
+        <field name="arch" type="xml">
+            <list sample="1">
+                <field name="name" decoration-bf="1"/>
+                <field name="payment_method_id"/>
+                <field name="payment_date"/>
+                <field name="company_id" groups="base.group_multi_company"
+                       optional="show"/>
+                <field name="line_ids" optional="hide"/>
+                <field name="paid_amount" optional="show"
+                       sum="Total Paid Amount" decoration-bf="1"/>
+                <field name="message_needaction" invisible="1"/>
+                <field name="state" decoration-success="state == 'validated'"
+                       decoration-info="state == 'draft'" widget="badge"
+                       optional="show"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="hr_payslip_payment_order_search" model="ir.ui.view">
+        <field name="name">hr.payslip.payment.order.search</field>
+        <field name="model">hr.payslip.payment.order</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="payment_method_id"/>
+                <field name="payment_date"/>
+                <field name="company_id" groups="base.group_multi_company"/>
+                <field name="state"/>
+                <filter string="My Orders" domain="[('create_uid', '=', uid)]"
+                        name="my_orders_filter"/>
+                <separator/>
+                <filter string="Draft" name="draft"
+                        domain="[('state','=', 'draft')]"/>
+                <filter string="Validated" name="validated"
+                        domain="[('state','=', 'validated')]"/>
+                <filter string="Cancelled" name="cancelled"
+                        domain="[('state','=', 'cancel')]"/>
+                <separator/>
+                <filter string="Payment Date" name="filter_payment_date"
+                        date="payment_date"/>
+                <separator/>
+                <group expand="0" string="Group By">
+                    <filter name="payment_method_id" string="Payment Method"
+                            domain="[]"
+                            context="{'group_by': 'payment_method_id'}"/>
+                    <filter string="Payment Date" name="order_month" domain="[]"
+                            context="{'group_by': 'payment_date'}"/>
+                    <filter string="Company" name="company_group" domain="[]"
+                            context="{'group_by': 'company_id'}"
+                            groups="base.group_multi_company"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_payslip_payment_order_action" model="ir.actions.act_window">
+        <field name="name">Payment Order</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.payslip.payment.order</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <menuitem id="hr_payslip_payment_order_menu"
+              name="Payment Order"
+              parent="hr_payroll.menu_hr_payroll_payslips"
+              action="hr_payslip_payment_order_action"
+              sequence="1000"/>
+
+</odoo>

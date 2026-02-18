@@ -1,0 +1,24 @@
+<odoo>
+    <!-- hr_contract form view -->
+    <record id="hr_contract_view_form" model="ir.ui.view">
+        <field name="name">hr.contract.view.form</field>
+        <field name="model">hr.contract</field>
+        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+        <field name="arch" type="xml">
+            <group name='salary' position="after">
+                <group>
+                    <label for="net_salary_monthly" />
+                    <div class="o_row mw-50" name="net_salary_monthly">
+                        <field name="net_salary_monthly" nolabel="1" />
+                        <span>/ monthly</span>
+                    </div>
+                    <label for="net_salary_daily" />
+                    <div class="o_row mw-50" name="net_salary_daily">
+                        <field name="net_salary_daily" nolabel="1" />
+                        <span>/ day</span>
+                    </div>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

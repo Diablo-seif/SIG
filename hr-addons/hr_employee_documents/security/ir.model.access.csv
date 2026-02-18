@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_manager_hr_employee_documents,Access.Manager.HR.Employee.Documents,model_hr_employee_documents,hr.group_hr_user,1,1,1,1
+access_manager_hr_employee_documents_lines,Access.Manager.HR.Employee.Documents.Lines,model_hr_employee_documents_lines,hr.group_hr_user,1,1,1,1
+access_user_hr_employee_documents,Access.User.HR.Employee.Documents,model_hr_employee_documents,hr.group_hr_manager,1,0,0,0
+access_user_hr_employee_documents_lines,Access.User.HR.Employee.Documents.Lines,model_hr_employee_documents_lines,hr.group_hr_manager,1,1,1,1

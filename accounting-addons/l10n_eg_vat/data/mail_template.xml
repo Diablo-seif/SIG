@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mail_template_warning_check_vat_report" model="mail.template">
+        <field name="name">Warning Check VAT Report</field>
+        <field name="email_from">${('"%s" &lt;%s&gt;' % (object.company_id.name, object.company_id.email or user.email)) | safe}</field>
+        <field name="partner_to">${object.partner_id.id}</field>
+        <field name="subject">Warning: Check VAT Report for Month ${datetime.date.today().month == 1 and  (11, datetime.date.today().year-1) or   (datetime.date.today().month == 2 and  (12, datetime.date.today().year-1) or (datetime.date.today().month-2))}</field>
+        <field name="lang">${object.lang}</field>
+        <field name="model_id" ref="base.model_res_users"/>
+        <field name="auto_delete" eval="False"/>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p style="margin: 0px; padding: 0px; font-size: 13px;">
+                    Dear ${object.name}
+                    <br /><br />
+                    Please check VAT report for month
+                    % if datetime.date.today().month == 1:
+                        11, ${datetime.date.today().year-1}
+                    % else:
+                        % if datetime.date.today().month == 2:
+                            12, ${datetime.date.today().year-1}
+                        % else:
+                            ${datetime.date.today().month-2},
+                            ${datetime.date.today().year}
+                        % endif
+                    % endif
+                    <br /><br />
+                </p>
+            </div>
+        </field>
+    </record>
+</odoo>

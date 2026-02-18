@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- <record id="insurance_hr_employee_form" model="ir.ui.view">
+        <field name="name">insurance.hr.employee.form</field>
+        <field name="model">hr.employee</field>
+
+        </field>
+    </record> -->
+
+    <record id="hr_employee_view_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.employee.tree.inherit</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='parent_id']" position="after">
+                <field name="eg_insurance_amount"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

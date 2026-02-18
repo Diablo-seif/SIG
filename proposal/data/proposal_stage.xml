@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="stage_new" model="proposal.stage">
+        <field name="name">New</field>
+    </record>
+
+    <record id="stage_in_progress" model="proposal.stage">
+        <field name="name">In Progress</field>
+    </record>
+
+    <record id="stage_postpone" model="proposal.stage">
+        <field name="name">Postpone</field>
+    </record>
+
+    <record id="stage_won" model="proposal.stage">
+        <field name="name">Won</field>
+        <field name="is_done" eval="True"/>
+    </record>
+
+    <record id="stage_lost" model="proposal.stage">
+        <field name="name">Lost</field>
+        <field name="is_lost" eval="True"/>
+    </record>
+
+</odoo>

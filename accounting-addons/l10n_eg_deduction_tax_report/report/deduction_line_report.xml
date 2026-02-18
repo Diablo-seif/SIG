@@ -1,0 +1,74 @@
+<odoo>
+
+    <record id="deduction_line_report_action" model="ir.actions.act_window">
+        <field name="name">Deduction Tax Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">deduction.line.report</field>
+        <field name="view_mode">list,form</field>
+        <field name="target">current</field>
+    </record>
+
+    <record id="deduction_line_report_tree" model="ir.ui.view">
+        <field name="name">deduction.line.report.tree</field>
+        <field name="model">deduction.line.report</field>
+        <field name="arch" type="xml">
+            <list create="false" duplicate="false" edit="false" delete="false">
+                <field name="duration"/>
+                <field name="year" optional="show"/>
+                <field name="registration_number" optional="show"/>
+                <field name="file_number" optional="show"/>
+                <field name="vat_department" optional="show"/>
+                <field name="transaction_date" optional="show"/>
+                <field name="transaction_type" optional="show"/>
+                <field name="transaction_total_amount" optional="show"/>
+                <field name="deduction_type" optional="show"/>
+                <field name="transaction_base_amount" optional="show"/>
+                <field name="tax_percentage" optional="show"/>
+                <field name="tax_amount" optional="show"/>
+                <field name="vendor_name" optional="show"/>
+                <field name="vendor_address" optional="show"/>
+                <field name="national_id" optional="show"/>
+                <field name="currency_label" optional="hide"/>
+                <field name="currency_code" optional="show"/>
+                <field name="tax_type" invisible="True"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="deduction_line_report_search_view" model="ir.ui.view">
+        <field name="name">deduction.line.report.search</field>
+        <field name="model">deduction.line.report</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="year"/>
+                <field name="duration"/>
+                <field name="vendor_name"/>
+                <filter string="First Duration" name="first"
+                        domain="[('duration','=','1')]"/>
+                <filter string="Second Duration" name="second"
+                        domain="[('duration','=','2')]"/>
+                <filter string="Third Duration" name="third"
+                        domain="[('duration','=','3')]"/>
+                <filter string="Fourth Duration" name="fourth"
+                        domain="[('duration','=','4')]"/>
+                <group expand="1" string="Group By">
+                    <filter string="Year" name="year"
+                            context="{'group_by':'year'}"/>
+                    <filter string="Duration" name="duration"
+                            context="{'group_by':'duration'}"/>
+                    <separator orientation="vertical"/>
+                    <filter string="Vendor Name" name="vendor_name"
+                            context="{'group_by':'vendor_name'}"/>
+                    <filter string="Transaction Type" name="transaction_type"
+                            context="{'group_by':'transaction_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <menuitem id="menuitem_deduction_line_report"
+              name="Deduction Tax Report"
+              parent="account.account_reports_management_menu"
+              action="deduction_line_report_action" sequence="1"/>
+
+</odoo>

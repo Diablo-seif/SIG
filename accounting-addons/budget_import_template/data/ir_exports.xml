@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="crossovered_budget_export" model="ir.exports">
+        <field name="name">Crossovered Budget</field>
+        <field name="resource">crossovered.budget</field>
+    </record>
+
+    <record id="real_estate_project_export_line_01" model="ir.exports.line">
+        <field name="name">name</field>
+        <field name="export_id" ref="crossovered_budget_export"/>
+    </record>
+
+    <record id="real_estate_project_export_line_02" model="ir.exports.line">
+        <field name="name">date_from</field>
+        <field name="export_id" ref="crossovered_budget_export"/>
+    </record>
+
+    <record id="real_estate_project_export_line_03" model="ir.exports.line">
+        <field name="name">date_to</field>
+        <field name="export_id" ref="crossovered_budget_export"/>
+    </record>
+
+    <record id="real_estate_project_export_line_04" model="ir.exports.line">
+        <field name="name">crossovered_budget_line/general_budget_id/name</field>
+        <field name="export_id" ref="crossovered_budget_export"/>
+    </record>
+
+    <record id="real_estate_project_export_line_05" model="ir.exports.line">
+        <field name="name">crossovered_budget_line/analytic_account_id/name</field>
+        <field name="export_id" ref="crossovered_budget_export"/>
+    </record>
+
+    <record id="real_estate_project_export_line_06" model="ir.exports.line">
+        <field name="name">crossovered_budget_line/date_from</field>
+        <field name="export_id" ref="crossovered_budget_export"/>
+    </record>
+
+    <record id="real_estate_project_export_line_07" model="ir.exports.line">
+        <field name="name">crossovered_budget_line/date_to</field>
+        <field name="export_id" ref="crossovered_budget_export"/>
+    </record>
+
+    <record id="real_estate_project_export_line_09" model="ir.exports.line">
+        <field name="name">crossovered_budget_line/planned_amount</field>
+        <field name="export_id" ref="crossovered_budget_export"/>
+    </record>
+
+</odoo>

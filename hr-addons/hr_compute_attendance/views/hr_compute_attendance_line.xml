@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_queue_job_search" model="ir.ui.view">
+        <field name="name">hr.compute.attendance.line.search</field>
+        <field name="model">hr.compute.attendance.line</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="employee_id" />
+                <field name="department_id" />
+                <field name="start_date" />
+                <field name="end_date" />
+            </search>
+        </field>
+    </record>
+
+    <record id="view_hr_compute_attendance_line_tree" model="ir.ui.view">
+        <field name="name">hr.compute.attendance.line.tree</field>
+        <field name="model">hr.compute.attendance.line</field>
+        <field name="arch" type="xml">
+            <list create="false" duplicate="false" edit="false" delete="false">
+                <field name="employee_id" />
+                <field name="department_id" />
+                <field name="start_date" />
+                <field name="end_date" />
+                <field name="sum_working_schedule_hours" optional="hide" />
+                <field name="sum_total_actual_working_hours" optional="hide" />
+                <field name="sum_total_missing_hours" optional="hide" />
+                <field name="sum_total_penalty_percentage" />
+                <field name="sum_total_penalty_amount" />
+                <field name="sum_attend_interval" optional="hide" />
+                <field name="sum_interval_count" optional="hide" />
+                <field name="sum_absent_interval" optional="hide" />
+                <field name="sum_absent_penalty_value" />
+                <field name="week_deduction_hours" optional="hide" />
+                <field name="month_deduction_hours" optional="hide" />
+                <field name="last_computed" optional="hide" />
+                <button name="open_line" string="Open Details" type="object" />
+            </list>
+        </field>
+    </record>
+
+    <record id="view_hr_compute_attendance_line_form" model="ir.ui.view">
+        <field name="name">hr.compute.attendance.line.form</field>
+        <field name="model">hr.compute.attendance.line</field>
+        <field name="arch" type="xml">
+            <form create="false"
+                duplicate="false" edit="false" delete="false">
+                <header>
+                    <button name="compute_line" string="Re-Compute"
+                        class="oe_highlight" type="object" />
+
+                    <button name="open_line" string="Open Details" type="object" />
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="employee_id" />
+                            <field name="start_date" />
+                            <field name="end_date" />
+                        </group>
+                        <group>
+                            <field name="sum_working_schedule_hours" />
+                            <field name="sum_total_actual_working_hours" />
+                            <field name="sum_total_missing_hours" />
+                        </group>
+                        <group>
+                            <field name="sum_total_penalty_percentage" />
+                            <field name="sum_total_penalty_amount" />
+                            <field name="sum_attend_interval" />
+                        </group>
+                        <group>
+                            <field name="sum_interval_count" groups="base.group_no_one" />
+                            <field name="sum_absent_interval" groups="base.group_no_one" />
+                            <field name="sum_absent_penalty_value" />
+                        </group>
+                        <group>
+                            <field name="week_deduction_hours" />
+                            <field name="month_deduction_hours" />
+                            <field name="last_computed" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

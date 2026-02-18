@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="birth_certificate_employee_document" model="hr.employee.documents">
+        <field name="name">Birth Certificate</field>
+        <field name="default_document" eval="True"/>
+    </record>
+
+    <record id="national_id_employee_document" model="hr.employee.documents">
+        <field name="name">National Identity Card or Passport</field>
+        <field name="default_document" eval="True"/>
+        <field name="has_expiration" eval="True"/>
+    </record>
+
+    <record id="criminal_status_employee_document" model="hr.employee.documents">
+        <field name="name">Criminal Status Record</field>
+        <field name="default_document" eval="True"/>
+        <field name="require_original" eval="True"/>
+    </record>
+
+    <record id="educational_certificate_employee_document" model="hr.employee.documents">
+        <field name="name">Educational Certificate</field>
+        <field name="default_document" eval="True"/>
+        <field name="require_original" eval="True"/>
+    </record>
+
+    <record id="labor_office_employee_document" model="hr.employee.documents">
+        <field name="name">Labor Office Notice</field>
+        <field name="default_document" eval="True"/>
+    </record>
+
+    <record id="military_status_employee_document" model="hr.employee.documents">
+        <field name="name">Certificate of Military Status</field>
+        <field name="default_document" eval="True"/>
+        <field name="require_original" eval="True"/>
+    </record>
+
+    <record id="medical_form_employee_document" model="hr.employee.documents">
+        <field name="name">Medical Check-Up Form</field>
+        <field name="default_document" eval="True"/>
+    </record>
+
+    <record id="social_insurance_employee_document" model="hr.employee.documents">
+        <field name="name">Social Insurance Stamp</field>
+        <field name="default_document" eval="True"/>
+    </record>
+
+    <record id="electricity_invoice_employee_document" model="hr.employee.documents">
+        <field name="name">Electricity/Gas/Telephone Invoice</field>
+        <field name="default_document" eval="True"/>
+    </record>
+
+    <record id="work_license_employee_document" model="hr.employee.documents">
+        <field name="name">Work License</field>
+        <field name="default_document" eval="True"/>
+    </record>
+
+</odoo>

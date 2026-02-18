@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_einvoice_incoming_user,access.einvoice.incoming.user,model_account_einvoice_incoming,base.group_user,1,0,0,0
+access_einvoice_incoming_admin,access.einvoice.incoming.admin,model_account_einvoice_incoming,base.group_erp_manager,1,1,1,1
+access_einvoice_document_received_accountant,access.einvoice.document.received.accountant,model_account_document_receive,account.group_account_user,1,1,1,0
+access_einvoice_document_received_admin,access.einvoice.document.received.admin,model_account_document_receive,base.group_erp_manager,1,1,1,1

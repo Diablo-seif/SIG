@@ -1,0 +1,11 @@
+<odoo>
+
+    <record id="hr_employee_evaluation_sequence" model="ir.sequence">
+        <field name="name">Employee Public Code Sequence</field>
+        <field name="code">hr.employee.evaluation</field>
+        <field name="prefix">PE</field>
+        <field name="company_id" eval="False"/>
+         <field name="padding">2</field>
+    </record>
+
+</odoo>

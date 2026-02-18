@@ -1,0 +1,19 @@
+{
+	"id": "62b27104-44fc-480d-91f8-4a9a0eb2072d",
+	"name": "E-Invoice With Token",
+	"values": [
+		{
+			"key": "odoo-url",
+			"value": "http://staging.dev-odoo-account.staging.core-bpo.net",
+			"enabled": true
+		},
+		{
+			"key": "API_KEY",
+			"value": "123456789",
+			"enabled": true
+		}
+	],
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2021-03-19T22:13:12.403Z",
+	"_postman_exported_using": "Postman/7.36.5"
+}

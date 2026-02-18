@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="hr_tna_line_form" model="ir.ui.view">
+        <field name="name">hr.tna.line.form</field>
+        <field name="model">hr.tna.line</field>
+        <field name="arch" type="xml">
+            <form create="0">
+                <header>
+                    <field name="state" widget="statusbar"
+                           statusbar_visible="draft,submitted,budgeted,approved"/>
+                </header>
+                <sheet>
+                    <div class="oe_title">
+                        <h1>
+                            <field name="department_id"
+                                   readonly="state !=draft"
+
+                                   options="{'no_open': True, 'no_create': True}"/>
+                        </h1>
+                        <!--                                   readonly="state !=draft"-->
+
+                    </div>
+                    <group>
+                        <group>
+                            <field name="job_id"
+                                   options="{'no_open': True, 'no_create': True}"
+                                   readonly="state !=draft"/>
+                            <field name="course_id"
+                                   options="{'no_open': True, 'no_create': True}"
+                                   readonly="state !=draft"/>
+                            <field name="no_of_participants"
+                                   readonly="state !=draft"/>
+                            <field name="approved_no_of_participants"
+                                   groups='hr_tna.group_tna_manager'
+                                   readonly="state != 'budgeted'"
+                            />
+                        </group>
+                        <group>
+                            <field name="provider_id"
+                                   groups='hr_tna.group_tna_budget'
+                                   options="{'no_open': True, 'no_create': True}"
+                                   readonly="state != 'submitted'"/>
+                            <field name="unit_budget"
+                                   groups='hr_tna.group_tna_budget'
+                                   readonly="state != 'submitted'"/>
+                            <field name="planned_budget"
+                                   groups='hr_tna.group_tna_budget'/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="approved_budget"
+                                   groups='hr_tna.group_tna_budget'/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Department Requirements"
+                              invisible=" state != 'approved'">
+                            <field name="tna_course_ids"
+                                   context="{'default_estimated_date':context.get('default_start_date')}">
+                                <list editable="bottom">
+                                    <field name="employee_id"
+                                           domain="[('department_id','=',parent.department_id),('job_id','=',parent.job_id)]"/>
+                                    <field name="estimated_date"/>
+                                    <field name="state"/>
+                                </list>
+                            </field>
+                        </page>
+                        <page string="Notes">
+                            <field name="note"/>
+                        </page>
+                    </notebook>
+
+                </sheet>
+                <chatter/>
+<!--                <div class="oe_chatter">-->
+<!--                    <field name="message_follower_ids"/>-->
+<!--                    <field name="activity_ids"/>-->
+<!--                    <field name="message_ids"/>-->
+<!--                </div>-->
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_tna_line_tree" model="ir.ui.view">
+        <field name="name">hr.tna.line.tree</field>
+        <field name="model">hr.tna.line</field>
+        <field name="arch" type="xml">
+            <list decoration-bf="state == 'draft'"
+                  decoration-info="state == 'submitted'"
+                  decoration-success="state == 'approved'"
+                  decoration-danger="state == 'rejected'">
+                <field name="department_id"
+                       options="{'no_open': True, 'no_create': True}"
+                       readonly="state !=draft"
+                       groups="hr_tna.group_tna_manager,hr.group_hr_manager"/>
+                <field name="job_id"
+                       options="{'no_open': True, 'no_create': True}"
+                       readonly="state !=draft"/>
+                <field name="course_id"
+                       options="{'no_open': True, 'no_create': True}"
+                       readonly="state !=draft"/>
+                <field name="no_of_participants" sum="No Of Participants"
+                       readonly="state !=draft"/>
+                <field name="approved_no_of_participants"
+                       sum="Approved No Of Participants"
+                       readonly="state != 'budgeted'"
+                       groups='hr_tna.group_tna_manager'/>
+                <field name="provider_id"
+                       options="{'no_open': True, 'no_create': True}"
+                       readonly="state != 'submitted'"
+                       groups='hr_tna.group_tna_budget'/>
+                <field name="unit_budget"
+                       options="{'currency_field': 'currency_id'}"
+                       readonly="state != 'submitted'"
+                       groups='hr_tna.group_tna_budget'/>
+                <field name="planned_budget" sum="Planned Budget"
+                       groups='hr_tna.group_tna_budget'/>
+                <field name="approved_budget" sum="Approved Budget"
+                       groups='hr_tna.group_tna_budget'/>
+                <field name="currency_id" invisible="1"/>
+                <button name="action_submit" type="object" string="Submit"
+                        icon="fa-check text-info"
+                        invisible=" state != 'draft'"
+                />
+                <button name="action_budget" type="object" icon="fa-dollar"
+                        string="Submit Budget" groups='hr_tna.group_tna_budget'
+                        invisible=" state != 'submitted'"
+                />
+                <!--                                        attrs="{'invisible':[('state','!=','submitted')]}"-->
+
+                <button name="action_approve" type="object" string="Approve"
+                        icon="fa-check text-success"
+                        groups="hr_tna.group_tna_manager"
+                        invisible=" state != 'budgeted'"
+                />
+                <!--                attrs="{'invisible':[('state','!=','budgeted')]}"-->
+
+                <button name="action_reject" type="object"
+                        string="Reject" icon="fa-ban text-danger"
+                        groups="hr_tna.group_tna_manager"
+                        invisible=" state != 'budgeted'"
+                />
+                <!--                        attrs="{'invisible':[('state','!=','budgeted')]}"-->
+                <field name="state"/>
+                <button name="open_form" type="object"
+                        string="..."
+                        groups="hr_tna.group_tna_user"
+                        invisible=" state != 'approved'"
+                />
+            </list>
+            <!--                        attrs="{'invisible':[('state','!=','approved')]}"/>-->
+        </field>
+    </record>
+
+    <record id="hr_tna_line_search" model="ir.ui.view">
+        <field name="name">hr.tna.line.search</field>
+        <field name="model">hr.tna.line</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="department_id"/>
+                <field name="job_id"/>
+                <field name="course_id"/>
+                <field name="provider_id"/>
+                <group expand="1" string="Group By">
+                    <filter string="Employee" name="group_job_id"
+                            context="{'group_by':'job_id'}"/>
+                    <filter string="Course" name="group_course_id"
+                            context="{'group_by':'course_id'}"/>
+                    <filter string="Department" name="group_department_id"
+                            context="{'group_by':'department_id'}"/>
+                    <filter string="Provider" name="group_provider_id"
+                            context="{'group_by':'provider_id'}"/>
+                    <filter string="Type" name="group_provider_type"
+                            context="{'group_by':'provider_type'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="hr_tna_line_action" model="ir.actions.act_window">
+        <field name="name">Department TNA Plan</field>
+        <field name="res_model">hr.tna.line</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">
+            {'search_default_group_course_id':'1'}
+        </field>
+    </record>
+
+</odoo>

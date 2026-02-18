@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_dynamic_dashboard_kanban" model="ir.ui.view">
+        <field name="name">hr.dynamic.service.subtype.kanban</field>
+        <field name="model">hr.dynamic.service.subtype</field>
+        <field name="arch" type="xml">
+            <kanban default_group_by="service_type_id" records_draggable="false"
+                    draggable="false" class="o_kanban_mobile"
+                    create="false" duplicate="false" edit="false"
+                    delete="false">
+                <field name="name"/>
+                <field name="service_type_id"/>
+                <field name="service_count"/>
+                <field name="service_draft_count"/>
+                <field name="service_progress_count"/>
+                <field name="service_done_count"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div style="margin-bottom:8px;"
+                             t-attf-class="oe_kanban_global_click o_has_icon">
+                            <div class="o_service_kanban_boxes">
+                                <div class="o_kanban_card_content">
+                                    <div class="row no-gutters o_ma_campaign_header">
+                                        <div class="col-9">
+                                            <a class="o_service_kanban_box"
+                                               name="open_request_action"
+                                               type="object">
+                                                <strong>
+                                                    <t t-esc="record.name.value"/>
+                                                </strong>
+                                            </a>
+                                        </div>
+                                        <div class="col-3">
+                                            <a class="o_service_kanban_box"
+                                               name="open_request_action"
+                                               type="object">
+                                                <span t-attf-class="badge-pill badge-secondary float-right o_badge_brand"
+                                                      title="Total Requests Count">
+                                                    <t t-esc="record.service_count.value"/>
+                                                </span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="o_service_kanban_boxes">
+                                <div class="row no-gutters o_ma_campaign_header">
+                                    <div class="col-4">
+                                        <a class="o_service_kanban_box"
+                                           name="action_open_draft_requests"
+                                           type="object">
+                                            <strong>Drafts</strong>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="o_service_kanban_box"
+                                           name="action_open_progress_requests"
+                                           type="object">
+                                            <strong>In-Progress</strong>
+                                        </a>
+                                    </div>
+                                    <div class="col-4">
+                                        <a class="o_service_kanban_box"
+                                           name="action_open_done_requests"
+                                           type="object">
+                                            <strong>Done</strong>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="row no-gutters o_ma_campaign_header">
+                                    <div class="col-4">
+
+                                        <span t-attf-class="badge-pill badge-info o_badge_brand"
+                                              title="Draft Requests Count">
+                                            <t t-esc="record.service_draft_count.value"/>
+                                        </span>
+
+                                    </div>
+                                    <div class="col-4">
+                                        <span t-attf-class="badge-pill badge-warning o_badge_brand"
+                                              title="In-Progress Requests Count">
+
+                                            <t t-esc="record.service_progress_count.value"/>
+
+                                        </span>
+                                    </div>
+                                    <div class="col-4">
+                                        <span t-attf-class="badge-pill badge-success o_badge_brand"
+                                              title="Done Requests Count">
+
+                                            <t t-esc="record.service_done_count.value"/>
+
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="view_hr_dynamic_dashboard_action" model="ir.actions.act_window">
+        <field name="name">Dynamic Approval Dashboard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.dynamic.service.subtype</field>
+        <field name="view_mode">kanban</field>
+    </record>
+
+</odoo>

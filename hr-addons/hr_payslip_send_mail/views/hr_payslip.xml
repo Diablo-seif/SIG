@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_payslip_form_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.form.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <field name="credit_note" position="after">
+                <field name="mark_payslip_as_sent"
+                       readonly="1"
+                       invisible="mark_payslip_as_sent = False"/>
+            </field>
+            <button name="action_payslip_done" position="before">
+                <button invisible="mark_payslip_as_sent = True or state != done"
+                        string="SEND BY EMAIL"
+                        name="action_payslip_send_only"
+                        type="object" class="oe_highlight"/>
+            </button>
+        </field>
+    </record>
+
+    <record id="view_hr_payslip_tree_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.tree.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='state']" position="after">
+                <field name="compute_job_id" groups='base.group_no_one'/>
+                <field name="compute_status"/>
+                <field name="confirm_job_id" groups='base.group_no_one'/>
+                <field name="confirm_status"/>
+                <field name="send_job_id" groups='base.group_no_one'/>
+                <field name="send_status"/>
+            </xpath>
+
+            <xpath expr="//list" position="attributes">
+                <attribute name="decoration-warning">compute_status=='pending' or confirm_status=='pending'</attribute>
+                <attribute name="decoration-danger">compute_status=='failed' or confirm_status=='failed'</attribute>
+                <attribute name="decoration-info">compute_status=='enqueued' or confirm_status=='enqueued'</attribute>
+                <attribute name="decoration-bf">compute_status=='started' or confirm_status=='started'</attribute>
+                <attribute name="decoration-success">compute_status=='done' or confirm_status=='done'</attribute>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_hr_payslip_filter_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.search.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//filter[@name='done']" position="after">
+                <separator/>
+                <filter name="compute_status_done" string="Compute Done"
+                        domain="[('compute_job_id.state', '=', 'done')]"/>
+                <filter name="compute_status_failed" string="Compute Failed"
+                        domain="[('compute_job_id.state', '=', 'failed')]"/>
+                <separator/>
+                <filter name="confirm_status_done" string="Confirm Done"
+                        domain="[('confirm_job_id.state', '=', 'done')]"/>
+                <filter name="confirm_status_failed" string="Confirm Failed"
+                        domain="[('confirm_job_id.state', '=', 'failed')]"/>
+                <separator/>
+                <filter name="send_status_done" string="Send Done"
+                        domain="[('send_job_id.state', '=', 'done')]"/>
+                <filter name="send_status_failed" string="Send Failed"
+                        domain="[('send_job_id.state', '=', 'failed')]"/>
+                <separator/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="hr_payslips_action_server_confirm" model="ir.actions.server">
+        <field name="name">Payslips: Confirm Payslips</field>
+        <field name="model_id" ref="hr_payroll.model_hr_payslip"/>
+        <field name="state">code</field>
+        <field name="code">records.action_payslip_done()</field>
+        <field name="binding_model_id" ref="hr_payroll.model_hr_payslip"/>
+    </record>
+
+</odoo>

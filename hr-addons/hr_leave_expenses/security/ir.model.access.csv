@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_global_leave_expense,access_global_leave_expense,model_hr_leave_expense,,1,0,0,0
+access_hr_manager_leave_expense,access_hr_manager_leave_expense,model_hr_leave_expense,hr_holidays.group_hr_holidays_manager,1,1,1,1
+

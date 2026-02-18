@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <!-- Annual leave -->
+    <record id="holiday_status_annual" model="hr.leave.type">
+        <field name="name">Annual Leave</field>
+        <field name="allocation_type">fixed</field>
+        <field name="leave_validation_type">both</field>
+        <field name="color_name">black</field>
+        <field name="leave_notif_subtype_id" eval="ref('hr_holidays.mt_leave')"/>
+        <field name="allocation_notif_subtype_id" eval="ref('hr_holidays.mt_leave_allocation')"/>
+        <!-- <field name="validity_start" eval="time.strftime('%Y-%m-01')"/> -->
+        <field name="responsible_id" ref="base.user_admin"/>
+    </record>
+
+    <!-- Casual leave -->
+    <record id="holiday_status_casual" model="hr.leave.type">
+        <field name="name">Casual Leave</field>
+        <field name="allocation_type">fixed</field>
+        <field name="leave_validation_type">both</field>
+        <field name="color_name">red</field>
+        <field name="leave_notif_subtype_id" eval="ref('hr_holidays.mt_leave')"/>
+        <field name="allocation_notif_subtype_id" eval="ref('hr_holidays.mt_leave_allocation')"/>
+        <!-- <field name="validity_start" eval="time.strftime('%Y-%m-01')"/> -->
+        <field name="responsible_id" ref="base.user_admin"/>
+    </record>
+
+</odoo>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="proposal_yearly_financial_tree" model="ir.ui.view">
+        <field name="name">proposal.yearly.financial.tree</field>
+        <field name="model">proposal.yearly.financial</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="company_id" optional="hide" />
+                <field name="year_state" optional="show" />
+                <field name="year" />
+                <field name="proposal_id" />
+                <field name="remaining_revenue" sum="Total Remaining Revenue" />
+                <field name="cumulative_remaining_revenue" optional="show"/>
+                <field name="remaining_cost" sum="Total Remaining Cost" />
+                <field name="cumulative_remaining_cost" optional="show"/>
+                <field name="remaining_margin" sum="Total Remaining Margin"/>
+                <field name="date_order" optional="show" />
+                <field name="contract_date" optional="show" />
+                <field name="state" optional="show" />
+                <field name="project_progress" widget="percentage" optional="show" />
+            </list>
+        </field>
+    </record>
+
+    <record id="proposal_yearly_financial_pivot" model="ir.ui.view">
+        <field name="name">proposal.yearly.financial.pivot</field>
+        <field name="model">proposal.yearly.financial</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="proposal_id" type="row" />
+                <field name="remaining_revenue" type="measure" />
+                <field name="remaining_cost" type="measure" />
+            </pivot>
+        </field>
+    </record>
+
+    <record id="proposal_yearly_financial_search" model="ir.ui.view">
+        <field name="name">proposal.yearly.financial.search</field>
+        <field name="model">proposal.yearly.financial</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="proposal_id" />
+                <field name="year" />
+                <group expand="0" string="Group By">
+                    <filter string="Year" name="group_year"
+                        context="{'group_by':'year'}" />
+                    <filter string="Proposal" name="group_proposal_id"
+                        context="{'group_by':'proposal_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="proposal_yearly_financial_action" model="ir.actions.act_window">
+        <field name="name">Yearly Financial</field>
+        <field name="res_model">proposal.yearly.financial</field>
+        <field name="view_mode">list,pivot</field>
+        <field name="context">{'search_default_group_year': '1', 'create': 0, 'edit': 0, 'delete':
+            0}</field>
+
+    </record>
+
+    <menuitem id="proposal_yearly_financial_menu"
+        name="Yearly Financial"
+        action="proposal_yearly_financial_action"
+        parent="proposal_report_menu"
+        sequence="2" />
+
+</odoo>

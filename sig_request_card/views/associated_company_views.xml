@@ -1,0 +1,19 @@
+<odoo>
+
+        <record id="view_associated_company_tree" model="ir.ui.view">
+            <field name="name">associated.company.tree</field>
+            <field name="model">associated.company</field>
+            <field name="arch" type="xml">
+                <list editable="top">
+                    <field name="name"/>
+                </list>
+            </field>
+        </record>
+
+        <record id="action_sig_associated_company_view" model="ir.actions.act_window">
+            <field name="name">Associated Companies</field>
+            <field name="res_model">associated.company</field>
+            <field name="view_mode">list</field>
+        </record>
+
+</odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="full_time_contract" model="hr.contract.type">
+        <field name="name">Full-Time</field>
+    </record>
+
+    <record id="part_time_contract" model="hr.contract.type">
+        <field name="name">Part-Time</field>
+    </record>
+
+</odoo>

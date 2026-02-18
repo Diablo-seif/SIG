@@ -1,0 +1,51 @@
+<odoo>
+    <record id="hr_contract_wage_calculate_form" model="ir.ui.view">
+        <field name="name">hr.contract.wage.calculate.form</field>
+        <field name="model">hr.contract.wage.calculate</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="net_amount"/>
+                </group>
+                <group string="Insurance Info">
+                    <field name="with_social_insurance" string="With Insurance"/>
+                    <field name="insurance_amount"
+                           invisible="with_social_insurance !=  True"
+                           required="with_social_insurance != True"
+                    />
+                    <field name="insurance_employee_percentage"
+                           invisible="with_social_insurance !=  True"
+                           required="with_social_insurance != True"/>
+                </group>
+                <group string="Tax Info">
+                    <field name="tax_type"/>
+                    <field name="fixed_percentage"
+                           invisible="tax_type !=  'percentage'"
+                           required="tax_type = 'percentage'"/>
+                    <field name="hr_salary_tax_id"
+                           invisible="tax_type !=  'laws'"
+                           required="tax_type = 'laws'"/>
+                </group>
+                <group>
+                    <field name="gross_amount"/>
+                </group>
+                <footer>
+                    <button name="action_calculate_gross_amount" string="Update Contract" class="btn-primary"
+                            type="object"/>
+                    <button string="Cancel" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="hr_contract_wage_calculate_action"
+            model="ir.actions.act_window">
+        <field name="name">Calculate Egypt Net To Gross</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">hr.contract.wage.calculate</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+    </record>
+
+
+</odoo>

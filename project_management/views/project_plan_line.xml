@@ -1,0 +1,63 @@
+<odoo>
+
+    <record id="project_plan_line_tree" model="ir.ui.view">
+        <field name="name">project.plan.line.tree</field>
+        <field name="model">project.plan.line</field>
+        <field name="arch" type="xml">
+            <list decoration-danger="cumulative_target > actual_progress and end_date &lt; current_date"
+                decoration-success="cumulative_target &lt;=  actual_progress">
+                <field name="project_id" />
+                <field name="start_date" />
+                <field name="end_date" />
+                <field name="target" />
+                <field name="cumulative_target"/>
+                <field name="actual_progress"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="project_plan_line_view_pivot" model="ir.ui.view" >
+        <field name="name">project.plan.line.view.pivot</field>
+        <field name="model">project.plan.line</field>
+        <field name="arch" type="xml">
+            <pivot>
+                <field name="project_id" type="row"/>
+            </pivot>
+        </field>
+    </record>
+
+    <record id="project_plan_line_search" model="ir.ui.view">
+        <field name="name">project.plan.line.search</field>
+        <field name="model">project.plan.line</field>
+        <field name="arch" type="xml">
+            <search string="Search Projects Plans">
+                <field name="project_id" />
+                <!-- <filter string="overdue" name="filter_overdue" 
+                    domain="[('cumulative_target','>','actual_progress'), ('end_date', '&lt;', context_today()]" /> -->
+                <!-- <filter string="done" name="filter_done" 
+                    domain="[('cumulative_target','&lt;=', 'actual_progress')]" /> -->
+                <group string="Group By">
+                    <filter string="Project" name="groupby_project_id"  
+                    context="{'group_by':'project_id'}" />
+                </group>
+            </search>
+        </field>
+    </record>
+
+    <record id="project_plan_line_action" model="ir.actions.act_window">
+        <field name="name">Projects Plans</field>
+        <field name="res_model">project.plan.line</field>
+        <field name="view_mode">list,pivot</field>
+        <field name="context">{
+            'create': False,
+            'edit': False,
+            'search_default_groupby_project_id': 1,}</field>
+    </record>
+
+    <menuitem id="project_plan_line_menu"
+        name="Projects Plans"
+        action="project_plan_line_action"
+        parent="project.menu_main_pm"
+        sequence="10" />
+
+</odoo>

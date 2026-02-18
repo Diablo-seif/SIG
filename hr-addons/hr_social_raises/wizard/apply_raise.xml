@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="apply_raise_form" model="ir.ui.view">
+        <field name="name">apply.raise.form</field>
+        <field name="model">apply.raise</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="percentage"/>
+                        </group>
+                        <group>
+                            <field name="min_salary"/>
+                            <field name="max_salary"/>
+                            <field name="currency_id" invisible="1"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="apply_raise" string="Apply Raise" type="object" class="oe_highlight"/>
+                    <button string="Cancel" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="apply_raise_action" model="ir.actions.act_window">
+        <field name="name">Apply Raise</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">apply.raise</field>
+        <field name="view_mode">form</field>
+        <field name="target">new</field>
+        <field name="binding_view_types">list,form</field>
+        <field name="binding_model_id" ref="hr.model_hr_employee"/>
+    </record>
+
+
+
+</odoo>

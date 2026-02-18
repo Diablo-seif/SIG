@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="vat_close_report_view_form" model="ir.ui.view">
+        <field name="name">vat.close.report.form</field>
+        <field name="model">vat.close.report</field>
+        <field name="arch" type="xml">
+            <form string="Mark invoices of month">
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="close_year" required="1"/>
+                            <field name="close_month" string="Month" />
+                            <field name="mark_as_reported"/>
+                        </group>
+                    </group>
+                </sheet>
+                <footer>
+                    <button name="action_close_report" string="Save"
+                            type="object" />
+                    <button string="Cancel" class="btn btn-default"
+                            special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+</odoo>

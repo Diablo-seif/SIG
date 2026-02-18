@@ -1,0 +1,159 @@
+<odoo>
+    <template id="report_deduction_tax_receipt_document">
+        <t t-call="web.external_layout">
+            <t t-set="o" t-value="o.with_context(lang=lang)"/>
+            <div class="page">
+                <style>
+                    .d-inline{ font-weight: bold; }
+                </style>
+                <t t-if="'ar' in lang">
+                    <script type="text/javascript"
+                            src="/l10n_eg_deduction_tax_notice/static/src/js/ar_numbers.js"/>
+                </t>
+                <div class="text-center">
+                    <h4>
+                        Deduction Tax Notice
+                    </h4>
+                    <h5>
+                        <t t-esc="o.name"/>
+                    </h5>
+                    <br/>
+                </div>
+                <div class="container">
+                    <div class="col-6 float-left">
+                        <div class="row">
+                            <div style="width:40%">Vendor Name:</div>
+                            <div style="width:60%">
+                                <t t-esc="o.partner_id.name"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div style="width:40%">File Number:
+                            </div>
+
+                            <t t-esc="o.partner_id.tax_file_number"/>
+                        </div>
+                        <div class="row">
+                            <div style="width:40%">Tax Department:</div>
+                            <t t-esc="o.partner_id.vat_department_id.name"/>
+                        </div>
+                        <div class="row">
+                            <div style="width:40%">Tax Card Number:</div>
+                            <t t-esc="o.partner_id.tax_card_number"/>
+                        </div>
+                    </div>
+                    <div class="col-6 float-left">
+                        <div class="row">
+                            <div style="width:30%">Invoice Number:</div>
+                            <t t-esc="o.deduction_invoice_id.name"/>
+                        </div>
+                        <div class="row">
+                            <div style="width:30%">Invoice Date:</div>
+                            <t t-esc="o.deduction_invoice_id.date.strftime('%Y/%m/%d')"/>
+                        </div>
+                        <div class="row">
+                            <div style="width:30%">Invoice Amount:</div>
+                            <t t-esc="o.deduction_invoice_id.amount_total"/>
+                            <t t-esc="o.deduction_invoice_id.currency_id.currency_unit_label"/>
+                        </div>
+                    </div>
+                    <br/>
+                    <table class="table table-sm" t-if="o.taxation_amount">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Tax Type
+                                </th>
+                                <th>
+                                    Tax Percent
+                                </th>
+                                <th>
+                                    Basic Amount
+                                </th>
+                                <th>
+                                    Deduction Amount
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr t-foreach="o.deduction_line_ids" t-as="line">
+                                <td>
+                                    <span t-esc="line.deduction_tax_id.name"/>
+                                </td>
+                                <td>
+                                    <span t-esc="line.tax_percentage"/>
+                                    %
+                                </td>
+                                <td>
+                                    <span t-esc="round(line.base_amount,2)"/>
+                                </td>
+                                <td>
+                                    <span t-esc="round(line.tax_amount,2)"/>
+                                </td>
+                            </tr>
+                            <tr class="border-black o_total">
+                                <td/>
+                                <td/>
+                                <td>
+                                    <strong>Total</strong>
+                                </td>
+                                <td>
+                                    <span t-esc="- round(float(o.amount),2)"/>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="row col-12">
+                        <div style="width:18%">
+                            Deduction Amount:
+                        </div>
+                        <span>
+                            (
+                            <t t-esc="- round(o.amount,2)"/>
+                        </span>
+                        <span style="margin-left: 8px;">
+                            ) only
+                        </span>
+                        <span>
+                            <t t-esc="o.amount_in_words"/>
+                        </span>
+                    </div>
+                    <div class="row col-12">
+                        <div style="width:18%">Issued on:</div>
+                        <t t-esc="o.date.strftime('%Y/%m/%d')"/>
+                    </div>
+                    <br/>
+                    <div class="row">
+                        <div class="col-6">
+                            Accreditation: . . . . . . . . . . . . . . . . . .
+                        </div>
+                        <div class="col-6">
+                            The Recipient's Signature: . . . . . . . . . . . . . . . . . .
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </t>
+    </template>
+
+    <template id="report_deduction_tax_receipt">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-set="lang" t-value="o.partner_id.lang"/>
+                <t t-call="l10n_eg_deduction_tax_notice.report_deduction_tax_receipt_document"
+                   t-lang="lang"/>
+            </t>
+        </t>
+    </template>
+
+    <record model="ir.actions.report" id="action_report_deduction_tax_receipt">
+        <field name="name">Deduction Receipt</field>
+        <field name="model">account.payment</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">l10n_eg_deduction_tax_notice.report_deduction_tax_receipt</field>
+        <field name="report_file">l10n_eg_deduction_tax_notice.report_deduction_tax_receipt</field>
+        <field name="binding_type">report</field>
+        <field name="binding_model_id" ref="account.model_account_payment"/>
+    </record>
+
+</odoo>

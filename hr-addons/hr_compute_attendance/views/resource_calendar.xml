@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="resource_calendar_form_inherit" model="ir.ui.view">
+        <field name="name">resource.calendar.form.inherit</field>
+        <field name="model">resource.calendar</field>
+        <field name="inherit_id" ref="resource.resource_calendar_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//field[@name='tz']/../.." position="after">
+                <group>
+                    <group>
+                        <field name="is_flexible"/>
+                    </group>
+                </group>
+                <group string="Maximum Deduction">
+                    <div class="row mt16 o_settings_container">
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="maximum_deduction_per_day"/>
+                                <field name="maximum_deduction_per_day"/>
+                                <div class="text-muted">
+                                    Set Maximum Penalty Percentage Per Day (One
+                                    Record) - Positive Float Number.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-md-6 o_setting_box">
+                            <div class="o_setting_right_pane">
+                                <label for="absent_deduction_value_per_day"/>
+                                <field name="absent_deduction_value_per_day" required="1"/>
+                                <div class="text-muted">
+                                    Set Maximum Absent Deduction Value Per
+                                    Day
+                                    (One
+                                    Record) - Positive Float
+                                    Number.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </group>
+            </xpath>
+
+            <xpath expr="//notebook[last()]" position="inside">
+                <page string="Attendance Penalties" groups="base.group_no_one">
+                    <field name="penalty_ids" string="Attendance Penalties">
+                        <list decoration-success="active == True"
+                              decoration-danger="active == False">
+                            <field name="name"/>
+                            <field name="delay_from"/>
+                            <field name="delay_to"/>
+                            <field name="penalty_type"/>
+                            <field name="deduction_type"/>
+                            <field name="calendar_id" optional="hide"/>
+                            <field name="penalty_redundant_ids"
+                                   widget="many2many_tags" optional="hide"/>
+                            <field name="active"/>
+                        </list>
+                    </field>
+                </page>
+                <page string="Absent Penalties">
+                    <field name="absent_ids" string="Absent Penalties">
+                        <list>
+                            <field name="redundant"/>
+                            <field name="absent_value"/>
+                        </list>
+                        <form>
+                            <group>
+                                <field name="redundant"/>
+                                <field name="absent_value"/>
+                            </group>
+                        </form>
+                    </field>
+                </page>
+            </xpath>
+
+        </field>
+    </record>
+
+    <record id="resource.action_resource_calendar_form"
+            model="ir.actions.act_window">
+        <field name="name">Working Schedule</field>
+    </record>
+
+    <menuitem id="menu_resource_calendar"
+              parent="hr_attendance.menu_hr_attendance_settings"
+              groups="hr_attendance.group_hr_attendance_manager"
+              action="resource.action_resource_calendar_form"
+              name="Working Schedule"
+              sequence="10"/>
+
+</odoo>

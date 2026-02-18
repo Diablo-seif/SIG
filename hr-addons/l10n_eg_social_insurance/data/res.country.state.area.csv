@@ -1,0 +1,10 @@
+"id","name","state_id/id"
+area_001,East Cairo,base.state_eg_c
+area_002,West Cairo,base.state_eg_c
+area_003,North Cairo,base.state_eg_c
+area_004,South Cairo,base.state_eg_c
+area_005,North Giza,base.state_eg_gz
+area_006,South Giza,base.state_eg_gz
+area_007,Alexandria,base.state_eg_alx
+area_008,Borj Arab Jadid,base.state_eg_alx
+area_009,Borj Arab center and city,base.state_eg_alx
