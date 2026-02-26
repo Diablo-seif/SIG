@@ -23,10 +23,10 @@
                 <field name="code"/>
                 <field name="value"/>
                 <field name="date_from"
-                                   required="date_to not in [False, None, '']"/>
+                       required="date_to not in [False, None]"/>
 <!--                       attrs="{'required':[('date_to','not in',)]}"/>-->
                 <field name="date_to"
-                                   required="date_from not in [False, None, '']"/>
+                                   required="date_to not in [False, None]"/>
 <!--                       attrs="{'required':[('date_from','not in',[False, None, ''])]}"/>-->
             </list>
         </field>
